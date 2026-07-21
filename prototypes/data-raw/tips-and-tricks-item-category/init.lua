@@ -1,0 +1,11 @@
+return {
+  ["copy-paste"] = require("___KHAOSDATA___.prototypes.data-raw.tips-and-tricks-item-category.copy-paste"),
+  ["drag-building"] = require("___KHAOSDATA___.prototypes.data-raw.tips-and-tricks-item-category.drag-building"),
+  ["electric-network"] = require("___KHAOSDATA___.prototypes.data-raw.tips-and-tricks-item-category.electric-network"),
+  ["fast-replace"] = require("___KHAOSDATA___.prototypes.data-raw.tips-and-tricks-item-category.fast-replace"),
+  ["game-interaction"] = require("___KHAOSDATA___.prototypes.data-raw.tips-and-tricks-item-category.game-interaction"),
+  ["ghost-building"] = require("___KHAOSDATA___.prototypes.data-raw.tips-and-tricks-item-category.ghost-building"),
+  ["inserters"] = require("___KHAOSDATA___.prototypes.data-raw.tips-and-tricks-item-category.inserters"),
+  ["logistic-network"] = require("___KHAOSDATA___.prototypes.data-raw.tips-and-tricks-item-category.logistic-network"),
+  ["trains"] = require("___KHAOSDATA___.prototypes.data-raw.tips-and-tricks-item-category.trains"),
+}

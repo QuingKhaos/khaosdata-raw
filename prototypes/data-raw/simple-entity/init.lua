@@ -1,0 +1,15 @@
+return {
+  ["big-rock"] = require("___KHAOSDATA___.prototypes.data-raw.simple-entity.big-rock"),
+  ["big-sand-rock"] = require("___KHAOSDATA___.prototypes.data-raw.simple-entity.big-sand-rock"),
+  ["huge-rock"] = require("___KHAOSDATA___.prototypes.data-raw.simple-entity.huge-rock"),
+  ["parameter-0"] = require("___KHAOSDATA___.prototypes.data-raw.simple-entity.parameter-0"),
+  ["parameter-1"] = require("___KHAOSDATA___.prototypes.data-raw.simple-entity.parameter-1"),
+  ["parameter-2"] = require("___KHAOSDATA___.prototypes.data-raw.simple-entity.parameter-2"),
+  ["parameter-3"] = require("___KHAOSDATA___.prototypes.data-raw.simple-entity.parameter-3"),
+  ["parameter-4"] = require("___KHAOSDATA___.prototypes.data-raw.simple-entity.parameter-4"),
+  ["parameter-5"] = require("___KHAOSDATA___.prototypes.data-raw.simple-entity.parameter-5"),
+  ["parameter-6"] = require("___KHAOSDATA___.prototypes.data-raw.simple-entity.parameter-6"),
+  ["parameter-7"] = require("___KHAOSDATA___.prototypes.data-raw.simple-entity.parameter-7"),
+  ["parameter-8"] = require("___KHAOSDATA___.prototypes.data-raw.simple-entity.parameter-8"),
+  ["parameter-9"] = require("___KHAOSDATA___.prototypes.data-raw.simple-entity.parameter-9"),
+}

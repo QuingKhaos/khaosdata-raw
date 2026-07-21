@@ -1,36 +1,24 @@
-
 {
-  "mods":
-  [
-
+  "mods": [
     {
-      "name": "base",
-      "enabled": true
+      "enabled": false,
+      "name": "elevated-rails"
     },
-
     {
-      "name": "elevated-rails",
-      "enabled": false
+      "enabled": true,
+      "name": "khaosdata-extractor"
     },
-
     {
-      "name": "quality",
-      "enabled": false
+      "enabled": true,
+      "name": "khaosdata-raw"
     },
-
     {
-      "name": "space-age",
-      "enabled": false
+      "enabled": false,
+      "name": "quality"
     },
-
     {
-      "name": "khaosdata-raw",
-      "enabled": true
-    },
-
-    {
-      "name": "khaosdata-extractor",
-      "enabled": true
+      "enabled": false,
+      "name": "space-age"
     }
   ]
 }

@@ -1,0 +1,6 @@
+return {
+  group = "production",
+  name = "space-related",
+  order = "g",
+  type = "item-subgroup"
+}
