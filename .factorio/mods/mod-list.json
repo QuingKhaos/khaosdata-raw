@@ -10,17 +10,17 @@
 
     {
       "name": "elevated-rails",
-      "enabled": true
+      "enabled": false
     },
 
     {
       "name": "quality",
-      "enabled": true
+      "enabled": false
     },
 
     {
       "name": "space-age",
-      "enabled": true
+      "enabled": false
     },
 
     {
