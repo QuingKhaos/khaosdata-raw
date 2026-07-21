@@ -1,7 +1,7 @@
 --- @type data.Mods
 return {
   base = "2.0.77",
-  ["khaosdata-extractor"] = "12026.721.710",
+  ["khaosdata-extractor"] = "12026.721.1306",
   ["khaosdata-raw"] = "0.0.0",
   pyalienlife = "3.0.67",
   pyalienlifegraphics = "3.0.12",
