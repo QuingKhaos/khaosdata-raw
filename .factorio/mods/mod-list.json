@@ -26,6 +26,11 @@
     {
       "name": "khaosdata-raw",
       "enabled": true
+    },
+
+    {
+      "name": "khaosdata-extractor",
+      "enabled": true
     }
   ]
 }
