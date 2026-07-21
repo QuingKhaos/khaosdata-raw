@@ -1,7 +1,7 @@
 {
   "mods": [
     {
-      "enabled": false,
+      "enabled": true,
       "name": "elevated-rails"
     },
     {
@@ -13,11 +13,11 @@
       "name": "khaosdata-raw"
     },
     {
-      "enabled": false,
+      "enabled": true,
       "name": "quality"
     },
     {
-      "enabled": false,
+      "enabled": true,
       "name": "space-age"
     }
   ]
