@@ -1,0 +1,135 @@
+name: Extraction
+
+on:
+  workflow_call:
+    inputs:
+      version:
+        description: The version of Factorio to install. stable or experimental.
+        required: true
+        type: string
+
+jobs:
+  extract:
+    name: Extraction
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout ${{ github.ref_name }}
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.ref }}
+          persist-credentials: true
+          path: khaosdata
+
+      #- name: Install ORAS
+      #  run: |
+      #    sudo snap install oras --classic
+      #    oras version
+
+      #- name: Authenticate to GitHub Container Registry
+      #  run: |
+      #    echo "${{ secrets.GITHUB_TOKEN }}" | oras login -u "${{ github.actor }}" --password-stdin ghcr.io
+
+      - name: Install mod updater
+        run: |
+          curl --location --output "${{ github.workspace }}/mod_updater.py" https://raw.githubusercontent.com/pdemonaco/factorio-mod-updater/refs/heads/master/mod_updater.py
+
+      - name: Install Factorio
+        run: |
+          curl --location --output "${{ github.workspace }}/factorio.tar.xz" https://factorio.com/get-download/${{ inputs.version }}/headless/linux64
+          mkdir -p "${{ github.workspace }}/factorio"
+          tar -xf "${{ github.workspace }}/factorio.tar.xz" -C "${{ github.workspace }}/factorio" --strip-components=1
+          "${{ github.workspace }}/factorio/bin/x64/factorio" --version
+
+      #- name: Pull previous mods
+      #  run: |
+      #    ref_name="${{ github.ref_name }}"
+      #    oras pull ghcr.io/${{ github.repository }}:${ref_name//\//-}-latest --output "${{ github.workspace }}/khaosdata/.factorio/mods/" || true
+      #    ls -lha "${{ github.workspace }}/khaosdata/.factorio/mods/"
+
+      - name: Install mods
+        run: |
+          python3 "${{ github.workspace }}/mod_updater.py" --update --fact-path "${{ github.workspace }}/factorio/bin/x64/factorio" --mod-directory "${{ github.workspace }}/khaosdata/.factorio/mods" --username "QuingKhaos" --token "${{ secrets.FACTORIO_TOKEN }}"
+
+      - name: Run Factorio data extraction
+        continue-on-error: true
+        timeout-minutes: 2
+        run: |
+          echo "Starting Factorio for data extraction..."
+
+          # Create log file for Factorio output
+          FACTORIO_LOG="factorio_output.log"
+
+          # Start Factorio in true headless mode with stdin redirected
+          "${{ github.workspace }}/factorio/bin/x64/factorio" \
+            --mod-directory "${{ github.workspace }}/khaosdata/.factorio/mods" \
+            --start-server-load-scenario base/freeplay \
+            --server-settings "${{ github.workspace }}/khaosdata/.factorio/server-settings.json" \
+            2>&1 | tee "$FACTORIO_LOG" &
+
+          FACTORIO_PID=$!
+          echo "Factorio started with PID: $FACTORIO_PID"
+
+          # Monitor for completion message in stdout
+          echo "Waiting for DATA EXTRACTION FINISHED message..."
+          timeout 60 bash -c '
+            while true; do
+              if ps -p '$FACTORIO_PID' > /dev/null 2>&1; then
+                # Check stdout capture for completion message
+                if grep -q "DATA EXTRACTION FINISHED" "'$FACTORIO_LOG'" 2>/dev/null; then
+                  echo "Data extraction completed - found completion message!"
+                  break
+                fi
+                sleep 2
+              else
+                echo "Factorio process ended naturally"
+                # Check one more time in case process ended after writing
+                if grep -q "DATA EXTRACTION FINISHED" "'$FACTORIO_LOG'" 2>/dev/null; then
+                  echo "Data extraction completed - found completion message after process end!"
+                else
+                  echo "WARNING: Factorio ended without completion message"
+                  echo "Last 20 lines of Factorio output:"
+                  tail -20 "'$FACTORIO_LOG'" || true
+                fi
+                break
+              fi
+            done
+          '
+
+          # Ensure Factorio is terminated
+          if ps -p $FACTORIO_PID > /dev/null 2>&1; then
+            echo "Terminating Factorio process..."
+            kill $FACTORIO_PID
+
+            sleep 15
+            kill -9 $FACTORIO_PID 2>/dev/null || true
+          fi
+
+          echo "Factorio data extraction completed"
+
+      - name: Upload extracted data
+        uses: actions/upload-artifact@v7
+        with:
+          name: extracted-factorio-data
+          path: ${{ github.workspace }}/factorio/script-output/khaosdata-extractor/
+          retention-days: 7
+
+      - name: Copy extracted data into repo
+        run: |
+          rm -rf "${{ github.workspace }}/khaosdata/prototypes" "${{ github.workspace }}/khaosdata/settings" "${{ github.workspace }}/khaosdata/metadata.lua"
+          cp -r "${{ github.workspace }}/factorio/script-output/khaosdata-extractor/"* "${{ github.workspace }}/khaosdata/"
+
+      - name: Commit extracted data and updated mod list
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: "chore: update extracted data"
+          branch: ${{ github.ref_name }}
+          repository: khaosdata
+
+      #- name: Push mods to GitHub Container Registry
+      #- run: |
+      #    cd "${{ github.workspace }}/khaosdata/.factorio/mods"
+      #    ref_name="${{ github.ref_name }}"
+      #    version_tag="${ref_name//\//-}-v$(date +%Y.%m%d.%H%M)"
+      #    oras push ghcr.io/${{ github.repository }}:${version_tag} ./:application/vnd.factorio.mods.layer.v1+tar
+      #    oras tag ghcr.io/${{ github.repository }}:${version_tag} ghcr.io/${{ github.repository }}:${ref_name//\//-}-latest
