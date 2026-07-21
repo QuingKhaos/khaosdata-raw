@@ -11,3 +11,7 @@ The structuring into branches also allows for easy comparison between different 
 The output of the data extractor is stored in a structured format in copy&pasteable Lua, a subdirectory for each prototype type of `data.raw`, with each prototype being in a separate file. This makes it easy to navigate and analyze the data, as users can quickly locate the specific prototype they are interested in and gives them the ability to easily compare different versions of the same prototype across different versions of Factorio and mods with git diff.
 
 For the moment the Lua files are simple pretty-printed serializations of the prototypes, with keys in simple alphabetical order. In the future, the data may be serialized in a more structured format, such as being in the order of the keys in the API documentation, default value comments, and types like colors, vectors, bounding boxes collapsed into single lines.
+
+## License notice
+
+The raw data in this repository is not covered by the attached GPLv3 license, as it is not original work. The data is extracted from Factorio and its mods, which are subject to their own licenses. Only the scripts and workflows used to extract and process the data are covered by the GPLv3 license.
