@@ -1,6 +1,7 @@
 return {
   amount = 10,
   damage_type = "impact",
+  hidden = true,
   icon = "__base__/graphics/achievement/steamrolled.png",
   icon_size = 128,
   in_vehicle = true,

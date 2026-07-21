@@ -5,34 +5,51 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = false,
   icon = "__base__/graphics/technology/effect-transmission.png",
   icon_size = 256,
   name = "effect-transmission",
+  order = "autotech-[000904]-[effect-transmission]",
   prerequisites = {
-    "processing-unit",
-    "production-science-pack"
+    "wind-mk04"
   },
   type = "technology",
   unit = {
-    count = 75,
+    count = 3300,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
-        1
-      },
-      {
-        "chemical-science-pack",
-        1
-      },
       {
         "production-science-pack",
         1
+      },
+      {
+        "py-science-pack-3",
+        2
+      },
+      {
+        "chemical-science-pack",
+        3
+      },
+      {
+        "py-science-pack-2",
+        6
+      },
+      {
+        "logistic-science-pack",
+        10
+      },
+      {
+        "py-science-pack-1",
+        20
+      },
+      {
+        "automation-science-pack",
+        30
+      },
+      {
+        "military-science-pack",
+        6
       }
     },
-    time = 30
+    time = 300
   }
 }

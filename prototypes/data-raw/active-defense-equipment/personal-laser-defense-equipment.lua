@@ -25,7 +25,8 @@ return {
   },
   automatic = true,
   categories = {
-    "armor"
+    "armor",
+    "py-mount-generator"
   },
   energy_source = {
     buffer_capacity = "220kJ",

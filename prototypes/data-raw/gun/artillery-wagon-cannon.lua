@@ -1803,7 +1803,7 @@ return {
         }
       }
     },
-    range = 224,
+    range = 64,
     shell_particle = {
       center = {
         0,

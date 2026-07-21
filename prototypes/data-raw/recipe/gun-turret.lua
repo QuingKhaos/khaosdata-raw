@@ -1,10 +1,12 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 8,
   ingredients = {
     {
       amount = 10,
-      name = "iron-gear-wheel",
+      name = "small-parts-01",
       type = "item"
     },
     {
@@ -18,6 +20,19 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.gun-turret"
+    },
+    {
+      "item-name.gun-turret"
+    },
+    {
+      "entity-name.gun-turret"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "gun-turret",
   results = {
     {

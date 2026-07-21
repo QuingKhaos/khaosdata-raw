@@ -9,27 +9,37 @@ return {
       type = "bulk-inserter-capacity-bonus"
     }
   },
+  essential = true,
   icon = "__base__/graphics/technology/bulk-inserter.png",
   icon_size = 256,
   name = "bulk-inserter",
+  order = "autotech-[000336]-[bulk-inserter]",
   prerequisites = {
-    "fast-inserter",
-    "logistics-2",
-    "advanced-circuit"
+    "intermetallics-mk02",
+    "electric-engine"
   },
   type = "technology",
   unit = {
-    count = 150,
+    count = 1300,
     ingredients = {
       {
-        "automation-science-pack",
+        "py-science-pack-2",
         1
       },
       {
         "logistic-science-pack",
-        1
+        2
+      },
+      {
+        "py-science-pack-1",
+        3
+      },
+      {
+        "automation-science-pack",
+        6
       }
     },
-    time = 30
-  }
+    time = 90
+  },
+  upgrade = false
 }

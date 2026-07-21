@@ -691,6 +691,15 @@ return {
       0.4
     }
   },
+  collision_mask = {
+    layers = {
+      floor = true,
+      meltable = true,
+      object = true,
+      transport_belt = true,
+      water_tile = true
+    }
+  },
   connector_frame_sprites = {
     frame_back_patch = {
       sheet = {
@@ -856,7 +865,13 @@ return {
   max_health = 160,
   minable = {
     mining_time = 0.1,
-    result = "fast-transport-belt"
+    results = {
+      {
+        amount = 1,
+        name = "fast-transport-belt",
+        type = "item"
+      }
+    }
   },
   name = "fast-transport-belt",
   next_upgrade = "express-transport-belt",

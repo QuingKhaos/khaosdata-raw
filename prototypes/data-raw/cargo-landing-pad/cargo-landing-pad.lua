@@ -780,6 +780,19 @@ return {
       3.9
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      elevated_rail = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "cargo-landing-pad-remnants",
   dying_explosion = "rocket-silo-explosion",
   flags = {
@@ -3782,7 +3795,13 @@ return {
   max_health = 1000,
   minable = {
     mining_time = 1,
-    result = "cargo-landing-pad"
+    results = {
+      {
+        amount = 1,
+        name = "cargo-landing-pad",
+        type = "item"
+      }
+    }
   },
   name = "cargo-landing-pad",
   open_sound = {

@@ -1,0 +1,10 @@
+return {
+  flags = {},
+  icon = "__pyalternativeenergygraphics__/graphics/icons/mirror.png",
+  icon_size = 64,
+  name = "mirror-mk01",
+  order = "da",
+  stack_size = 100,
+  subgroup = "py-alternativeenergy-items",
+  type = "item"
+}

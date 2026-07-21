@@ -1,7 +1,10 @@
 return {
   allow_productivity = true,
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 20,
+  hidden = false,
   ingredients = {
     {
       amount = 1,
@@ -10,20 +13,56 @@ return {
     },
     {
       amount = 2,
-      name = "battery",
+      name = "battery-mk01",
       type = "item"
     },
     {
       amount = 1,
-      name = "steel-plate",
+      name = "niobium-plate",
       type = "item"
     },
     {
-      amount = 3,
-      name = "electronic-circuit",
+      amount = 1,
+      name = "advanced-circuit",
+      type = "item"
+    },
+    {
+      amount = 5,
+      name = "duralumin",
+      type = "item"
+    },
+    {
+      amount = 2,
+      name = "mechanical-parts-01",
       type = "item"
     }
   },
+  localised_description = {
+    "?",
+    {
+      "",
+      {
+        "recipe-description.flying-robot-frame"
+      },
+      "\n",
+      {
+        "recipe-description.affected-by-productivity"
+      }
+    },
+    {
+      "recipe-description.affected-by-productivity"
+    }
+  },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.flying-robot-frame"
+    },
+    {
+      "item-name.flying-robot-frame"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "flying-robot-frame",
   results = {
     {

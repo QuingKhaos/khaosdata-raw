@@ -1,4 +1,7 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
+  energy_required = 1,
   ingredients = {
     {
       amount = 5,
@@ -6,6 +9,19 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.stone-furnace"
+    },
+    {
+      "item-name.stone-furnace"
+    },
+    {
+      "entity-name.stone-furnace"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "stone-furnace",
   results = {
     {

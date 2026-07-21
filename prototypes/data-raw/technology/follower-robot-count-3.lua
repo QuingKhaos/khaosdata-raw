@@ -5,6 +5,7 @@ return {
       type = "maximum-following-robots-count"
     }
   },
+  essential = false,
   icons = {
     {
       icon = "__base__/graphics/technology/follower-robots.png",
@@ -22,32 +23,41 @@ return {
     }
   },
   name = "follower-robot-count-3",
+  order = "autotech-[000357]-[follower-robot-count-3]",
   prerequisites = {
-    "follower-robot-count-2",
-    "chemical-science-pack"
+    "chemical-science-pack",
+    "follower-robot-count-2"
   },
   type = "technology",
   unit = {
-    count = 300,
+    count = 700,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
-        1
-      },
       {
         "chemical-science-pack",
         1
       },
       {
+        "py-science-pack-2",
+        2
+      },
+      {
+        "logistic-science-pack",
+        3
+      },
+      {
+        "py-science-pack-1",
+        6
+      },
+      {
+        "automation-science-pack",
+        10
+      },
+      {
         "military-science-pack",
-        1
+        2
       }
     },
-    time = 30
+    time = 120
   },
   upgrade = true
 }

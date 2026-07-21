@@ -602,6 +602,18 @@ return {
       0.9
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "pump-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -690,6 +702,12 @@ return {
   fluid_box = {
     pipe_connections = {
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 0,
         flow_direction = "output",
         position = {
@@ -698,6 +716,12 @@ return {
         }
       },
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 8,
         flow_direction = "input",
         position = {
@@ -786,7 +810,7 @@ return {
     },
     volume = 400
   },
-  fluid_wagon_connector_alignment_tolerance = 0.0625,
+  fluid_wagon_connector_alignment_tolerance = 1,
   fluid_wagon_connector_frame_count = 35,
   fluid_wagon_connector_graphics = {
     load_animations = {
@@ -2898,14 +2922,20 @@ return {
   max_health = 180,
   minable = {
     mining_time = 0.2,
-    result = "pump"
+    results = {
+      {
+        amount = 1,
+        name = "pump",
+        type = "item"
+      }
+    }
   },
   name = "pump",
   open_sound = {
     filename = "__base__/sound/machine-open.ogg",
     volume = 0.5
   },
-  pumping_speed = 20,
+  pumping_speed = 200,
   resistances = {
     {
       percent = 80,

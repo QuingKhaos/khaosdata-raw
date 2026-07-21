@@ -1,5 +1,6 @@
 return {
   amount = 500,
+  hidden = true,
   icon = "__base__/graphics/achievement/computer-age-1.png",
   icon_size = 128,
   item_product = "processing-unit",

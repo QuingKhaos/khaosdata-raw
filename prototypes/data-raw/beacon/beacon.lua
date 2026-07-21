@@ -1,8 +1,13 @@
 return {
   allowed_effects = {
     "consumption",
+    "speed"
+  },
+  allowed_module_categories = {
+    "productivity",
     "speed",
-    "pollution"
+    "efficiency",
+    "quality"
   },
   beacon_counter = "same_type",
   close_sound = {
@@ -17,6 +22,18 @@ return {
     {
       1.2,
       1.2
+    }
+  },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
     }
   },
   corpse = "beacon-remnants",
@@ -49,7 +66,7 @@ return {
     type = "electric",
     usage_priority = "secondary-input"
   },
-  energy_usage = "480kW",
+  energy_usage = "2MW",
   fast_replaceable_group = "beacon",
   flags = {
     "placeable-player",
@@ -296,15 +313,17 @@ return {
     },
     random_animation_offset = true
   },
+  hidden = true,
+  hidden_by_factoriopedia = true,
   icon = "__base__/graphics/icons/beacon.png",
   icons_positioning = {
     {
       inventory_index = 1,
       max_icons_per_row = 2,
-      multi_row_initial_height_modifier = -0.3,
+      scale = 0.85737499999999986,
       shift = {
         0,
-        0
+        0.55688750000000011
       }
     }
   },
@@ -312,7 +331,13 @@ return {
   max_health = 200,
   minable = {
     mining_time = 0.2,
-    result = "beacon"
+    results = {
+      {
+        amount = 1,
+        name = "beacon",
+        type = "item"
+      }
+    }
   },
   module_slots = 2,
   name = "beacon",
@@ -438,6 +463,7 @@ return {
       1.5
     }
   },
+  subgroup = "module",
   supply_area_distance = 3,
   type = "beacon",
   water_reflection = {

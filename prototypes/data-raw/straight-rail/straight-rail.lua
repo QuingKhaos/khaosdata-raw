@@ -9,6 +9,16 @@ return {
       1
     }
   },
+  collision_mask = {
+    layers = {
+      floor = true,
+      is_lower_object = true,
+      item = true,
+      object = true,
+      rail = true,
+      water_tile = true
+    }
+  },
   corpse = "straight-rail-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -44,9 +54,14 @@ return {
   icon = "__base__/graphics/icons/rail.png",
   max_health = 200,
   minable = {
-    count = 1,
     mining_time = 0.2,
-    result = "rail"
+    results = {
+      {
+        amount = 1,
+        name = "rail",
+        type = "item"
+      }
+    }
   },
   name = "straight-rail",
   order = "a[ground-rail]-a[straight-rail]",

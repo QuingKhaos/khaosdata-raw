@@ -5,6 +5,7 @@ return {
       type = "worker-robot-storage"
     }
   },
+  essential = false,
   icons = {
     {
       icon = "__base__/graphics/technology/worker-robots-storage.png",
@@ -22,36 +23,57 @@ return {
     }
   },
   name = "worker-robots-storage-3",
+  order = "autotech-[000851]-[worker-robots-storage-3]",
   prerequisites = {
-    "worker-robots-storage-2",
-    "utility-science-pack"
+    "utility-science-pack",
+    "worker-robots-storage-2"
   },
   type = "technology",
   unit = {
-    count = 450,
+    count = 3300,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
-        1
-      },
-      {
-        "chemical-science-pack",
-        1
-      },
-      {
-        "production-science-pack",
-        1
-      },
       {
         "utility-science-pack",
         1
+      },
+      {
+        "py-science-pack-4",
+        2
+      },
+      {
+        "production-science-pack",
+        3
+      },
+      {
+        "py-science-pack-3",
+        6
+      },
+      {
+        "chemical-science-pack",
+        10
+      },
+      {
+        "py-science-pack-2",
+        20
+      },
+      {
+        "logistic-science-pack",
+        30
+      },
+      {
+        "py-science-pack-1",
+        60
+      },
+      {
+        "automation-science-pack",
+        100
+      },
+      {
+        "military-science-pack",
+        20
       }
     },
-    time = 60
+    time = 600
   },
   upgrade = true
 }

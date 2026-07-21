@@ -5,22 +5,28 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = true,
   icon = "__base__/graphics/technology/heavy-armor.png",
   icon_size = 256,
   name = "heavy-armor",
+  order = "autotech-[000091]-[heavy-armor]",
   prerequisites = {
-    "military",
-    "steel-processing"
+    "intermetallics-mk01",
+    "military"
   },
   type = "technology",
   unit = {
-    count = 30,
+    count = 80,
     ingredients = {
       {
-        "automation-science-pack",
+        "py-science-pack-1",
         1
+      },
+      {
+        "automation-science-pack",
+        2
       }
     },
-    time = 30
+    time = 45
   }
 }

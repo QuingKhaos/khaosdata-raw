@@ -5,6 +5,8 @@ return {
       type = "mining-drill-productivity-bonus"
     }
   },
+  essential = false,
+  icon_size = 256,
   icons = {
     {
       icon = "__base__/graphics/technology/mining-productivity.png",
@@ -22,23 +24,24 @@ return {
     }
   },
   name = "mining-productivity-1",
+  order = "autotech-[000099]-[mining-productivity-1]",
   prerequisites = {
-    "advanced-circuit"
+    "machines-mk01"
   },
   type = "technology",
   unit = {
-    count = 250,
+    count = 90,
     ingredients = {
       {
-        "automation-science-pack",
+        "py-science-pack-1",
         1
       },
       {
-        "logistic-science-pack",
-        1
+        "automation-science-pack",
+        2
       }
     },
-    time = 60
+    time = 45
   },
   upgrade = true
 }

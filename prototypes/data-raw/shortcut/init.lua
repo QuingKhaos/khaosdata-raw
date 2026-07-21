@@ -13,6 +13,7 @@ return {
   ["give-upgrade-planner"] = require("___KHAOSDATA___.prototypes.data-raw.shortcut.give-upgrade-planner"),
   ["import-string"] = require("___KHAOSDATA___.prototypes.data-raw.shortcut.import-string"),
   ["paste"] = require("___KHAOSDATA___.prototypes.data-raw.shortcut.paste"),
+  ["py-toggle-equipment-fuel-manager"] = require("___KHAOSDATA___.prototypes.data-raw.shortcut.py-toggle-equipment-fuel-manager"),
   ["redo"] = require("___KHAOSDATA___.prototypes.data-raw.shortcut.redo"),
   ["toggle-alt-mode"] = require("___KHAOSDATA___.prototypes.data-raw.shortcut.toggle-alt-mode"),
   ["toggle-equipment-movement-bonus"] = require("___KHAOSDATA___.prototypes.data-raw.shortcut.toggle-equipment-movement-bonus"),

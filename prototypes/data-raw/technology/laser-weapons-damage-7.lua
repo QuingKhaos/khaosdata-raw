@@ -16,6 +16,7 @@ return {
       type = "ammo-damage"
     }
   },
+  essential = false,
   icons = {
     {
       icon = "__base__/graphics/technology/laser-weapons-damage.png",
@@ -34,40 +35,61 @@ return {
   },
   max_level = "infinite",
   name = "laser-weapons-damage-7",
+  order = "autotech-[000928]-[laser-weapons-damage-7]",
   prerequisites = {
-    "laser-weapons-damage-6",
-    "space-science-pack"
+    "space-science-pack",
+    "laser-weapons-damage-6"
   },
   type = "technology",
   unit = {
-    count_formula = "2^(L-7)*1000",
+    count_formula = "(3600) + 2^(L-7)*1000",
     ingredients = {
       {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
-        1
-      },
-      {
-        "chemical-science-pack",
-        1
-      },
-      {
-        "military-science-pack",
+        "space-science-pack",
         1
       },
       {
         "utility-science-pack",
-        1
+        2
       },
       {
-        "space-science-pack",
-        1
+        "py-science-pack-4",
+        3
+      },
+      {
+        "production-science-pack",
+        6
+      },
+      {
+        "py-science-pack-3",
+        10
+      },
+      {
+        "chemical-science-pack",
+        20
+      },
+      {
+        "py-science-pack-2",
+        30
+      },
+      {
+        "logistic-science-pack",
+        60
+      },
+      {
+        "py-science-pack-1",
+        100
+      },
+      {
+        "automation-science-pack",
+        200
+      },
+      {
+        "military-science-pack",
+        30
       }
     },
-    time = 60
+    time = 1200
   },
   upgrade = true
 }

@@ -691,6 +691,15 @@ return {
       0.4
     }
   },
+  collision_mask = {
+    layers = {
+      floor = true,
+      meltable = true,
+      object = true,
+      transport_belt = true,
+      water_tile = true
+    }
+  },
   corpse = "express-splitter-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -758,7 +767,13 @@ return {
   max_health = 190,
   minable = {
     mining_time = 0.1,
-    result = "express-splitter"
+    results = {
+      {
+        amount = 1,
+        name = "express-splitter",
+        type = "item"
+      }
+    }
   },
   name = "express-splitter",
   open_sound = {

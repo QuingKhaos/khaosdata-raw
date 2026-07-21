@@ -9,29 +9,35 @@ return {
       type = "maximum-following-robots-count"
     }
   },
+  essential = false,
   icon = "__base__/graphics/technology/defender.png",
   icon_size = 256,
   name = "defender",
+  order = "autotech-[000177]-[defender]",
   prerequisites = {
     "military-science-pack"
   },
   type = "technology",
   unit = {
-    count = 100,
+    count = 175,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
       {
         "logistic-science-pack",
         1
+      },
+      {
+        "py-science-pack-1",
+        2
+      },
+      {
+        "automation-science-pack",
+        3
       },
       {
         "military-science-pack",
         1
       }
     },
-    time = 30
+    time = 90
   }
 }

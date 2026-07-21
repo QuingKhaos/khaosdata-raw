@@ -1,5 +1,6 @@
 return {
   amount = 20000,
+  hidden = true,
   icon = "__base__/graphics/achievement/iron-throne-1.png",
   icon_size = 128,
   item_product = "iron-plate",

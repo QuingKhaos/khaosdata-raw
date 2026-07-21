@@ -73,6 +73,8 @@ return {
   },
   collision_mask = {
     layers = {
+      caravan_collision_mask = true,
+      dingrido_collision_mask = true,
       doodad = true,
       floor = true,
       item = true,

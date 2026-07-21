@@ -5,35 +5,44 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = false,
   icon = "__base__/graphics/technology/distractor.png",
   icon_size = 256,
   name = "distractor",
+  order = "autotech-[000366]-[distractor]",
   prerequisites = {
-    "defender",
-    "military-3",
-    "laser"
+    "chemical-science-pack",
+    "defender"
   },
   type = "technology",
   unit = {
-    count = 200,
+    count = 700,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
-        1
-      },
       {
         "chemical-science-pack",
         1
       },
       {
+        "py-science-pack-2",
+        2
+      },
+      {
+        "logistic-science-pack",
+        3
+      },
+      {
+        "py-science-pack-1",
+        6
+      },
+      {
+        "automation-science-pack",
+        10
+      },
+      {
         "military-science-pack",
-        1
+        2
       }
     },
-    time = 30
+    time = 120
   }
 }

@@ -14,6 +14,11 @@ return {
       0.1
     }
   },
+  collision_mask = {
+    layers = {
+      resource = true
+    }
+  },
   driving_sound = {
     fade_ticks = 6,
     sound = {
@@ -51,7 +56,13 @@ return {
   minable = {
     mining_particle = "copper-ore-particle",
     mining_time = 1,
-    result = "copper-ore"
+    results = {
+      {
+        amount = 1,
+        name = "copper-ore",
+        type = "item"
+      }
+    }
   },
   mining_visualisation_tint = {
     a = 1,
@@ -71,6 +82,7 @@ return {
       0.5
     }
   },
+  selection_priority = 40,
   stage_counts = {
     15000,
     9500,

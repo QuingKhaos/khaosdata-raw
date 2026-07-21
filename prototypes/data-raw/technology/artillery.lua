@@ -1,10 +1,6 @@
 return {
   effects = {
     {
-      recipe = "artillery-wagon",
-      type = "unlock-recipe"
-    },
-    {
       recipe = "artillery-turret",
       type = "unlock-recipe"
     },
@@ -13,40 +9,43 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = false,
   icon = "__base__/graphics/technology/artillery.png",
   icon_size = 256,
   name = "artillery",
+  order = "autotech-[000430]-[artillery]",
   prerequisites = {
-    "military-4",
-    "tank",
-    "concrete",
-    "radar"
+    "tank"
   },
   type = "technology",
   unit = {
-    count = 2000,
+    count = 800,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
-        1
-      },
       {
         "chemical-science-pack",
         1
       },
       {
-        "military-science-pack",
-        1
+        "py-science-pack-2",
+        2
       },
       {
-        "utility-science-pack",
-        1
+        "logistic-science-pack",
+        3
+      },
+      {
+        "py-science-pack-1",
+        6
+      },
+      {
+        "automation-science-pack",
+        10
+      },
+      {
+        "military-science-pack",
+        2
       }
     },
-    time = 30
+    time = 120
   }
 }

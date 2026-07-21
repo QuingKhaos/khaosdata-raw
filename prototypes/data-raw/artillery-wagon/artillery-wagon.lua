@@ -336,6 +336,11 @@ return {
       2.3999999999999999
     }
   },
+  collision_mask = {
+    layers = {
+      train = true
+    }
+  },
   color = {
     a = 0.5,
     b = 0,
@@ -493,7 +498,13 @@ return {
   max_speed = 1.5,
   minable = {
     mining_time = 0.5,
-    result = "artillery-wagon"
+    results = {
+      {
+        amount = 1,
+        name = "artillery-wagon",
+        type = "item"
+      }
+    }
   },
   mined_sound = {
     switch_vibration_data = {

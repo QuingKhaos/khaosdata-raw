@@ -9,23 +9,29 @@ return {
   icon = "__base__/graphics/technology/military-science-pack.png",
   icon_size = 256,
   name = "military-science-pack",
+  order = "autotech-[000149]-[military-science-pack]",
   prerequisites = {
+    "logistic-science-pack",
     "military-2",
     "stone-wall"
   },
   type = "technology",
   unit = {
-    count = 30,
+    count = 160,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
       {
         "logistic-science-pack",
         1
+      },
+      {
+        "py-science-pack-1",
+        2
+      },
+      {
+        "automation-science-pack",
+        3
       }
     },
-    time = 15
+    time = 60
   }
 }

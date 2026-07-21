@@ -35,6 +35,18 @@ return {
       0.7
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "power-switch-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -106,7 +118,13 @@ return {
   max_health = 200,
   minable = {
     mining_time = 0.2,
-    result = "power-switch"
+    results = {
+      {
+        amount = 1,
+        name = "power-switch",
+        type = "item"
+      }
+    }
   },
   name = "power-switch",
   open_sound = {

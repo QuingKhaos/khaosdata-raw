@@ -5,6 +5,9 @@ return {
       type = "unlock-recipe"
     }
   },
+  enabled = false,
+  essential = false,
+  hidden = true,
   icons = {
     {
       icon = "__base__/graphics/technology/battery-mk2-equipment.png",
@@ -22,28 +25,41 @@ return {
     }
   },
   name = "battery-mk2-equipment",
+  order = "autotech-[000621]-[battery-mk2-equipment]",
   prerequisites = {
-    "battery-equipment",
+    "power-armor",
     "low-density-structure",
-    "power-armor"
+    "electric-energy-accumulators"
   },
   type = "technology",
   unit = {
-    count = 100,
+    count = 2250,
     ingredients = {
       {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
+        "py-science-pack-3",
         1
       },
       {
         "chemical-science-pack",
-        1
+        2
+      },
+      {
+        "py-science-pack-2",
+        3
+      },
+      {
+        "logistic-science-pack",
+        6
+      },
+      {
+        "py-science-pack-1",
+        10
+      },
+      {
+        "automation-science-pack",
+        20
       }
     },
-    time = 30
+    time = 180
   }
 }

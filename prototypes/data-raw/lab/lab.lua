@@ -1,194 +1,186 @@
 return {
+  allowed_effects = {
+    "consumption",
+    "productivity",
+    "pollution"
+  },
+  allowed_module_categories = {
+    "vatbrain"
+  },
   close_sound = {
-    filename = "__base__/sound/open-close/lab-close.ogg",
-    volume = 0.8
+    filename = "__base__/sound/machine-close.ogg",
+    volume = 0.5
   },
   collision_box = {
     {
-      -1.2,
-      -1.2
+      -2.2000000000000002,
+      -2.2000000000000002
     },
     {
-      1.2,
-      1.2
+      2.2000000000000002,
+      2.2000000000000002
+    }
+  },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
     }
   },
   corpse = "lab-remnants",
-  damaged_trigger_effect = {
-    damage_type_filters = "fire",
-    entity_name = "spark-explosion",
-    offset_deviation = {
-      {
-        -0.5,
-        -0.5
-      },
-      {
-        0.5,
-        0.5
-      }
-    },
-    offsets = {
-      {
-        0,
-        1
-      }
-    },
-    type = "create-entity"
-  },
+  drawing_box_vertical_extension = 2,
   dying_explosion = "lab-explosion",
   energy_source = {
     type = "electric",
     usage_priority = "secondary-input"
   },
   energy_usage = "60kW",
-  fast_replaceable_group = "lab",
   flags = {
     "placeable-player",
     "player-creation"
   },
-  icon = "__base__/graphics/icons/lab.png",
-  icons_positioning = {
-    {
-      inventory_index = 3,
-      shift = {
-        0,
-        0.9
-      }
-    },
-    {
-      inventory_index = 2,
-      max_icons_per_row = 4,
-      separation_multiplier = 0.90909090909090899,
-      shift = {
-        0,
-        0
-      }
-    }
-  },
-  impact_category = "glass",
+  icon = "__pycoalprocessinggraphics__/graphics/icons/lab-mk01.png",
+  icon_size = 64,
   inputs = {
     "automation-science-pack",
+    "py-science-pack-1",
     "logistic-science-pack",
     "military-science-pack",
+    "py-science-pack-2",
     "chemical-science-pack",
+    "py-science-pack-3",
     "production-science-pack",
+    "py-science-pack-4",
     "utility-science-pack",
     "space-science-pack"
   },
   max_health = 150,
   minable = {
     mining_time = 0.2,
-    result = "lab"
+    results = {
+      {
+        amount = 1,
+        name = "lab",
+        type = "item"
+      }
+    }
   },
-  module_slots = 2,
+  module_slots = 0,
   name = "lab",
   off_animation = {
     layers = {
       {
-        filename = "__base__/graphics/entity/lab/lab.png",
-        height = 174,
-        scale = 0.5,
+        filename = "__pycoalprocessinggraphics__/graphics/entity/lab-mk01/raw.png",
+        frame_count = 1,
+        height = 384,
         shift = {
           0,
-          0.046875
+          -3.5
         },
-        width = 194
-      },
-      {
-        filename = "__base__/graphics/entity/lab/lab-integration.png",
-        height = 162,
-        scale = 0.5,
-        shift = {
-          0,
-          0.484375
-        },
-        width = 242
+        width = 160
       },
       {
         draw_as_shadow = true,
-        filename = "__base__/graphics/entity/lab/lab-shadow.png",
-        height = 136,
-        scale = 0.5,
+        filename = "__pycoalprocessinggraphics__/graphics/entity/lab-mk01/sh.png",
+        frame_count = 1,
+        height = 160,
         shift = {
-          0.40625,
-          0.34375
+          1,
+          0
         },
-        width = 242
+        width = 224
       }
     }
   },
   on_animation = {
     layers = {
       {
-        animation_speed = 0.3333333333333333,
-        filename = "__base__/graphics/entity/lab/lab.png",
-        frame_count = 33,
-        height = 174,
-        line_length = 11,
-        scale = 0.5,
+        animation_speed = 0.2,
+        filename = "__pycoalprocessinggraphics__/graphics/entity/lab-mk01/raw.png",
+        frame_count = 30,
+        height = 384,
+        line_length = 10,
+        repeat_count = 2,
         shift = {
           0,
-          0.046875
+          -3.5
         },
-        width = 194
+        width = 160
       },
       {
-        animation_speed = 0.3333333333333333,
-        filename = "__base__/graphics/entity/lab/lab-integration.png",
-        height = 162,
-        line_length = 1,
-        repeat_count = 33,
-        scale = 0.5,
-        shift = {
-          0,
-          0.484375
-        },
-        width = 242
-      },
-      {
-        animation_speed = 0.3333333333333333,
-        blend_mode = "additive",
+        animation_speed = 0.2,
         draw_as_light = true,
-        filename = "__base__/graphics/entity/lab/lab-light.png",
-        frame_count = 33,
-        height = 194,
-        line_length = 11,
-        scale = 0.5,
+        filename = "__pycoalprocessinggraphics__/graphics/entity/lab-mk01/l.png",
+        frame_count = 1,
+        height = 384,
+        line_length = 1,
+        repeat_count = 60,
         shift = {
-          0,
+          -0,
+          -3.5
+        },
+        width = 160
+      },
+      {
+        animation_speed = 0.25,
+        filename = "__pycoalprocessinggraphics__/graphics/entity/lab-mk01/beam.png",
+        frame_count = 60,
+        height = 128,
+        line_length = 20,
+        shift = {
+          1,
+          -3.5
+        },
+        width = 96
+      },
+      {
+        animation_speed = 0.25,
+        draw_as_light = true,
+        filename = "__pycoalprocessinggraphics__/graphics/entity/lab-mk01/beam.png",
+        frame_count = 60,
+        height = 128,
+        line_length = 20,
+        shift = {
+          1,
+          -3.5
+        },
+        width = 96
+      },
+      {
+        animation_speed = 0.2,
+        draw_as_shadow = true,
+        filename = "__pycoalprocessinggraphics__/graphics/entity/lab-mk01/sh.png",
+        frame_count = 1,
+        height = 160,
+        line_length = 1,
+        repeat_count = 60,
+        shift = {
+          1,
           0
         },
-        width = 216
-      },
-      {
-        animation_speed = 0.3333333333333333,
-        draw_as_shadow = true,
-        filename = "__base__/graphics/entity/lab/lab-shadow.png",
-        height = 136,
-        line_length = 1,
-        repeat_count = 33,
-        scale = 0.5,
-        shift = {
-          0.40625,
-          0.34375
-        },
-        width = 242
+        width = 224
       }
     }
   },
   open_sound = {
-    filename = "__base__/sound/open-close/lab-open.ogg",
-    volume = 0.8
+    filename = "__base__/sound/machine-open.ogg",
+    volume = 0.5
   },
   researching_speed = 1,
   selection_box = {
     {
-      -1.5,
-      -1.5
+      -2.5,
+      -2.5
     },
     {
-      1.5,
-      1.5
+      2.5,
+      2.5
     }
   },
   type = "lab",
@@ -198,16 +190,6 @@ return {
     sound = {
       audible_distance_modifier = 0.7,
       filename = "__base__/sound/lab.ogg",
-      modifiers = {
-        {
-          type = "main-menu",
-          volume_multiplier = 2.2000000000000002
-        },
-        {
-          type = "tips-and-tricks",
-          volume_multiplier = 0.8
-        }
-      },
       volume = 0.7
     }
   }

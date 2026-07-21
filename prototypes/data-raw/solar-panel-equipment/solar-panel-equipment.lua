@@ -7,7 +7,7 @@ return {
     usage_priority = "primary-output"
   },
   name = "solar-panel-equipment",
-  power = "30kW",
+  power = "90kW",
   shape = {
     height = 1,
     type = "full",

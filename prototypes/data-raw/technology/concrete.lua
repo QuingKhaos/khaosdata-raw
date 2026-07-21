@@ -1,14 +1,6 @@
 return {
   effects = {
     {
-      recipe = "concrete",
-      type = "unlock-recipe"
-    },
-    {
-      recipe = "hazard-concrete",
-      type = "unlock-recipe"
-    },
-    {
       recipe = "refined-concrete",
       type = "unlock-recipe"
     },
@@ -17,27 +9,33 @@ return {
       type = "unlock-recipe"
     },
     {
-      recipe = "iron-stick",
+      recipe = "concrete",
+      type = "unlock-recipe"
+    },
+    {
+      recipe = "hazard-concrete",
+      type = "unlock-recipe"
+    },
+    {
+      recipe = "lime",
       type = "unlock-recipe"
     }
   },
+  essential = true,
   icon = "__base__/graphics/technology/concrete.png",
   icon_size = 256,
   name = "concrete",
+  order = "autotech-[000018]-[concrete]",
   prerequisites = {
-    "advanced-material-processing",
-    "automation-2"
+    "crusher",
+    "automation"
   },
   type = "technology",
   unit = {
-    count = 250,
+    count = 24,
     ingredients = {
       {
         "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
         1
       }
     },

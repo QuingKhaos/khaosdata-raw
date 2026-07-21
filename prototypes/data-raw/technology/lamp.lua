@@ -5,21 +5,23 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = true,
   icon = "__base__/graphics/technology/lamp.png",
   icon_size = 256,
   name = "lamp",
+  order = "autotech-[000027]-[lamp]",
   prerequisites = {
-    "automation-science-pack"
+    "glass"
   },
   type = "technology",
   unit = {
-    count = 10,
+    count = 60,
     ingredients = {
       {
         "automation-science-pack",
         1
       }
     },
-    time = 15
+    time = 30
   }
 }

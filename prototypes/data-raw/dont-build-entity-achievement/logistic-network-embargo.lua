@@ -4,6 +4,7 @@ return {
     "requester-chest",
     "buffer-chest"
   },
+  hidden = true,
   icon = "__base__/graphics/achievement/logistic-network-embargo.png",
   icon_size = 128,
   name = "logistic-network-embargo",

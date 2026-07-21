@@ -49,6 +49,11 @@ return {
       2.3999999999999999
     }
   },
+  collision_mask = {
+    layers = {
+      train = true
+    }
+  },
   color = {
     a = 1,
     b = 0,
@@ -276,13 +281,19 @@ return {
     }
   },
   impact_category = "metal-large",
-  inventory_size = 40,
+  inventory_size = 20,
   joint_distance = 4,
   max_health = 600,
   max_speed = 1.5,
   minable = {
     mining_time = 0.5,
-    result = "cargo-wagon"
+    results = {
+      {
+        amount = 1,
+        name = "cargo-wagon",
+        type = "item"
+      }
+    }
   },
   mined_sound = {
     switch_vibration_data = {

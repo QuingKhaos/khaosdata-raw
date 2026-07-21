@@ -15,6 +15,17 @@ return {
       4.5
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   default_status = "broken",
   dying_explosion = "nuke-explosion",
   flags = {
@@ -27,6 +38,10 @@ return {
   },
   hidden = true,
   icon = "__base__/graphics/icons/crash-site-spaceship.png",
+  icon_draw_specification = {
+    scale = 3.6800000000000002,
+    scale_for_many = 3.6800000000000002
+  },
   integration_patch = {
     dice_x = 4,
     dice_y = 3,

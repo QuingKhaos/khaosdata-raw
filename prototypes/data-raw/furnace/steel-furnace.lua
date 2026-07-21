@@ -4,6 +4,12 @@ return {
     "consumption",
     "pollution"
   },
+  allowed_module_categories = {
+    "productivity",
+    "speed",
+    "efficiency",
+    "quality"
+  },
   circuit_connector = {
     {
       points = {
@@ -609,11 +615,23 @@ return {
       0.7
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "steel-furnace-remnants",
   crafting_categories = {
     "smelting"
   },
-  crafting_speed = 2,
+  crafting_speed = 4,
   damaged_trigger_effect = {
     damage_type_filters = "fire",
     entity_name = "spark-explosion",
@@ -642,12 +660,147 @@ return {
     uses_surface_effects = true
   },
   energy_source = {
+    burns_fluid = true,
+    burnt_inventory_size = 1,
+    destroy_non_fuel_fluid = false,
     effectivity = 1,
     emissions_per_minute = {
       pollution = 4
     },
+    fluid_box = {
+      pipe_connections = {
+        {
+          connection_category = {
+            "default",
+            "pipe",
+            "niobium-pipe",
+            "ht-pipes"
+          },
+          direction = 8,
+          flow_direction = "input-output",
+          position = {
+            0.5,
+            0.5
+          }
+        },
+        {
+          connection_category = {
+            "default",
+            "pipe",
+            "niobium-pipe",
+            "ht-pipes"
+          },
+          direction = 0,
+          flow_direction = "input-output",
+          position = {
+            0.5,
+            -0.5
+          }
+        }
+      },
+      pipe_covers = {
+        east = {
+          layers = {
+            {
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-east.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-east-shadow.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            }
+          }
+        },
+        north = {
+          filename = "__pypostprocessing__/empty.png",
+          line_length = 1,
+          priority = "high",
+          size = 1
+        },
+        south = {
+          layers = {
+            {
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-south.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-south-shadow.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            }
+          }
+        },
+        west = {
+          layers = {
+            {
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-west.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-west-shadow.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            }
+          }
+        }
+      },
+      pipe_picture = {
+        east = {
+          filename = "__pypostprocessing__/empty.png",
+          line_length = 1,
+          priority = "high",
+          size = 1
+        },
+        north = {
+          filename = "__pypostprocessing__/empty.png",
+          line_length = 1,
+          priority = "high",
+          size = 1
+        },
+        south = {
+          filename = "__base__/graphics/entity/assembling-machine-2/assembling-machine-2-pipe-S.png",
+          height = 61,
+          priority = "extra-high",
+          scale = 0.5,
+          shift = {
+            0,
+            -0.95999999999999996
+          },
+          width = 88
+        },
+        west = {
+          filename = "__pypostprocessing__/empty.png",
+          line_length = 1,
+          priority = "high",
+          size = 1
+        }
+      },
+      production_type = "input",
+      volume = 200
+    },
+    fluid_usage_per_tick = 2,
     fuel_categories = {
-      "chemical"
+      "chemical",
+      "biomass"
     },
     fuel_inventory_size = 1,
     light_flicker = {
@@ -659,6 +812,7 @@ return {
       maximum_intensity = 0.95,
       minimum_intensity = 0.6
     },
+    scale_fluid_usage = true,
     smoke = {
       {
         frequency = 10,
@@ -671,9 +825,9 @@ return {
         starting_vertical_speed = 0.08
       }
     },
-    type = "burner"
+    type = "fluid"
   },
-  energy_usage = "90kW",
+  energy_usage = "6MW",
   fast_replaceable_group = "furnace",
   flags = {
     "placeable-neutral",
@@ -806,10 +960,17 @@ return {
     }
   },
   impact_category = "metal",
+  match_animation_speed_to_activity = false,
   max_health = 300,
   minable = {
     mining_time = 0.2,
-    result = "steel-furnace"
+    results = {
+      {
+        amount = 1,
+        name = "steel-furnace",
+        type = "item"
+      }
+    }
   },
   name = "steel-furnace",
   open_sound = {

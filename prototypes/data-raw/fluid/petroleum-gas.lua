@@ -10,6 +10,8 @@ return {
     0.8,
     0.8
   },
+  fuel_value = "1MJ",
+  gas_temperature = 20,
   icon = "__base__/graphics/icons/fluid/petroleum-gas.png",
   name = "petroleum-gas",
   order = "a[fluid]-b[oil]-b[petroleum-gas]",

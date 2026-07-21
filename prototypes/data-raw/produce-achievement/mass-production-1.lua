@@ -1,5 +1,6 @@
 return {
   amount = 10000,
+  hidden = true,
   icon = "__base__/graphics/achievement/mass-production-1.png",
   icon_size = 128,
   item_product = "electronic-circuit",

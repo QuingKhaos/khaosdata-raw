@@ -13,30 +13,35 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = false,
   icon = "__base__/graphics/technology/flamethrower.png",
   icon_size = 256,
   name = "flamethrower",
+  order = "autotech-[000176]-[flamethrower]",
   prerequisites = {
-    "flammables",
     "military-science-pack"
   },
   type = "technology",
   unit = {
-    count = 50,
+    count = 175,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
       {
         "logistic-science-pack",
         1
+      },
+      {
+        "py-science-pack-1",
+        2
+      },
+      {
+        "automation-science-pack",
+        3
       },
       {
         "military-science-pack",
         1
       }
     },
-    time = 30
+    time = 90
   }
 }

@@ -1,53 +1,4 @@
 return {
-  base = {
-    layers = {
-      {
-        filename = "__base__/graphics/entity/roboport/roboport-base.png",
-        height = 277,
-        scale = 0.5,
-        shift = {
-          0.0625,
-          -0.0703125
-        },
-        width = 228
-      },
-      {
-        draw_as_shadow = true,
-        filename = "__base__/graphics/entity/roboport/roboport-shadow.png",
-        height = 201,
-        scale = 0.5,
-        shift = {
-          0.890625,
-          0.2890625
-        },
-        width = 294
-      }
-    }
-  },
-  base_animation = {
-    animation_speed = 0.5,
-    filename = "__base__/graphics/entity/roboport/roboport-base-animation.png",
-    frame_count = 8,
-    height = 59,
-    priority = "medium",
-    scale = 0.5,
-    shift = {
-      -0.5546875,
-      -2.2265625
-    },
-    width = 83
-  },
-  base_patch = {
-    filename = "__base__/graphics/entity/roboport/roboport-base-patch.png",
-    height = 100,
-    priority = "medium",
-    scale = 0.5,
-    shift = {
-      0.046875,
-      -0.15625
-    },
-    width = 138
-  },
   charge_approach_distance = 5,
   charging_energy = "500kW",
   charging_offsets = {
@@ -218,6 +169,19 @@ return {
       1.7
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      elevated_rail = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   construction_radius = 55,
   corpse = "roboport-remnants",
   damaged_trigger_effect = {
@@ -261,30 +225,6 @@ return {
     name = "signal-Y",
     type = "virtual"
   },
-  door_animation_down = {
-    filename = "__base__/graphics/entity/roboport/roboport-door-down.png",
-    frame_count = 16,
-    height = 41,
-    priority = "medium",
-    scale = 0.5,
-    shift = {
-      -0.0078125,
-      -0.6171875
-    },
-    width = 97
-  },
-  door_animation_up = {
-    filename = "__base__/graphics/entity/roboport/roboport-door-up.png",
-    frame_count = 16,
-    height = 38,
-    priority = "medium",
-    scale = 0.5,
-    shift = {
-      -0.0078125,
-      -1.234375
-    },
-    width = 97
-  },
   draw_construction_radius_visualization = true,
   draw_logistic_radius_visualization = true,
   dying_explosion = "roboport-explosion",
@@ -300,6 +240,7 @@ return {
     "placeable-player",
     "player-creation"
   },
+  hidden = true,
   icon = "__base__/graphics/icons/roboport.png",
   impact_category = "metal",
   logistics_radius = 25,
@@ -307,7 +248,13 @@ return {
   max_health = 500,
   minable = {
     mining_time = 0.1,
-    result = "roboport"
+    results = {
+      {
+        amount = 1,
+        name = "roboport",
+        type = "item"
+      }
+    }
   },
   name = "roboport",
   open_door_trigger_effect = {
@@ -337,16 +284,6 @@ return {
     0.275
   },
   recharge_minimum = "40MJ",
-  recharging_animation = {
-    animation_speed = 0.5,
-    draw_as_glow = true,
-    filename = "__base__/graphics/entity/roboport/roboport-recharging.png",
-    frame_count = 16,
-    height = 35,
-    priority = "high",
-    scale = 1.5,
-    width = 37
-  },
   recharging_light = {
     color = {
       0.5,

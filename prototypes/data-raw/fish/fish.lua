@@ -1,6 +1,7 @@
 return {
   autoplace = {
-    probability_expression = 0.01
+    order = "fish",
+    probability_expression = 0.002
   },
   collision_box = {
     {
@@ -10,6 +11,12 @@ return {
     {
       0.75,
       0.75
+    }
+  },
+  collision_mask = {
+    colliding_with_tiles_only = true,
+    layers = {
+      ground_tile = true
     }
   },
   factoriopedia_simulation = {
@@ -22,9 +29,14 @@ return {
   icon = "__base__/graphics/icons/fish-entity.png",
   max_health = 20,
   minable = {
-    count = 5,
     mining_time = 0.4,
-    result = "raw-fish"
+    results = {
+      {
+        amount = 5,
+        name = "fish",
+        type = "item"
+      }
+    }
   },
   mined_sound = {
     {

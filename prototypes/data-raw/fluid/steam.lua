@@ -12,9 +12,9 @@ return {
     1
   },
   gas_temperature = 15,
-  heat_capacity = "0.2kJ",
+  heat_capacity = "2.1kJ",
   icon = "__base__/graphics/icons/fluid/steam.png",
-  max_temperature = 5000,
+  max_temperature = 2000,
   name = "steam",
   order = "a[fluid]-a[water]-b[steam]",
   subgroup = "fluid",

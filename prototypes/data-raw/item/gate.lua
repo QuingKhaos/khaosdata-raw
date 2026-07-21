@@ -28,6 +28,6 @@ return {
   },
   place_result = "gate",
   stack_size = 50,
-  subgroup = "defensive-structure",
+  subgroup = "py-walls",
   type = "item"
 }

@@ -11,28 +11,42 @@ return {
     {
       recipe = "fast-splitter",
       type = "unlock-recipe"
+    },
+    {
+      recipe = "fast-transport-belt-2",
+      type = "unlock-recipe"
     }
   },
+  essential = true,
   icon = "__base__/graphics/technology/logistics-2.png",
   icon_size = 256,
   name = "logistics-2",
+  order = "autotech-[000322]-[logistics-2]",
   prerequisites = {
-    "logistics",
-    "logistic-science-pack"
+    "basic-electronics",
+    "small-parts-mk02"
   },
   type = "technology",
   unit = {
-    count = 200,
+    count = 1100,
     ingredients = {
       {
-        "automation-science-pack",
+        "py-science-pack-2",
         1
       },
       {
         "logistic-science-pack",
-        1
+        2
+      },
+      {
+        "py-science-pack-1",
+        3
+      },
+      {
+        "automation-science-pack",
+        6
       }
     },
-    time = 30
+    time = 90
   }
 }

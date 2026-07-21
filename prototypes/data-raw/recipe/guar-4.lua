@@ -1,0 +1,115 @@
+return {
+  allow_productivity = true,
+  always_show_made_in = true,
+  always_show_products = true,
+  category = "guar",
+  enabled = false,
+  energy_required = 30,
+  icons = {
+    {
+      icon = "__pyalienlifegraphics__/graphics/icons/guar.png"
+    },
+    {
+      floating = true,
+      icon = "__pyalienlifegraphics__/graphics/icons/4.png",
+      scale = 0.25,
+      shift = {
+        8,
+        8
+      }
+    }
+  },
+  ingredients = {
+    {
+      amount = 50,
+      name = "guar-seeds",
+      type = "item"
+    },
+    {
+      amount = 500,
+      fluidbox_index = 1,
+      name = "water",
+      type = "fluid"
+    },
+    {
+      amount = 48,
+      name = "sand",
+      type = "item"
+    },
+    {
+      amount = 25,
+      name = "ash",
+      type = "item"
+    },
+    {
+      amount = 6,
+      name = "small-lamp",
+      type = "item"
+    },
+    {
+      amount = 6,
+      name = "coarse",
+      type = "item"
+    },
+    {
+      amount = 2,
+      name = "pesticide-mk01",
+      type = "item"
+    },
+    {
+      amount = 1000,
+      fluidbox_index = 2,
+      name = "carbon-dioxide",
+      type = "fluid"
+    },
+    {
+      amount = 2,
+      name = "pesticide-mk02",
+      type = "item"
+    },
+    {
+      amount = 8,
+      fallback = "coarse",
+      name = "clay",
+      type = "item"
+    }
+  },
+  localised_description = {
+    "?",
+    {
+      "",
+      {
+        "recipe-description.guar-4"
+      },
+      "\n",
+      {
+        "recipe-description.affected-by-productivity"
+      }
+    },
+    {
+      "recipe-description.affected-by-productivity"
+    }
+  },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.guar-4"
+    },
+    {
+      "item-name.guar"
+    }
+  },
+  main_product = "guar",
+  maximum_productivity = 1000000,
+  name = "guar-4",
+  order = "a",
+  results = {
+    {
+      amount = 90,
+      name = "guar",
+      type = "item"
+    }
+  },
+  subgroup = "py-alienlife-guar",
+  type = "recipe"
+}

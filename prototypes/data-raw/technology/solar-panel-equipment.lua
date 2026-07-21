@@ -5,6 +5,7 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = false,
   icons = {
     {
       icon = "__base__/graphics/technology/solar-panel-equipment.png",
@@ -22,23 +23,42 @@ return {
     }
   },
   name = "solar-panel-equipment",
+  order = "autotech-[000571]-[solar-panel-equipment]",
   prerequisites = {
+    "lithium-processing",
+    "solar-mk01",
     "modular-armor",
-    "solar-energy"
+    "electric-energy-distribution-1"
   },
   type = "technology",
   unit = {
-    count = 100,
+    count = 1300,
     ingredients = {
       {
-        "automation-science-pack",
+        "py-science-pack-3",
         1
       },
       {
+        "chemical-science-pack",
+        2
+      },
+      {
+        "py-science-pack-2",
+        3
+      },
+      {
         "logistic-science-pack",
-        1
+        6
+      },
+      {
+        "py-science-pack-1",
+        10
+      },
+      {
+        "automation-science-pack",
+        20
       }
     },
-    time = 15
+    time = 180
   }
 }

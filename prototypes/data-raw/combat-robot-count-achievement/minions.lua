@@ -1,5 +1,6 @@
 return {
   count = 100,
+  hidden = true,
   icon = "__base__/graphics/achievement/minions.png",
   icon_size = 128,
   name = "minions",

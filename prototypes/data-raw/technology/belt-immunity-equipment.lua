@@ -5,6 +5,7 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = false,
   icons = {
     {
       icon = "__base__/graphics/technology/belt-immunity-equipment.png",
@@ -22,22 +23,32 @@ return {
     }
   },
   name = "belt-immunity-equipment",
+  order = "autotech-[000263]-[belt-immunity-equipment]",
   prerequisites = {
-    "solar-panel-equipment"
+    "py-science-pack-2",
+    "personal-roboport-equipment"
   },
   type = "technology",
   unit = {
-    count = 50,
+    count = 450,
     ingredients = {
       {
-        "automation-science-pack",
+        "py-science-pack-2",
         1
       },
       {
         "logistic-science-pack",
-        1
+        2
+      },
+      {
+        "py-science-pack-1",
+        3
+      },
+      {
+        "automation-science-pack",
+        6
       }
     },
-    time = 15
+    time = 90
   }
 }

@@ -1,4 +1,6 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 8,
   ingredients = {
@@ -9,7 +11,7 @@ return {
     },
     {
       amount = 500,
-      name = "steel-plate",
+      name = "titanium-plate",
       type = "item"
     },
     {
@@ -19,10 +21,23 @@ return {
     },
     {
       amount = 500,
-      name = "copper-plate",
+      name = "stainless-steel",
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.nuclear-reactor"
+    },
+    {
+      "item-name.nuclear-reactor"
+    },
+    {
+      "entity-name.nuclear-reactor"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "nuclear-reactor",
   requester_paste_multiplier = 1,
   results = {

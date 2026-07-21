@@ -133,6 +133,18 @@ return {
       0.29
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   connected_gate_visualization = {
     filename = "__core__/graphics/arrows/underground-lines.png",
     height = 64,
@@ -177,7 +189,13 @@ return {
   max_health = 350,
   minable = {
     mining_time = 0.2,
-    result = "stone-wall"
+    results = {
+      {
+        amount = 1,
+        name = "stone-wall",
+        type = "item"
+      }
+    }
   },
   mined_sound = {
     aggregation = {

@@ -1,4 +1,5 @@
 return {
+  burnt_result = "ash",
   dark_background_icon = "__base__/graphics/icons/coal-dark-background.png",
   drop_sound = {
     aggregation = {

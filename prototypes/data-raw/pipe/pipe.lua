@@ -13,6 +13,17 @@ return {
       0.29
     }
   },
+  collision_mask = {
+    layers = {
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "pipe-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -43,6 +54,7 @@ return {
   },
   fluid_box = {
     hide_connection_info = true,
+    max_pipeline_extent = 320,
     pipe_connections = {
       {
         direction = 0,
@@ -165,13 +177,19 @@ return {
   },
   icon = "__base__/graphics/icons/pipe.png",
   icon_draw_specification = {
-    scale = 0.5
+    scale = 0.65
   },
   impact_category = "metal",
   max_health = 100,
   minable = {
     mining_time = 0.1,
-    result = "pipe"
+    results = {
+      {
+        amount = 1,
+        name = "pipe",
+        type = "item"
+      }
+    }
   },
   name = "pipe",
   open_sound = {

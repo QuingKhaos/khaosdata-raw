@@ -1,5 +1,5 @@
 return {
-  group = "intermediate-products",
+  group = "production",
   name = "science-pack",
   order = "y",
   type = "item-subgroup"

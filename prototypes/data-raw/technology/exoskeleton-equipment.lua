@@ -5,6 +5,7 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = true,
   icons = {
     {
       icon = "__base__/graphics/technology/exoskeleton-equipment.png",
@@ -22,28 +23,48 @@ return {
     }
   },
   name = "exoskeleton-equipment",
+  order = "autotech-[000808]-[exoskeleton-equipment]",
   prerequisites = {
-    "processing-unit",
-    "electric-engine",
-    "solar-panel-equipment"
+    "machine-components-mk04",
+    "power-armor"
   },
   type = "technology",
   unit = {
-    count = 50,
+    count = 3300,
     ingredients = {
       {
-        "automation-science-pack",
+        "production-science-pack",
         1
       },
       {
-        "logistic-science-pack",
-        1
+        "py-science-pack-3",
+        2
       },
       {
         "chemical-science-pack",
-        1
+        3
+      },
+      {
+        "py-science-pack-2",
+        6
+      },
+      {
+        "logistic-science-pack",
+        10
+      },
+      {
+        "py-science-pack-1",
+        20
+      },
+      {
+        "automation-science-pack",
+        30
+      },
+      {
+        "military-science-pack",
+        6
       }
     },
-    time = 30
+    time = 300
   }
 }

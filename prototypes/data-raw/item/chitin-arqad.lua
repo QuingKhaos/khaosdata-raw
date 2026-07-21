@@ -1,0 +1,40 @@
+return {
+  flags = {},
+  icon_size = 64,
+  icons = {
+    {
+      icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"
+    },
+    {
+      icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
+      scale = 0.25,
+      shift = {
+        -8,
+        -8
+      }
+    }
+  },
+  localised_description = {
+    "?",
+    {
+      "",
+      {
+        "item-description.chitin-arqad"
+      },
+      "\n",
+      {
+        "item-description.compost-amount",
+        "5"
+      }
+    },
+    {
+      "item-description.compost-amount",
+      "5"
+    }
+  },
+  name = "chitin-arqad",
+  order = "a",
+  stack_size = 100,
+  subgroup = "py-alienlife-arqad",
+  type = "item"
+}

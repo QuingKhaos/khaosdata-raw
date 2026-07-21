@@ -13,39 +13,43 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = false,
   icon = "__base__/graphics/technology/uranium-ammo.png",
   icon_size = 256,
   name = "uranium-ammo",
+  order = "autotech-[000429]-[uranium-ammo]",
   prerequisites = {
-    "uranium-processing",
-    "military-4",
     "tank"
   },
   type = "technology",
   unit = {
-    count = 1000,
+    count = 800,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
-        1
-      },
       {
         "chemical-science-pack",
         1
       },
       {
-        "military-science-pack",
-        1
+        "py-science-pack-2",
+        2
       },
       {
-        "utility-science-pack",
-        1
+        "logistic-science-pack",
+        3
+      },
+      {
+        "py-science-pack-1",
+        6
+      },
+      {
+        "automation-science-pack",
+        10
+      },
+      {
+        "military-science-pack",
+        2
       }
     },
-    time = 45
+    time = 120
   }
 }

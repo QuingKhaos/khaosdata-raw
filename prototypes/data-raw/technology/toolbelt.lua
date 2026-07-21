@@ -5,6 +5,7 @@ return {
       type = "character-inventory-slots-bonus"
     }
   },
+  essential = false,
   icons = {
     {
       icon = "__base__/graphics/technology/toolbelt.png",
@@ -22,22 +23,27 @@ return {
     }
   },
   name = "toolbelt",
+  order = "autotech-[000148]-[toolbelt]",
   prerequisites = {
     "logistic-science-pack"
   },
   type = "technology",
   unit = {
-    count = 100,
+    count = 160,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
       {
         "logistic-science-pack",
         1
+      },
+      {
+        "py-science-pack-1",
+        2
+      },
+      {
+        "automation-science-pack",
+        3
       }
     },
-    time = 30
+    time = 60
   }
 }

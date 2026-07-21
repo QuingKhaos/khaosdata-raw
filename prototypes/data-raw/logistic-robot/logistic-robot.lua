@@ -48,6 +48,9 @@ return {
       0
     }
   },
+  collision_mask = {
+    layers = {}
+  },
   damaged_trigger_effect = {
     damage_type_filters = "fire",
     entity_name = "flying-robot-damaged-explosion",
@@ -155,6 +158,7 @@ return {
     "placeable-off-grid",
     "not-on-map"
   },
+  hidden = true,
   hit_visualization_box = {
     {
       -0.1,
@@ -237,7 +241,13 @@ return {
   min_to_charge = 0.2,
   minable = {
     mining_time = 0.1,
-    result = "logistic-robot"
+    results = {
+      {
+        amount = 1,
+        name = "logistic-robot",
+        type = "item"
+      }
+    }
   },
   name = "logistic-robot",
   resistances = {

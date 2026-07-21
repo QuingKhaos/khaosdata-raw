@@ -27,7 +27,7 @@ return {
     volume = 0.8
   },
   stack_size = 50,
-  subgroup = "raw-material",
+  subgroup = "py-items",
   type = "item",
   weight = 2000
 }

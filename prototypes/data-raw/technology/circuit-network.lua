@@ -1,10 +1,6 @@
 return {
   effects = {
     {
-      modifier = true,
-      type = "unlock-circuit-network"
-    },
-    {
       recipe = "arithmetic-combinator",
       type = "unlock-recipe"
     },
@@ -27,31 +23,29 @@ return {
     {
       recipe = "display-panel",
       type = "unlock-recipe"
-    },
-    {
-      recipe = "iron-stick",
-      type = "unlock-recipe"
     }
   },
+  essential = true,
   icon = "__base__/graphics/technology/circuit-network.png",
   icon_size = 256,
   name = "circuit-network",
+  order = "autotech-[000130]-[circuit-network]",
   prerequisites = {
-    "logistic-science-pack"
+    "machine-components-mk01"
   },
   type = "technology",
   unit = {
-    count = 100,
+    count = 225,
     ingredients = {
       {
-        "automation-science-pack",
+        "py-science-pack-1",
         1
       },
       {
-        "logistic-science-pack",
-        1
+        "automation-science-pack",
+        2
       }
     },
-    time = 15
+    time = 45
   }
 }

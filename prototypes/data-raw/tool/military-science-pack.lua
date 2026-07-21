@@ -27,7 +27,7 @@ return {
     "item-description.science-pack"
   },
   name = "military-science-pack",
-  order = "c[military-science-pack]",
+  order = "d",
   pick_sound = {
     aggregation = {
       max_count = 1,

@@ -70,6 +70,8 @@ return {
   },
   collision_mask = {
     layers = {
+      caravan_collision_mask = true,
+      dingrido_collision_mask = true,
       floor = true,
       resource = true,
       water_tile = true

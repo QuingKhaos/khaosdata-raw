@@ -14,7 +14,8 @@ return {
   durability_description_key = "description.science-pack-remaining-amount-key",
   durability_description_value = "description.science-pack-remaining-amount-value",
   factoriopedia_durability_description_key = "description.factoriopedia-science-pack-remaining-amount-key",
-  icon = "__base__/graphics/icons/logistic-science-pack.png",
+  icon = "__pycoalprocessinggraphics__/graphics/icons/science-pack-2.png",
+  icon_size = 64,
   inventory_move_sound = {
     aggregation = {
       max_count = 1,
@@ -27,7 +28,7 @@ return {
     "item-description.science-pack"
   },
   name = "logistic-science-pack",
-  order = "b[logistic-science-pack]",
+  order = "c",
   pick_sound = {
     aggregation = {
       max_count = 1,

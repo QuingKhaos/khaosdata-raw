@@ -1,13 +1,14 @@
 return {
   categories = {
-    "armor"
+    "armor",
+    "py-mount-generator"
   },
-  energy_consumption = "200kW",
+  energy_consumption = "750kW",
   energy_source = {
     type = "electric",
     usage_priority = "secondary-input"
   },
-  movement_bonus = 0.3,
+  movement_bonus = 2,
   name = "exoskeleton-equipment",
   shape = {
     height = 4,

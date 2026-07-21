@@ -1,4 +1,6 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 4,
   ingredients = {
@@ -9,17 +11,17 @@ return {
     },
     {
       amount = 10,
-      name = "iron-gear-wheel",
+      name = "small-parts-01",
       type = "item"
     },
     {
       amount = 40,
-      name = "steel-plate",
+      name = "super-steel",
       type = "item"
     },
     {
       amount = 16,
-      name = "pipe",
+      name = "niobium-pipe",
       type = "item"
     },
     {
@@ -28,6 +30,19 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.artillery-wagon"
+    },
+    {
+      "item-name.artillery-wagon"
+    },
+    {
+      "entity-name.artillery-wagon"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "artillery-wagon",
   results = {
     {

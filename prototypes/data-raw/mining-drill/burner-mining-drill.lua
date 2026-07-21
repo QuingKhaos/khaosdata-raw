@@ -1,5 +1,11 @@
 return {
   allowed_effects = {},
+  allowed_module_categories = {
+    "productivity",
+    "speed",
+    "efficiency",
+    "quality"
+  },
   circuit_connector = {
     {
       points = {
@@ -605,6 +611,18 @@ return {
       0.7
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "burner-mining-drill-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -629,12 +647,14 @@ return {
   },
   dying_explosion = "burner-mining-drill-explosion",
   energy_source = {
+    burnt_inventory_size = 1,
     effectivity = 1,
     emissions_per_minute = {
       pollution = 12
     },
     fuel_categories = {
-      "chemical"
+      "chemical",
+      "biomass"
     },
     fuel_inventory_size = 1,
     light_flicker = {
@@ -656,7 +676,7 @@ return {
     },
     type = "burner"
   },
-  energy_usage = "150kW",
+  energy_usage = "500kW",
   fast_replaceable_group = "mining-drill",
   flags = {
     "placeable-neutral",
@@ -810,9 +830,15 @@ return {
   max_health = 150,
   minable = {
     mining_time = 0.3,
-    result = "burner-mining-drill"
+    results = {
+      {
+        amount = 1,
+        name = "burner-mining-drill",
+        type = "item"
+      }
+    }
   },
-  mining_speed = 0.25,
+  mining_speed = 1,
   monitor_visualization_tint = {
     78,
     173,
@@ -823,10 +849,19 @@ return {
     filename = "__base__/sound/open-close/drill-open.ogg",
     volume = 0.9
   },
+  perceived_performance = {
+    maximum = 1.5,
+    performance_to_activity_rate = 0.2
+  },
+  radius_visualisation_picture = {
+    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",
+    height = 12,
+    width = 12
+  },
   resource_categories = {
     "basic-solid"
   },
-  resource_searching_radius = 0.99000000000000004,
+  resource_searching_radius = 1.99,
   selection_box = {
     {
       -1,

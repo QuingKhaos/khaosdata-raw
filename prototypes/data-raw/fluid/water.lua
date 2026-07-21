@@ -10,9 +10,9 @@ return {
     0.7,
     0.7
   },
-  heat_capacity = "2kJ",
+  heat_capacity = "2.1kJ",
   icon = "__base__/graphics/icons/fluid/water.png",
-  max_temperature = 100,
+  max_temperature = 500,
   name = "water",
   order = "a[fluid]-a[water]-a[water]",
   subgroup = "fluid",

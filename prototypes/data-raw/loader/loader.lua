@@ -1083,6 +1083,15 @@ return {
       0.9
     }
   },
+  collision_mask = {
+    layers = {
+      floor = true,
+      meltable = true,
+      object = true,
+      transport_belt = true,
+      water_tile = true
+    }
+  },
   corpse = "small-remnants",
   fast_replaceable_group = "loader",
   filter_count = 5,
@@ -1098,7 +1107,13 @@ return {
   max_health = 170,
   minable = {
     mining_time = 0.1,
-    result = "loader"
+    results = {
+      {
+        amount = 1,
+        name = "loader",
+        type = "item"
+      }
+    }
   },
   name = "loader",
   open_sound = {

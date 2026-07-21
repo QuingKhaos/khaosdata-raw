@@ -15,6 +15,17 @@ return {
       1.3999999999999999
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   default_status = "broken",
   dying_explosion = "big-explosion",
   flags = {

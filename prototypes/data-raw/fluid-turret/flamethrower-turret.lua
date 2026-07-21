@@ -73,6 +73,70 @@ return {
       {
         damage_modifier = 1.1000000000000001,
         type = "light-oil"
+      },
+      {
+        damage_modifier = 2,
+        type = "gasoline"
+      },
+      {
+        damage_modifier = 2,
+        type = "diesel"
+      },
+      {
+        damage_modifier = 2,
+        type = "kerosene"
+      },
+      {
+        damage_modifier = 1.2,
+        type = "syngas"
+      },
+      {
+        damage_modifier = 1.2,
+        type = "refsyngas"
+      },
+      {
+        damage_modifier = 1.2,
+        type = "methanol"
+      },
+      {
+        damage_modifier = 1.2,
+        type = "combustion-mixture1"
+      },
+      {
+        damage_modifier = 1.2,
+        type = "oleochemicals"
+      },
+      {
+        damage_modifier = 2,
+        type = "olefin"
+      },
+      {
+        damage_modifier = 1.2,
+        type = "btx"
+      },
+      {
+        damage_modifier = 1.2,
+        type = "scrude"
+      },
+      {
+        damage_modifier = 1.2,
+        type = "natural-gas"
+      },
+      {
+        damage_modifier = 1.2,
+        type = "fuel-oil"
+      },
+      {
+        damage_modifier = 1.2,
+        type = "methane"
+      },
+      {
+        damage_modifier = 1.2,
+        type = "benzene"
+      },
+      {
+        damage_modifier = 1.2,
+        type = "ethanol"
       }
     },
     gun_barrel_length = 0.4,
@@ -1490,6 +1554,18 @@ return {
       1.2
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "flamethrower-turret-remnants",
   dying_explosion = "medium-explosion",
   ending_attack_animation = {
@@ -2456,6 +2532,12 @@ return {
   fluid_box = {
     pipe_connections = {
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 12,
         position = {
           -0.5,
@@ -2463,6 +2545,12 @@ return {
         }
       },
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 4,
         position = {
           0.5,
@@ -3534,7 +3622,13 @@ return {
   max_health = 1400,
   minable = {
     mining_time = 0.5,
-    result = "flamethrower-turret"
+    results = {
+      {
+        amount = 1,
+        name = "flamethrower-turret",
+        type = "item"
+      }
+    }
   },
   muzzle_animation = {
     blend_mode = "additive",

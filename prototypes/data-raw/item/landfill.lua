@@ -49,7 +49,7 @@ return {
     0.92000000000000011,
     1
   },
-  stack_size = 100,
+  stack_size = 1000,
   subgroup = "terrain",
   type = "item"
 }

@@ -16,6 +16,18 @@ return {
       0.4
     }
   },
+  collision_mask = {
+    layers = {
+      dingrido_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   colors = {
     {
       b = 82,
@@ -96,7 +108,6 @@ return {
   },
   max_health = 50,
   minable = {
-    count = 4,
     mining_particle = "wooden-particle",
     mining_time = 0.55,
     mining_trigger = {
@@ -137,7 +148,20 @@ return {
         type = "direct"
       }
     },
-    result = "wood"
+    results = {
+      {
+        amount_max = 2,
+        amount_min = 1,
+        name = "log",
+        type = "item"
+      },
+      {
+        amount = 1,
+        name = "saps",
+        probability = 0.1,
+        type = "item"
+      }
+    }
   },
   mined_sound = {
     {

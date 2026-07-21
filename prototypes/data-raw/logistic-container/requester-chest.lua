@@ -218,6 +218,17 @@ return {
       0.35
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "requester-chest-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -256,7 +267,13 @@ return {
   max_health = 350,
   minable = {
     mining_time = 0.1,
-    result = "requester-chest"
+    results = {
+      {
+        amount = 1,
+        name = "requester-chest",
+        type = "item"
+      }
+    }
   },
   name = "requester-chest",
   open_sound = {

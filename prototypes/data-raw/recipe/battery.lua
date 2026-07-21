@@ -1,5 +1,7 @@
 return {
   allow_productivity = true,
+  always_show_made_in = true,
+  always_show_products = true,
   category = "chemistry",
   crafting_machine_tint = {
     primary = {
@@ -29,6 +31,7 @@ return {
   },
   enabled = false,
   energy_required = 4,
+  hidden = true,
   ingredients = {
     {
       amount = 20,
@@ -37,20 +40,54 @@ return {
     },
     {
       amount = 1,
-      name = "iron-plate",
+      name = "zinc-plate",
       type = "item"
     },
     {
       amount = 1,
       name = "copper-plate",
       type = "item"
+    },
+    {
+      amount = 2,
+      name = "rayon",
+      type = "item"
     }
   },
+  localised_description = {
+    "?",
+    {
+      "",
+      {
+        "recipe-description.battery"
+      },
+      "\n",
+      {
+        "recipe-description.affected-by-productivity"
+      }
+    },
+    {
+      "recipe-description.affected-by-productivity"
+    }
+  },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.battery"
+    },
+    {
+      "item-name.battery-mk01"
+    },
+    {
+      "equipment-name.battery-equipment"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "battery",
   results = {
     {
       amount = 1,
-      name = "battery",
+      name = "battery-mk01",
       type = "item"
     }
   },

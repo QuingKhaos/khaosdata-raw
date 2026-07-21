@@ -128,6 +128,15 @@ return {
       0.4
     }
   },
+  collision_mask = {
+    layers = {
+      floor = true,
+      meltable = true,
+      object = true,
+      transport_belt = true,
+      water_tile = true
+    }
+  },
   corpse = "splitter-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",

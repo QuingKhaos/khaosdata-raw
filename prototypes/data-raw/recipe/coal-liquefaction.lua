@@ -1,9 +1,12 @@
 return {
   allow_decomposition = false,
   allow_productivity = true,
+  always_show_made_in = true,
+  always_show_products = true,
   category = "oil-processing",
   enabled = false,
   energy_required = 5,
+  hidden = true,
   icon = "__base__/graphics/icons/fluid/coal-liquefaction.png",
   ingredients = {
     {
@@ -23,6 +26,23 @@ return {
       type = "fluid"
     }
   },
+  localised_description = {
+    "?",
+    {
+      "",
+      {
+        "recipe-description.coal-liquefaction"
+      },
+      "\n",
+      {
+        "recipe-description.affected-by-productivity"
+      }
+    },
+    {
+      "recipe-description.affected-by-productivity"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "coal-liquefaction",
   order = "a[oil-processing]-c[coal-liquefaction]",
   results = {

@@ -5,6 +5,8 @@ return {
       type = "mining-drill-productivity-bonus"
     }
   },
+  essential = false,
+  icon_size = 256,
   icons = {
     {
       icon = "__base__/graphics/technology/mining-productivity.png",
@@ -21,42 +23,34 @@ return {
       }
     }
   },
-  max_level = "infinite",
   name = "mining-productivity-4",
+  order = "autotech-[000192]-[mining-productivity-4]",
   prerequisites = {
     "mining-productivity-3",
-    "space-science-pack"
+    "military-science-pack"
   },
   type = "technology",
   unit = {
-    count_formula = "2500*(L - 3)",
+    count = 200,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
       {
         "logistic-science-pack",
         1
       },
       {
-        "chemical-science-pack",
-        1
+        "py-science-pack-1",
+        2
       },
       {
-        "production-science-pack",
-        1
+        "automation-science-pack",
+        3
       },
       {
-        "utility-science-pack",
-        1
-      },
-      {
-        "space-science-pack",
+        "military-science-pack",
         1
       }
     },
-    time = 60
+    time = 90
   },
   upgrade = true
 }

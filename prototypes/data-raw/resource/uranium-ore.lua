@@ -4,6 +4,7 @@ return {
     probability_expression = "(var('control:uranium-ore:size') > 0) * (clamp(var('default-uranium-ore-patches'), 0, 1))",
     richness_expression = "(var('control:uranium-ore:size') > 0) * (1*var('control:uranium-ore:richness')*(var('default-uranium-ore-patches'))*max((1000+distance)/2600,1))"
   },
+  category = "uranium",
   collision_box = {
     {
       -0.1,
@@ -12,6 +13,11 @@ return {
     {
       0.1,
       0.1
+    }
+  },
+  collision_mask = {
+    layers = {
+      resource = true
     }
   },
   driving_sound = {
@@ -54,11 +60,15 @@ return {
   max_effect_alpha = 0.3,
   min_effect_alpha = 0.2,
   minable = {
-    fluid_amount = 10,
     mining_particle = "stone-particle",
-    mining_time = 2,
-    required_fluid = "sulfuric-acid",
-    result = "uranium-ore"
+    mining_time = 1,
+    results = {
+      {
+        amount = 1,
+        name = "uranium-ore",
+        type = "item"
+      }
+    }
   },
   mining_visualisation_tint = {
     a = 1,
@@ -78,6 +88,7 @@ return {
       0.5
     }
   },
+  selection_priority = 40,
   stage_counts = {
     10000,
     6330,

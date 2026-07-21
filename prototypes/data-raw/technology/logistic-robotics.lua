@@ -1,19 +1,7 @@
 return {
   effects = {
     {
-      recipe = "roboport",
-      type = "unlock-recipe"
-    },
-    {
       recipe = "passive-provider-chest",
-      type = "unlock-recipe"
-    },
-    {
-      recipe = "storage-chest",
-      type = "unlock-recipe"
-    },
-    {
-      recipe = "logistic-robot",
       type = "unlock-recipe"
     },
     {
@@ -23,31 +11,38 @@ return {
     {
       modifier = 30,
       type = "character-logistic-trash-slots"
+    },
+    {
+      recipe = "py-logistic-robot-mk01",
+      type = "unlock-recipe"
     }
   },
+  essential = true,
   icon = "__base__/graphics/technology/logistic-robotics.png",
   icon_size = 256,
   name = "logistic-robotics",
+  order = "autotech-[000210]-[logistic-robotics]",
   prerequisites = {
-    "robotics"
+    "niobium",
+    "construction-robotics"
   },
   type = "technology",
   unit = {
-    count = 250,
+    count = 275,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
       {
         "logistic-science-pack",
         1
       },
       {
-        "chemical-science-pack",
-        1
+        "py-science-pack-1",
+        2
+      },
+      {
+        "automation-science-pack",
+        3
       }
     },
-    time = 30
+    time = 60
   }
 }

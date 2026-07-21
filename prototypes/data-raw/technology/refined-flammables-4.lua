@@ -11,6 +11,7 @@ return {
       type = "turret-attack"
     }
   },
+  essential = false,
   icons = {
     {
       icon = "__base__/graphics/technology/refined-flammables.png",
@@ -28,36 +29,57 @@ return {
     }
   },
   name = "refined-flammables-4",
+  order = "autotech-[000842]-[refined-flammables-4]",
   prerequisites = {
-    "refined-flammables-3",
-    "utility-science-pack"
+    "utility-science-pack",
+    "refined-flammables-3"
   },
   type = "technology",
   unit = {
-    count = 400,
+    count = 3300,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
-        1
-      },
-      {
-        "military-science-pack",
-        1
-      },
-      {
-        "chemical-science-pack",
-        1
-      },
       {
         "utility-science-pack",
         1
+      },
+      {
+        "py-science-pack-4",
+        2
+      },
+      {
+        "production-science-pack",
+        3
+      },
+      {
+        "py-science-pack-3",
+        6
+      },
+      {
+        "chemical-science-pack",
+        10
+      },
+      {
+        "py-science-pack-2",
+        20
+      },
+      {
+        "logistic-science-pack",
+        30
+      },
+      {
+        "py-science-pack-1",
+        60
+      },
+      {
+        "automation-science-pack",
+        100
+      },
+      {
+        "military-science-pack",
+        20
       }
     },
-    time = 60
+    time = 600
   },
   upgrade = true
 }

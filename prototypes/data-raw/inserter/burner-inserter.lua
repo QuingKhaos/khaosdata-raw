@@ -668,6 +668,17 @@ return {
       0.15
     }
   },
+  collision_mask = {
+    layers = {
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "burner-inserter-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -698,6 +709,7 @@ return {
   energy_per_movement = "50kJ",
   energy_per_rotation = "50kJ",
   energy_source = {
+    burnt_inventory_size = 1,
     effectivity = 1,
     fuel_categories = {
       "chemical"
@@ -722,11 +734,11 @@ return {
         name = "smoke"
       }
     },
-    type = "burner"
+    type = "void"
   },
   extension_speed = 0.035000000000000004,
   fast_replaceable_group = "inserter",
-  filter_count = 5,
+  filter_count = 1,
   flags = {
     "placeable-neutral",
     "placeable-player",
@@ -786,7 +798,13 @@ return {
   max_health = 100,
   minable = {
     mining_time = 0.1,
-    result = "burner-inserter"
+    results = {
+      {
+        amount = 1,
+        name = "burner-inserter",
+        type = "item"
+      }
+    }
   },
   name = "burner-inserter",
   open_sound = {

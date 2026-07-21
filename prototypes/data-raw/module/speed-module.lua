@@ -2,9 +2,8 @@ return {
   art_style = "vanilla",
   beacon_tint = {
     primary = {
-      0.44100000000000001,
-      0.71399999999999997,
-      1,
+      0,
+      0.65,
       1
     },
     secondary = {
@@ -27,9 +26,8 @@ return {
     volume = 0.8
   },
   effect = {
-    consumption = 0.5,
-    quality = -0.1,
-    speed = 0.2
+    consumption = 1,
+    speed = 0.4
   },
   icon = "__base__/graphics/icons/speed-module.png",
   inventory_move_sound = {

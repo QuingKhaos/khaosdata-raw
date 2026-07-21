@@ -3,48 +3,56 @@ return {
     {
       recipe = "spidertron",
       type = "unlock-recipe"
+    },
+    {
+      recipe = "gastrocapacitor",
+      type = "unlock-recipe"
     }
   },
-  icon = "__base__/graphics/technology/spidertron.png",
-  icon_size = 256,
+  essential = false,
+  icon = "__pyalienlifegraphics__/graphics/technology/mounts-mk03.png",
+  icon_size = 128,
   name = "spidertron",
+  order = "autotech-[000693]-[spidertron]",
   prerequisites = {
-    "military-4",
-    "exoskeleton-equipment",
-    "fission-reactor-equipment",
-    "rocketry",
-    "efficiency-module-3",
-    "radar"
+    "energy-shield-mk2-equipment",
+    "zungror",
+    "lead-mk03",
+    "py-warehouse-research"
   },
   type = "technology",
   unit = {
-    count = 2500,
+    count = 1200,
     ingredients = {
       {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
-        1
-      },
-      {
-        "military-science-pack",
+        "py-science-pack-3",
         1
       },
       {
         "chemical-science-pack",
-        1
+        2
       },
       {
-        "production-science-pack",
-        1
+        "py-science-pack-2",
+        3
       },
       {
-        "utility-science-pack",
-        1
+        "logistic-science-pack",
+        6
+      },
+      {
+        "py-science-pack-1",
+        10
+      },
+      {
+        "automation-science-pack",
+        20
+      },
+      {
+        "military-science-pack",
+        3
       }
     },
-    time = 30
+    time = 180
   }
 }

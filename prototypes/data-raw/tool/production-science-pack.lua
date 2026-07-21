@@ -14,7 +14,8 @@ return {
   durability_description_key = "description.science-pack-remaining-amount-key",
   durability_description_value = "description.science-pack-remaining-amount-value",
   factoriopedia_durability_description_key = "description.factoriopedia-science-pack-remaining-amount-key",
-  icon = "__base__/graphics/icons/production-science-pack.png",
+  icon = "__pyfusionenergygraphics__/graphics/icons/production-science-pack.png",
+  icon_size = 64,
   inventory_move_sound = {
     aggregation = {
       max_count = 1,
@@ -27,7 +28,7 @@ return {
     "item-description.science-pack"
   },
   name = "production-science-pack",
-  order = "e[production-science-pack]",
+  order = "h",
   pick_sound = {
     aggregation = {
       max_count = 1,

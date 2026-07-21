@@ -3,28 +3,29 @@ return {
     {
       recipe = "engine-unit",
       type = "unlock-recipe"
+    },
+    {
+      recipe = "pump",
+      type = "unlock-recipe"
     }
   },
+  essential = true,
   icon = "__base__/graphics/technology/engine.png",
   icon_size = 256,
   name = "engine",
+  order = "autotech-[000020]-[engine]",
   prerequisites = {
-    "steel-processing",
-    "logistic-science-pack"
+    "mining-with-fluid"
   },
   type = "technology",
   unit = {
-    count = 100,
+    count = 60,
     ingredients = {
       {
         "automation-science-pack",
         1
-      },
-      {
-        "logistic-science-pack",
-        1
       }
     },
-    time = 15
+    time = 30
   }
 }

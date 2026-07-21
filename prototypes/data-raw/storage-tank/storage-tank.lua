@@ -492,6 +492,18 @@ return {
       1.3
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "storage-tank-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -525,6 +537,12 @@ return {
     hide_connection_info = true,
     pipe_connections = {
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 0,
         position = {
           -1,
@@ -532,6 +550,12 @@ return {
         }
       },
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 4,
         position = {
           1,
@@ -539,6 +563,12 @@ return {
         }
       },
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 8,
         position = {
           1,
@@ -546,6 +576,12 @@ return {
         }
       },
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 12,
         position = {
           -1,
@@ -645,7 +681,13 @@ return {
   max_health = 500,
   minable = {
     mining_time = 0.5,
-    result = "storage-tank"
+    results = {
+      {
+        amount = 1,
+        name = "storage-tank",
+        type = "item"
+      }
+    }
   },
   name = "storage-tank",
   open_sound = {

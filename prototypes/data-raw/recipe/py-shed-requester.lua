@@ -1,0 +1,50 @@
+return {
+  always_show_made_in = true,
+  always_show_products = true,
+  enabled = false,
+  energy_required = 0.5,
+  ingredients = {
+    {
+      amount = 1,
+      name = "py-shed-basic",
+      type = "item"
+    },
+    {
+      amount = 1,
+      name = "requester-chest",
+      type = "item"
+    },
+    {
+      amount = 5,
+      name = "iron-plate",
+      type = "item"
+    },
+    {
+      amount = 2,
+      name = "advanced-circuit",
+      type = "item"
+    }
+  },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.py-shed-requester"
+    },
+    {
+      "item-name.py-shed-requester"
+    },
+    {
+      "entity-name.py-shed-requester"
+    }
+  },
+  maximum_productivity = 1000000,
+  name = "py-shed-requester",
+  results = {
+    {
+      amount = 1,
+      name = "py-shed-requester",
+      type = "item"
+    }
+  },
+  type = "recipe"
+}

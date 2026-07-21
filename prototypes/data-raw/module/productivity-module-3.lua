@@ -12,10 +12,9 @@ return {
     volume = 0.8
   },
   effect = {
-    consumption = 0.8,
-    pollution = 0.1,
-    productivity = 0.1,
-    speed = -0.15
+    consumption = 2,
+    productivity = 0.3,
+    speed = -0.75
   },
   icon = "__base__/graphics/icons/productivity-module-3.png",
   inventory_move_sound = {

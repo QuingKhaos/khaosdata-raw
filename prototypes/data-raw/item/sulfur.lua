@@ -26,8 +26,8 @@ return {
     filename = "__base__/sound/item/resource-inventory-pickup.ogg",
     volume = 0.6
   },
-  stack_size = 50,
-  subgroup = "raw-material",
+  stack_size = 100,
+  subgroup = "py-sulfur",
   type = "item",
   weight = 1000
 }

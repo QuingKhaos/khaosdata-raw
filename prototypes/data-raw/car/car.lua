@@ -3,6 +3,7 @@ return {
     0,
     -0.40625
   },
+  allow_remote_driving = true,
   animation = {
     layers = {
       {
@@ -180,6 +181,15 @@ return {
       1
     }
   },
+  collision_mask = {
+    consider_tile_transitions = true,
+    layers = {
+      car = true,
+      is_object = true,
+      player = true,
+      train = true
+    }
+  },
   consumption = "150kW",
   corpse = "car-remnants",
   crash_trigger = {
@@ -215,9 +225,12 @@ return {
   effectivity = 0.6,
   energy_per_hit_point = 1,
   energy_source = {
+    burnt_inventory_size = 1,
     effectivity = 1,
     fuel_categories = {
-      "chemical"
+      "jerry",
+      "chemical",
+      "biomass"
     },
     fuel_inventory_size = 1,
     smoke = {
@@ -324,7 +337,13 @@ return {
   max_health = 450,
   minable = {
     mining_time = 0.4,
-    result = "car"
+    results = {
+      {
+        amount = 1,
+        name = "car",
+        type = "item"
+      }
+    }
   },
   mined_sound = {
     switch_vibration_data = {

@@ -9,6 +9,17 @@ return {
       1.3999999999999999
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "solar-panel-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -46,7 +57,13 @@ return {
   max_health = 200,
   minable = {
     mining_time = 0.1,
-    result = "solar-panel"
+    results = {
+      {
+        amount = 1,
+        name = "solar-panel",
+        type = "item"
+      }
+    }
   },
   name = "solar-panel",
   overlay = {

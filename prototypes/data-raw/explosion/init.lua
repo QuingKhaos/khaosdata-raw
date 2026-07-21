@@ -89,6 +89,7 @@ return {
   ["nuke-effects-nauvis"] = require("___KHAOSDATA___.prototypes.data-raw.explosion.nuke-effects-nauvis"),
   ["nuke-explosion"] = require("___KHAOSDATA___.prototypes.data-raw.explosion.nuke-explosion"),
   ["offshore-pump-explosion"] = require("___KHAOSDATA___.prototypes.data-raw.explosion.offshore-pump-explosion"),
+  ["oil-explosion"] = require("___KHAOSDATA___.prototypes.data-raw.explosion.oil-explosion"),
   ["oil-refinery-explosion"] = require("___KHAOSDATA___.prototypes.data-raw.explosion.oil-refinery-explosion"),
   ["passive-provider-chest-explosion"] = require("___KHAOSDATA___.prototypes.data-raw.explosion.passive-provider-chest-explosion"),
   ["pipe-explosion"] = require("___KHAOSDATA___.prototypes.data-raw.explosion.pipe-explosion"),

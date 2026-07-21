@@ -20,6 +20,18 @@ return {
       1.1000000000000001
     }
   },
+  collision_mask = {
+    layers = {
+      dingrido_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   count_as_rock_for_filtered_deconstruction = true,
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -201,7 +213,13 @@ return {
       {
         amount_max = 50,
         amount_min = 24,
-        name = "coal",
+        name = "raw-coal",
+        type = "item"
+      },
+      {
+        amount = 1,
+        name = "moss",
+        probability = 0.1,
         type = "item"
       }
     }

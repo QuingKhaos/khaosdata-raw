@@ -5,29 +5,30 @@ return {
       type = "unlock-recipe"
     }
   },
-  icon = "__base__/graphics/technology/electric-energy-acumulators.png",
-  icon_size = 256,
+  essential = true,
+  icon = "__pyindustrygraphics__/graphics/technology/accumulator-mk01.png",
+  icon_size = 128,
   localised_name = {
     "technology-name.electric-energy-accumulators-1"
   },
   name = "electric-energy-accumulators",
+  order = "autotech-[000125]-[electric-energy-accumulators]",
   prerequisites = {
-    "electric-energy-distribution-1",
-    "battery"
+    "battery-mk01"
   },
   type = "technology",
   unit = {
-    count = 150,
+    count = 200,
     ingredients = {
       {
-        "automation-science-pack",
+        "py-science-pack-1",
         1
       },
       {
-        "logistic-science-pack",
-        1
+        "automation-science-pack",
+        2
       }
     },
-    time = 30
+    time = 45
   }
 }

@@ -367,6 +367,18 @@ return {
       0.7
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "gun-turret-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -594,7 +606,13 @@ return {
   max_health = 400,
   minable = {
     mining_time = 0.5,
-    result = "gun-turret"
+    results = {
+      {
+        amount = 1,
+        name = "gun-turret",
+        type = "item"
+      }
+    }
   },
   name = "gun-turret",
   open_sound = {

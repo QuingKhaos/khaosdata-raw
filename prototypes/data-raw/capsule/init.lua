@@ -6,8 +6,11 @@ return {
   ["destroyer-capsule"] = require("___KHAOSDATA___.prototypes.data-raw.capsule.destroyer-capsule"),
   ["discharge-defense-remote"] = require("___KHAOSDATA___.prototypes.data-raw.capsule.discharge-defense-remote"),
   ["distractor-capsule"] = require("___KHAOSDATA___.prototypes.data-raw.capsule.distractor-capsule"),
+  ["dried-meat"] = require("___KHAOSDATA___.prototypes.data-raw.capsule.dried-meat"),
+  ["energy-drink"] = require("___KHAOSDATA___.prototypes.data-raw.capsule.energy-drink"),
   ["grenade"] = require("___KHAOSDATA___.prototypes.data-raw.capsule.grenade"),
   ["poison-capsule"] = require("___KHAOSDATA___.prototypes.data-raw.capsule.poison-capsule"),
   ["raw-fish"] = require("___KHAOSDATA___.prototypes.data-raw.capsule.raw-fish"),
   ["slowdown-capsule"] = require("___KHAOSDATA___.prototypes.data-raw.capsule.slowdown-capsule"),
+  ["ulric-infusion"] = require("___KHAOSDATA___.prototypes.data-raw.capsule.ulric-infusion"),
 }

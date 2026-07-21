@@ -1,6 +1,9 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 10,
+  hidden = true,
   ingredients = {
     {
       amount = 10,
@@ -18,6 +21,16 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.battery-mk2-equipment"
+    },
+    {
+      "equipment-name.battery-mk2-equipment"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "battery-mk2-equipment",
   results = {
     {

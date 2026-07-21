@@ -9,6 +9,15 @@ return {
       0.8
     }
   },
+  collision_mask = {
+    layers = {
+      is_lower_object = true,
+      is_object = true,
+      object = true,
+      rail = true,
+      rail_support = true
+    }
+  },
   flags = {
     "placeable-neutral",
     "player-creation",

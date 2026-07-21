@@ -31,6 +31,18 @@ return {
       0.4
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "pipe-remnants",
   dying_explosion = "pipe-explosion",
   fast_replaceable_group = "pipe",
@@ -42,6 +54,12 @@ return {
   fluid_box = {
     pipe_connections = {
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 0,
         flow_direction = "output",
         position = {
@@ -50,6 +68,12 @@ return {
         }
       },
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 8,
         flow_direction = "input-output",
         position = {

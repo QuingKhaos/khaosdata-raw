@@ -8,6 +8,12 @@ return {
     "consumption",
     "pollution"
   },
+  allowed_module_categories = {
+    "productivity",
+    "speed",
+    "efficiency",
+    "quality"
+  },
   circuit_connector = {
     {
       points = {
@@ -613,13 +619,26 @@ return {
       1.2
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "assembling-machine-1-remnants",
   crafting_categories = {
     "crafting",
     "basic-crafting",
-    "advanced-crafting"
+    "advanced-crafting",
+    "crafting-with-fluid"
   },
-  crafting_speed = 0.5,
+  crafting_speed = 1,
   damaged_trigger_effect = {
     damage_type_filters = "fire",
     entity_name = "spark-explosion",
@@ -648,11 +667,17 @@ return {
     uses_surface_effects = true
   },
   energy_source = {
+    burnt_inventory_size = 1,
+    effectivity = 1,
     emissions_per_minute = {
-      pollution = 4
+      pollution = 12
     },
-    type = "electric",
-    usage_priority = "secondary-input"
+    fuel_categories = {
+      "chemical",
+      "biomass"
+    },
+    fuel_inventory_size = 1,
+    type = "burner"
   },
   energy_usage = "75kW",
   fast_replaceable_group = "assembling-machine",
@@ -660,6 +685,308 @@ return {
     "placeable-neutral",
     "placeable-player",
     "player-creation"
+  },
+  fluid_boxes = {
+    {
+      pipe_connections = {
+        {
+          connection_category = {
+            "default",
+            "pipe",
+            "niobium-pipe",
+            "ht-pipes",
+            "pipe",
+            "niobium-pipe",
+            "ht-pipes"
+          },
+          direction = 0,
+          flow_direction = "input",
+          position = {
+            0,
+            -1
+          }
+        }
+      },
+      pipe_covers = {
+        east = {
+          layers = {
+            {
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-east.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-east-shadow.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            }
+          }
+        },
+        north = {
+          layers = {
+            {
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-north.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-north-shadow.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            }
+          }
+        },
+        south = {
+          layers = {
+            {
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-south.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-south-shadow.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            }
+          }
+        },
+        west = {
+          layers = {
+            {
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-west.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-west-shadow.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            }
+          }
+        }
+      },
+      pipe_picture = {
+        east = {
+          filename = "__base__/graphics/entity/assembling-machine-2/assembling-machine-2-pipe-E.png",
+          height = 76,
+          priority = "extra-high",
+          scale = 0.5,
+          shift = {
+            -0.765625,
+            0.03125
+          },
+          width = 42
+        },
+        north = {
+          filename = "__base__/graphics/entity/assembling-machine-2/assembling-machine-2-pipe-N.png",
+          height = 38,
+          priority = "extra-high",
+          scale = 0.5,
+          shift = {
+            0.0703125,
+            0.421875
+          },
+          width = 71
+        },
+        south = {
+          filename = "__base__/graphics/entity/assembling-machine-2/assembling-machine-2-pipe-S.png",
+          height = 61,
+          priority = "extra-high",
+          scale = 0.5,
+          shift = {
+            0,
+            -0.9765625
+          },
+          width = 88
+        },
+        west = {
+          filename = "__base__/graphics/entity/assembling-machine-2/assembling-machine-2-pipe-W.png",
+          height = 73,
+          priority = "extra-high",
+          scale = 0.5,
+          shift = {
+            0.8046875,
+            0.0390625
+          },
+          width = 39
+        }
+      },
+      production_type = "input",
+      secondary_draw_orders = {
+        north = -1
+      },
+      volume = 1000
+    },
+    {
+      pipe_connections = {
+        {
+          connection_category = {
+            "default",
+            "pipe",
+            "niobium-pipe",
+            "ht-pipes",
+            "pipe",
+            "niobium-pipe",
+            "ht-pipes"
+          },
+          direction = 8,
+          flow_direction = "output",
+          position = {
+            0,
+            1
+          }
+        }
+      },
+      pipe_covers = {
+        east = {
+          layers = {
+            {
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-east.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-east-shadow.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            }
+          }
+        },
+        north = {
+          layers = {
+            {
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-north.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-north-shadow.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            }
+          }
+        },
+        south = {
+          layers = {
+            {
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-south.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-south-shadow.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            }
+          }
+        },
+        west = {
+          layers = {
+            {
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-west.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__base__/graphics/entity/pipe-covers/pipe-cover-west-shadow.png",
+              height = 128,
+              priority = "extra-high",
+              scale = 0.5,
+              width = 128
+            }
+          }
+        }
+      },
+      pipe_picture = {
+        east = {
+          filename = "__base__/graphics/entity/assembling-machine-2/assembling-machine-2-pipe-E.png",
+          height = 76,
+          priority = "extra-high",
+          scale = 0.5,
+          shift = {
+            -0.765625,
+            0.03125
+          },
+          width = 42
+        },
+        north = {
+          filename = "__base__/graphics/entity/assembling-machine-2/assembling-machine-2-pipe-N.png",
+          height = 38,
+          priority = "extra-high",
+          scale = 0.5,
+          shift = {
+            0.0703125,
+            0.421875
+          },
+          width = 71
+        },
+        south = {
+          filename = "__base__/graphics/entity/assembling-machine-2/assembling-machine-2-pipe-S.png",
+          height = 61,
+          priority = "extra-high",
+          scale = 0.5,
+          shift = {
+            0,
+            -0.9765625
+          },
+          width = 88
+        },
+        west = {
+          filename = "__base__/graphics/entity/assembling-machine-2/assembling-machine-2-pipe-W.png",
+          height = 73,
+          priority = "extra-high",
+          scale = 0.5,
+          shift = {
+            0.8046875,
+            0.0390625
+          },
+          width = 39
+        }
+      },
+      production_type = "output",
+      secondary_draw_orders = {
+        north = -1
+      },
+      volume = 1000
+    }
   },
   graphics_set = {
     animation = {
@@ -702,10 +1029,17 @@ return {
     }
   },
   impact_category = "metal",
+  match_animation_speed_to_activity = false,
   max_health = 300,
   minable = {
     mining_time = 0.2,
-    result = "assembling-machine-1"
+    results = {
+      {
+        amount = 1,
+        name = "assembling-machine-1",
+        type = "item"
+      }
+    }
   },
   name = "assembling-machine-1",
   next_upgrade = "assembling-machine-2",

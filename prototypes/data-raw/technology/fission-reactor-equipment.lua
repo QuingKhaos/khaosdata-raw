@@ -3,11 +3,21 @@ return {
     {
       recipe = "fission-reactor-equipment",
       type = "unlock-recipe"
+    },
+    {
+      recipe = "personal-fusion-cell",
+      type = "unlock-recipe"
+    },
+    {
+      recipe = "personal-fusion-cell-refuel",
+      type = "unlock-recipe"
     }
   },
+  essential = true,
+  icon_size = 256,
   icons = {
     {
-      icon = "__base__/graphics/technology/fission-reactor-equipment.png",
+      icon = "__pyindustrygraphics__/graphics/technology/fusion-reactor-equipment.png",
       icon_size = 256
     },
     {
@@ -22,37 +32,50 @@ return {
     }
   },
   name = "fission-reactor-equipment",
+  order = "autotech-[000829]-[fission-reactor-equipment]",
   prerequisites = {
-    "utility-science-pack",
+    "fusion-mk02",
+    "efficiency-module-3",
     "power-armor",
-    "military-science-pack",
-    "nuclear-power"
+    "electric-energy-distribution-1"
   },
   type = "technology",
   unit = {
-    count = 200,
+    count = 3300,
     ingredients = {
       {
-        "automation-science-pack",
+        "production-science-pack",
         1
       },
       {
-        "logistic-science-pack",
-        1
+        "py-science-pack-3",
+        2
       },
       {
         "chemical-science-pack",
-        1
+        3
+      },
+      {
+        "py-science-pack-2",
+        6
+      },
+      {
+        "logistic-science-pack",
+        10
+      },
+      {
+        "py-science-pack-1",
+        20
+      },
+      {
+        "automation-science-pack",
+        30
       },
       {
         "military-science-pack",
-        1
-      },
-      {
-        "utility-science-pack",
-        1
+        6
       }
     },
-    time = 30
+    time = 300
   }
 }

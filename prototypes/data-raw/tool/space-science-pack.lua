@@ -14,7 +14,8 @@ return {
   durability_description_key = "description.science-pack-remaining-amount-key",
   durability_description_value = "description.science-pack-remaining-amount-value",
   factoriopedia_durability_description_key = "description.factoriopedia-science-pack-remaining-amount-key",
-  icon = "__base__/graphics/icons/space-science-pack.png",
+  icon = "__pyalternativeenergygraphics__/graphics/icons/space-science-pack.png",
+  icon_size = 64,
   inventory_move_sound = {
     aggregation = {
       max_count = 1,
@@ -24,7 +25,7 @@ return {
     volume = 0.6
   },
   name = "space-science-pack",
-  order = "g[space-science-pack]",
+  order = "k",
   pick_sound = {
     aggregation = {
       max_count = 1,
@@ -39,7 +40,7 @@ return {
     0.96999999999999993,
     1
   },
-  stack_size = 2000,
+  stack_size = 200,
   subgroup = "science-pack",
   type = "tool",
   weight = 1000

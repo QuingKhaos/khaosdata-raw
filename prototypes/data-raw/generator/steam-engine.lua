@@ -17,6 +17,18 @@ return {
       2.3500000000000001
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "steam-engine-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -39,8 +51,9 @@ return {
     },
     type = "create-entity"
   },
+  destroy_non_fuel_fluid = false,
   dying_explosion = "steam-engine-explosion",
-  effectivity = 1,
+  effectivity = 0.5,
   energy_source = {
     type = "electric",
     usage_priority = "secondary-output"
@@ -55,6 +68,12 @@ return {
     minimum_temperature = 100,
     pipe_connections = {
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 8,
         flow_direction = "input-output",
         position = {
@@ -63,6 +82,12 @@ return {
         }
       },
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 0,
         flow_direction = "input-output",
         position = {
@@ -152,7 +177,7 @@ return {
     production_type = "input",
     volume = 200
   },
-  fluid_usage_per_tick = 0.5,
+  fluid_usage_per_tick = 0.25,
   horizontal_animation = {
     layers = {
       {
@@ -185,10 +210,16 @@ return {
   icon = "__base__/graphics/icons/steam-engine.png",
   impact_category = "metal-large",
   max_health = 400,
-  maximum_temperature = 165,
+  maximum_temperature = 500,
   minable = {
     mining_time = 0.3,
-    result = "steam-engine"
+    results = {
+      {
+        amount = 1,
+        name = "steam-engine",
+        type = "item"
+      }
+    }
   },
   name = "steam-engine",
   open_sound = {

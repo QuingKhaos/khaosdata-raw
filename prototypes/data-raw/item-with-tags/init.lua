@@ -1,0 +1,16 @@
+return {
+  ["aerial-blimp-mk01"] = require("___KHAOSDATA___.prototypes.data-raw.item-with-tags.aerial-blimp-mk01"),
+  ["aerial-blimp-mk02"] = require("___KHAOSDATA___.prototypes.data-raw.item-with-tags.aerial-blimp-mk02"),
+  ["aerial-blimp-mk03"] = require("___KHAOSDATA___.prototypes.data-raw.item-with-tags.aerial-blimp-mk03"),
+  ["aerial-blimp-mk04"] = require("___KHAOSDATA___.prototypes.data-raw.item-with-tags.aerial-blimp-mk04"),
+  ["caravan"] = require("___KHAOSDATA___.prototypes.data-raw.item-with-tags.caravan"),
+  ["caravan-turd"] = require("___KHAOSDATA___.prototypes.data-raw.item-with-tags.caravan-turd"),
+  ["fluidavan"] = require("___KHAOSDATA___.prototypes.data-raw.item-with-tags.fluidavan"),
+  ["fluidavan-turd"] = require("___KHAOSDATA___.prototypes.data-raw.item-with-tags.fluidavan-turd"),
+  ["fluidflyavan"] = require("___KHAOSDATA___.prototypes.data-raw.item-with-tags.fluidflyavan"),
+  ["fluidflyavan-turd"] = require("___KHAOSDATA___.prototypes.data-raw.item-with-tags.fluidflyavan-turd"),
+  ["flyavan"] = require("___KHAOSDATA___.prototypes.data-raw.item-with-tags.flyavan"),
+  ["flyavan-turd"] = require("___KHAOSDATA___.prototypes.data-raw.item-with-tags.flyavan-turd"),
+  ["nukavan"] = require("___KHAOSDATA___.prototypes.data-raw.item-with-tags.nukavan"),
+  ["nukavan-turd"] = require("___KHAOSDATA___.prototypes.data-raw.item-with-tags.nukavan-turd"),
+}

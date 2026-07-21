@@ -1,6 +1,6 @@
 return {
-  group = "intermediate-products",
+  group = "coal-processing",
   name = "internal-process",
-  order = "z",
+  order = "b",
   type = "item-subgroup"
 }

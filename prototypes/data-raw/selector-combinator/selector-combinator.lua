@@ -88,6 +88,18 @@ return {
       0.65
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "selector-combinator-remnants",
   count_symbol_sprites = {
     east = {
@@ -389,7 +401,13 @@ return {
   },
   minable = {
     mining_time = 0.1,
-    result = "selector-combinator"
+    results = {
+      {
+        amount = 1,
+        name = "selector-combinator",
+        type = "item"
+      }
+    }
   },
   name = "selector-combinator",
   open_sound = {

@@ -11,6 +11,18 @@ return {
       0.6
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   dying_explosion = "medium-explosion",
   flags = {
     "placeable-player",

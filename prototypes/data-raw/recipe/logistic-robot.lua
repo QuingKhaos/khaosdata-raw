@@ -1,5 +1,9 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
+  energy_required = 0.5,
+  hidden = true,
   ingredients = {
     {
       amount = 1,
@@ -12,6 +16,19 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.logistic-robot"
+    },
+    {
+      "item-name.logistic-robot"
+    },
+    {
+      "entity-name.logistic-robot"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "logistic-robot",
   results = {
     {

@@ -4,6 +4,12 @@ return {
     "consumption",
     "pollution"
   },
+  allowed_module_categories = {
+    "productivity",
+    "speed",
+    "efficiency",
+    "quality"
+  },
   circuit_connector = {
     {
       points = {
@@ -609,6 +615,18 @@ return {
       0.7
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "stone-furnace-remnants",
   crafting_categories = {
     "smelting"
@@ -642,12 +660,14 @@ return {
     uses_surface_effects = true
   },
   energy_source = {
+    burnt_inventory_size = 1,
     effectivity = 1,
     emissions_per_minute = {
       pollution = 2
     },
     fuel_categories = {
-      "chemical"
+      "chemical",
+      "biomass"
     },
     fuel_inventory_size = 1,
     light_flicker = {
@@ -677,7 +697,7 @@ return {
     },
     type = "burner"
   },
-  energy_usage = "90kW",
+  energy_usage = "200kW",
   fast_replaceable_group = "furnace",
   flags = {
     "placeable-neutral",
@@ -792,10 +812,17 @@ return {
     }
   },
   impact_category = "stone",
+  match_animation_speed_to_activity = false,
   max_health = 200,
   minable = {
     mining_time = 0.2,
-    result = "stone-furnace"
+    results = {
+      {
+        amount = 1,
+        name = "stone-furnace",
+        type = "item"
+      }
+    }
   },
   mined_sound = {
     aggregation = {

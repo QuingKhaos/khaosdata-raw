@@ -13,6 +13,6 @@ return {
   icon = "__base__/graphics/icons/fluid/lubricant.png",
   name = "lubricant",
   order = "a[fluid]-b[oil]-e[lubricant]",
-  subgroup = "fluid",
+  subgroup = "py-petroleum-handling-lubricant-recipes",
   type = "fluid"
 }

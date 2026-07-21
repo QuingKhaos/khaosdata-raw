@@ -5,26 +5,27 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = false,
   icon = "__base__/graphics/technology/fluid-wagon.png",
   icon_size = 256,
   name = "fluid-wagon",
+  order = "autotech-[000107]-[fluid-wagon]",
   prerequisites = {
-    "railway",
-    "fluid-handling"
+    "railway"
   },
   type = "technology",
   unit = {
-    count = 200,
+    count = 100,
     ingredients = {
       {
-        "automation-science-pack",
+        "py-science-pack-1",
         1
       },
       {
-        "logistic-science-pack",
-        1
+        "automation-science-pack",
+        2
       }
     },
-    time = 30
+    time = 45
   }
 }

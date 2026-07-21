@@ -1,4 +1,6 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 8,
   ingredients = {
@@ -9,7 +11,7 @@ return {
     },
     {
       amount = 10,
-      name = "iron-gear-wheel",
+      name = "small-parts-01",
       type = "item"
     },
     {
@@ -28,6 +30,19 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.oil-refinery"
+    },
+    {
+      "item-name.oil-refinery"
+    },
+    {
+      "entity-name.oil-refinery"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "oil-refinery",
   results = {
     {

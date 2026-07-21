@@ -54,6 +54,11 @@ return {
       2.6000000000000001
     }
   },
+  collision_mask = {
+    layers = {
+      train = true
+    }
+  },
   color = {
     a = 1,
     b = 0,
@@ -182,9 +187,12 @@ return {
   dying_explosion = "locomotive-explosion",
   energy_per_hit_point = 5,
   energy_source = {
+    burnt_inventory_size = 3,
     effectivity = 1,
     fuel_categories = {
-      "chemical"
+      "chemical",
+      "biomass",
+      "nuke"
     },
     fuel_inventory_size = 3,
     smoke = {
@@ -321,7 +329,13 @@ return {
   max_speed = 1.2,
   minable = {
     mining_time = 0.5,
-    result = "locomotive"
+    results = {
+      {
+        amount = 1,
+        name = "locomotive",
+        type = "item"
+      }
+    }
   },
   mined_sound = {
     switch_vibration_data = {

@@ -1,0 +1,142 @@
+return {
+  allow_productivity = true,
+  always_show_made_in = true,
+  always_show_products = true,
+  category = "rennea",
+  enabled = false,
+  energy_required = 54,
+  icons = {
+    {
+      icon = "__pyalienlifegraphics__/graphics/icons/rennea.png"
+    },
+    {
+      floating = true,
+      icon = "__pyalienlifegraphics__/graphics/icons/3.png",
+      scale = 0.25,
+      shift = {
+        8,
+        8
+      }
+    },
+    {
+      floating = true,
+      icon = "__pycoalprocessinggraphics__/graphics/icons/gui/turd.png",
+      icon_size = 40,
+      scale = 0.35,
+      shift = {
+        10,
+        -10
+      },
+      tint = {
+        a = 1,
+        b = 1,
+        g = 1,
+        r = 1
+      }
+    }
+  },
+  ingredients = {
+    {
+      amount = 12,
+      name = "rennea-seeds",
+      type = "item"
+    },
+    {
+      amount = 20000,
+      fluidbox_index = 1,
+      name = "water",
+      type = "fluid"
+    },
+    {
+      amount = 50,
+      fluidbox_index = 2,
+      name = "manure-bacteria",
+      type = "fluid"
+    },
+    {
+      amount = 9,
+      name = "fertilizer",
+      type = "item"
+    },
+    {
+      amount = 1,
+      name = "yaedols",
+      type = "item"
+    },
+    {
+      amount = 10,
+      name = "lignin",
+      type = "item"
+    },
+    {
+      amount = 2,
+      name = "pesticide-mk01",
+      type = "item"
+    },
+    {
+      amount = 3,
+      fallback = {
+        amount = 2,
+        name = "blood-barrel"
+      },
+      name = "blood-meal",
+      type = "item"
+    },
+    {
+      amount = 200,
+      fluidbox_index = 3,
+      name = "carbon-dioxide",
+      type = "fluid"
+    }
+  },
+  localised_description = {
+    "",
+    {
+      "?",
+      {
+        "",
+        {
+          "recipe-description.rennea-3-hydrophile"
+        },
+        "\n",
+        {
+          "turd.font",
+          {
+            "turd.recipe-replacement"
+          }
+        }
+      },
+      {
+        "turd.font",
+        {
+          "turd.recipe-replacement"
+        }
+      }
+    },
+    "\n",
+    {
+      "recipe-description.affected-by-productivity"
+    }
+  },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.rennea-3-hydrophile"
+    },
+    {
+      "item-name.rennea"
+    }
+  },
+  maximum_productivity = 1000000,
+  name = "rennea-3-hydrophile",
+  order = "a",
+  results = {
+    {
+      amount = 19,
+      name = "rennea",
+      type = "item"
+    }
+  },
+  subgroup = "py-alienlife-rennea",
+  type = "recipe"
+}

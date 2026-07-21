@@ -10,4 +10,6 @@ return {
   ["crash-site-fire-flame"] = require("___KHAOSDATA___.prototypes.data-raw.fire.crash-site-fire-flame"),
   ["fire-flame"] = require("___KHAOSDATA___.prototypes.data-raw.fire.fire-flame"),
   ["fire-flame-on-tree"] = require("___KHAOSDATA___.prototypes.data-raw.fire.fire-flame-on-tree"),
+  ["sut-smokestack"] = require("___KHAOSDATA___.prototypes.data-raw.fire.sut-smokestack"),
+  ["sut-smokestack-weak"] = require("___KHAOSDATA___.prototypes.data-raw.fire.sut-smokestack-weak"),
 }

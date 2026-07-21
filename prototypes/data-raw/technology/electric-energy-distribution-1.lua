@@ -3,36 +3,29 @@ return {
     {
       recipe = "medium-electric-pole",
       type = "unlock-recipe"
-    },
-    {
-      recipe = "big-electric-pole",
-      type = "unlock-recipe"
-    },
-    {
-      recipe = "iron-stick",
-      type = "unlock-recipe"
     }
   },
-  icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
-  icon_size = 256,
+  essential = true,
+  icon = "__pyalternativeenergygraphics__/graphics/technology/poles-mk01.png",
+  icon_size = 128,
   name = "electric-energy-distribution-1",
+  order = "autotech-[000109]-[electric-energy-distribution-1]",
   prerequisites = {
-    "steel-processing",
-    "logistic-science-pack"
+    "chromium-mk01"
   },
   type = "technology",
   unit = {
-    count = 120,
+    count = 100,
     ingredients = {
       {
-        "automation-science-pack",
+        "py-science-pack-1",
         1
       },
       {
-        "logistic-science-pack",
-        1
+        "automation-science-pack",
+        2
       }
     },
-    time = 30
+    time = 45
   }
 }

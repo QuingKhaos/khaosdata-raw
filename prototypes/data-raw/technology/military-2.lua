@@ -9,27 +9,28 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = true,
   icon = "__base__/graphics/technology/military.png",
   icon_size = 256,
   name = "military-2",
+  order = "autotech-[000068]-[military-2]",
   prerequisites = {
-    "military",
-    "steel-processing",
-    "logistic-science-pack"
+    "py-science-pack-1",
+    "military"
   },
   type = "technology",
   unit = {
-    count = 20,
+    count = 50,
     ingredients = {
       {
-        "automation-science-pack",
+        "py-science-pack-1",
         1
       },
       {
-        "logistic-science-pack",
-        1
+        "automation-science-pack",
+        2
       }
     },
-    time = 15
+    time = 45
   }
 }

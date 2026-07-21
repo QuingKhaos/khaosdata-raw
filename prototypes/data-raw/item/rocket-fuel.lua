@@ -8,7 +8,7 @@ return {
     volume = 0.6
   },
   fuel_acceleration_multiplier = 1.8,
-  fuel_category = "chemical",
+  fuel_category = "jerry",
   fuel_top_speed_multiplier = 1.1499999999999999,
   fuel_value = "100MJ",
   icon = "__base__/graphics/icons/rocket-fuel.png",
@@ -31,7 +31,7 @@ return {
     volume = 0.5
   },
   stack_size = 20,
-  subgroup = "intermediate-product",
+  subgroup = "space-related",
   type = "item",
   weight = 10000
 }

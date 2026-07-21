@@ -17,7 +17,7 @@ return {
     volume = 0.7
   },
   name = "solar-panel-equipment",
-  order = "a[energy-source]-a[solar-panel]",
+  order = "a[energy-source]-b[solar-panel-equipment]",
   pick_sound = {
     aggregation = {
       max_count = 1,
@@ -28,6 +28,6 @@ return {
   },
   place_as_equipment_result = "solar-panel-equipment",
   stack_size = 20,
-  subgroup = "equipment",
+  subgroup = "py-generator-equipment",
   type = "item"
 }

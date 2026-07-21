@@ -5,6 +5,12 @@ return {
     "productivity",
     "pollution"
   },
+  allowed_module_categories = {
+    "productivity",
+    "speed",
+    "efficiency",
+    "quality"
+  },
   circuit_connector = {
     {
       points = {
@@ -612,6 +618,7 @@ return {
   },
   collision_mask = {
     layers = {
+      caravan_collision_mask = true,
       elevated_rail = true,
       is_lower_object = true,
       is_object = true,
@@ -667,6 +674,12 @@ return {
     {
       pipe_connections = {
         {
+          connection_category = {
+            "default",
+            "pipe",
+            "niobium-pipe",
+            "ht-pipes"
+          },
           direction = 8,
           flow_direction = "input",
           position = {
@@ -759,6 +772,12 @@ return {
     {
       pipe_connections = {
         {
+          connection_category = {
+            "default",
+            "pipe",
+            "niobium-pipe",
+            "ht-pipes"
+          },
           direction = 8,
           flow_direction = "input",
           position = {
@@ -851,6 +870,12 @@ return {
     {
       pipe_connections = {
         {
+          connection_category = {
+            "default",
+            "pipe",
+            "niobium-pipe",
+            "ht-pipes"
+          },
           direction = 0,
           flow_direction = "output",
           position = {
@@ -943,6 +968,12 @@ return {
     {
       pipe_connections = {
         {
+          connection_category = {
+            "default",
+            "pipe",
+            "niobium-pipe",
+            "ht-pipes"
+          },
           direction = 0,
           flow_direction = "output",
           position = {
@@ -1035,6 +1066,12 @@ return {
     {
       pipe_connections = {
         {
+          connection_category = {
+            "default",
+            "pipe",
+            "niobium-pipe",
+            "ht-pipes"
+          },
           direction = 0,
           flow_direction = "output",
           position = {
@@ -1125,245 +1162,35 @@ return {
       volume = 100
     }
   },
-  graphics_set = {
-    animation = {
-      east = {
-        layers = {
-          {
-            filename = "__base__/graphics/entity/oil-refinery/oil-refinery.png",
-            height = 430,
-            priority = "high",
-            scale = 0.5,
-            shift = {
-              0,
-              -0.234375
-            },
-            tint_as_overlay = false,
-            width = 386,
-            x = 386,
-            y = 0
-          },
-          {
-            draw_as_shadow = true,
-            filename = "__base__/graphics/entity/oil-refinery/oil-refinery-shadow.png",
-            height = 426,
-            priority = "high",
-            scale = 0.5,
-            shift = {
-              2.578125,
-              0.828125
-            },
-            tint_as_overlay = false,
-            width = 674,
-            x = 674,
-            y = 0
-          }
-        }
-      },
-      north = {
-        layers = {
-          {
-            filename = "__base__/graphics/entity/oil-refinery/oil-refinery.png",
-            height = 430,
-            priority = "high",
-            scale = 0.5,
-            shift = {
-              0,
-              -0.234375
-            },
-            tint_as_overlay = false,
-            width = 386,
-            x = 0,
-            y = 0
-          },
-          {
-            draw_as_shadow = true,
-            filename = "__base__/graphics/entity/oil-refinery/oil-refinery-shadow.png",
-            height = 426,
-            priority = "high",
-            scale = 0.5,
-            shift = {
-              2.578125,
-              0.828125
-            },
-            tint_as_overlay = false,
-            width = 674,
-            x = 0,
-            y = 0
-          }
-        }
-      },
-      south = {
-        layers = {
-          {
-            filename = "__base__/graphics/entity/oil-refinery/oil-refinery.png",
-            height = 430,
-            priority = "high",
-            scale = 0.5,
-            shift = {
-              0,
-              -0.234375
-            },
-            tint_as_overlay = false,
-            width = 386,
-            x = 772,
-            y = 0
-          },
-          {
-            draw_as_shadow = true,
-            filename = "__base__/graphics/entity/oil-refinery/oil-refinery-shadow.png",
-            height = 426,
-            priority = "high",
-            scale = 0.5,
-            shift = {
-              2.578125,
-              0.828125
-            },
-            tint_as_overlay = false,
-            width = 674,
-            x = 1348,
-            y = 0
-          }
-        }
-      },
-      west = {
-        layers = {
-          {
-            filename = "__base__/graphics/entity/oil-refinery/oil-refinery.png",
-            height = 430,
-            priority = "high",
-            scale = 0.5,
-            shift = {
-              0,
-              -0.234375
-            },
-            tint_as_overlay = false,
-            width = 386,
-            x = 1158,
-            y = 0
-          },
-          {
-            draw_as_shadow = true,
-            filename = "__base__/graphics/entity/oil-refinery/oil-refinery-shadow.png",
-            height = 426,
-            priority = "high",
-            scale = 0.5,
-            shift = {
-              2.578125,
-              0.828125
-            },
-            tint_as_overlay = false,
-            width = 674,
-            x = 2022,
-            y = 0
-          }
-        }
-      }
-    },
-    working_visualisations = {
-      {
-        animation = {
-          animation_speed = 0.75,
-          draw_as_glow = true,
-          filename = "__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
-          frame_count = 60,
-          height = 81,
-          line_length = 10,
-          scale = 0.5,
-          shift = {
-            0,
-            -0.4453125
-          },
-          width = 40
-        },
-        constant_speed = true,
-        east_position = {
-          -1.625,
-          -1.90625
-        },
-        fadeout = true,
-        north_position = {
-          1.0625,
-          -2.03125
-        },
-        south_position = {
-          -1.84375,
-          -2.5625
-        },
-        west_position = {
-          1.78125,
-          -1.8125
-        }
-      },
-      {
-        east_animation = {
-          blend_mode = "additive",
-          draw_as_glow = true,
-          filename = "__base__/graphics/entity/oil-refinery/oil-refinery-light.png",
-          height = 205,
-          scale = 0.5,
-          shift = {
-            -0.03125,
-            -1.5625
-          },
-          width = 321,
-          x = 321
-        },
-        fadeout = true,
-        north_animation = {
-          blend_mode = "additive",
-          draw_as_glow = true,
-          filename = "__base__/graphics/entity/oil-refinery/oil-refinery-light.png",
-          height = 205,
-          scale = 0.5,
-          shift = {
-            -0.03125,
-            -1.5625
-          },
-          width = 321
-        },
-        south_animation = {
-          blend_mode = "additive",
-          draw_as_glow = true,
-          filename = "__base__/graphics/entity/oil-refinery/oil-refinery-light.png",
-          height = 205,
-          scale = 0.5,
-          shift = {
-            -0.03125,
-            -1.5625
-          },
-          width = 321,
-          x = 642
-        },
-        west_animation = {
-          blend_mode = "additive",
-          draw_as_glow = true,
-          filename = "__base__/graphics/entity/oil-refinery/oil-refinery-light.png",
-          height = 205,
-          scale = 0.5,
-          shift = {
-            -0.03125,
-            -1.5625
-          },
-          width = 321,
-          x = 963
-        }
-      }
-    }
-  },
+  hidden = true,
   icon = "__base__/graphics/icons/oil-refinery.png",
   icon_draw_specification = {
-    scale = 2,
-    shift = {
-      0,
-      -0.3
+    scale = 1.6699999999999999,
+    scale_for_many = 1.6699999999999999
+  },
+  icons_positioning = {
+    {
+      inventory_index = 4,
+      max_icons_per_row = 3,
+      scale = 1.25,
+      shift = {
+        0,
+        1.125
+      }
     }
   },
   impact_category = "metal-large",
+  match_animation_speed_to_activity = false,
   max_health = 350,
   minable = {
     mining_time = 0.2,
-    result = "oil-refinery"
+    results = {
+      {
+        amount = 1,
+        name = "oil-refinery",
+        type = "item"
+      }
+    }
   },
   module_slots = 3,
   name = "oil-refinery",

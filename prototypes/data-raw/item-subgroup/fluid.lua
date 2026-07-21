@@ -1,6 +1,6 @@
 return {
-  group = "fluids",
+  group = "coal-processing",
   name = "fluid",
-  order = "a",
+  order = "c",
   type = "item-subgroup"
 }

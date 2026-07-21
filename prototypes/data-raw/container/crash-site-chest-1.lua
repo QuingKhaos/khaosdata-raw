@@ -161,6 +161,17 @@ return {
       0.35
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "small-remnants",
   fast_replaceable_group = "container",
   flags = {

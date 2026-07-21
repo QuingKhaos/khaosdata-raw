@@ -161,6 +161,17 @@ return {
       0.15
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "lamp-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -238,7 +249,13 @@ return {
   max_health = 100,
   minable = {
     mining_time = 0.1,
-    result = "small-lamp"
+    results = {
+      {
+        amount = 1,
+        name = "small-lamp",
+        type = "item"
+      }
+    }
   },
   name = "small-lamp",
   open_sound = {

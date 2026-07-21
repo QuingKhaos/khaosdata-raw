@@ -11,36 +11,57 @@ return {
     {
       recipe = "express-splitter",
       type = "unlock-recipe"
+    },
+    {
+      recipe = "express-transport-belt-2",
+      type = "unlock-recipe"
     }
   },
+  essential = true,
   icon = "__base__/graphics/technology/logistics-3.png",
   icon_size = 256,
   name = "logistics-3",
+  order = "autotech-[000699]-[logistics-3]",
   prerequisites = {
-    "production-science-pack",
-    "lubricant"
+    "super-alloy"
   },
   type = "technology",
   unit = {
-    count = 300,
+    count = 1400,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
-        1
-      },
-      {
-        "chemical-science-pack",
-        1
-      },
       {
         "production-science-pack",
         1
+      },
+      {
+        "py-science-pack-3",
+        2
+      },
+      {
+        "chemical-science-pack",
+        3
+      },
+      {
+        "py-science-pack-2",
+        6
+      },
+      {
+        "logistic-science-pack",
+        10
+      },
+      {
+        "py-science-pack-1",
+        20
+      },
+      {
+        "automation-science-pack",
+        30
+      },
+      {
+        "military-science-pack",
+        6
       }
     },
-    time = 15
+    time = 300
   }
 }

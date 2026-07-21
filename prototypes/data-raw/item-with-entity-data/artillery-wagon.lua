@@ -28,6 +28,6 @@ return {
   },
   place_result = "artillery-wagon",
   stack_size = 5,
-  subgroup = "train-transport",
+  subgroup = "defensive-structure",
   type = "item-with-entity-data"
 }

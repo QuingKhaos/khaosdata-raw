@@ -1,0 +1,17 @@
+return {
+  flags = {},
+  icon_size = 64,
+  icons = {
+    {
+      icon = "__pyalienlifegraphics__/graphics/icons/arthurian-pup.png"
+    },
+    {
+      icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"
+    }
+  },
+  name = "arthurian-pup-mk03",
+  order = "h",
+  stack_size = 100,
+  subgroup = "py-alienlife-arthurian",
+  type = "item"
+}

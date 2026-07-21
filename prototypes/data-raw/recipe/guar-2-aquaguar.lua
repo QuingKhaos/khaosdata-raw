@@ -1,0 +1,122 @@
+return {
+  allow_productivity = true,
+  always_show_made_in = true,
+  always_show_products = true,
+  category = "guar",
+  enabled = false,
+  energy_required = 99,
+  icons = {
+    {
+      icon = "__pyalienlifegraphics__/graphics/icons/guar.png"
+    },
+    {
+      floating = true,
+      icon = "__pyalienlifegraphics__/graphics/icons/2.png",
+      scale = 0.25,
+      shift = {
+        8,
+        8
+      }
+    },
+    {
+      floating = true,
+      icon = "__pycoalprocessinggraphics__/graphics/icons/gui/turd.png",
+      icon_size = 40,
+      scale = 0.35,
+      shift = {
+        10,
+        -10
+      },
+      tint = {
+        a = 1,
+        b = 1,
+        g = 1,
+        r = 1
+      }
+    }
+  },
+  ingredients = {
+    {
+      amount = 10,
+      name = "guar-seeds",
+      type = "item"
+    },
+    {
+      amount = 8,
+      name = "sand",
+      type = "item"
+    },
+    {
+      amount = 40,
+      name = "soil",
+      type = "item"
+    },
+    {
+      amount = 25,
+      name = "ash",
+      type = "item"
+    },
+    {
+      amount = 2,
+      name = "small-lamp",
+      type = "item"
+    },
+    {
+      amount = 40,
+      fluidbox_index = 1,
+      name = "water-saline",
+      type = "fluid"
+    }
+  },
+  localised_description = {
+    "",
+    {
+      "?",
+      {
+        "",
+        {
+          "recipe-description.guar-2-aquaguar"
+        },
+        "\n",
+        {
+          "turd.font",
+          {
+            "turd.recipe-replacement"
+          }
+        }
+      },
+      {
+        "turd.font",
+        {
+          "turd.recipe-replacement"
+        }
+      }
+    },
+    "\n",
+    {
+      "recipe-description.affected-by-productivity"
+    }
+  },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.guar-2-aquaguar"
+    },
+    {
+      "item-name.guar"
+    }
+  },
+  main_product = "guar",
+  maximum_productivity = 1000000,
+  name = "guar-2-aquaguar",
+  order = "a",
+  results = {
+    {
+      amount = 25,
+      name = "guar",
+      type = "item"
+    }
+  },
+  subgroup = "py-alienlife-guar",
+  type = "recipe"
+}

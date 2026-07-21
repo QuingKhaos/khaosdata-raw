@@ -28,6 +28,6 @@ return {
   },
   place_result = "stone-wall",
   stack_size = 100,
-  subgroup = "defensive-structure",
+  subgroup = "py-walls",
   type = "item"
 }

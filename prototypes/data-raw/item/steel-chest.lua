@@ -28,6 +28,6 @@ return {
   },
   place_result = "steel-chest",
   stack_size = 50,
-  subgroup = "storage",
+  subgroup = "logistic-network",
   type = "item"
 }

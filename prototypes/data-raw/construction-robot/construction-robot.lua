@@ -48,6 +48,9 @@ return {
       0
     }
   },
+  collision_mask = {
+    layers = {}
+  },
   construction_vector = {
     0.3,
     0.22000000000000002
@@ -159,6 +162,7 @@ return {
     "placeable-off-grid",
     "not-on-map"
   },
+  hidden = true,
   hit_visualization_box = {
     {
       -0.1,
@@ -212,7 +216,13 @@ return {
   min_to_charge = 0.2,
   minable = {
     mining_time = 0.1,
-    result = "construction-robot"
+    results = {
+      {
+        amount = 1,
+        name = "construction-robot",
+        type = "item"
+      }
+    }
   },
   mined_sound_volume_modifier = 0.6,
   name = "construction-robot",

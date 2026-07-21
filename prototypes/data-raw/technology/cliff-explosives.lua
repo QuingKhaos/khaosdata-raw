@@ -9,26 +9,33 @@ return {
       type = "cliff-deconstruction-enabled"
     }
   },
+  essential = false,
   icon = "__base__/graphics/technology/cliff-explosives.png",
   icon_size = 256,
   name = "cliff-explosives",
+  order = "autotech-[000238]-[cliff-explosives]",
   prerequisites = {
     "explosives",
-    "military-2"
+    "military-2",
+    "fluid-handling"
   },
   type = "technology",
   unit = {
-    count = 200,
+    count = 450,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
       {
         "logistic-science-pack",
         1
+      },
+      {
+        "py-science-pack-1",
+        2
+      },
+      {
+        "automation-science-pack",
+        3
       }
     },
-    time = 15
+    time = 60
   }
 }

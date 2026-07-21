@@ -1445,8 +1445,19 @@ return {
       0.2
     }
   },
+  collision_mask = {
+    consider_tile_transitions = true,
+    layers = {
+      is_object = true,
+      player = true,
+      train = true
+    }
+  },
   crafting_categories = {
-    "crafting"
+    "crafting",
+    "handcrafting",
+    "wpu-handcrafting",
+    "research-handcrafting"
   },
   damage_hit_tint = {
     0.12,
@@ -1462,7 +1473,6 @@ return {
     "breaths-air",
     "not-repairable",
     "not-on-map",
-    "not-flammable",
     "get-by-unit-number"
   },
   footprint_particles = {

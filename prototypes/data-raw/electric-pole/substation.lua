@@ -13,6 +13,16 @@ return {
       0.7
     }
   },
+  collision_mask = {
+    layers = {
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   connection_points = {
     {
       shadow = {
@@ -170,7 +180,13 @@ return {
   maximum_wire_distance = 18,
   minable = {
     mining_time = 0.1,
-    result = "substation"
+    results = {
+      {
+        amount = 1,
+        name = "substation",
+        type = "item"
+      }
+    }
   },
   name = "substation",
   open_sound = {

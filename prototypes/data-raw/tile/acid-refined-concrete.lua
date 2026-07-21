@@ -102,7 +102,7 @@ return {
       ground_tile = true
     }
   },
-  decorative_removal_probability = 0.25,
+  decorative_removal_probability = 1,
   driving_sound = {
     fade_ticks = 6,
     sound = {
@@ -144,22 +144,12 @@ return {
     g = 0.76100000000000003,
     r = 0.55900000000000007
   },
+  minable = {
+    mining_time = 0.1,
+    result = "acid-refined-concrete"
+  },
   mined_sound = {
-    aggregation = {
-      count_already_playing = true,
-      max_count = 2,
-      remove = true
-    },
-    switch_vibration_data = {
-      filename = "__core__/sound/deconstruct-bricks.bnvib",
-      gain = 0.32000000000000002
-    },
-    variations = {
-      {
-        filename = "__base__/sound/deconstruct-bricks.ogg",
-        volume = 0.8
-      }
-    }
+    filename = "__base__/sound/deconstruct-bricks.ogg"
   },
   name = "acid-refined-concrete",
   needs_correction = false,
@@ -572,7 +562,7 @@ return {
       }
     }
   },
-  vehicle_friction_modifier = 0.8,
+  vehicle_friction_modifier = -0.1,
   walking_sound = {
     advanced_volume_control = {
       fades = {
@@ -636,5 +626,5 @@ return {
       }
     }
   },
-  walking_speed_modifier = 1.5
+  walking_speed_modifier = 3.5
 }

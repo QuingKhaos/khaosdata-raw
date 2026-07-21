@@ -33,7 +33,7 @@ return {
     1
   },
   stack_size = 100,
-  subgroup = "raw-material",
+  subgroup = "py-petroleum-handling-plastic-recipes",
   type = "item",
   weight = 500
 }

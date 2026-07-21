@@ -56,7 +56,7 @@ return {
     }
   },
   stack_size = 50,
-  subgroup = "raw-resource",
+  subgroup = "py-rawores-copper",
   type = "item",
   weight = 2000
 }

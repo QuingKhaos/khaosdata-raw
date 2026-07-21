@@ -5,6 +5,7 @@ return {
       type = "bulk-inserter-capacity-bonus"
     }
   },
+  essential = false,
   icons = {
     {
       icon = "__base__/graphics/technology/inserter-capacity.png",
@@ -22,28 +23,37 @@ return {
     }
   },
   name = "inserter-capacity-bonus-3",
+  order = "autotech-[000459]-[inserter-capacity-bonus-3]",
   prerequisites = {
     "inserter-capacity-bonus-2",
     "chemical-science-pack"
   },
   type = "technology",
   unit = {
-    count = 250,
+    count = 900,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
-        1
-      },
       {
         "chemical-science-pack",
         1
+      },
+      {
+        "py-science-pack-2",
+        2
+      },
+      {
+        "logistic-science-pack",
+        3
+      },
+      {
+        "py-science-pack-1",
+        6
+      },
+      {
+        "automation-science-pack",
+        10
       }
     },
-    time = 30
+    time = 120
   },
   upgrade = true
 }

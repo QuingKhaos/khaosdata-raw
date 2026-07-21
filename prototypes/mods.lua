@@ -2,5 +2,25 @@
 return {
   base = "2.0.77",
   ["khaosdata-extractor"] = "12026.721.710",
-  ["khaosdata-raw"] = "0.0.0"
+  ["khaosdata-raw"] = "0.0.0",
+  pyalienlife = "3.0.67",
+  pyalienlifegraphics = "3.0.12",
+  pyalienlifegraphics2 = "3.0.3",
+  pyalienlifegraphics3 = "3.0.4",
+  pyalternativeenergy = "3.1.38",
+  pyalternativeenergygraphics = "3.0.6",
+  pycoalprocessing = "3.0.44",
+  pycoalprocessinggraphics = "3.0.9",
+  pyfusionenergy = "3.0.17",
+  pyfusionenergygraphics = "3.0.4",
+  pyhightech = "3.0.19",
+  pyhightechgraphics = "3.0.3",
+  pyindustry = "3.0.21",
+  pyindustrygraphics = "3.0.3",
+  pymodpack = "3.0.0",
+  pypetroleumhandling = "3.0.23",
+  pypetroleumhandlinggraphics = "3.0.5",
+  pypostprocessing = "3.0.42",
+  pyrawores = "3.0.25",
+  pyraworesgraphics = "3.0.4"
 }

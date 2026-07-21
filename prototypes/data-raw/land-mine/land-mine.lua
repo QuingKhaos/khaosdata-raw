@@ -58,6 +58,14 @@ return {
       0.4
     }
   },
+  collision_mask = {
+    layers = {
+      is_lower_object = true,
+      object = true,
+      rail = true,
+      water_tile = true
+    }
+  },
   corpse = "land-mine-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -93,7 +101,13 @@ return {
   max_health = 15,
   minable = {
     mining_time = 0.5,
-    result = "land-mine"
+    results = {
+      {
+        amount = 1,
+        name = "land-mine",
+        type = "item"
+      }
+    }
   },
   mined_sound = {
     switch_vibration_data = {

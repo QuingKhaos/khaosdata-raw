@@ -1,4 +1,6 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 5,
   ingredients = {
@@ -9,7 +11,7 @@ return {
     },
     {
       amount = 10,
-      name = "iron-gear-wheel",
+      name = "small-parts-01",
       type = "item"
     },
     {
@@ -19,10 +21,28 @@ return {
     },
     {
       amount = 10,
-      name = "pipe",
+      name = "niobium-pipe",
+      type = "item"
+    },
+    {
+      amount = 10,
+      name = "duralumin",
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.pumpjack"
+    },
+    {
+      "item-name.pumpjack"
+    },
+    {
+      "entity-name.pumpjack"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "pumpjack",
   results = {
     {

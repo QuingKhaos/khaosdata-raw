@@ -1,5 +1,8 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
+  energy_required = 0.5,
   ingredients = {
     {
       amount = 10,
@@ -12,6 +15,19 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.pipe-to-ground"
+    },
+    {
+      "item-name.pipe-to-ground"
+    },
+    {
+      "entity-name.pipe-to-ground"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "pipe-to-ground",
   results = {
     {

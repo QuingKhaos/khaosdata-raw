@@ -9,31 +9,36 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = false,
   icon = "__base__/graphics/technology/rocketry.png",
   icon_size = 256,
   name = "rocketry",
+  order = "autotech-[000240]-[rocketry]",
   prerequisites = {
     "explosives",
-    "flammables",
-    "military-science-pack"
+    "flamethrower"
   },
   type = "technology",
   unit = {
-    count = 120,
+    count = 450,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
       {
         "logistic-science-pack",
         1
+      },
+      {
+        "py-science-pack-1",
+        2
+      },
+      {
+        "automation-science-pack",
+        3
       },
       {
         "military-science-pack",
         1
       }
     },
-    time = 15
+    time = 90
   }
 }

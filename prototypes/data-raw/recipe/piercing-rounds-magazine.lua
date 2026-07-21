@@ -1,4 +1,6 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 6,
   ingredients = {
@@ -13,11 +15,21 @@ return {
       type = "item"
     },
     {
-      amount = 2,
-      name = "copper-plate",
+      amount = 1,
+      name = "lead-plate",
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.piercing-rounds-magazine"
+    },
+    {
+      "item-name.piercing-rounds-magazine"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "piercing-rounds-magazine",
   results = {
     {

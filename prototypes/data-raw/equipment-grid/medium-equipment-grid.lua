@@ -2,8 +2,8 @@ return {
   equipment_categories = {
     "armor"
   },
-  height = 8,
+  height = 10,
   name = "medium-equipment-grid",
   type = "equipment-grid",
-  width = 6
+  width = 12
 }

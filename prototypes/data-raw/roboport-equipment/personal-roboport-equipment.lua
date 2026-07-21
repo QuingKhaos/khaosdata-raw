@@ -1,6 +1,7 @@
 return {
   categories = {
-    "armor"
+    "armor",
+    "py-mount-generator"
   },
   charge_approach_distance = 2.6000000000000001,
   charging_distance = 1.6000000000000001,

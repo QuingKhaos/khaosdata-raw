@@ -5,6 +5,7 @@ return {
       type = "worker-robot-speed"
     }
   },
+  essential = false,
   icons = {
     {
       icon = "__base__/graphics/technology/worker-robots-speed.png",
@@ -22,27 +23,33 @@ return {
     }
   },
   name = "worker-robots-speed-1",
+  order = "autotech-[000261]-[worker-robots-speed-1]",
   prerequisites = {
-    "robotics"
+    "py-science-pack-2",
+    "logistic-robotics"
   },
   type = "technology",
   unit = {
-    count = 50,
+    count = 450,
     ingredients = {
       {
-        "automation-science-pack",
+        "py-science-pack-2",
         1
       },
       {
         "logistic-science-pack",
-        1
+        2
       },
       {
-        "chemical-science-pack",
-        1
+        "py-science-pack-1",
+        3
+      },
+      {
+        "automation-science-pack",
+        6
       }
     },
-    time = 30
+    time = 90
   },
   upgrade = true
 }

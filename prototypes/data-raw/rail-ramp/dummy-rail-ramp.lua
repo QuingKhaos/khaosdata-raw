@@ -9,6 +9,16 @@ return {
       7.7999999999999998
     }
   },
+  collision_mask = {
+    layers = {
+      elevated_rail = true,
+      is_lower_object = true,
+      is_object = true,
+      object = true,
+      rail = true,
+      rail_support = true
+    }
+  },
   extra_planner_penalty = 0.5,
   forced_fence_segment_count = 2,
   hidden = true,

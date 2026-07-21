@@ -1,4 +1,6 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 5,
   ingredients = {
@@ -13,6 +15,19 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.land-mine"
+    },
+    {
+      "item-name.land-mine"
+    },
+    {
+      "entity-name.land-mine"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "land-mine",
   results = {
     {

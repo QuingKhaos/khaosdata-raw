@@ -1,29 +1,32 @@
 return {
-  effects = {
-    {
-      recipe = "battery",
-      type = "unlock-recipe"
-    }
-  },
+  effects = {},
+  enabled = false,
+  essential = false,
+  hidden = true,
   icon = "__base__/graphics/technology/battery.png",
   icon_size = 256,
   name = "battery",
+  order = "autotech-[000150]-[battery]",
   prerequisites = {
-    "sulfur-processing"
+    "logistic-science-pack"
   },
   type = "technology",
   unit = {
-    count = 150,
+    count = 160,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
       {
         "logistic-science-pack",
         1
+      },
+      {
+        "py-science-pack-1",
+        2
+      },
+      {
+        "automation-science-pack",
+        3
       }
     },
-    time = 30
+    time = 60
   }
 }

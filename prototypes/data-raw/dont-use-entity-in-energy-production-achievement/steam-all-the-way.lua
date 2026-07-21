@@ -1,6 +1,7 @@
 return {
   allowed_without_fight = false,
   excluded = "solar-panel",
+  hidden = true,
   icon = "__base__/graphics/achievement/steam-all-the-way.png",
   icon_size = 128,
   name = "steam-all-the-way",

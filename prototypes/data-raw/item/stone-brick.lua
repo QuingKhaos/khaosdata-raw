@@ -35,7 +35,7 @@ return {
     condition_size = 1,
     result = "stone-path"
   },
-  stack_size = 100,
+  stack_size = 1000,
   subgroup = "terrain",
   type = "item"
 }

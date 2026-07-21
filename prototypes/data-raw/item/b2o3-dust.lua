@@ -1,0 +1,34 @@
+return {
+  drop_sound = {
+    aggregation = {
+      max_count = 1,
+      remove = true
+    },
+    filename = "__base__/sound/item/sulfur-inventory-move.ogg",
+    volume = 0.7
+  },
+  flags = {},
+  icon = "__pyfusionenergygraphics__/graphics/icons/boron-trioxide-dust.png",
+  icon_size = 32,
+  inventory_move_sound = {
+    aggregation = {
+      max_count = 1,
+      remove = true
+    },
+    filename = "__base__/sound/item/sulfur-inventory-move.ogg",
+    volume = 0.7
+  },
+  name = "b2o3-dust",
+  order = "m",
+  pick_sound = {
+    aggregation = {
+      max_count = 1,
+      remove = true
+    },
+    filename = "__base__/sound/item/resource-inventory-pickup.ogg",
+    volume = 0.6
+  },
+  stack_size = 100,
+  subgroup = "py-fusion-items",
+  type = "item"
+}

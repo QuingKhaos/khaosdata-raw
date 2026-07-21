@@ -15,6 +15,18 @@ return {
       0.6
     }
   },
+  collision_mask = {
+    layers = {
+      dingrido_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   deconstruction_alternative = "tree-01",
   drawing_box_vertical_extension = 2.2000000000000002,
   emissions_per_second = {
@@ -33,10 +45,15 @@ return {
   impact_category = "tree",
   max_health = 20,
   minable = {
-    count = 2,
     mining_particle = "wooden-particle",
     mining_time = 0.5,
-    result = "wood"
+    results = {
+      {
+        amount = 1,
+        name = "log",
+        type = "item"
+      }
+    }
   },
   name = "dead-tree-desert",
   order = "a[tree]-a[nauvis]-b[dead-tree]",

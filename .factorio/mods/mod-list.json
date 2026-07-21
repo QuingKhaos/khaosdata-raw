@@ -14,10 +14,6 @@
     },
     {
       "enabled": true,
-      "name": "pymodpack"
-    },
-    {
-      "enabled": true,
       "name": "pyalienlife"
     },
     {
@@ -71,6 +67,10 @@
     {
       "enabled": true,
       "name": "pyindustrygraphics"
+    },
+    {
+      "enabled": true,
+      "name": "pymodpack"
     },
     {
       "enabled": true,

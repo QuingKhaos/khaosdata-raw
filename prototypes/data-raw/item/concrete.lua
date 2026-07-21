@@ -41,7 +41,7 @@ return {
     0.96999999999999993,
     1
   },
-  stack_size = 100,
+  stack_size = 1000,
   subgroup = "terrain",
   type = "item",
   weight = 10000

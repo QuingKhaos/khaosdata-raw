@@ -1,5 +1,7 @@
 return {
   allow_productivity = true,
+  always_show_made_in = true,
+  always_show_products = true,
   category = "chemistry",
   crafting_machine_tint = {
     primary = {
@@ -29,6 +31,7 @@ return {
   },
   enabled = false,
   energy_required = 1,
+  hidden = true,
   icon = "__base__/graphics/icons/solid-fuel-from-light-oil.png",
   ingredients = {
     {
@@ -37,6 +40,32 @@ return {
       type = "fluid"
     }
   },
+  localised_description = {
+    "?",
+    {
+      "",
+      {
+        "recipe-description.solid-fuel-from-light-oil"
+      },
+      "\n",
+      {
+        "recipe-description.affected-by-productivity"
+      }
+    },
+    {
+      "recipe-description.affected-by-productivity"
+    }
+  },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.solid-fuel-from-light-oil"
+    },
+    {
+      "item-name.solid-fuel"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "solid-fuel-from-light-oil",
   order = "b[fluid-chemistry]-d[solid-fuel-from-light-oil]",
   results = {

@@ -1,0 +1,46 @@
+return {
+  always_show_made_in = true,
+  always_show_products = true,
+  category = "lor",
+  enabled = false,
+  energy_required = 4,
+  ingredients = {
+    {
+      amount = 500,
+      name = "aromatics",
+      type = "fluid"
+    },
+    {
+      amount = 100,
+      name = "naphtha",
+      type = "fluid"
+    },
+    {
+      amount = 1,
+      name = "sncr-alloy",
+      type = "item"
+    }
+  },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.aromatics-2-diesel"
+    },
+    {
+      "fluid-name.diesel"
+    }
+  },
+  main_product = "diesel",
+  maximum_productivity = 1000000,
+  name = "aromatics-2-diesel",
+  order = "a",
+  results = {
+    {
+      amount = 350,
+      name = "diesel",
+      type = "fluid"
+    }
+  },
+  subgroup = "py-petroleum-handling-fluids",
+  type = "recipe"
+}

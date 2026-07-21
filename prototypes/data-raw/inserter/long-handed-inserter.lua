@@ -668,6 +668,17 @@ return {
       0.15
     }
   },
+  collision_mask = {
+    layers = {
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "long-handed-inserter-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -704,7 +715,7 @@ return {
   },
   extension_speed = 0.05,
   fast_replaceable_group = "long-handed-inserter",
-  filter_count = 5,
+  filter_count = 3,
   flags = {
     "placeable-neutral",
     "placeable-player",
@@ -765,7 +776,13 @@ return {
   max_health = 160,
   minable = {
     mining_time = 0.1,
-    result = "long-handed-inserter"
+    results = {
+      {
+        amount = 1,
+        name = "long-handed-inserter",
+        type = "item"
+      }
+    }
   },
   name = "long-handed-inserter",
   open_sound = {

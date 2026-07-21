@@ -5,6 +5,8 @@ return {
   ["bullet"] = require("___KHAOSDATA___.prototypes.data-raw.ammo-category.bullet"),
   ["cannon-shell"] = require("___KHAOSDATA___.prototypes.data-raw.ammo-category.cannon-shell"),
   ["capsule"] = require("___KHAOSDATA___.prototypes.data-raw.ammo-category.capsule"),
+  ["caravan-control"] = require("___KHAOSDATA___.prototypes.data-raw.ammo-category.caravan-control"),
+  ["dragon-breath"] = require("___KHAOSDATA___.prototypes.data-raw.ammo-category.dragon-breath"),
   ["electric"] = require("___KHAOSDATA___.prototypes.data-raw.ammo-category.electric"),
   ["flamethrower"] = require("___KHAOSDATA___.prototypes.data-raw.ammo-category.flamethrower"),
   ["grenade"] = require("___KHAOSDATA___.prototypes.data-raw.ammo-category.grenade"),
@@ -13,4 +15,5 @@ return {
   ["melee"] = require("___KHAOSDATA___.prototypes.data-raw.ammo-category.melee"),
   ["rocket"] = require("___KHAOSDATA___.prototypes.data-raw.ammo-category.rocket"),
   ["shotgun-shell"] = require("___KHAOSDATA___.prototypes.data-raw.ammo-category.shotgun-shell"),
+  ["ulric-infusion"] = require("___KHAOSDATA___.prototypes.data-raw.ammo-category.ulric-infusion"),
 }

@@ -5,57 +5,43 @@ return {
       type = "artillery-range"
     }
   },
-  icons = {
-    {
-      icon = "__base__/graphics/technology/artillery-range.png",
-      icon_size = 256
-    },
-    {
-      floating = true,
-      icon = "__core__/graphics/icons/technology/constants/constant-range.png",
-      icon_size = 128,
-      scale = 0.5,
-      shift = {
-        50,
-        50
-      }
-    }
-  },
-  max_level = "infinite",
+  essential = false,
+  icon = "__base__/graphics/technology/artillery.png",
+  icon_size = 256,
   name = "artillery-shell-range-1",
+  order = "autotech-[000462]-[artillery-shell-range-1]",
   prerequisites = {
-    "artillery",
-    "space-science-pack"
+    "artillery"
   },
   type = "technology",
   unit = {
-    count_formula = "2^L*1000",
+    count = 900,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
-        1
-      },
       {
         "chemical-science-pack",
         1
       },
       {
+        "py-science-pack-2",
+        2
+      },
+      {
+        "logistic-science-pack",
+        3
+      },
+      {
+        "py-science-pack-1",
+        6
+      },
+      {
+        "automation-science-pack",
+        10
+      },
+      {
         "military-science-pack",
-        1
-      },
-      {
-        "utility-science-pack",
-        1
-      },
-      {
-        "space-science-pack",
-        1
+        2
       }
     },
-    time = 60
+    time = 120
   }
 }

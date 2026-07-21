@@ -1,4 +1,15 @@
 return {
+  allowed_effects = {
+    "consumption",
+    "speed",
+    "productivity"
+  },
+  allowed_module_categories = {
+    "productivity",
+    "speed",
+    "efficiency",
+    "quality"
+  },
   base_picture = {
     sheets = {
       {
@@ -631,6 +642,18 @@ return {
       1.2
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "pumpjack-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -668,48 +691,29 @@ return {
     "placeable-neutral",
     "player-creation"
   },
-  graphics_set = {
-    animation = {
-      north = {
-        layers = {
-          {
-            animation_speed = 0.5,
-            filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead.png",
-            frame_count = 40,
-            height = 202,
-            line_length = 8,
-            priority = "high",
-            scale = 0.5,
-            shift = {
-              -0.125,
-              -0.75
-            },
-            width = 206
-          },
-          {
-            animation_speed = 0.5,
-            draw_as_shadow = true,
-            filename = "__base__/graphics/entity/pumpjack/pumpjack-horsehead-shadow.png",
-            frame_count = 40,
-            height = 82,
-            line_length = 8,
-            priority = "high",
-            scale = 0.5,
-            shift = {
-              0.5546875,
-              0.453125
-            },
-            width = 309
-          }
-        }
+  hidden = true,
+  icon = "__base__/graphics/icons/pumpjack.png",
+  icons_positioning = {
+    {
+      inventory_index = 2,
+      max_icons_per_row = 2,
+      scale = 0.85737499999999986,
+      shift = {
+        0,
+        0.55688750000000011
       }
     }
   },
-  icon = "__base__/graphics/icons/pumpjack.png",
   max_health = 200,
   minable = {
     mining_time = 0.5,
-    result = "pumpjack"
+    results = {
+      {
+        amount = 1,
+        name = "pumpjack",
+        type = "item"
+      }
+    }
   },
   mining_speed = 1,
   module_slots = 2,
@@ -726,6 +730,12 @@ return {
   output_fluid_box = {
     pipe_connections = {
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 0,
         flow_direction = "output",
         positions = {
@@ -827,6 +837,10 @@ return {
       }
     },
     volume = 1000
+  },
+  perceived_performance = {
+    maximum = 1.5,
+    performance_to_activity_rate = 0.2
   },
   radius_visualisation_picture = {
     filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png",

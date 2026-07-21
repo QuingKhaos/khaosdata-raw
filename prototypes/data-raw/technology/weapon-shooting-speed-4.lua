@@ -16,6 +16,7 @@ return {
       type = "gun-speed"
     }
   },
+  essential = false,
   icons = {
     {
       icon = "__base__/graphics/technology/weapon-shooting-speed-2.png",
@@ -33,27 +34,32 @@ return {
     }
   },
   name = "weapon-shooting-speed-4",
+  order = "autotech-[000189]-[weapon-shooting-speed-4]",
   prerequisites = {
     "weapon-shooting-speed-3"
   },
   type = "technology",
   unit = {
-    count = 400,
+    count = 200,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
       {
         "logistic-science-pack",
         1
+      },
+      {
+        "py-science-pack-1",
+        2
+      },
+      {
+        "automation-science-pack",
+        3
       },
       {
         "military-science-pack",
         1
       }
     },
-    time = 60
+    time = 90
   },
   upgrade = true
 }

@@ -1,3 +1,17 @@
 return {
+  ["outpost-aerial-fluid"] = require("___KHAOSDATA___.prototypes.data-raw.storage-tank.outpost-aerial-fluid"),
+  ["outpost-fluid"] = require("___KHAOSDATA___.prototypes.data-raw.storage-tank.outpost-fluid"),
+  ["py-check-valve"] = require("___KHAOSDATA___.prototypes.data-raw.storage-tank.py-check-valve"),
+  ["py-tank-1000"] = require("___KHAOSDATA___.prototypes.data-raw.storage-tank.py-tank-1000"),
+  ["py-tank-10000"] = require("___KHAOSDATA___.prototypes.data-raw.storage-tank.py-tank-10000"),
+  ["py-tank-1500"] = require("___KHAOSDATA___.prototypes.data-raw.storage-tank.py-tank-1500"),
+  ["py-tank-3000"] = require("___KHAOSDATA___.prototypes.data-raw.storage-tank.py-tank-3000"),
+  ["py-tank-4000"] = require("___KHAOSDATA___.prototypes.data-raw.storage-tank.py-tank-4000"),
+  ["py-tank-5000"] = require("___KHAOSDATA___.prototypes.data-raw.storage-tank.py-tank-5000"),
+  ["py-tank-6500"] = require("___KHAOSDATA___.prototypes.data-raw.storage-tank.py-tank-6500"),
+  ["py-tank-7000"] = require("___KHAOSDATA___.prototypes.data-raw.storage-tank.py-tank-7000"),
+  ["py-tank-8000"] = require("___KHAOSDATA___.prototypes.data-raw.storage-tank.py-tank-8000"),
+  ["py-tank-9000"] = require("___KHAOSDATA___.prototypes.data-raw.storage-tank.py-tank-9000"),
   ["storage-tank"] = require("___KHAOSDATA___.prototypes.data-raw.storage-tank.storage-tank"),
+  ["tailings-pond"] = require("___KHAOSDATA___.prototypes.data-raw.storage-tank.tailings-pond"),
 }

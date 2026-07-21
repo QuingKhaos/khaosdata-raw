@@ -20,6 +20,18 @@ return {
       1
     }
   },
+  collision_mask = {
+    layers = {
+      dingrido_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   count_as_rock_for_filtered_deconstruction = true,
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -189,10 +201,21 @@ return {
   },
   max_health = 500,
   minable = {
-    count = 20,
     mining_particle = "stone-particle",
     mining_time = 2,
-    result = "stone"
+    results = {
+      {
+        amount = 20,
+        name = "stone",
+        type = "item"
+      },
+      {
+        amount = 1,
+        name = "moss",
+        probability = 0.1,
+        type = "item"
+      }
+    }
   },
   mined_sound = {
     aggregation = {

@@ -44,6 +44,9 @@ return {
       0
     }
   },
+  collision_mask = {
+    layers = {}
+  },
   damaged_trigger_effect = {
     damage_type_filters = "fire",
     entity_name = "flying-robot-damaged-explosion",

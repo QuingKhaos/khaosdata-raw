@@ -7,6 +7,7 @@ return {
     filename = "__base__/sound/item/nuclear-inventory-move.ogg",
     volume = 0.6
   },
+  hidden = true,
   icon = "__base__/graphics/icons/uranium-238.png",
   inventory_move_sound = {
     aggregation = {

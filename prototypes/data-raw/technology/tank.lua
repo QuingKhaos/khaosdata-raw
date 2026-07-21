@@ -13,35 +13,45 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = false,
   icon = "__base__/graphics/technology/tank.png",
   icon_size = 256,
   name = "tank",
+  order = "autotech-[000361]-[tank]",
   prerequisites = {
-    "automobilism",
-    "military-3",
-    "explosives"
+    "chemical-science-pack",
+    "explosives",
+    "military-science-pack"
   },
   type = "technology",
   unit = {
-    count = 250,
+    count = 700,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
-        1
-      },
       {
         "chemical-science-pack",
         1
       },
       {
+        "py-science-pack-2",
+        2
+      },
+      {
+        "logistic-science-pack",
+        3
+      },
+      {
+        "py-science-pack-1",
+        6
+      },
+      {
+        "automation-science-pack",
+        10
+      },
+      {
         "military-science-pack",
-        1
+        2
       }
     },
-    time = 30
+    time = 120
   }
 }

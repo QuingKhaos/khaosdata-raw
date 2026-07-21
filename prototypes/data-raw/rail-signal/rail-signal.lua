@@ -14,6 +14,15 @@ return {
       0.2
     }
   },
+  collision_mask = {
+    layers = {
+      floor = true,
+      is_lower_object = true,
+      item = true,
+      rail = true,
+      water_tile = true
+    }
+  },
   corpse = "rail-signal-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -7297,7 +7306,13 @@ return {
   max_health = 100,
   minable = {
     mining_time = 0.1,
-    result = "rail-signal"
+    results = {
+      {
+        amount = 1,
+        name = "rail-signal",
+        type = "item"
+      }
+    }
   },
   name = "rail-signal",
   open_sound = {

@@ -9,12 +9,27 @@ return {
       0.85
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   flags = {
     "placeable-neutral",
     "player-creation"
   },
   hidden = true,
   icon = "__base__/graphics/icons/factorio-logo-16tiles.png",
+  icon_draw_specification = {
+    scale = 1.8899999999999999,
+    scale_for_many = 1.8899999999999999
+  },
   inventory_size = 1,
   max_health = 666,
   minable = {

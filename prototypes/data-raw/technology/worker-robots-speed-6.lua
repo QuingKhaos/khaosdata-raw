@@ -5,6 +5,7 @@ return {
       type = "worker-robot-speed"
     }
   },
+  essential = false,
   icons = {
     {
       icon = "__base__/graphics/technology/worker-robots-speed.png",
@@ -21,42 +22,58 @@ return {
       }
     }
   },
-  max_level = "infinite",
   name = "worker-robots-speed-6",
+  order = "autotech-[000850]-[worker-robots-speed-6]",
   prerequisites = {
-    "worker-robots-speed-5",
-    "space-science-pack"
+    "utility-science-pack",
+    "worker-robots-speed-5"
   },
   type = "technology",
   unit = {
-    count_formula = "2^(L-6)*1000",
+    count = 3300,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
-        1
-      },
-      {
-        "chemical-science-pack",
-        1
-      },
-      {
-        "production-science-pack",
-        1
-      },
       {
         "utility-science-pack",
         1
       },
       {
-        "space-science-pack",
-        1
+        "py-science-pack-4",
+        2
+      },
+      {
+        "production-science-pack",
+        3
+      },
+      {
+        "py-science-pack-3",
+        6
+      },
+      {
+        "chemical-science-pack",
+        10
+      },
+      {
+        "py-science-pack-2",
+        20
+      },
+      {
+        "logistic-science-pack",
+        30
+      },
+      {
+        "py-science-pack-1",
+        60
+      },
+      {
+        "automation-science-pack",
+        100
+      },
+      {
+        "military-science-pack",
+        20
       }
     },
-    time = 60
+    time = 600
   },
   upgrade = true
 }

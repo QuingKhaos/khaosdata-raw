@@ -1,5 +1,5 @@
 return {
-  group = "logistics",
+  group = "combat",
   name = "transport",
   order = "f",
   type = "item-subgroup"

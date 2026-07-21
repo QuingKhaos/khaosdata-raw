@@ -1,11 +1,15 @@
 return {
   categories = {
-    "armor"
+    "armor",
+    "py-mount-generator"
   },
   energy_source = {
-    buffer_capacity = "20MJ",
+    buffer_capacity = "50MJ",
     type = "electric",
     usage_priority = "tertiary"
+  },
+  localised_name = {
+    "item-name.battery-mk01"
   },
   name = "battery-equipment",
   shape = {
@@ -20,5 +24,6 @@ return {
     scale = 0.5,
     width = 64
   },
+  take_result = "battery-mk01",
   type = "battery-equipment"
 }

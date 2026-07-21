@@ -1,4 +1,6 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 3,
   hidden = true,
@@ -14,6 +16,19 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.fast-loader"
+    },
+    {
+      "item-name.fast-loader"
+    },
+    {
+      "entity-name.fast-loader"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "fast-loader",
   results = {
     {

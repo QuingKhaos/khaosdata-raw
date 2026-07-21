@@ -1,12 +1,15 @@
 return {
   allow_decomposition = false,
   allow_quality = false,
-  category = "crafting-with-fluid",
+  always_show_made_in = true,
+  always_show_products = true,
+  category = "py-barreling",
   enabled = false,
   energy_required = 0.2,
   factoriopedia_alternative = "barrel",
   hide_from_player_crafting = true,
   hide_from_signal_gui = false,
+  hide_from_stats = true,
   icons = {
     {
       icon = "__base__/graphics/icons/fluid/barreling/barrel-empty.png",
@@ -56,6 +59,7 @@ return {
       "fluid-name.heavy-oil"
     }
   },
+  maximum_productivity = 1000000,
   name = "empty-heavy-oil-barrel",
   order = "a[fluid]-b[oil]-d[heavy-oil]",
   results = {

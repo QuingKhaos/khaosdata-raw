@@ -9,6 +9,16 @@ return {
       1
     }
   },
+  collision_mask = {
+    layers = {
+      floor = true,
+      is_lower_object = true,
+      item = true,
+      object = true,
+      rail = true,
+      water_tile = true
+    }
+  },
   corpse = "legacy-straight-rail-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",

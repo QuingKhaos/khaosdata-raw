@@ -13,6 +13,17 @@ return {
       0.2
     }
   },
+  collision_mask = {
+    layers = {
+      car = true,
+      floor = true,
+      is_lower_object = true,
+      item = true,
+      meltable = true,
+      transport_belt = true,
+      water_tile = true
+    }
+  },
   corpse = "pipe-to-ground-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -88,6 +99,7 @@ return {
   },
   fluid_box = {
     hide_connection_info = true,
+    max_pipeline_extent = 320,
     pipe_connections = {
       {
         direction = 0,
@@ -188,13 +200,19 @@ return {
   },
   icon = "__base__/graphics/icons/pipe-to-ground.png",
   icon_draw_specification = {
-    scale = 0.5
+    scale = 0.65
   },
   impact_category = "metal",
   max_health = 150,
   minable = {
     mining_time = 0.1,
-    result = "pipe-to-ground"
+    results = {
+      {
+        amount = 1,
+        name = "pipe-to-ground",
+        type = "item"
+      }
+    }
   },
   name = "pipe-to-ground",
   open_sound = {

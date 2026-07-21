@@ -1,49 +1,79 @@
 return {
   effects = {
     {
-      recipe = "advanced-oil-processing",
+      recipe = "oleochemicals-distilation",
       type = "unlock-recipe"
     },
     {
-      recipe = "heavy-oil-cracking",
+      recipe = "ref-to-light-oil",
       type = "unlock-recipe"
     },
     {
-      recipe = "light-oil-cracking",
+      recipe = "sulfuric-petgas",
       type = "unlock-recipe"
     },
     {
-      recipe = "solid-fuel-from-heavy-oil",
+      recipe = "petgas-to-refsyngas",
       type = "unlock-recipe"
     },
     {
-      recipe = "solid-fuel-from-light-oil",
+      recipe = "heavy-oleo",
+      type = "unlock-recipe"
+    },
+    {
+      recipe = "lubricant",
+      type = "unlock-recipe"
+    },
+    {
+      recipe = "aromatics2",
       type = "unlock-recipe"
     }
   },
+  essential = false,
   icon = "__base__/graphics/technology/advanced-oil-processing.png",
   icon_size = 256,
   name = "advanced-oil-processing",
+  order = "autotech-[000636]-[advanced-oil-processing]",
   prerequisites = {
-    "chemical-science-pack"
+    "production-science-pack"
   },
   type = "technology",
   unit = {
-    count = 75,
+    count = 1200,
     ingredients = {
       {
-        "automation-science-pack",
+        "production-science-pack",
         1
       },
       {
-        "logistic-science-pack",
-        1
+        "py-science-pack-3",
+        2
       },
       {
         "chemical-science-pack",
-        1
+        3
+      },
+      {
+        "py-science-pack-2",
+        6
+      },
+      {
+        "logistic-science-pack",
+        10
+      },
+      {
+        "py-science-pack-1",
+        20
+      },
+      {
+        "automation-science-pack",
+        30
+      },
+      {
+        "military-science-pack",
+        6
       }
     },
-    time = 30
+    time = 300
   }
 }

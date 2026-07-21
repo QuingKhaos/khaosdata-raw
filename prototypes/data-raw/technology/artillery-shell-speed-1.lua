@@ -7,6 +7,7 @@ return {
       type = "gun-speed"
     }
   },
+  essential = false,
   icons = {
     {
       icon = "__base__/graphics/technology/artillery-speed.png",
@@ -25,39 +26,39 @@ return {
   },
   max_level = "infinite",
   name = "artillery-shell-speed-1",
+  order = "autotech-[000463]-[artillery-shell-speed-1]",
   prerequisites = {
-    "artillery",
-    "space-science-pack"
+    "artillery"
   },
   type = "technology",
   unit = {
-    count_formula = "1000+3^(L-1)*1000",
+    count_formula = "(900) + 1000+3^(L-1)*1000",
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
-        1
-      },
       {
         "chemical-science-pack",
         1
       },
       {
+        "py-science-pack-2",
+        2
+      },
+      {
+        "logistic-science-pack",
+        3
+      },
+      {
+        "py-science-pack-1",
+        6
+      },
+      {
+        "automation-science-pack",
+        10
+      },
+      {
         "military-science-pack",
-        1
-      },
-      {
-        "utility-science-pack",
-        1
-      },
-      {
-        "space-science-pack",
-        1
+        2
       }
     },
-    time = 60
+    time = 120
   }
 }

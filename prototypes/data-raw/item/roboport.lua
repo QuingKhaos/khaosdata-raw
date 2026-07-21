@@ -7,6 +7,7 @@ return {
     filename = "__base__/sound/item/roboport-inventory-move.ogg",
     volume = 0.45
   },
+  hidden = true,
   icon = "__base__/graphics/icons/roboport.png",
   inventory_move_sound = {
     aggregation = {

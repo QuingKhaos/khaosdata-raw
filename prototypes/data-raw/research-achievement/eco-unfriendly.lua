@@ -1,4 +1,5 @@
 return {
+  hidden = true,
   icon = "__base__/graphics/achievement/eco-unfriendly.png",
   icon_size = 128,
   name = "eco-unfriendly",

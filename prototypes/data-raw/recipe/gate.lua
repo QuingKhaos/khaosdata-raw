@@ -1,5 +1,8 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
+  energy_required = 0.5,
   ingredients = {
     {
       amount = 1,
@@ -17,6 +20,19 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.gate"
+    },
+    {
+      "item-name.gate"
+    },
+    {
+      "entity-name.gate"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "gate",
   results = {
     {

@@ -1,4 +1,5 @@
 return {
+  hidden = true,
   icon = "__base__/graphics/achievement/smoke-me-a-kipper-i-will-be-back-for-breakfast.png",
   icon_size = 128,
   name = "smoke-me-a-kipper-i-will-be-back-for-breakfast",

@@ -3,11 +3,11 @@ return {
     0,
     -0.375
   },
-  allowed_effects = {
-    "consumption",
-    "speed",
+  allowed_effects = {},
+  allowed_module_categories = {
     "productivity",
-    "pollution",
+    "speed",
+    "efficiency",
     "quality"
   },
   circuit_connector = {
@@ -615,6 +615,18 @@ return {
       1.2
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "assembling-machine-3-remnants",
   crafting_categories = {
     "basic-crafting",
@@ -622,7 +634,7 @@ return {
     "advanced-crafting",
     "crafting-with-fluid"
   },
-  crafting_speed = 1.25,
+  crafting_speed = 4,
   damaged_trigger_effect = {
     damage_type_filters = "fire",
     entity_name = "spark-explosion",
@@ -647,23 +659,38 @@ return {
   drawing_box_vertical_extension = 0.2,
   dying_explosion = "assembling-machine-3-explosion",
   energy_source = {
+    burnt_inventory_size = 1,
+    effectivity = 1,
     emissions_per_minute = {
-      pollution = 2
+      pollution = 12
     },
-    type = "electric",
-    usage_priority = "secondary-input"
+    fuel_categories = {
+      "chemical",
+      "biomass",
+      "jerry",
+      "nuke"
+    },
+    fuel_inventory_size = 1,
+    type = "burner"
   },
   energy_usage = "375kW",
   fast_replaceable_group = "assembling-machine",
   flags = {
     "placeable-neutral",
     "placeable-player",
-    "player-creation"
+    "player-creation",
+    "not-in-made-in"
   },
   fluid_boxes = {
     {
       pipe_connections = {
         {
+          connection_category = {
+            "default",
+            "pipe",
+            "niobium-pipe",
+            "ht-pipes"
+          },
           direction = 0,
           flow_direction = "input",
           position = {
@@ -805,6 +832,12 @@ return {
     {
       pipe_connections = {
         {
+          connection_category = {
+            "default",
+            "pipe",
+            "niobium-pipe",
+            "ht-pipes"
+          },
           direction = 8,
           flow_direction = "output",
           position = {
@@ -987,12 +1020,19 @@ return {
     }
   },
   impact_category = "metal",
+  match_animation_speed_to_activity = false,
   max_health = 400,
   minable = {
     mining_time = 0.2,
-    result = "assembling-machine-3"
+    results = {
+      {
+        amount = 1,
+        name = "assembling-machine-3",
+        type = "item"
+      }
+    }
   },
-  module_slots = 4,
+  module_slots = 0,
   name = "assembling-machine-3",
   open_sound = {
     filename = "__base__/sound/machine-open.ogg",

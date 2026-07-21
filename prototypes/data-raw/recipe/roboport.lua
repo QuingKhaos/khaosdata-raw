@@ -1,6 +1,9 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 5,
+  hidden = true,
   ingredients = {
     {
       amount = 45,
@@ -9,7 +12,7 @@ return {
     },
     {
       amount = 45,
-      name = "iron-gear-wheel",
+      name = "small-parts-01",
       type = "item"
     },
     {
@@ -18,6 +21,19 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.roboport"
+    },
+    {
+      "item-name.roboport"
+    },
+    {
+      "entity-name.roboport"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "roboport",
   results = {
     {

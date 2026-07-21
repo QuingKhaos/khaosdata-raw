@@ -593,6 +593,12 @@ return {
   fluid_box = {
     pipe_connections = {
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 8,
         flow_direction = "output",
         position = {
@@ -1013,7 +1019,13 @@ return {
   max_health = 150,
   minable = {
     mining_time = 0.1,
-    result = "offshore-pump"
+    results = {
+      {
+        amount = 1,
+        name = "offshore-pump",
+        type = "item"
+      }
+    }
   },
   name = "offshore-pump",
   open_sound = {

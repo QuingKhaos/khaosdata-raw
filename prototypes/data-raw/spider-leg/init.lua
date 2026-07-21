@@ -1,4 +1,5 @@
 return {
+  ["py-fake-spidertron-leg"] = require("___KHAOSDATA___.prototypes.data-raw.spider-leg.py-fake-spidertron-leg"),
   ["spidertron-leg-1"] = require("___KHAOSDATA___.prototypes.data-raw.spider-leg.spidertron-leg-1"),
   ["spidertron-leg-2"] = require("___KHAOSDATA___.prototypes.data-raw.spider-leg.spidertron-leg-2"),
   ["spidertron-leg-3"] = require("___KHAOSDATA___.prototypes.data-raw.spider-leg.spidertron-leg-3"),

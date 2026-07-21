@@ -3,6 +3,7 @@ return {
     "steam-engine",
     "steam-turbine"
   },
+  hidden = true,
   icon = "__base__/graphics/achievement/solaris.png",
   icon_size = 128,
   included = "solar-panel",

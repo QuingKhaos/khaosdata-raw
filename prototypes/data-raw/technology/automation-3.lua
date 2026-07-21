@@ -5,38 +5,39 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = false,
   icon = "__base__/graphics/technology/automation-3.png",
   icon_size = 256,
   localised_description = {
     "technology-description.automation-3"
   },
   name = "automation-3",
+  order = "autotech-[000350]-[automation-3]",
   prerequisites = {
-    "speed-module",
-    "production-science-pack",
-    "electric-engine"
+    "bulk-inserter",
+    "machine-components-mk02"
   },
   type = "technology",
   unit = {
-    count = 150,
+    count = 700,
     ingredients = {
       {
-        "automation-science-pack",
+        "py-science-pack-2",
         1
       },
       {
         "logistic-science-pack",
-        1
+        2
       },
       {
-        "chemical-science-pack",
-        1
+        "py-science-pack-1",
+        3
       },
       {
-        "production-science-pack",
-        1
+        "automation-science-pack",
+        6
       }
     },
-    time = 60
+    time = 90
   }
 }

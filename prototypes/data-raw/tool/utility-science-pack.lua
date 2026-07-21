@@ -7,34 +7,35 @@ return {
       max_count = 1,
       remove = true
     },
-    filename = "__base__/sound/item/science-inventory-move.ogg",
-    volume = 0.6
+    filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+    volume = 1
   },
   durability = 1,
   durability_description_key = "description.science-pack-remaining-amount-key",
   durability_description_value = "description.science-pack-remaining-amount-value",
   factoriopedia_durability_description_key = "description.factoriopedia-science-pack-remaining-amount-key",
-  icon = "__base__/graphics/icons/utility-science-pack.png",
+  icon = "__pyhightechgraphics__/graphics/icons/high-tech-science-pack.png",
+  icon_size = 64,
   inventory_move_sound = {
     aggregation = {
       max_count = 1,
       remove = true
     },
-    filename = "__base__/sound/item/science-inventory-move.ogg",
-    volume = 0.6
+    filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+    volume = 1
   },
   localised_description = {
     "item-description.science-pack"
   },
   name = "utility-science-pack",
-  order = "f[utility-science-pack]",
+  order = "j",
   pick_sound = {
     aggregation = {
       max_count = 1,
       remove = true
     },
-    filename = "__base__/sound/item/science-inventory-pickup.ogg",
-    volume = 0.6
+    filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+    volume = 0.7
   },
   random_tint_color = {
     0.92000000000000011,

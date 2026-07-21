@@ -395,6 +395,15 @@ return {
       0.4
     }
   },
+  collision_mask = {
+    layers = {
+      dingrido_collision_mask = true,
+      is_object = true,
+      player = true,
+      train = true
+    },
+    not_colliding_with_itself = true
+  },
   corpse = "behemoth-spitter-corpse",
   damaged_trigger_effect = {
     damage_type_filters = "fire",

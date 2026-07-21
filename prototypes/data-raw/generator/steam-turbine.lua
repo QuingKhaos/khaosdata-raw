@@ -18,6 +18,18 @@ return {
       2.3500000000000001
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "steam-turbine-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -40,8 +52,9 @@ return {
     },
     type = "create-entity"
   },
+  destroy_non_fuel_fluid = false,
   dying_explosion = "steam-turbine-explosion",
-  effectivity = 1,
+  effectivity = 0.5,
   energy_source = {
     type = "electric",
     usage_priority = "secondary-output"
@@ -56,6 +69,12 @@ return {
     minimum_temperature = 100,
     pipe_connections = {
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 8,
         flow_direction = "input-output",
         position = {
@@ -64,6 +83,12 @@ return {
         }
       },
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 0,
         flow_direction = "input-output",
         position = {
@@ -188,10 +213,16 @@ return {
   icon = "__base__/graphics/icons/steam-turbine.png",
   impact_category = "metal-large",
   max_health = 300,
-  maximum_temperature = 500,
+  maximum_temperature = 2000,
   minable = {
     mining_time = 0.3,
-    result = "steam-turbine"
+    results = {
+      {
+        amount = 1,
+        name = "steam-turbine",
+        type = "item"
+      }
+    }
   },
   name = "steam-turbine",
   open_sound = {

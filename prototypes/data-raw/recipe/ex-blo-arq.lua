@@ -1,0 +1,49 @@
+return {
+  allow_productivity = false,
+  always_show_made_in = true,
+  always_show_products = true,
+  category = "slaughterhouse",
+  enabled = false,
+  energy_required = 30,
+  icons = {
+    {
+      icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"
+    },
+    {
+      icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png",
+      scale = 0.25,
+      shift = {
+        -8,
+        -8
+      }
+    }
+  },
+  ingredients = {
+    {
+      amount = 3,
+      name = "blood-arqad",
+      type = "item"
+    }
+  },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.ex-blo-arq"
+    },
+    {
+      "fluid-name.arthropod-blood"
+    }
+  },
+  maximum_productivity = 1000000,
+  name = "ex-blo-arq",
+  order = "b",
+  results = {
+    {
+      amount = 130,
+      name = "arthropod-blood",
+      type = "fluid"
+    }
+  },
+  subgroup = "py-alienlife-arqad",
+  type = "recipe"
+}

@@ -1,4 +1,6 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 2,
   ingredients = {
@@ -8,16 +10,44 @@ return {
       type = "item"
     },
     {
-      amount = 10,
-      name = "iron-gear-wheel",
+      amount = 2,
+      name = "advanced-circuit",
       type = "item"
     },
     {
-      amount = 10,
-      name = "electronic-circuit",
+      amount = 1,
+      name = "nbfe-alloy",
+      type = "item"
+    },
+    {
+      amount = 1,
+      name = "chromium",
+      type = "item"
+    },
+    {
+      amount = 5,
+      name = "stainless-steel",
+      type = "item"
+    },
+    {
+      amount = 6,
+      name = "small-parts-02",
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.fast-splitter"
+    },
+    {
+      "item-name.fast-splitter"
+    },
+    {
+      "entity-name.fast-splitter"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "fast-splitter",
   results = {
     {

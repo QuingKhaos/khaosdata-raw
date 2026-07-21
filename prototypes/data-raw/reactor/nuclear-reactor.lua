@@ -133,6 +133,18 @@ return {
       2.2000000000000002
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   connection_patches_connected = {
     sheet = {
       filename = "__base__/graphics/entity/nuclear-reactor/reactor-connect-patches.png",
@@ -152,7 +164,7 @@ return {
       y = 64
     }
   },
-  consumption = "40MW",
+  consumption = "2GW",
   corpse = "nuclear-reactor-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -182,7 +194,7 @@ return {
   dying_explosion = "nuclear-reactor-explosion",
   energy_source = {
     burnt_inventory_size = 1,
-    effectivity = 1,
+    effectivity = 2,
     fuel_categories = {
       "nuclear"
     },
@@ -327,10 +339,10 @@ return {
         }
       }
     },
-    max_temperature = 1000,
+    max_temperature = 2000,
     max_transfer = "10GW",
     minimum_glow_temperature = 350,
-    specific_heat = "10MJ"
+    specific_heat = "40MJ"
   },
   heat_connection_patches_connected = {
     sheet = {
@@ -464,7 +476,13 @@ return {
   },
   minable = {
     mining_time = 0.5,
-    result = "nuclear-reactor"
+    results = {
+      {
+        amount = 1,
+        name = "nuclear-reactor",
+        type = "item"
+      }
+    }
   },
   name = "nuclear-reactor",
   neighbour_bonus = 1,
@@ -508,10 +526,11 @@ return {
     }
   },
   type = "reactor",
+  use_fuel_glow_color = true,
   working_light_picture = {
     blend_mode = "additive",
     draw_as_glow = true,
-    filename = "__base__/graphics/entity/nuclear-reactor/reactor-lights-color.png",
+    filename = "__pyraworesgraphics__/graphics/entity/reactor/reactor-lights.png",
     height = 320,
     scale = 0.5,
     shift = {

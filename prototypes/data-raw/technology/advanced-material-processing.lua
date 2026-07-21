@@ -5,26 +5,27 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = true,
   icon = "__base__/graphics/technology/advanced-material-processing.png",
   icon_size = 256,
   name = "advanced-material-processing",
+  order = "autotech-[000069]-[advanced-material-processing]",
   prerequisites = {
-    "steel-processing",
-    "logistic-science-pack"
+    "py-science-pack-1"
   },
   type = "technology",
   unit = {
-    count = 75,
+    count = 50,
     ingredients = {
       {
-        "automation-science-pack",
+        "py-science-pack-1",
         1
       },
       {
-        "logistic-science-pack",
-        1
+        "automation-science-pack",
+        2
       }
     },
-    time = 30
+    time = 45
   }
 }

@@ -9,6 +9,16 @@ return {
       2.2360000000000002
     }
   },
+  collision_mask = {
+    layers = {
+      floor = true,
+      is_lower_object = true,
+      item = true,
+      object = true,
+      rail = true,
+      water_tile = true
+    }
+  },
   corpse = "half-diagonal-rail-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -62,9 +72,14 @@ return {
   icon = "__base__/graphics/icons/half-diagonal-rail.png",
   max_health = 200,
   minable = {
-    count = 2,
     mining_time = 0.2,
-    result = "rail"
+    results = {
+      {
+        amount = 2,
+        name = "rail",
+        type = "item"
+      }
+    }
   },
   name = "half-diagonal-rail",
   order = "a[ground-rail]-b[half-diagonal-rail]",

@@ -1,4 +1,6 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 8,
   ingredients = {
@@ -13,11 +15,21 @@ return {
       type = "item"
     },
     {
-      amount = 1,
-      name = "explosives",
+      amount = 10,
+      name = "gunpowder",
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.cannon-shell"
+    },
+    {
+      "item-name.cannon-shell"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "cannon-shell",
   results = {
     {

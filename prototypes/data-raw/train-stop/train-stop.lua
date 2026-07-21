@@ -739,6 +739,17 @@ return {
       0.5
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   color = {
     0.95,
     0,
@@ -1036,7 +1047,13 @@ return {
   max_health = 250,
   minable = {
     mining_time = 0.2,
-    result = "train-stop"
+    results = {
+      {
+        amount = 1,
+        name = "train-stop",
+        type = "item"
+      }
+    }
   },
   name = "train-stop",
   open_sound = {

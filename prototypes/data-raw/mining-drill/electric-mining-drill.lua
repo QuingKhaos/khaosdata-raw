@@ -1,4 +1,15 @@
 return {
+  allowed_effects = {
+    "consumption",
+    "speed",
+    "productivity"
+  },
+  allowed_module_categories = {
+    "productivity",
+    "speed",
+    "efficiency",
+    "quality"
+  },
   circuit_connector = {
     {
       points = {
@@ -492,6 +503,18 @@ return {
       1.3500000000000001
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "electric-mining-drill-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -522,7 +545,7 @@ return {
     type = "electric",
     usage_priority = "secondary-input"
   },
-  energy_usage = "90kW",
+  energy_usage = "1MW",
   fast_replaceable_group = "mining-drill",
   flags = {
     "placeable-neutral",
@@ -3407,109 +3430,16 @@ return {
     }
   },
   icon = "__base__/graphics/icons/electric-mining-drill.png",
-  input_fluid_box = {
-    pipe_connections = {
-      {
-        direction = 12,
-        position = {
-          -1,
-          0
-        }
-      },
-      {
-        direction = 4,
-        position = {
-          1,
-          0
-        }
-      },
-      {
-        direction = 8,
-        position = {
-          0,
-          1
-        }
+  icons_positioning = {
+    {
+      inventory_index = 2,
+      max_icons_per_row = 3,
+      scale = 0.85737499999999986,
+      shift = {
+        0,
+        0.55688750000000011
       }
-    },
-    pipe_covers = {
-      east = {
-        layers = {
-          {
-            filename = "__base__/graphics/entity/pipe-covers/pipe-cover-east.png",
-            height = 128,
-            priority = "extra-high",
-            scale = 0.5,
-            width = 128
-          },
-          {
-            draw_as_shadow = true,
-            filename = "__base__/graphics/entity/pipe-covers/pipe-cover-east-shadow.png",
-            height = 128,
-            priority = "extra-high",
-            scale = 0.5,
-            width = 128
-          }
-        }
-      },
-      north = {
-        layers = {
-          {
-            filename = "__base__/graphics/entity/pipe-covers/pipe-cover-north.png",
-            height = 128,
-            priority = "extra-high",
-            scale = 0.5,
-            width = 128
-          },
-          {
-            draw_as_shadow = true,
-            filename = "__base__/graphics/entity/pipe-covers/pipe-cover-north-shadow.png",
-            height = 128,
-            priority = "extra-high",
-            scale = 0.5,
-            width = 128
-          }
-        }
-      },
-      south = {
-        layers = {
-          {
-            filename = "__base__/graphics/entity/pipe-covers/pipe-cover-south.png",
-            height = 128,
-            priority = "extra-high",
-            scale = 0.5,
-            width = 128
-          },
-          {
-            draw_as_shadow = true,
-            filename = "__base__/graphics/entity/pipe-covers/pipe-cover-south-shadow.png",
-            height = 128,
-            priority = "extra-high",
-            scale = 0.5,
-            width = 128
-          }
-        }
-      },
-      west = {
-        layers = {
-          {
-            filename = "__base__/graphics/entity/pipe-covers/pipe-cover-west.png",
-            height = 128,
-            priority = "extra-high",
-            scale = 0.5,
-            width = 128
-          },
-          {
-            draw_as_shadow = true,
-            filename = "__base__/graphics/entity/pipe-covers/pipe-cover-west-shadow.png",
-            height = 128,
-            priority = "extra-high",
-            scale = 0.5,
-            width = 128
-          }
-        }
-      }
-    },
-    volume = 200
+    }
   },
   integration_patch = {
     east = {
@@ -3560,9 +3490,15 @@ return {
   max_health = 300,
   minable = {
     mining_time = 0.3,
-    result = "electric-mining-drill"
+    results = {
+      {
+        amount = 1,
+        name = "electric-mining-drill",
+        type = "item"
+      }
+    }
   },
-  mining_speed = 0.5,
+  mining_speed = 2,
   module_slots = 3,
   monitor_visualization_tint = {
     78,

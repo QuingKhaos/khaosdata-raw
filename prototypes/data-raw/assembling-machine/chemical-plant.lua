@@ -6,6 +6,12 @@ return {
     "pollution",
     "quality"
   },
+  allowed_module_categories = {
+    "productivity",
+    "speed",
+    "efficiency",
+    "quality"
+  },
   circuit_connector = {
     {
       points = {
@@ -611,6 +617,18 @@ return {
       1.2
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "chemical-plant-remnants",
   crafting_categories = {
     "chemistry"
@@ -657,6 +675,12 @@ return {
     {
       pipe_connections = {
         {
+          connection_category = {
+            "default",
+            "pipe",
+            "niobium-pipe",
+            "ht-pipes"
+          },
           direction = 0,
           flow_direction = "input",
           position = {
@@ -749,6 +773,12 @@ return {
     {
       pipe_connections = {
         {
+          connection_category = {
+            "default",
+            "pipe",
+            "niobium-pipe",
+            "ht-pipes"
+          },
           direction = 0,
           flow_direction = "input",
           position = {
@@ -841,6 +871,12 @@ return {
     {
       pipe_connections = {
         {
+          connection_category = {
+            "default",
+            "pipe",
+            "niobium-pipe",
+            "ht-pipes"
+          },
           direction = 8,
           flow_direction = "output",
           position = {
@@ -933,6 +969,12 @@ return {
     {
       pipe_connections = {
         {
+          connection_category = {
+            "default",
+            "pipe",
+            "niobium-pipe",
+            "ht-pipes"
+          },
           direction = 8,
           flow_direction = "output",
           position = {
@@ -1345,6 +1387,7 @@ return {
       }
     }
   },
+  hidden = true,
   icon = "__base__/graphics/icons/chemical-plant.png",
   icon_draw_specification = {
     shift = {
@@ -1352,11 +1395,29 @@ return {
       -0.3
     }
   },
+  icons_positioning = {
+    {
+      inventory_index = 4,
+      max_icons_per_row = 3,
+      scale = 0.85737499999999986,
+      shift = {
+        0,
+        0.55688750000000011
+      }
+    }
+  },
   impact_category = "metal-large",
+  match_animation_speed_to_activity = false,
   max_health = 300,
   minable = {
     mining_time = 0.1,
-    result = "chemical-plant"
+    results = {
+      {
+        amount = 1,
+        name = "chemical-plant",
+        type = "item"
+      }
+    }
   },
   module_slots = 3,
   name = "chemical-plant",

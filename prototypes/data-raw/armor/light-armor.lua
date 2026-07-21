@@ -7,6 +7,7 @@ return {
     filename = "__base__/sound/item/armor-small-inventory-move.ogg",
     volume = 0.7
   },
+  equipment_grid = "light-armor-equipment-grid",
   factoriopedia_simulation = {
     init = "    game.simulation.camera_zoom = 4\n    game.simulation.camera_position = {0.5, -0.25}\n    local character = game.surfaces[1].create_entity{name = \"character\", position = {0.5, 0.5}, force = \"player\", direction = defines.direction.south}\n    character.insert{name = \"light-armor\"}\n  "
   },
@@ -20,6 +21,7 @@ return {
     filename = "__base__/sound/item/armor-small-inventory-move.ogg",
     volume = 0.7
   },
+  inventory_size_bonus = 20,
   name = "light-armor",
   order = "a[light-armor]",
   pick_sound = {

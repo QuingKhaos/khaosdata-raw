@@ -1,4 +1,5 @@
 return {
+  hidden = true,
   icon = "__base__/graphics/achievement/getting-on-track-like-a-pro.png",
   icon_size = 128,
   name = "getting-on-track-like-a-pro",

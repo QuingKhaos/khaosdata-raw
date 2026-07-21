@@ -9,6 +9,16 @@ return {
       2.4409999999999998
     }
   },
+  collision_mask = {
+    layers = {
+      floor = true,
+      is_lower_object = true,
+      item = true,
+      object = true,
+      rail = true,
+      water_tile = true
+    }
+  },
   corpse = "curved-rail-b-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -95,9 +105,14 @@ return {
   icon = "__base__/graphics/icons/curved-rail-b.png",
   max_health = 200,
   minable = {
-    count = 3,
     mining_time = 0.2,
-    result = "rail"
+    results = {
+      {
+        amount = 3,
+        name = "rail",
+        type = "item"
+      }
+    }
   },
   name = "curved-rail-b",
   order = "a[ground-rail]-d[curved-rail-b]",

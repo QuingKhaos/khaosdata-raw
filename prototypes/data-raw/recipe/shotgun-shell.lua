@@ -1,22 +1,40 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
+  category = "crafting",
   enabled = false,
-  energy_required = 3,
+  energy_required = 5,
   ingredients = {
     {
-      amount = 2,
-      name = "copper-plate",
+      amount = 1,
+      name = "iron-plate",
       type = "item"
     },
     {
       amount = 2,
-      name = "iron-plate",
+      name = "gunpowder",
+      type = "item"
+    },
+    {
+      amount = 1,
+      name = "lead-plate",
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.shotgun-shell"
+    },
+    {
+      "item-name.shotgun-shell"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "shotgun-shell",
   results = {
     {
-      amount = 1,
+      amount = 3,
       name = "shotgun-shell",
       type = "item"
     }

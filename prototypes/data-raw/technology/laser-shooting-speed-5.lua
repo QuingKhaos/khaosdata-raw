@@ -6,6 +6,7 @@ return {
       type = "gun-speed"
     }
   },
+  essential = false,
   icons = {
     {
       icon = "__base__/graphics/technology/laser-shooting-speed.png",
@@ -23,36 +24,57 @@ return {
     }
   },
   name = "laser-shooting-speed-5",
+  order = "autotech-[000845]-[laser-shooting-speed-5]",
   prerequisites = {
-    "laser-shooting-speed-4",
-    "utility-science-pack"
+    "utility-science-pack",
+    "laser-shooting-speed-4"
   },
   type = "technology",
   unit = {
-    count = 200,
+    count = 3300,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
-        1
-      },
-      {
-        "chemical-science-pack",
-        1
-      },
-      {
-        "military-science-pack",
-        1
-      },
       {
         "utility-science-pack",
         1
+      },
+      {
+        "py-science-pack-4",
+        2
+      },
+      {
+        "production-science-pack",
+        3
+      },
+      {
+        "py-science-pack-3",
+        6
+      },
+      {
+        "chemical-science-pack",
+        10
+      },
+      {
+        "py-science-pack-2",
+        20
+      },
+      {
+        "logistic-science-pack",
+        30
+      },
+      {
+        "py-science-pack-1",
+        60
+      },
+      {
+        "automation-science-pack",
+        100
+      },
+      {
+        "military-science-pack",
+        20
       }
     },
-    time = 60
+    time = 600
   },
   upgrade = true
 }

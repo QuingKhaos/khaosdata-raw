@@ -1,6 +1,7 @@
 return {
   categories = {
-    "armor"
+    "armor",
+    "py-mount-generator"
   },
   energy_per_shield = "30kJ",
   energy_source = {

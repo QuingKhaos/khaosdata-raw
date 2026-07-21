@@ -1,5 +1,7 @@
 return {
   allow_productivity = true,
+  always_show_made_in = true,
+  always_show_products = true,
   category = "chemistry",
   crafting_machine_tint = {
     primary = {
@@ -28,23 +30,52 @@ return {
     }
   },
   enabled = false,
-  energy_required = 1,
+  energy_required = 5,
   ingredients = {
     {
-      amount = 10,
+      amount = 150,
       name = "heavy-oil",
       type = "fluid"
+    },
+    {
+      amount = 2,
+      name = "nexelit-plate",
+      type = "item"
     }
   },
+  localised_description = {
+    "?",
+    {
+      "",
+      {
+        "recipe-description.lubricant"
+      },
+      "\n",
+      {
+        "recipe-description.affected-by-productivity"
+      }
+    },
+    {
+      "recipe-description.affected-by-productivity"
+    }
+  },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.lubricant"
+    },
+    {
+      "fluid-name.lubricant"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "lubricant",
-  order = "c[oil-products]-a[lubricant]",
   results = {
     {
-      amount = 10,
+      amount = 100,
       name = "lubricant",
       type = "fluid"
     }
   },
-  subgroup = "fluid-recipes",
   type = "recipe"
 }

@@ -1,6 +1,6 @@
 return {
   group = "logistics",
   name = "terrain",
-  order = "i",
+  order = "ta",
   type = "item-subgroup"
 }

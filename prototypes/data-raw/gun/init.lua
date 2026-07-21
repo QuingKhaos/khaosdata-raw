@@ -1,6 +1,7 @@
 return {
   ["artillery-wagon-cannon"] = require("___KHAOSDATA___.prototypes.data-raw.gun.artillery-wagon-cannon"),
   ["combat-shotgun"] = require("___KHAOSDATA___.prototypes.data-raw.gun.combat-shotgun"),
+  ["dragon-breath"] = require("___KHAOSDATA___.prototypes.data-raw.gun.dragon-breath"),
   ["flamethrower"] = require("___KHAOSDATA___.prototypes.data-raw.gun.flamethrower"),
   ["pistol"] = require("___KHAOSDATA___.prototypes.data-raw.gun.pistol"),
   ["rocket-launcher"] = require("___KHAOSDATA___.prototypes.data-raw.gun.rocket-launcher"),

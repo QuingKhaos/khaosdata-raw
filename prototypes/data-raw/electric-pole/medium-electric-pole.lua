@@ -13,6 +13,16 @@ return {
       0.15
     }
   },
+  collision_mask = {
+    layers = {
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   connection_points = {
     {
       shadow = {
@@ -170,7 +180,13 @@ return {
   maximum_wire_distance = 9,
   minable = {
     mining_time = 0.1,
-    result = "medium-electric-pole"
+    results = {
+      {
+        amount = 1,
+        name = "medium-electric-pole",
+        type = "item"
+      }
+    }
   },
   name = "medium-electric-pole",
   open_sound = {

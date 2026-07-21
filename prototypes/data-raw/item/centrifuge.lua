@@ -7,6 +7,7 @@ return {
     filename = "__base__/sound/item/mechanical-inventory-move.ogg",
     volume = 0.7
   },
+  hidden = true,
   icon = "__base__/graphics/icons/centrifuge.png",
   inventory_move_sound = {
     aggregation = {

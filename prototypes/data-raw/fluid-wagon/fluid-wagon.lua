@@ -35,7 +35,7 @@ return {
     }
   },
   braking_force = 3,
-  capacity = 50000,
+  capacity = 25000,
   collision_box = {
     {
       -0.6,
@@ -44,6 +44,11 @@ return {
     {
       0.6,
       2.3999999999999999
+    }
+  },
+  collision_mask = {
+    layers = {
+      train = true
     }
   },
   color = {
@@ -201,7 +206,13 @@ return {
   max_speed = 1.5,
   minable = {
     mining_time = 0.5,
-    result = "fluid-wagon"
+    results = {
+      {
+        amount = 1,
+        name = "fluid-wagon",
+        type = "item"
+      }
+    }
   },
   mined_sound = {
     switch_vibration_data = {

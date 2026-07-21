@@ -1,4 +1,6 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 15,
   ingredients = {
@@ -18,6 +20,16 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.artillery-shell"
+    },
+    {
+      "item-name.artillery-shell"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "artillery-shell",
   results = {
     {

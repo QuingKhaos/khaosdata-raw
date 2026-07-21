@@ -6,6 +6,12 @@ return {
     "pollution",
     "quality"
   },
+  allowed_module_categories = {
+    "productivity",
+    "speed",
+    "efficiency",
+    "quality"
+  },
   circuit_connector = {
     {
       points = {
@@ -499,11 +505,23 @@ return {
       1.2
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "centrifuge-remnants",
   crafting_categories = {
     "centrifuging"
   },
-  crafting_speed = 1,
+  crafting_speed = 4,
   damaged_trigger_effect = {
     damage_type_filters = "fire",
     entity_name = "spark-explosion",
@@ -534,7 +552,7 @@ return {
     type = "electric",
     usage_priority = "secondary-input"
   },
-  energy_usage = "350kW",
+  energy_usage = "250MW",
   fast_replaceable_group = "centrifuge",
   flags = {
     "placeable-neutral",
@@ -701,6 +719,7 @@ return {
       }
     }
   },
+  hidden = true,
   icon = "__base__/graphics/icons/centrifuge.png",
   icon_draw_specification = {
     shift = {
@@ -708,13 +727,31 @@ return {
       -0.3
     }
   },
+  icons_positioning = {
+    {
+      inventory_index = 4,
+      max_icons_per_row = 4,
+      scale = 0.66342043128906223,
+      shift = {
+        0,
+        0.77023752558203151
+      }
+    }
+  },
   impact_category = "metal-large",
+  match_animation_speed_to_activity = false,
   max_health = 350,
   minable = {
     mining_time = 0.1,
-    result = "centrifuge"
+    results = {
+      {
+        amount = 1,
+        name = "centrifuge",
+        type = "item"
+      }
+    }
   },
-  module_slots = 2,
+  module_slots = 4,
   name = "centrifuge",
   open_sound = {
     filename = "__base__/sound/machine-open.ogg",

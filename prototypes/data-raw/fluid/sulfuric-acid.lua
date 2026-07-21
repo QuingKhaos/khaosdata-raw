@@ -13,6 +13,6 @@ return {
   icon = "__base__/graphics/icons/fluid/sulfuric-acid.png",
   name = "sulfuric-acid",
   order = "a[fluid]-b[oil]-f[sulfuric-acid]",
-  subgroup = "fluid",
+  subgroup = "py-fluids",
   type = "fluid"
 }

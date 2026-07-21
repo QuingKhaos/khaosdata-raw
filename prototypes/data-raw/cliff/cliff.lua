@@ -11,6 +11,21 @@ return {
     },
     0
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      cliff = true,
+      dingrido_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    },
+    not_colliding_with_itself = true
+  },
   factoriopedia_simulation = {
     hide_factoriopedia_gradient = true,
     init = "    game.simulation.camera_position = {0, 2.5}\n    for x = -8, 8, 1 do\n      for y = -3, 4 do\n        game.surfaces[1].set_tiles{{position = {x, y}, name = \"red-desert-1\"}}\n      end\n    end\n    for x = -8, 8, 1 do\n      for y = 3, 4 do\n        game.surfaces[1].set_tiles{{position = {x, y}, name = \"red-desert-0\"}}\n      end\n    end\n    for x = -8, 8, 4 do\n      game.surfaces[1].create_entity{name = \"cliff\", position = {x, 0}, cliff_orientation = \"west-to-east\"}\n    end\n  "

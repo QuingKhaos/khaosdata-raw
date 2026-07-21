@@ -14,6 +14,18 @@ return {
       0.79000000000000004
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "heat-exchanger-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -37,7 +49,7 @@ return {
     type = "create-entity"
   },
   dying_explosion = "heat-exchanger-explosion",
-  energy_consumption = "10MW",
+  energy_consumption = "125MW",
   energy_source = {
     connections = {
       {
@@ -356,8 +368,8 @@ return {
         }
       }
     },
-    max_temperature = 1000,
-    max_transfer = "2GW",
+    max_temperature = 2000,
+    max_transfer = "4GW",
     min_working_temperature = 500,
     minimum_glow_temperature = 350,
     pipe_covers = {
@@ -402,7 +414,7 @@ return {
         y = 0
       }
     },
-    specific_heat = "1MJ",
+    specific_heat = "500MJ",
     type = "heat"
   },
   fast_replaceable_group = "heat-exchanger",
@@ -414,6 +426,12 @@ return {
     filter = "water",
     pipe_connections = {
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 12,
         flow_direction = "input-output",
         position = {
@@ -422,6 +440,12 @@ return {
         }
       },
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 4,
         flow_direction = "input-output",
         position = {
@@ -516,7 +540,13 @@ return {
   max_health = 200,
   minable = {
     mining_time = 0.1,
-    result = "heat-exchanger"
+    results = {
+      {
+        amount = 1,
+        name = "heat-exchanger",
+        type = "item"
+      }
+    }
   },
   mode = "output-to-separate-pipe",
   name = "heat-exchanger",
@@ -528,6 +558,12 @@ return {
     filter = "steam",
     pipe_connections = {
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 0,
         flow_direction = "output",
         position = {
@@ -759,7 +795,7 @@ return {
       1
     }
   },
-  target_temperature = 500,
+  target_temperature = 2000,
   type = "boiler",
   water_reflection = {
     orientation_to_variation = true,

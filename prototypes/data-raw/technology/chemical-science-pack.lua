@@ -3,6 +3,10 @@ return {
     {
       recipe = "chemical-science-pack",
       type = "unlock-recipe"
+    },
+    {
+      recipe = "nuclear-sample",
+      type = "unlock-recipe"
     }
   },
   essential = true,
@@ -15,23 +19,33 @@ return {
     "technology-name.chemical-science-pack"
   },
   name = "chemical-science-pack",
+  order = "autotech-[000337]-[chemical-science-pack]",
   prerequisites = {
-    "advanced-circuit",
-    "sulfur-processing"
+    "intermetallics-mk02",
+    "uranium-processing",
+    "pyrite"
   },
   type = "technology",
   unit = {
-    count = 75,
+    count = 1300,
     ingredients = {
       {
-        "automation-science-pack",
+        "py-science-pack-2",
         1
       },
       {
         "logistic-science-pack",
-        1
+        2
+      },
+      {
+        "py-science-pack-1",
+        3
+      },
+      {
+        "automation-science-pack",
+        6
       }
     },
-    time = 10
+    time = 90
   }
 }

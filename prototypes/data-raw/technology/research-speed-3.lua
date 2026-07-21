@@ -5,13 +5,29 @@ return {
       type = "laboratory-speed"
     }
   },
+  essential = false,
+  icon_size = 128,
   icons = {
     {
-      icon = "__base__/graphics/technology/research-speed.png",
-      icon_size = 256
+      icon = "__pycoalprocessinggraphics__/graphics/technology/energy-1.png",
+      icon_size = 128,
+      tint = {
+        a = 1,
+        b = 0,
+        g = 0,
+        r = 0
+      }
     },
     {
-      floating = true,
+      icon = "__pycoalprocessinggraphics__/graphics/technology/border.png",
+      icon_size = 128
+    },
+    {
+      icon = "__pycoalprocessinggraphics__/graphics/technology/lab.png",
+      icon_size = 128,
+      scale = 0.8
+    },
+    {
       icon = "__core__/graphics/icons/technology/constants/constant-speed.png",
       icon_size = 128,
       scale = 0.5,
@@ -22,28 +38,37 @@ return {
     }
   },
   name = "research-speed-3",
+  order = "autotech-[000364]-[research-speed-3]",
   prerequisites = {
-    "research-speed-2",
-    "chemical-science-pack"
+    "chemical-science-pack",
+    "research-speed-2"
   },
   type = "technology",
   unit = {
-    count = 250,
+    count = 700,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
-        1
-      },
       {
         "chemical-science-pack",
         1
+      },
+      {
+        "py-science-pack-2",
+        2
+      },
+      {
+        "logistic-science-pack",
+        3
+      },
+      {
+        "py-science-pack-1",
+        6
+      },
+      {
+        "automation-science-pack",
+        10
       }
     },
-    time = 30
+    time = 120
   },
   upgrade = true
 }

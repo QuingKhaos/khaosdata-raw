@@ -1,4 +1,6 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 2,
   ingredients = {
@@ -18,6 +20,19 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.pump"
+    },
+    {
+      "item-name.pump"
+    },
+    {
+      "entity-name.pump"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "pump",
   results = {
     {

@@ -1,4 +1,6 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 1,
   hidden = true,
@@ -15,7 +17,7 @@ return {
     },
     {
       amount = 5,
-      name = "iron-gear-wheel",
+      name = "small-parts-01",
       type = "item"
     },
     {
@@ -29,6 +31,19 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.loader"
+    },
+    {
+      "item-name.loader"
+    },
+    {
+      "entity-name.loader"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "loader",
   results = {
     {

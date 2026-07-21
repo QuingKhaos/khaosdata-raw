@@ -17,6 +17,7 @@ return {
   },
   collision_mask = {
     layers = {
+      caravan_collision_mask = true,
       elevated_rail = true,
       is_lower_object = true,
       is_object = true,
@@ -61,7 +62,8 @@ return {
   inventory_size = 20,
   max_health = 250,
   minable = {
-    mining_time = 0.5
+    mining_time = 0.5,
+    results = {}
   },
   name = "cargo-pod-container",
   open_sound = {

@@ -1,33 +1,52 @@
 return {
   allow_productivity = true,
-  crafting_machine_tint = {
-    primary = {
-      a = 1,
-      b = 0,
-      g = 0,
-      r = 1
-    },
-    secondary = {
-      a = 1,
-      b = 0,
-      g = 0,
-      r = 1
-    }
-  },
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 5,
   ingredients = {
     {
-      amount = 1,
-      name = "copper-plate",
+      amount = 2,
+      name = "planter-box",
       type = "item"
     },
     {
-      amount = 1,
-      name = "iron-gear-wheel",
+      amount = 10,
+      name = "native-flora",
+      type = "item"
+    },
+    {
+      amount = 2,
+      name = "small-parts-01",
       type = "item"
     }
   },
+  localised_description = {
+    "?",
+    {
+      "",
+      {
+        "recipe-description.automation-science-pack"
+      },
+      "\n",
+      {
+        "recipe-description.affected-by-productivity"
+      }
+    },
+    {
+      "recipe-description.affected-by-productivity"
+    }
+  },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.automation-science-pack"
+    },
+    {
+      "item-name.automation-science-pack"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "automation-science-pack",
   results = {
     {

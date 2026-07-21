@@ -1,34 +1,35 @@
 return {
   effects = {
     {
-      recipe = "substation",
+      recipe = "big-electric-pole",
       type = "unlock-recipe"
     }
   },
-  icon = "__base__/graphics/technology/electric-energy-distribution-2.png",
-  icon_size = 256,
+  essential = true,
+  icon = "__pyalternativeenergygraphics__/graphics/technology/poles-mk02.png",
+  icon_size = 128,
   name = "electric-energy-distribution-2",
+  order = "autotech-[000209]-[electric-energy-distribution-2]",
   prerequisites = {
-    "electric-energy-distribution-1",
-    "chemical-science-pack"
+    "niobium"
   },
   type = "technology",
   unit = {
-    count = 100,
+    count = 275,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
       {
         "logistic-science-pack",
         1
       },
       {
-        "chemical-science-pack",
-        1
+        "py-science-pack-1",
+        2
+      },
+      {
+        "automation-science-pack",
+        3
       }
     },
-    time = 45
+    time = 60
   }
 }

@@ -1,5 +1,7 @@
 return {
   allow_productivity = true,
+  always_show_made_in = true,
+  always_show_products = true,
   category = "chemistry",
   crafting_machine_tint = {
     primary = {
@@ -29,6 +31,7 @@ return {
   },
   enabled = false,
   energy_required = 1,
+  hidden = true,
   icon = "__base__/graphics/icons/solid-fuel-from-heavy-oil.png",
   ingredients = {
     {
@@ -37,6 +40,32 @@ return {
       type = "fluid"
     }
   },
+  localised_description = {
+    "?",
+    {
+      "",
+      {
+        "recipe-description.solid-fuel-from-heavy-oil"
+      },
+      "\n",
+      {
+        "recipe-description.affected-by-productivity"
+      }
+    },
+    {
+      "recipe-description.affected-by-productivity"
+    }
+  },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.solid-fuel-from-heavy-oil"
+    },
+    {
+      "item-name.solid-fuel"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "solid-fuel-from-heavy-oil",
   order = "b[fluid-chemistry]-e[solid-fuel-from-heavy-oil]",
   results = {

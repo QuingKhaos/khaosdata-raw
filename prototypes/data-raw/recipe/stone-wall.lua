@@ -1,5 +1,8 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
+  energy_required = 0.5,
   ingredients = {
     {
       amount = 5,
@@ -7,6 +10,19 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.stone-wall"
+    },
+    {
+      "item-name.stone-wall"
+    },
+    {
+      "entity-name.stone-wall"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "stone-wall",
   results = {
     {

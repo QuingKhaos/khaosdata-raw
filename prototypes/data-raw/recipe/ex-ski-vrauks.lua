@@ -1,0 +1,45 @@
+return {
+  allow_productivity = false,
+  always_show_made_in = true,
+  always_show_products = true,
+  category = "slaughterhouse",
+  enabled = false,
+  energy_required = 10,
+  icons = {
+    {
+      icon = "__pyalienlifegraphics__/graphics/icons/caged-vrauks.png"
+    },
+    {
+      icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
+      scale = 0.25,
+      shift = {
+        -8,
+        -8
+      }
+    }
+  },
+  ingredients = {
+    {
+      amount = 1,
+      name = "chitin-caged-vrauks",
+      type = "item"
+    }
+  },
+  maximum_productivity = 1000000,
+  name = "ex-ski-vrauks",
+  order = "b",
+  results = {
+    {
+      amount = 1,
+      name = "cage",
+      type = "item"
+    },
+    {
+      amount = 15,
+      name = "chitin",
+      type = "item"
+    }
+  },
+  subgroup = "py-alienlife-vrauks",
+  type = "recipe"
+}

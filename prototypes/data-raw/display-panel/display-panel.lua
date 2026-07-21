@@ -118,6 +118,18 @@ return {
       0.29
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "display-panel-remnants",
   dying_explosion = "display-panel-explosion",
   factoriopedia_simulation = {
@@ -139,7 +151,13 @@ return {
   max_text_width = 400,
   minable = {
     mining_time = 0.2,
-    result = "display-panel"
+    results = {
+      {
+        amount = 1,
+        name = "display-panel",
+        type = "item"
+      }
+    }
   },
   name = "display-panel",
   open_sound = {

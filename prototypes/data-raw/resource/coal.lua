@@ -42,6 +42,7 @@ return {
   flags = {
     "placeable-neutral"
   },
+  hidden = true,
   icon = "__base__/graphics/icons/coal.png",
   map_color = {
     0,
@@ -71,6 +72,7 @@ return {
       0.5
     }
   },
+  selection_priority = 40,
   stage_counts = {
     15000,
     9500,

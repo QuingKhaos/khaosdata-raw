@@ -1,33 +1,35 @@
 return {
   effects = {
     {
-      recipe = "lubricant",
+      recipe = "olefin-lube",
       type = "unlock-recipe"
     }
   },
+  essential = true,
   icon = "__base__/graphics/technology/lubricant.png",
   icon_size = 256,
   name = "lubricant",
+  order = "autotech-[000202]-[lubricant]",
   prerequisites = {
-    "advanced-oil-processing"
+    "coal-processing-2"
   },
   type = "technology",
   unit = {
-    count = 50,
+    count = 225,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
       {
         "logistic-science-pack",
         1
       },
       {
-        "chemical-science-pack",
-        1
+        "py-science-pack-1",
+        2
+      },
+      {
+        "automation-science-pack",
+        3
       }
     },
-    time = 30
+    time = 60
   }
 }

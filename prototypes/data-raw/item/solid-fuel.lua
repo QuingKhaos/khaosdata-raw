@@ -1,4 +1,5 @@
 return {
+  burnt_result = "ash",
   drop_sound = {
     aggregation = {
       max_count = 1,
@@ -11,6 +12,7 @@ return {
   fuel_category = "chemical",
   fuel_top_speed_multiplier = 1.05,
   fuel_value = "12MJ",
+  hidden = true,
   icon = "__base__/graphics/icons/solid-fuel.png",
   inventory_move_sound = {
     aggregation = {

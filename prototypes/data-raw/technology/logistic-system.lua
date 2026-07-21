@@ -17,34 +17,31 @@ return {
       type = "vehicle-logistics"
     }
   },
+  essential = true,
   icon = "__base__/graphics/technology/logistic-system.png",
   icon_size = 256,
   name = "logistic-system",
+  order = "autotech-[000214]-[logistic-system]",
   prerequisites = {
-    "utility-science-pack",
     "logistic-robotics"
   },
   type = "technology",
   unit = {
-    count = 500,
+    count = 300,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
       {
         "logistic-science-pack",
         1
       },
       {
-        "chemical-science-pack",
-        1
+        "py-science-pack-1",
+        2
       },
       {
-        "utility-science-pack",
-        1
+        "automation-science-pack",
+        3
       }
     },
-    time = 30
+    time = 60
   }
 }

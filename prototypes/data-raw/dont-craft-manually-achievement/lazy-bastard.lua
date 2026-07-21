@@ -1,5 +1,5 @@
 return {
-  amount = 111,
+  amount = 250,
   icon = "__base__/graphics/achievement/lazy-bastard.png",
   icon_size = 128,
   name = "lazy-bastard",

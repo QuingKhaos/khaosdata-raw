@@ -33,6 +33,6 @@ return {
     1
   },
   stack_size = 100,
-  subgroup = "raw-material",
+  subgroup = "py-rawores-iron-alloys",
   type = "item"
 }

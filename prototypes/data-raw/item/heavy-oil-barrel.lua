@@ -59,7 +59,7 @@ return {
     filename = "__base__/sound/item/metal-barrel-inventory-pickup.ogg",
     volume = 0.5
   },
-  stack_size = 10,
+  stack_size = 50,
   subgroup = "barrel",
   type = "item",
   weight = 10000

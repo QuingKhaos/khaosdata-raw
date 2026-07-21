@@ -5,6 +5,7 @@ return {
       type = "train-braking-force-bonus"
     }
   },
+  essential = false,
   icons = {
     {
       icon = "__base__/graphics/technology/braking-force.png",
@@ -22,36 +23,57 @@ return {
     }
   },
   name = "braking-force-6",
+  order = "autotech-[000848]-[braking-force-6]",
   prerequisites = {
-    "braking-force-5",
-    "utility-science-pack"
+    "utility-science-pack",
+    "braking-force-5"
   },
   type = "technology",
   unit = {
-    count = 550,
+    count = 3300,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
-        1
-      },
-      {
-        "chemical-science-pack",
-        1
-      },
-      {
-        "production-science-pack",
-        1
-      },
       {
         "utility-science-pack",
         1
+      },
+      {
+        "py-science-pack-4",
+        2
+      },
+      {
+        "production-science-pack",
+        3
+      },
+      {
+        "py-science-pack-3",
+        6
+      },
+      {
+        "chemical-science-pack",
+        10
+      },
+      {
+        "py-science-pack-2",
+        20
+      },
+      {
+        "logistic-science-pack",
+        30
+      },
+      {
+        "py-science-pack-1",
+        60
+      },
+      {
+        "automation-science-pack",
+        100
+      },
+      {
+        "military-science-pack",
+        20
       }
     },
-    time = 45
+    time = 600
   },
   upgrade = true
 }

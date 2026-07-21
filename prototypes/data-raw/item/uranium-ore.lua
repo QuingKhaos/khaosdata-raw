@@ -121,7 +121,7 @@ return {
     }
   },
   stack_size = 50,
-  subgroup = "raw-resource",
+  subgroup = "py-rawores-uranium",
   type = "item",
   weight = 5000
 }

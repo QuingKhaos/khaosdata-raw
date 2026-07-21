@@ -1,5 +1,7 @@
 return {
   allow_productivity = true,
+  always_show_made_in = true,
+  always_show_products = true,
   category = "chemistry",
   crafting_machine_tint = {
     primary = {
@@ -29,6 +31,7 @@ return {
   },
   enabled = false,
   energy_required = 4,
+  hidden = true,
   ingredients = {
     {
       amount = 1,
@@ -44,8 +47,44 @@ return {
       amount = 10,
       name = "water",
       type = "fluid"
+    },
+    {
+      amount = 5,
+      name = "collagen",
+      type = "item"
+    },
+    {
+      amount = 5,
+      name = "urea",
+      type = "item"
     }
   },
+  localised_description = {
+    "?",
+    {
+      "",
+      {
+        "recipe-description.explosives"
+      },
+      "\n",
+      {
+        "recipe-description.affected-by-productivity"
+      }
+    },
+    {
+      "recipe-description.affected-by-productivity"
+    }
+  },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.explosives"
+    },
+    {
+      "item-name.explosives"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "explosives",
   results = {
     {

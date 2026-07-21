@@ -12,6 +12,7 @@ return {
     "big-spitter",
     "behemoth-spitter"
   },
+  hidden = true,
   icon = "__base__/graphics/achievement/it-stinks-and-they-dont-like-it.png",
   icon_size = 128,
   name = "it-stinks-and-they-dont-like-it",

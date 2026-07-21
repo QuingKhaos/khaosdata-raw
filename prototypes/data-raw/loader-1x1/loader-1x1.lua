@@ -124,6 +124,15 @@ return {
       0.4
     }
   },
+  collision_mask = {
+    layers = {
+      floor = true,
+      meltable = true,
+      object = true,
+      transport_belt = true,
+      water_tile = true
+    }
+  },
   container_distance = 1,
   filter_count = 5,
   hidden = true,

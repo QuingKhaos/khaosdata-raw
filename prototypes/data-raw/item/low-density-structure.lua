@@ -27,7 +27,7 @@ return {
     volume = 0.7
   },
   stack_size = 50,
-  subgroup = "intermediate-product",
+  subgroup = "space-related",
   type = "item",
   weight = 5000
 }

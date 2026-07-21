@@ -10,7 +10,8 @@ return {
     filename = "__base__/sound/item/metal-small-inventory-move.ogg",
     volume = 0.8
   },
-  icon = "__base__/graphics/icons/copper-plate.png",
+  icon = "__pyraworesgraphics__/graphics/icons/copper-plate.png",
+  icon_size = 32,
   inventory_move_sound = {
     aggregation = {
       max_count = 1,
@@ -30,6 +31,6 @@ return {
     volume = 0.8
   },
   stack_size = 100,
-  subgroup = "raw-material",
+  subgroup = "py-rawores-copper",
   type = "item"
 }

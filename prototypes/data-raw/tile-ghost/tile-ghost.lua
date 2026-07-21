@@ -14,6 +14,11 @@ return {
       0.49000000000000004
     }
   },
+  collision_mask = {
+    layers = {
+      ghost = true
+    }
+  },
   factoriopedia_simulation = {
     init = "    game.simulation.camera_position = {0.5, 0}\n    for x = -2, 2, 1 do\n      for y = -2, 1 do\n        game.surfaces[1].create_entity{name = \"tile-ghost\", inner_name = \"concrete\", position = {x, y}}\n      end\n    end\n  "
   },

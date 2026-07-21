@@ -1,5 +1,6 @@
 return {
   allowed_without_fight = false,
+  hidden = true,
   icon = "__base__/graphics/achievement/no-time-for-chitchat.png",
   icon_size = 128,
   name = "no-time-for-chitchat",

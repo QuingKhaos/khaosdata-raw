@@ -1,6 +1,6 @@
 return {
-  group = "intermediate-products",
+  group = "coal-processing",
   name = "fill-barrel",
-  order = "e",
+  order = "y",
   type = "item-subgroup"
 }

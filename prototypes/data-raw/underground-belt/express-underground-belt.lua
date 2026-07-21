@@ -128,6 +128,15 @@ return {
       0.4
     }
   },
+  collision_mask = {
+    layers = {
+      floor = true,
+      meltable = true,
+      object = true,
+      transport_belt = true,
+      water_tile = true
+    }
+  },
   corpse = "express-underground-belt-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -160,11 +169,17 @@ return {
     "player-creation"
   },
   icon = "__base__/graphics/icons/express-underground-belt.png",
-  max_distance = 9,
+  max_distance = 33,
   max_health = 170,
   minable = {
     mining_time = 0.1,
-    result = "express-underground-belt"
+    results = {
+      {
+        amount = 1,
+        name = "express-underground-belt",
+        type = "item"
+      }
+    }
   },
   name = "express-underground-belt",
   open_sound = {

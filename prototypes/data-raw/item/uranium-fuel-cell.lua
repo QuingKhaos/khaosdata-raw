@@ -9,7 +9,13 @@ return {
     volume = 0.6
   },
   fuel_category = "nuclear",
-  fuel_value = "8GJ",
+  fuel_glow_color = {
+    0,
+    1,
+    0,
+    1
+  },
+  fuel_value = "4GJ",
   icon = "__base__/graphics/icons/uranium-fuel-cell.png",
   inventory_move_sound = {
     aggregation = {
@@ -20,7 +26,7 @@ return {
     volume = 0.6
   },
   name = "uranium-fuel-cell",
-  order = "b[uranium-products]-a[uranium-fuel-cell]",
+  order = "cae",
   pick_sound = {
     aggregation = {
       max_count = 1,
@@ -46,7 +52,7 @@ return {
     }
   },
   stack_size = 50,
-  subgroup = "uranium-processing",
+  subgroup = "py-rawores-items",
   type = "item",
   weight = 100000
 }

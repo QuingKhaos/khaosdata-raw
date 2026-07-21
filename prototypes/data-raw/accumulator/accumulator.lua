@@ -298,6 +298,17 @@ return {
       0.9
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "accumulator-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -327,9 +338,9 @@ return {
   drawing_box_vertical_extension = 0.5,
   dying_explosion = "accumulator-explosion",
   energy_source = {
-    buffer_capacity = "5MJ",
-    input_flow_limit = "300kW",
-    output_flow_limit = "300kW",
+    buffer_capacity = "150MJ",
+    input_flow_limit = "1MW",
+    output_flow_limit = "1MW",
     type = "electric",
     usage_priority = "tertiary"
   },
@@ -343,7 +354,13 @@ return {
   max_health = 150,
   minable = {
     mining_time = 0.1,
-    result = "accumulator"
+    results = {
+      {
+        amount = 1,
+        name = "accumulator",
+        type = "item"
+      }
+    }
   },
   name = "accumulator",
   open_sound = {

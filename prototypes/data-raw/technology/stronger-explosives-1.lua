@@ -6,6 +6,7 @@ return {
       type = "ammo-damage"
     }
   },
+  essential = false,
   icons = {
     {
       icon = "__base__/graphics/technology/stronger-explosives-1.png",
@@ -23,23 +24,29 @@ return {
     }
   },
   name = "stronger-explosives-1",
+  order = "autotech-[000146]-[stronger-explosives-1]",
   prerequisites = {
+    "logistic-science-pack",
     "military-2"
   },
   type = "technology",
   unit = {
-    count = 100,
+    count = 160,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
       {
         "logistic-science-pack",
         1
+      },
+      {
+        "py-science-pack-1",
+        2
+      },
+      {
+        "automation-science-pack",
+        3
       }
     },
-    time = 30
+    time = 60
   },
   upgrade = true
 }

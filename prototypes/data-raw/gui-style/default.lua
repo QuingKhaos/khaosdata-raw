@@ -2150,6 +2150,11 @@ return {
     },
     type = "radiobutton_style"
   },
+  centering_horizontal_flow = {
+    horizontal_align = "center",
+    type = "horizontal_flow_style",
+    vertical_align = "center"
+  },
   changelog_textbox = {
     bottom_padding = 4,
     default_background = {
@@ -4292,6 +4297,214 @@ return {
   confirm_button_without_tooltip = {
     parent = "confirm_button",
     tooltip = "",
+    type = "button_style"
+  },
+  confirm_button_without_tooltip_unhoverable = {
+    clicked_graphical_set = {
+      base = {
+        center = {
+          position = {
+            24,
+            296
+          },
+          size = {
+            1,
+            64
+          }
+        },
+        left = {
+          position = {
+            68,
+            25
+          },
+          size = {
+            8,
+            1
+          }
+        },
+        left_bottom = {
+          position = {
+            68,
+            26
+          },
+          size = 8
+        },
+        left_top = {
+          position = {
+            68,
+            17
+          },
+          size = 8
+        },
+        right = {
+          position = {
+            24,
+            296
+          },
+          size = {
+            24,
+            64
+          }
+        }
+      },
+      shadow = {
+        center = {
+          position = {
+            336,
+            424
+          },
+          size = {
+            1,
+            80
+          }
+        },
+        draw_type = "outer",
+        left = {
+          position = {
+            200,
+            136
+          },
+          size = {
+            8,
+            1
+          }
+        },
+        left_bottom = {
+          position = {
+            200,
+            137
+          },
+          size = 8
+        },
+        left_top = {
+          position = {
+            200,
+            128
+          },
+          size = 8
+        },
+        right = {
+          position = {
+            336,
+            424
+          },
+          size = {
+            32,
+            80
+          }
+        },
+        right_outer_border_shift = -12,
+        tint = {
+          15,
+          7,
+          3,
+          100
+        }
+      }
+    },
+    hovered_graphical_set = {
+      base = {
+        center = {
+          position = {
+            24,
+            296
+          },
+          size = {
+            1,
+            64
+          }
+        },
+        left = {
+          position = {
+            68,
+            25
+          },
+          size = {
+            8,
+            1
+          }
+        },
+        left_bottom = {
+          position = {
+            68,
+            26
+          },
+          size = 8
+        },
+        left_top = {
+          position = {
+            68,
+            17
+          },
+          size = 8
+        },
+        right = {
+          position = {
+            24,
+            296
+          },
+          size = {
+            24,
+            64
+          }
+        }
+      },
+      shadow = {
+        center = {
+          position = {
+            336,
+            424
+          },
+          size = {
+            1,
+            80
+          }
+        },
+        draw_type = "outer",
+        left = {
+          position = {
+            200,
+            136
+          },
+          size = {
+            8,
+            1
+          }
+        },
+        left_bottom = {
+          position = {
+            200,
+            137
+          },
+          size = 8
+        },
+        left_top = {
+          position = {
+            200,
+            128
+          },
+          size = 8
+        },
+        right = {
+          position = {
+            336,
+            424
+          },
+          size = {
+            32,
+            80
+          }
+        },
+        right_outer_border_shift = -12,
+        tint = {
+          15,
+          7,
+          3,
+          100
+        }
+      }
+    },
+    parent = "confirm_button_without_tooltip",
     type = "button_style"
   },
   confirm_double_arrow_button = {
@@ -7974,6 +8187,25 @@ return {
     top_padding = 4,
     type = "tab_style"
   },
+  filter_group_table = {
+    background_graphical_set = {
+      corner_size = 8,
+      overall_tiling_horizontal_padding = 12,
+      overall_tiling_horizontal_size = 48,
+      overall_tiling_horizontal_spacing = 23,
+      overall_tiling_vertical_padding = 12,
+      overall_tiling_vertical_size = 48,
+      overall_tiling_vertical_spacing = 24,
+      position = {
+        282,
+        17
+      }
+    },
+    horizontal_spacing = 0,
+    padding = 0,
+    type = "table_style",
+    vertical_spacing = 0
+  },
   filter_inventory_slot = {
     left_click_sound = {},
     parent = "blue_slot",
@@ -8462,6 +8694,61 @@ return {
     left_click_sound = "__core__/sound/gui-tool-button.ogg",
     parent = "frame_button",
     size = 24,
+    type = "button_style"
+  },
+  frame_action_button_always_on = {
+    default_graphical_set = {
+      base = {
+        corner_size = 8,
+        position = {
+          51,
+          17
+        }
+      },
+      shadow = {
+        corner_size = 8,
+        draw_type = "outer",
+        position = {
+          440,
+          24
+        }
+      }
+    },
+    graphical_set = {
+      base = {
+        corner_size = 8,
+        position = {
+          51,
+          17
+        }
+      },
+      shadow = {
+        corner_size = 8,
+        draw_type = "outer",
+        position = {
+          440,
+          24
+        }
+      }
+    },
+    hovered_graphical_set = {
+      base = {
+        corner_size = 8,
+        position = {
+          51,
+          17
+        }
+      },
+      shadow = {
+        corner_size = 8,
+        draw_type = "outer",
+        position = {
+          440,
+          24
+        }
+      }
+    },
+    parent = "frame_action_button",
     type = "button_style"
   },
   frame_around_bottom = {
@@ -13582,6 +13869,275 @@ return {
     parent = "crafting_queue_slot",
     type = "button_style"
   },
+  py_caravan_camera = {
+    graphical_set = {},
+    horizontally_stretchable = "on",
+    minimal_height = 256,
+    minimal_width = 256,
+    type = "camera_style"
+  },
+  py_clicked_train_schedule_action_button = {
+    clicked_font_color = {},
+    clicked_graphical_set = {
+      base = {
+        corner_size = 8,
+        position = {
+          352,
+          17
+        }
+      },
+      shadow = {
+        corner_size = 8,
+        draw_type = "outer",
+        position = {
+          200,
+          128
+        },
+        scale = 0.5,
+        tint = {
+          15,
+          7,
+          3,
+          100
+        }
+      }
+    },
+    default_font_color = {},
+    default_graphical_set = {
+      base = {
+        corner_size = 8,
+        position = {
+          225,
+          17
+        }
+      },
+      shadow = {
+        corner_size = 8,
+        draw_type = "outer",
+        position = {
+          200,
+          128
+        },
+        scale = 0.5,
+        tint = {
+          15,
+          7,
+          3,
+          100
+        }
+      }
+    },
+    hovered_font_color = {},
+    hovered_graphical_set = {
+      base = {
+        corner_size = 8,
+        position = {
+          369,
+          17
+        }
+      },
+      shadow = {
+        corner_size = 8,
+        draw_type = "outer",
+        position = {
+          200,
+          128
+        },
+        scale = 0.5,
+        tint = {
+          15,
+          7,
+          3,
+          100
+        }
+      }
+    },
+    parent = "train_schedule_action_button",
+    type = "button_style"
+  },
+  py_compact_notched_slider = {
+    horizontally_squashable = "on",
+    minimal_width = 20,
+    natural_width = 400,
+    parent = "notched_slider",
+    type = "slider_style"
+  },
+  py_compact_slider_value_textfield = {
+    parent = "slider_value_textfield",
+    type = "textbox_style",
+    width = 40
+  },
+  py_empty_widget = {
+    horizontally_squashable = "on",
+    horizontally_stretchable = "stretch_and_expand",
+    type = "empty_widget_style"
+  },
+  py_entity_preview = {
+    graphical_set = {
+      base = {
+        center = {
+          position = {
+            76,
+            8
+          },
+          size = {
+            1,
+            1
+          }
+        },
+        corner_size = 8,
+        draw_type = "outer",
+        position = {
+          17,
+          0
+        }
+      },
+      shadow = {
+        corner_size = 8,
+        draw_type = "inner",
+        position = {
+          183,
+          128
+        },
+        scale = 0.5,
+        tint = {
+          0,
+          0,
+          0,
+          1
+        }
+      }
+    },
+    horizontally_stretchable = "on",
+    padding = 0,
+    type = "empty_widget_style",
+    vertically_stretchable = "on"
+  },
+  py_nice_frame = {
+    parent = "deep_frame_in_shallow_frame",
+    type = "frame_style",
+    vertically_stretchable = "off"
+  },
+  py_schedule_move_button = {
+    default_graphical_set = {
+      base = {
+        corner_size = 8,
+        position = {
+          68,
+          0
+        }
+      },
+      shadow = {
+        corner_size = 4,
+        draw_type = "outer",
+        position = {
+          399,
+          90
+        }
+      }
+    },
+    parent = "train_schedule_delete_button",
+    type = "button_style"
+  },
+  py_schedule_move_button_alt = {
+    default_graphical_set = {
+      base = {
+        corner_size = 8,
+        position = {
+          68,
+          0
+        }
+      },
+      shadow = {
+        corner_size = 2,
+        draw_type = "inner",
+        position = {
+          399,
+          90
+        }
+      }
+    },
+    parent = "py_schedule_move_button",
+    type = "button_style"
+  },
+  py_schedule_scroll_pane = {
+    background_graphical_set = {
+      corner_size = 8,
+      custom_horizontal_tiling_sizes = {
+        28,
+        44,
+        288
+      },
+      overall_tiling_horizontal_padding = 4,
+      overall_tiling_horizontal_spacing = 8,
+      overall_tiling_vertical_padding = 4,
+      overall_tiling_vertical_size = 28,
+      overall_tiling_vertical_spacing = 12,
+      position = {
+        282,
+        17
+      }
+    },
+    extra_padding_when_activated = 0,
+    graphical_set = {
+      base = {
+        center = {
+          position = {
+            42,
+            8
+          },
+          size = 1
+        },
+        corner_size = 8,
+        draw_type = "outer",
+        left_top = {},
+        position = {
+          17,
+          0
+        },
+        right_top = {},
+        top = {}
+      },
+      shadow = {
+        corner_size = 8,
+        draw_type = "inner",
+        position = {
+          183,
+          128
+        },
+        scale = 0.5,
+        tint = {
+          0,
+          0,
+          0,
+          1
+        }
+      }
+    },
+    padding = 4,
+    type = "scroll_pane_style"
+  },
+  py_schedule_temporary_move_button = {
+    default_graphical_set = {
+      base = {
+        corner_size = 8,
+        position = {
+          446,
+          86
+        }
+      },
+      shadow = {
+        corner_size = 4,
+        draw_type = "outer",
+        position = {
+          467,
+          90
+        }
+      }
+    },
+    parent = "train_schedule_temporary_station_delete_button",
+    type = "button_style"
+  },
   quick_bar_inner_panel = {
     graphical_set = {
       base = {
@@ -14399,6 +14955,214 @@ return {
       }
     },
     parent = "dialog_button",
+    type = "button_style"
+  },
+  red_back_button_unhoverable = {
+    clicked_graphical_set = {
+      base = {
+        center = {
+          position = {
+            24,
+            360
+          },
+          size = {
+            1,
+            64
+          }
+        },
+        left = {
+          position = {
+            0,
+            360
+          },
+          size = {
+            24,
+            64
+          }
+        },
+        right = {
+          position = {
+            145,
+            25
+          },
+          size = {
+            8,
+            1
+          }
+        },
+        right_bottom = {
+          position = {
+            145,
+            26
+          },
+          size = 8
+        },
+        right_top = {
+          position = {
+            145,
+            17
+          },
+          size = 8
+        }
+      },
+      shadow = {
+        center = {
+          position = {
+            336,
+            424
+          },
+          size = {
+            1,
+            80
+          }
+        },
+        draw_type = "outer",
+        left = {
+          position = {
+            304,
+            424
+          },
+          size = {
+            32,
+            80
+          }
+        },
+        left_outer_border_shift = 12,
+        right = {
+          position = {
+            209,
+            136
+          },
+          size = {
+            8,
+            1
+          }
+        },
+        right_bottom = {
+          position = {
+            209,
+            137
+          },
+          size = 8
+        },
+        right_top = {
+          position = {
+            209,
+            128
+          },
+          size = 8
+        },
+        tint = {
+          15,
+          7,
+          3,
+          100
+        }
+      }
+    },
+    hovered_graphical_set = {
+      base = {
+        center = {
+          position = {
+            24,
+            360
+          },
+          size = {
+            1,
+            64
+          }
+        },
+        left = {
+          position = {
+            0,
+            360
+          },
+          size = {
+            24,
+            64
+          }
+        },
+        right = {
+          position = {
+            145,
+            25
+          },
+          size = {
+            8,
+            1
+          }
+        },
+        right_bottom = {
+          position = {
+            145,
+            26
+          },
+          size = 8
+        },
+        right_top = {
+          position = {
+            145,
+            17
+          },
+          size = 8
+        }
+      },
+      shadow = {
+        center = {
+          position = {
+            336,
+            424
+          },
+          size = {
+            1,
+            80
+          }
+        },
+        draw_type = "outer",
+        left = {
+          position = {
+            304,
+            424
+          },
+          size = {
+            32,
+            80
+          }
+        },
+        left_outer_border_shift = 12,
+        right = {
+          position = {
+            209,
+            136
+          },
+          size = {
+            8,
+            1
+          }
+        },
+        right_bottom = {
+          position = {
+            209,
+            137
+          },
+          size = 8
+        },
+        right_top = {
+          position = {
+            209,
+            128
+          },
+          size = 8
+        },
+        tint = {
+          15,
+          7,
+          3,
+          100
+        }
+      }
+    },
+    parent = "red_back_button",
     type = "button_style"
   },
   red_button = {
@@ -21336,6 +22100,10 @@ return {
     parent = "list_box_item",
     type = "button_style"
   },
+  titlebar_search_textfield = {
+    top_margin = -2,
+    type = "textbox_style"
+  },
   tool_bar_empty_slot = {
     graphical_set = {
       corner_size = 8,
@@ -23607,6 +24375,58 @@ return {
     parent = "slider_value_textfield",
     type = "textbox_style",
     width = 100
+  },
+  window_content_frame = {
+    graphical_set = {
+      base = {
+        center = {
+          position = {
+            76,
+            8
+          },
+          size = {
+            1,
+            1
+          }
+        },
+        corner_size = 8,
+        draw_type = "outer",
+        position = {
+          17,
+          0
+        }
+      },
+      shadow = {
+        corner_size = 8,
+        draw_type = "inner",
+        position = {
+          183,
+          128
+        },
+        scale = 0.5,
+        tint = {
+          0,
+          0,
+          0,
+          1
+        }
+      }
+    },
+    padding = 4,
+    type = "frame_style"
+  },
+  window_content_frame_packed = {
+    horizontal_flow_style = {
+      horizontal_spacing = 0,
+      type = "horizontal_flow_style"
+    },
+    padding = 0,
+    parent = "window_content_frame",
+    type = "frame_style",
+    vertical_flow_style = {
+      type = "vertical_flow_style",
+      vertical_spacing = 0
+    }
   },
   working_weapon_button = {
     clicked_graphical_set = {

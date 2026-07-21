@@ -1,14 +1,12 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
+  energy_required = 0.5,
   ingredients = {
     {
-      amount = 15,
-      name = "iron-gear-wheel",
-      type = "item"
-    },
-    {
-      amount = 15,
-      name = "electronic-circuit",
+      amount = 1,
+      name = "fast-inserter",
       type = "item"
     },
     {
@@ -18,10 +16,33 @@ return {
     },
     {
       amount = 1,
-      name = "fast-inserter",
+      name = "electric-engine-unit",
+      type = "item"
+    },
+    {
+      amount = 1,
+      name = "small-parts-02",
+      type = "item"
+    },
+    {
+      amount = 1,
+      name = "crmoni",
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.bulk-inserter"
+    },
+    {
+      "item-name.bulk-inserter"
+    },
+    {
+      "entity-name.bulk-inserter"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "bulk-inserter",
   results = {
     {

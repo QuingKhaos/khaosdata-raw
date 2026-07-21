@@ -181,7 +181,13 @@ return {
   maximum_wire_distance = 32,
   minable = {
     mining_time = 0.1,
-    result = "big-electric-pole"
+    results = {
+      {
+        amount = 1,
+        name = "big-electric-pole",
+        type = "item"
+      }
+    }
   },
   name = "big-electric-pole",
   open_sound = {

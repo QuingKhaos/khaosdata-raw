@@ -15,6 +15,11 @@ return {
       1.3999999999999999
     }
   },
+  collision_mask = {
+    layers = {
+      resource = true
+    }
+  },
   draw_stateless_visualisation_under_building = false,
   driving_sound = {
     fade_ticks = 6,
@@ -43,7 +48,7 @@ return {
   },
   highlight = true,
   icon = "__base__/graphics/icons/crude-oil-resource.png",
-  infinite = true,
+  infinite = false,
   infinite_depletion_amount = 10,
   map_color = {
     0.78000000000000007,
@@ -78,6 +83,7 @@ return {
       0.5
     }
   },
+  selection_priority = 40,
   stage_counts = {
     0
   },

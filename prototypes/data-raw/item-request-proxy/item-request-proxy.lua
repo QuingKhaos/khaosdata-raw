@@ -9,6 +9,9 @@ return {
       0
     }
   },
+  collision_mask = {
+    layers = {}
+  },
   factoriopedia_simulation = {
     init = "    game.simulation.camera_position = {0.5, 0.5}\n    game.simulation.camera_alt_info = true\n    local assembler = game.surfaces[1].create_entity{name = \"assembling-machine-3\", position = {0, 0}}\n    assembler.set_recipe(\"iron-gear-wheel\")\n    game.surfaces[1].create_entity { name = \"item-request-proxy\", position = assembler.position, target = assembler, modules = {{id={name = \"speed-module\"}, items = {in_inventory={{inventory = 4, stack = 0}}}}}}\n    game.surfaces[1].create_entity { name = \"item-request-proxy\", position = assembler.position, target = assembler, modules = {{id={name = \"efficiency-module\"}, items = {in_inventory={{inventory = 4, stack = 1}}}}}}\n    game.surfaces[1].create_entity { name = \"item-request-proxy\", position = assembler.position, target = assembler, modules = {{id={name = \"productivity-module\"}, items = {in_inventory={{inventory = 4, stack = 2}}}}}}\n  "
   },

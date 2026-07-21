@@ -7,7 +7,8 @@ return {
     filename = "__base__/sound/item/lab-inventory-move.ogg",
     volume = 0.8
   },
-  icon = "__base__/graphics/icons/lab.png",
+  icon = "__pycoalprocessinggraphics__/graphics/icons/lab-mk01.png",
+  icon_size = 64,
   inventory_move_sound = {
     aggregation = {
       max_count = 1,

@@ -5,6 +5,7 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = false,
   icons = {
     {
       icon = "__base__/graphics/technology/personal-laser-defense-equipment.png",
@@ -22,34 +23,47 @@ return {
     }
   },
   name = "personal-laser-defense-equipment",
+  order = "autotech-[000622]-[personal-laser-defense-equipment]",
   prerequisites = {
-    "laser-turret",
-    "military-3",
-    "low-density-structure",
     "power-armor",
-    "solar-panel-equipment"
+    "low-density-structure",
+    "solar-panel-equipment",
+    "laser-turret",
+    "military-3"
   },
   type = "technology",
   unit = {
-    count = 100,
+    count = 2250,
     ingredients = {
       {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
+        "py-science-pack-3",
         1
       },
       {
         "chemical-science-pack",
-        1
+        2
+      },
+      {
+        "py-science-pack-2",
+        3
+      },
+      {
+        "logistic-science-pack",
+        6
+      },
+      {
+        "py-science-pack-1",
+        10
+      },
+      {
+        "automation-science-pack",
+        20
       },
       {
         "military-science-pack",
-        1
+        3
       }
     },
-    time = 30
+    time = 180
   }
 }

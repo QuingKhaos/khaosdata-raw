@@ -5,34 +5,44 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = false,
   icon = "__base__/graphics/technology/explosive-rocketry.png",
   icon_size = 256,
   name = "explosive-rocketry",
+  order = "autotech-[000427]-[explosive-rocketry]",
   prerequisites = {
-    "rocketry",
-    "military-3"
+    "military-3",
+    "rocketry"
   },
   type = "technology",
   unit = {
-    count = 100,
+    count = 800,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
-        1
-      },
       {
         "chemical-science-pack",
         1
       },
       {
+        "py-science-pack-2",
+        2
+      },
+      {
+        "logistic-science-pack",
+        3
+      },
+      {
+        "py-science-pack-1",
+        6
+      },
+      {
+        "automation-science-pack",
+        10
+      },
+      {
         "military-science-pack",
-        1
+        2
       }
     },
-    time = 30
+    time = 120
   }
 }

@@ -1,5 +1,6 @@
 return {
   allowed_without_fight = false,
+  hidden = true,
   icon = "__base__/graphics/achievement/there-is-no-spoon.png",
   icon_size = 128,
   name = "there-is-no-spoon",

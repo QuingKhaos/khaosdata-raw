@@ -1,5 +1,7 @@
 return {
-  allow_productivity = true,
+  allow_productivity = false,
+  always_show_made_in = true,
+  always_show_products = true,
   category = "crafting",
   enabled = false,
   energy_required = 1,
@@ -10,6 +12,16 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.barrel"
+    },
+    {
+      "item-name.barrel"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "barrel",
   results = {
     {
@@ -18,6 +30,5 @@ return {
       type = "item"
     }
   },
-  subgroup = "intermediate-product",
   type = "recipe"
 }

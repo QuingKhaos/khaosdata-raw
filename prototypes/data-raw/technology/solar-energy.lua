@@ -5,26 +5,33 @@ return {
       type = "unlock-recipe"
     }
   },
+  enabled = false,
+  essential = false,
+  hidden = true,
   icon = "__base__/graphics/technology/solar-energy.png",
   icon_size = 256,
   name = "solar-energy",
+  order = "autotech-[000182]-[solar-energy]",
   prerequisites = {
-    "steel-processing",
-    "logistic-science-pack"
+    "pyrite"
   },
   type = "technology",
   unit = {
-    count = 250,
+    count = 175,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
       {
         "logistic-science-pack",
         1
+      },
+      {
+        "py-science-pack-1",
+        2
+      },
+      {
+        "automation-science-pack",
+        3
       }
     },
-    time = 30
+    time = 60
   }
 }

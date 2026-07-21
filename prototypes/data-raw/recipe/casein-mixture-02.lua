@@ -1,0 +1,44 @@
+return {
+  always_show_made_in = true,
+  always_show_products = true,
+  category = "mixer",
+  enabled = false,
+  energy_required = 10,
+  ingredients = {
+    {
+      amount = 50,
+      name = "milk",
+      type = "fluid"
+    },
+    {
+      amount = 50,
+      name = "hydrogen-chloride",
+      type = "fluid"
+    }
+  },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.casein-mixture-02"
+    },
+    {
+      "fluid-name.casein-mixture"
+    }
+  },
+  main_product = "casein-mixture",
+  maximum_productivity = 1000000,
+  name = "casein-mixture-02",
+  results = {
+    {
+      amount = 60,
+      name = "casein-mixture",
+      type = "fluid"
+    },
+    {
+      amount = 50,
+      name = "waste-water",
+      type = "fluid"
+    }
+  },
+  type = "recipe"
+}

@@ -5,6 +5,7 @@ return {
       type = "maximum-following-robots-count"
     }
   },
+  essential = false,
   icons = {
     {
       icon = "__base__/graphics/technology/follower-robots.png",
@@ -22,27 +23,32 @@ return {
     }
   },
   name = "follower-robot-count-2",
+  order = "autotech-[000201]-[follower-robot-count-2]",
   prerequisites = {
     "follower-robot-count-1"
   },
   type = "technology",
   unit = {
-    count = 200,
+    count = 225,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
       {
         "logistic-science-pack",
         1
+      },
+      {
+        "py-science-pack-1",
+        2
+      },
+      {
+        "automation-science-pack",
+        3
       },
       {
         "military-science-pack",
         1
       }
     },
-    time = 30
+    time = 90
   },
   upgrade = true
 }

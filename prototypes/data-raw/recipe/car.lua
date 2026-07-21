@@ -1,4 +1,6 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 2,
   ingredients = {
@@ -16,8 +18,26 @@ return {
       amount = 5,
       name = "steel-plate",
       type = "item"
+    },
+    {
+      amount = 1,
+      name = "light-armor",
+      type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.car"
+    },
+    {
+      "item-name.car"
+    },
+    {
+      "entity-name.car"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "car",
   results = {
     {

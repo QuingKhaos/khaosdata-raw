@@ -162,6 +162,15 @@ return {
       1.3
     }
   },
+  collision_mask = {
+    consider_tile_transitions = true,
+    layers = {
+      car = true,
+      is_object = true,
+      player = true,
+      train = true
+    }
+  },
   consumption = "600kW",
   corpse = "tank-remnants",
   damaged_trigger_effect = {
@@ -191,9 +200,12 @@ return {
   effectivity = 0.9,
   energy_per_hit_point = 0.5,
   energy_source = {
+    burnt_inventory_size = 2,
     effectivity = 1,
     fuel_categories = {
-      "chemical"
+      "jerry",
+      "chemical",
+      "biomass"
     },
     fuel_inventory_size = 2,
     smoke = {
@@ -307,7 +319,13 @@ return {
   max_health = 2000,
   minable = {
     mining_time = 0.5,
-    result = "tank"
+    results = {
+      {
+        amount = 1,
+        name = "tank",
+        type = "item"
+      }
+    }
   },
   mined_sound = {
     switch_vibration_data = {

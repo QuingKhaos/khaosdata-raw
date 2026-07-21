@@ -118,6 +118,7 @@ return {
     }
   },
   burner = {
+    burnt_inventory_size = 1,
     effectivity = 0.5,
     emissions_per_minute = {
       pollution = 10
@@ -154,6 +155,18 @@ return {
     {
       1.3500000000000001,
       2.3500000000000001
+    }
+  },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
     }
   },
   corpse = "steam-engine-remnants",

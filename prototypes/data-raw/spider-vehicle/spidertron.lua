@@ -22,14 +22,25 @@ return {
       1
     }
   },
+  collision_mask = {
+    layers = {
+      trigger_target = true
+    },
+    not_colliding_with_itself = true
+  },
   corpse = "spidertron-remnants",
   drawing_box_vertical_extension = 3,
   dying_explosion = "spidertron-explosion",
   energy_per_hit_point = 1,
   energy_source = {
-    type = "void"
+    effectivity = 1,
+    fuel_categories = {
+      "gastrocapacitor"
+    },
+    fuel_inventory_size = 4,
+    type = "burner"
   },
-  equipment_grid = "spidertron-equipment-grid",
+  equipment_grid = "mount-grid-10x8",
   factoriopedia_simulation = {
     init = "    game.simulation.camera_zoom = 1.3\n    game.simulation.camera_position = {0, -1}\n    game.surfaces[1].create_entity{name = \"spidertron\", position = {0, 0}}\n  "
   },
@@ -3174,14 +3185,21 @@ return {
     "spidertron-rocket-launcher-3",
     "spidertron-rocket-launcher-4"
   },
+  healing_per_tick = 0.08,
   height = 1.5,
   icon = "__base__/graphics/icons/spidertron.png",
-  inventory_size = 80,
+  inventory_size = 160,
   is_military_target = true,
   max_health = 3000,
   minable = {
     mining_time = 1,
-    result = "spidertron"
+    results = {
+      {
+        amount = 1,
+        name = "spidertron",
+        type = "item"
+      }
+    }
   },
   mined_sound = {
     switch_vibration_data = {
@@ -3206,7 +3224,7 @@ return {
       128
     }
   },
-  movement_energy_consumption = "250kW",
+  movement_energy_consumption = "8MW",
   name = "spidertron",
   open_sound = {
     filename = "__base__/sound/spidertron/spidertron-door-open.ogg",

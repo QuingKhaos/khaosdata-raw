@@ -10,6 +10,7 @@ return {
     0.72999999999999998,
     0.070000000000000009
   },
+  fuel_value = "0.9MJ",
   icon = "__base__/graphics/icons/fluid/light-oil.png",
   name = "light-oil",
   order = "a[fluid]-b[oil]-c[light-oil]",

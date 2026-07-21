@@ -27,7 +27,7 @@ return {
     volume = 0.8
   },
   stack_size = 50,
-  subgroup = "intermediate-product",
+  subgroup = "py-alternativeenergy-engine-units",
   type = "item",
   weight = 2500
 }

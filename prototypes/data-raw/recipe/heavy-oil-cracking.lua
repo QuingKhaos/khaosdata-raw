@@ -1,5 +1,7 @@
 return {
   allow_productivity = true,
+  always_show_made_in = true,
+  always_show_products = true,
   category = "chemistry",
   crafting_machine_tint = {
     primary = {
@@ -29,6 +31,7 @@ return {
   },
   enabled = false,
   energy_required = 2,
+  hidden = true,
   icon = "__base__/graphics/icons/fluid/heavy-oil-cracking.png",
   ingredients = {
     {
@@ -42,7 +45,24 @@ return {
       type = "fluid"
     }
   },
+  localised_description = {
+    "?",
+    {
+      "",
+      {
+        "recipe-description.heavy-oil-cracking"
+      },
+      "\n",
+      {
+        "recipe-description.affected-by-productivity"
+      }
+    },
+    {
+      "recipe-description.affected-by-productivity"
+    }
+  },
   main_product = "",
+  maximum_productivity = 1000000,
   name = "heavy-oil-cracking",
   order = "b[fluid-chemistry]-a[heavy-oil-cracking]",
   results = {

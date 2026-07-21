@@ -1,4 +1,6 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 2,
   ingredients = {
@@ -9,7 +11,7 @@ return {
     },
     {
       amount = 5,
-      name = "iron-gear-wheel",
+      name = "small-parts-01",
       type = "item"
     },
     {
@@ -18,6 +20,19 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.electric-mining-drill"
+    },
+    {
+      "item-name.electric-mining-drill"
+    },
+    {
+      "entity-name.electric-mining-drill"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "electric-mining-drill",
   results = {
     {

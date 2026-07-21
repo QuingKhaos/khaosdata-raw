@@ -1,25 +1,35 @@
 return {
   effects = {
     {
+      recipe = "fluid-drill-mk02",
+      type = "unlock-recipe"
+    },
+    {
       recipe = "electric-mining-drill",
       type = "unlock-recipe"
     }
   },
-  icon = "__base__/graphics/technology/electric-mining-drill.png",
-  icon_size = 256,
+  essential = true,
+  icon = "__pyalienlifegraphics2__/graphics/technology/electric-mining-drill.png",
+  icon_size = 128,
   name = "electric-mining-drill",
+  order = "autotech-[000065]-[electric-mining-drill]",
   prerequisites = {
-    "automation-science-pack"
+    "py-science-pack-1"
   },
   type = "technology",
   unit = {
-    count = 25,
+    count = 50,
     ingredients = {
       {
-        "automation-science-pack",
+        "py-science-pack-1",
         1
+      },
+      {
+        "automation-science-pack",
+        2
       }
     },
-    time = 10
+    time = 45
   }
 }

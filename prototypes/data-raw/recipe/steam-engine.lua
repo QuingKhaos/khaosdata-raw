@@ -1,9 +1,12 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
+  energy_required = 0.5,
   ingredients = {
     {
       amount = 8,
-      name = "iron-gear-wheel",
+      name = "small-parts-01",
       type = "item"
     },
     {
@@ -17,6 +20,19 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.steam-engine"
+    },
+    {
+      "item-name.steam-engine"
+    },
+    {
+      "entity-name.steam-engine"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "steam-engine",
   results = {
     {

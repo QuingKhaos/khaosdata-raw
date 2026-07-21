@@ -5,21 +5,31 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = true,
   icon = "__base__/graphics/technology/fast-inserter.png",
   icon_size = 256,
   name = "fast-inserter",
+  order = "autotech-[000216]-[fast-inserter]",
   prerequisites = {
-    "automation-science-pack"
+    "alloys-mk02"
   },
   type = "technology",
   unit = {
-    count = 30,
+    count = 300,
     ingredients = {
       {
-        "automation-science-pack",
+        "logistic-science-pack",
         1
+      },
+      {
+        "py-science-pack-1",
+        2
+      },
+      {
+        "automation-science-pack",
+        3
       }
     },
-    time = 15
+    time = 60
   }
 }

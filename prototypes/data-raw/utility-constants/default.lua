@@ -1892,7 +1892,7 @@ return {
     0.2,
     0.2
   },
-  default_pipeline_extent = 320,
+  default_pipeline_extent = 1280,
   default_planet_procession_set = {
     arrival = {
       "default-b"
@@ -2335,160 +2335,170 @@ return {
   logistic_robots_use_busy_robots_queue = true,
   logistic_slots_per_row = 10,
   low_energy_robot_estimate_multiplier = 1.2,
-  main_menu_background_image_location = "__core__/graphics/background-image.jpg",
+  main_menu_background_image_location = "__pyalienlifegraphics3__/graphics/pyal-wall.jpg",
   main_menu_background_vignette_intensity = 30,
   main_menu_background_vignette_sharpness = 0.44400000000000004,
   main_menu_simulations = {
-    nauvis_artillery = {
+    ae_early = {
       checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 0\n  ",
-      length = 1320,
-      save = "__base__/menu-simulations/menu-simulation-artillery.zip",
-      update = "  "
-    },
-    nauvis_big_defense = {
-      checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    logo.destructible = false\n    local center = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_position = center\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 1\n    game.map_settings.steering.moving.force_unit_fuzzy_goto_behavior = true\n    game.map_settings.steering.moving.radius = 3\n\n    local bop = function()\n      local surface = game.surfaces[1]\n      local target = surface.find_entities_filtered{name = \"flamethrower-turret\", position = {33.5, -12}}[1]\n      local names = {\"medium-biter\", \"medium-biter\", \"big-biter\", \"big-biter\", \"big-spitter\", \"medium-spitter\"}\n      for k = 1, 100 do\n        local spawn_position = {center[1] - 60 + math.random(-35, 5), center[2] + math.random(-10, 10)}\n        local name = names[math.random(#names)]\n        local biter = surface.create_entity{name = name, position = spawn_position}\n        biter.commandable.set_command({type = defines.command.attack, target = target})\n        biter.speed = 0.24 + (math.random() / 20)\n      end\n    end\n\n    bop()\n  ",
-      length = 720,
-      save = "__base__/menu-simulations/menu-simulation-big-defense.zip"
-    },
-    nauvis_biter_base_artillery = {
-      checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    logo.destructible = false\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    center = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 0\n    game.forces.enemy.set_evolution_factor(0.7)\n    local bases = {}\n    local get = function()\n      bases = game.surfaces[1].find_entities_filtered{force = \"enemy\", position = center, radius = 32}\n      for k, v in pairs (bases) do\n        local i = math.random(#bases)\n        bases[k], bases[i] = bases[i], bases[k]\n      end\n    end\n\n    local badonk = function(position, fluff)\n      local x = position.x + ((math.random() - 0.5) * fluff * 2)\n      local y = position.y + ((math.random() - 0.5) * fluff * 2)\n      return {x, y}\n    end\n    get()\n    local donk = function()\n      local k, base = next(bases)\n      if not k then\n        if not badink then\n          get()\n          badink = true\n        end\n        return\n      end\n      bases[k] = nil\n      if not base.valid then return end\n      game.surfaces[1].create_entity{name = \"artillery-projectile\", position = {center[1]-80, center[2]-80}, force = \"player\", target = badonk(base.position, base.get_radius()), speed = 1}\n    end\n\n    script.on_nth_tick(17, donk)\n    script.on_nth_tick(23, donk)\n    script.on_nth_tick(29, donk)\n\n    script.on_event(defines.events.on_entity_died, function()\n      if not badoob then\n        for k, v in pairs (game.surfaces[1].find_enemy_units(center, 32, \"player\")) do\n          local c = v.commandable\n          if not (c.has_command and c.command.type == defines.command.go_to_location) then\n            c.set_command{type = defines.command.go_to_location, destination  = {center[1] + 80, center[2] + 20}}\n          end\n        end\n      end\n    end)\n\n  ",
-      length = 720,
-      save = "__base__/menu-simulations/menu-simulation-biter-base.zip"
-    },
-    nauvis_biter_base_laser_defense = {
-      checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    logo.destructible = false\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    center = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.forces.enemy.set_evolution_factor(0.7)\n    game.surfaces[1].peaceful_mode = true\n    game.forces.player.research_all_technologies()\n    game.surfaces.nauvis.daytime = 0\n\n    local character = game.surfaces[1].create_entity{name = \"character\", position = {center[1] - 40, center[2] + 20}, force = \"player\"}\n    character.insert{name = \"power-armor-mk2\"}\n    local grid = character.get_inventory(defines.inventory.character_armor)[1].grid\n    grid.put{name = \"exoskeleton-equipment\"}\n    grid.put{name = \"exoskeleton-equipment\"}\n    for k = 1, 10 do\n      grid.put{name = \"personal-laser-defense-equipment\"}\n      grid.put{name = \"energy-shield-mk2-equipment\"}\n      grid.put{name = \"battery-mk2-equipment\"}\n      grid.put{name = \"battery-mk2-equipment\"}\n    end\n\n    for k, equipment in pairs(grid.equipment) do\n      if equipment.max_shield > 0 then equipment.shield = equipment.max_shield end\n      equipment.energy = equipment.max_energy\n    end\n\n    character.insert{name = \"submachine-gun\"}\n    character.insert{name = \"uranium-rounds-magazine\", count = 50}\n\n    points =\n    {\n      {-16, -8},\n      {0, -12},\n      {16, -8},\n      {16, 0},\n      {8, 8},\n      {60, 8},\n    }\n\n    local distance = function(p_1, p_2)\n      local dx = (p_1[1] or p_1.x) - (p_2[1] or p_2.x)\n      local dy = (p_1[2] or p_1.y) - (p_2[2] or p_2.y)\n      return ((dx * dx) + (dy * dy)) ^ 0.5\n    end\n\n    local direction = function(p_1, p_2)\n\n      local d_x = (p_2[1] or p_2.x) - (p_1[1] or p_1.x)\n      local d_y = (p_2[2] or p_2.y) - (p_1[2] or p_1.y)\n      local angle = math.atan2(d_y, d_x)\n\n      local orientation =  (angle / (2 * math.pi)) - 0.25\n      if orientation < 0 then orientation = orientation + 1 end\n\n      local direction = math.floor((orientation * 16) + 0.5)\n      if direction == 16 then direction = defines.direction.north end\n      return direction\n    end\n\n    local get_shoot_target = function(entity)\n      local enemies = entity.surface.find_enemy_units(entity.position, 10)\n      local closest = entity.surface.get_closest(entity.position, enemies)\n      return closest\n    end\n\n    script.on_event(defines.events.on_tick, function()\n      local k, destination = next(points)\n      if not k then return end\n      local target = {center[1] + destination[1], center[2] + destination[2]}\n      if distance(character.position, target) < 1 then\n        points[k] = nil\n        return\n      end\n\n      if game.tick % 17 == 0 then\n        local walking_direction = direction(target, character.position)\n        character.walking_state = {walking = true, direction = walking_direction}\n      end\n\n      if not (shoot_target and shoot_target.valid) then\n        shoot_target = get_shoot_target(character)\n      end\n\n      if shoot_target then\n        character.shooting_state = {state = defines.shooting.shooting_enemies, position = shoot_target.position}\n      else\n        character.shooting_state = {state = defines.shooting.not_shooting}\n      end\n\n    end)\n\n  ",
-      length = 720,
-      save = "__base__/menu-simulations/menu-simulation-biter-base.zip"
-    },
-    nauvis_biter_base_player_attack = {
-      checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    logo.destructible = false\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    center = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.forces.enemy.set_evolution_factor(0.5)\n    game.surfaces[1].peaceful_mode = true\n    game.forces.player.research_all_technologies()\n    game.surfaces.nauvis.daytime = 0\n\n    local character = game.surfaces[1].create_entity{name = \"character\", position = {center[1] - 40, center[2] - 20}, force = \"player\"}\n    character.insert{name = \"heavy-armor\"}\n    character.insert{name = \"submachine-gun\"}\n    character.insert{name = \"piercing-rounds-magazine\", count = 50}\n    character.insert{name = \"grenade\", count = 50}\n\n    points =\n    {\n      {-20, -8},\n      {-20, 8},\n      {-40, 20},\n      {0, -12},\n      {16, -8},\n      {16, 0},\n      {8, 8},\n      {60, 8},\n    }\n\n    local distance = function(p_1, p_2)\n      local dx = (p_1[1] or p_1.x) - (p_2[1] or p_2.x)\n      local dy = (p_1[2] or p_1.y) - (p_2[2] or p_2.y)\n      return ((dx * dx) + (dy * dy)) ^ 0.5\n    end\n\n    local direction = function(p_1, p_2)\n\n      local d_x = (p_2[1] or p_2.x) - (p_1[1] or p_1.x)\n      local d_y = (p_2[2] or p_2.y) - (p_1[2] or p_1.y)\n      local angle = math.atan2(d_y, d_x)\n\n      local orientation =  (angle / (2 * math.pi)) - 0.25\n      if orientation < 0 then orientation = orientation + 1 end\n\n      local direction = math.floor((orientation * 16) + 0.5)\n      if direction == 16 then direction = defines.direction.north end\n      return direction\n    end\n\n    local get_shoot_target = function(entity)\n      local enemies = entity.surface.find_entities_filtered{force = \"enemy\", type = {\"unit-spawner\", \"turret\", \"unit\"}, position = entity.position, radius = 15}\n      local closest = entity.surface.get_closest(entity.position, enemies)\n      return closest\n    end\n\n    local badonk = function(position, fluff)\n      local x = position.x + ((math.random() - 0.5) * fluff * 2)\n      local y = position.y + ((math.random() - 0.5) * fluff * 2)\n      return {x, y}\n    end\n\n    script.on_event(defines.events.on_tick, function()\n      if not character.valid then return end\n      local k, destination = next(points)\n      if not k then return end\n      local target = {center[1] + destination[1], center[2] + destination[2]}\n      if distance(character.position, target) < 1 then\n        points[k] = nil\n        return\n      end\n\n      if game.tick % 17 == 0 then\n        local walking_direction = direction(target, character.position)\n        character.walking_state = {walking = true, direction = walking_direction}\n      end\n\n      if not (shoot_target and shoot_target.valid) or game.tick % 123 == 0 then\n        shoot_target = get_shoot_target(character)\n      end\n\n      if shoot_target then\n        character.shooting_state = {state = defines.shooting.shooting_enemies, position = shoot_target.position}\n        if game.tick % 31 == 0 then\n          character.surface.create_entity{name = \"grenade\", position = character.position, speed = 0.3, target = badonk(shoot_target.position, 2), force = \"player\"}\n        end\n      else\n        character.shooting_state = {state = defines.shooting.not_shooting}\n      end\n\n    end)\n\n  ",
-      length = 720,
-      save = "__base__/menu-simulations/menu-simulation-biter-base.zip"
-    },
-    nauvis_biter_base_spidertron = {
-      checkboard = false,
-      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"factorio-logo-11tiles\"}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    center = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    surface.daytime = 0\n    game.forces.enemy.set_evolution_factor(1)\n    surface.peaceful_mode = true\n\n    spider = surface.create_entity{name = \"spidertron\", position = {logo.position.x - 30, logo.position.y + 60}, force = \"player\"}\n    spider.force.research_all_technologies()\n    local grid = spider.grid\n    grid.put{name = \"fission-reactor-equipment\"}\n    grid.put{name = \"personal-laser-defense-equipment\"}\n    grid.put{name = \"personal-laser-defense-equipment\"}\n    grid.put{name = \"personal-laser-defense-equipment\"}\n\n    spider.insert({name = \"rocket\", count = 800})\n\n    points =\n    {\n      {-16, -8},\n      {0, -12},\n      {16, -8},\n      {16, 0},\n      {60, 60},\n    }\n\n    local bonk = function()\n      local k, position = next(points)\n      if not k then return end\n      points[k] = nil\n      local x = position[1] + center[1]\n      local y = position[2] + center[2]\n      spider.autopilot_destination = {x, y}\n    end\n\n    bonk()\n\n    script.on_event(defines.events.on_spider_command_completed, function(event)\n      bonk()\n    end)\n\n  ",
-      length = 720,
-      save = "__base__/menu-simulations/menu-simulation-biter-base.zip"
-    },
-    nauvis_biter_base_steamrolled = {
-      checkboard = false,
-      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"factorio-logo-11tiles\"}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    center = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    surface.daytime = 0\n    game.forces.enemy.set_evolution_factor(0.3)\n    surface.peaceful_mode = true\n\n    local count = 120\n    script.on_nth_tick(2,\n      function()\n        count = count - 2\n        if count <= 0 then\n          for i=0,20 do\n            local y = game.simulation.camera_position.y - 20 + i * 2\n            local x = game.simulation.camera_position.x - 40\n            local character = surface.create_entity{ name = \"character\", position = {x, y}, force = \"player\" }\n            character.color = {1, 0, 0, 0.5}\n            local tank = surface.create_entity{ name = \"tank\", position = {x, y}, force = \"player\" }\n            tank.orientation = 0.25\n            tank.insert{name = \"rocket-fuel\", count = 3}\n            tank.speed = 0.5\n            tank.set_driver(character)\n            character.riding_state = { acceleration = defines.riding.acceleration.accelerating, direction = defines.riding.direction.straight }\n          end\n          script.on_nth_tick(2, nil)\n        end\n      end)\n\n    local wube_logo_position = {-499.5, 43.5}\n\n    script.on_nth_tick(1,\n    function()\n      if surface.count_entities_filtered{position = wube_logo_position, radius = 3, name = \"tank\"} > 0 then\n        local tiles = {}\n        for x=-3,3 do\n          for y=-3,3 do\n            table.insert(tiles, {name = \"dirt-1\", position = {wube_logo_position[1] + x, wube_logo_position[2] + y}})\n          end\n        end\n        surface.set_tiles(tiles)\n      end\n    end)\n  ",
-      length = 600,
-      save = "__base__/menu-simulations/menu-simulation-biter-base.zip"
-    },
-    nauvis_brutal_defeat = {
-      checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    logo.destructible = false\n    local center = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_position = center\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.map_settings.steering.moving.force_unit_fuzzy_goto_behavior = true\n    game.map_settings.steering.moving.radius = 2\n\n    game.forces.enemy.set_ammo_damage_modifier(\"melee\", 10)\n    game.forces.enemy.set_ammo_damage_modifier(\"biological\", 10)\n    game.forces.enemy.set_gun_speed_modifier(\"melee\", 0.5)\n    game.forces.enemy.set_gun_speed_modifier(\"biological\", 0.5)\n\n    local bop = function()\n      local surface = game.surfaces[1]\n      local targets = surface.find_entities_filtered{force = \"player\", position = {center[1] + 25, center[2]}, radius = 10}\n      local count = #targets\n      local names = {\"medium-biter\", \"small-biter\", \"small-biter\", \"small-biter\", \"small-biter\", \"small-biter\", \"small-spitter\"}\n      for k = 1, 350 do\n        local spawn_position = {center[1] - 40 + math.random(-55, 5), center[2] + 10 + math.random(-5, 5)}\n        local name = names[math.random(#names)]\n        local biter = surface.create_entity{name = name, position = spawn_position}\n        biter.commandable.set_command\n        {\n          type = defines.command.compound,\n          structure_type = defines.compound_command.return_last,\n          commands =\n          {\n            {type = defines.command.attack, target = targets[math.random(count)]},\n            {type = defines.command.attack_area, destination = {center[1] + 20, center[2]}, radius = math.random(5, 10)},\n            {type = defines.command.attack_area, destination = {center[1] + 35, center[2]}, radius = math.random(2, 5)},\n            {type = defines.command.go_to_location, destination = {center[1] + 120, center[2]}}\n          }\n        }\n        biter.speed = 0.24 + (math.random() / 20)\n      end\n    end\n\n    bop()\n  ",
-      length = 1080,
-      save = "__base__/menu-simulations/menu-simulation-brutal-defeat.zip"
-    },
-    nauvis_burner_city = {
-      checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 0.5\n  ",
-      length = 600,
-      save = "__base__/menu-simulations/menu-simulation-burner-city.zip",
-      update = "  "
-    },
-    nauvis_chase_player = {
-      checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    local center = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_position = center\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 0\n    game.map_settings.steering.moving.force_unit_fuzzy_goto_behavior = true\n    game.map_settings.steering.moving.radius = 1\n\n    local character = game.surfaces[1].create_entity{name = \"character\", position = {center[1] - 55, center[2] + 4.5}, force = \"player\"}\n    character.walking_state = {walking = true, direction = defines.direction.east}\n    character.character_running_speed_modifier = 0.2\n    character.tick_of_last_attack = game.tick\n\n    local biter = game.surfaces[1].create_entity{name = \"small-biter\", position = {center[1] - 40, center[2] + 4.5}}\n    biter.speed = character.character_running_speed\n    biter.commandable.set_command{type = defines.command.go_to_location, destination = {center[1] + 60, center[2] + 4.5}, distraction = defines.distraction.none}\n\n    script.on_nth_tick(10, function()\n      if biter.position.x < (center[1] + 50) then return end\n      character.walking_state = {walking = true, direction = defines.direction.west}\n      character.tick_of_last_attack = 0\n      character.character_running_speed_modifier = 0.6\n      local command = {type = defines.command.go_to_location, destination_entity = character, distraction = defines.distraction.none}\n      biter.commandable.set_command(command)\n      biter.speed = character.character_running_speed\n      local position = biter.position\n      local surface = game.surfaces[1]\n      local names = {\"medium-biter\", \"small-biter\", \"small-biter\", \"small-biter\"}\n      for k = 1, 25 do\n        local spawn_position = {position.x + math.random(-5, 5), position.y + math.random(-10, 10)}\n        local name = names[math.random(#names)]\n        local biter = surface.create_entity{name = name, position = position}\n        biter.commandable.set_command(command)\n        biter.speed = character.character_running_speed\n      end\n      script.on_nth_tick(10, nil)\n    end)\n  ",
-      length = 960,
-      save = "__base__/menu-simulations/menu-simulation-chase-player.zip"
-    },
-    nauvis_early_smelting = {
-      checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 0\n  ",
-      length = 600,
-      save = "__base__/menu-simulations/menu-simulation-early-smelting.zip",
-      update = "  "
-    },
-    nauvis_forest_fire = {
-      checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 0\n  ",
-      length = 1200,
-      save = "__base__/menu-simulations/menu-simulation-forest-fire.zip",
-      update = "    local dx = 0\n    local dy = 0\n    if game.tick % 3000 < 1000 then\n      dx = 0.01\n    elseif game.tick % 3000 < 2000 then\n      dx = -0.01\n    end\n    if (game.tick + 1500) % 3000 < 1000 then\n      dy = 0.01\n    elseif (game.tick + 1500) % 3000 < 2000 then\n      dy = -0.01\n    end\n    game.simulation.camera_position = {game.simulation.camera_position.x + dx*0, game.simulation.camera_position.y + dy*0}\n  "
-    },
-    nauvis_lab = {
-      checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 0.5\n  ",
-      length = 600,
-      save = "__base__/menu-simulations/menu-simulation-lab.zip",
-      update = "  "
-    },
-    nauvis_logistic_robots = {
-      checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 0\n  ",
-      length = 720,
-      save = "__base__/menu-simulations/menu-simulation-logistic-robots.zip",
-      update = "  "
-    },
-    nauvis_mining_defense = {
-      checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 0\n    game.forces.enemy.set_evolution_factor(0.11)\n  ",
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n\n    local y = game.simulation.camera_position.y + 8\n    local x = game.simulation.camera_position.x + 40\n    local character = surface.create_entity{ name = \"character\", position = {x, y}, force = \"player\" }\n    character.color = {1, 0, 0, 0.5}\n    local car = surface.create_entity{ name = \"car\", position = {x, y}, force = \"player\" }\n    car.orientation = 0.755\n    car.insert{name = \"wood\", count = 50}\n    car.speed = 0.5\n    character.riding_state = { acceleration = defines.riding.acceleration.nothing, direction = defines.riding.direction.straight }\n\n    local tickCount = 0\n    script.on_nth_tick(1,\n        function()\n            tickCount = tickCount + 1\n            if tickCount == 60 * 2 then\n                car.set_driver(character)\n                character.riding_state = { acceleration = defines.riding.acceleration.accelerating, direction = defines.riding.direction.straight }\n            end\n            if tickCount == 60 * 5.7 then\n                character.riding_state = { acceleration = defines.riding.acceleration.braking, direction = defines.riding.direction.straight }\n            end\n            if tickCount == 60 * 8 then\n                character.riding_state = { acceleration = defines.riding.acceleration.reversing, direction = defines.riding.direction.straight }\n            end\n            if tickCount == 60 * 8.5 then\n                character.riding_state = { acceleration = defines.riding.acceleration.braking, direction = defines.riding.direction.straight }\n            end\n            if tickCount == 60 * 9 then\n                character.riding_state = { acceleration = defines.riding.acceleration.accelerating, direction = defines.riding.direction.left }\n            end\n            if tickCount == 60 * 9.25 then\n                character.riding_state = { acceleration = defines.riding.acceleration.accelerating, direction = defines.riding.direction.right }\n            end\n            if tickCount == 60 * 9.4 then\n                character.riding_state = { acceleration = defines.riding.acceleration.accelerating, direction = defines.riding.direction.straight }\n            end\n        end)\n  ",
       length = 900,
-      save = "__base__/menu-simulations/menu-simulation-mining-defense.zip",
+      save = "__pyalternativeenergygraphics__/menu-simulations/menu-simulation-ae-early.zip",
       update = "  "
     },
-    nauvis_nuclear_power = {
+    ae_fossil_plants = {
       checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 0\n  ",
-      length = 720,
-      save = "__base__/menu-simulations/menu-simulation-nuclear-power.zip",
-      update = "  "
-    },
-    nauvis_oil_pumpjacks = {
-      checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 0\n  ",
-      length = 720,
-      save = "__base__/menu-simulations/menu-simulation-oil-pumpjacks.zip",
-      update = "  "
-    },
-    nauvis_oil_refinery = {
-      checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 0\n  ",
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+10.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n  ",
       length = 1200,
-      save = "__base__/menu-simulations/menu-simulation-oil-refinery.zip",
+      save = "__pyalternativeenergygraphics__/menu-simulations/menu-simulation-ae-fossil-plants.zip",
       update = "  "
     },
-    nauvis_solar_power_construction = {
+    ae_nuclear = {
       checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 0\n\n    local blueprint_string_1 = '0eNqd2dtq4zAUBdB/0bNbLOvuXyllcDKmGBw7+FIagv99cmFoodqWznlLQr2KhfaOdXIVh35tz1M3LKK+iu44DrOo365i7j6Gpr9/tlzOrahFt7QnUYihOd3fzWPfTC/nZmh7sRWiG/62X6KW23sh2mHplq59Mo83lz/Dejq00+0PokAhzuN8u2Yc7v/v5rw49WoKcbm9kqF8NdtW/KKqXKpMUiqTsi5J6VxKJymTS8kkZTMp45OUy6R0+gZ9LpW+wZBJqfQNyjLXMmkrd7+rKm3lbvgqpC1Fz6F3wNL0IELL0JMILUuPIrQcPYvQ8vQwQivQ04isqqTHEVqSnkdoVfQ8QkvR8wgtTc8jtAwjjxpYlpFHZH3v++Z4XE9r3yzjFNv3/r8Ud3yuY/edkOvoXUeVjDyDNVKSkWdkVYw8I0sx8owsnbnuKuyvu8l13L5jcx2z7zhGH6A18ow+QFZg9IEET6Qlow+QJcl9oKLOj32+HualeVy7VwdxRpHrIO5oRh2gJTKMOkCWZdQBshyjDpDlyXUQX/eQtw2+2yDKmJLcBnGH8bSOlsgwntahpcipk1FHk7+F444hxy7uWPI2ijuO/K0Sdzx5H8UdRns7D07ujPaGlqSfrqBV0U9X0FL0+oWWptcvtAy9fqFl6fULLUc/XUHL009X0Ar0/kSWK+n9CS3G1NEZYDHGjtBizB2hxRg8QosxeYQWY/QILcbsEVqM4SO0GNNHZHnG9BFajOcZaDGeZ57We/H86aD+8UtDIT7baX5cVXmpXaictM4FF7btH3fkxKI='\n    local blueprint_string = '0eNqd191qhDAQBeB3mWt3MTHmx1cppbjbUAIaRWOpLL57XUvpQjOrkzsj5hPmHAi5waWZbD84H6C6gbt2foTq5Qaj+/B1c38X5t5CBS7YFjLwdXtfjV1TD6e+9raBJQPn3+0XVGx5zcD64IKzP8y2mN/81F7ssH4QBTLou3Hd0/n7/1bnJIpzmcG8PjHDzuWyZP8ofpTKd6niIFWoXUocpcQuVR6l2C4lD1Jc71KKnqDWcUrTE8QoQ08Qo1hOjxC1GD1D1OL0EFGrSEixRCyRECNm/XW+vl6ndmrq0A2xeelfSUYdedSRzx111BHPHZ3QA2xGJqEHiMVz8rxF1Hno+XQZQ73tfTbuOMPJ4447KfXmyIhS6o1Z9HrzqEOvd9yh1zvupNQbm1FKvRGryOk9UAaxGL0HqMXpxxVqFfTjCrUEPUfUKuk5opZMyFEilkrIEbN0Qo6YZRJyRCyRJ+SIWSwhx81arwLbnaF6uGJk8GmHcdvFNRPKcMWkUkaZZfkGTxv4MA=='\n    local inventory = game.create_inventory(1)\n    local stack = inventory[1]\n    stack.import_stack(blueprint_string)\n    local function build_blueprint(position)\n      stack.build_blueprint{ surface = 'nauvis', position = position, force = 'player', build_mode = defines.build_mode.forced }\n    end\n\n    local tiktok =\n    {\n      [0.5 * 60] = {-36, -184},\n      [1 * 60] = {-67, -184},\n      [4 * 60] = {-36, -184-18},\n      [math.floor(4.1 * 60)] = {-36+18, -184-18},\n      [4.2 * 60] = {-36+18, -184},\n      [4.3 * 60] = {-36+18, -184+18},\n      [4.4 * 60] = {-36, -184+18},\n      [4.5 * 60] = {-67, -184+18},\n      [4.6 * 60] = {-67-18, -184+18},\n      [4.7 * 60] = {-67-18, -184},\n      [4.8 * 60] = {-67-18, -184-18},\n      [4.9 * 60] = {-67, -184-18},\n    }\n\n    local start_tick = game.tick\n    script.on_event(defines.events.on_tick, function()\n      local tick_from_start = game.tick - start_tick\n      local position = tiktok[tick_from_start]\n      if position then build_blueprint(position) end\n    end)\n\n  ",
-      length = 420,
-      save = "__base__/menu-simulations/menu-simulation-solar-power-construction.zip",
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+10.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n  ",
+      length = 1200,
+      save = "__pyalternativeenergygraphics__/menu-simulations/menu-simulation-ae-nuclear.zip",
       update = "  "
     },
-    nauvis_spider_ponds = {
+    ae_renewable = {
       checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    logo.destructible = false\n    local center = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_position = center\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    local spider = game.surfaces.nauvis.find_entities_filtered{name = \"spidertron\", limit = 1}[1]\n\n    points =\n    {\n      {-16, -8},\n      {0, -12},\n      {16, -8},\n      {16, 0},\n      {60, 60},\n    }\n\n    local bonk = function()\n      local k, position = next(points)\n      if not k then return end\n      points[k] = nil\n      local x = position[1] + center[1]\n      local y = position[2] + center[2]\n      spider.autopilot_destination = {x, y}\n    end\n\n    bonk()\n\n    script.on_event(defines.events.on_spider_command_completed, function(event)\n      bonk()\n    end)\n\n  ",
-      length = 720,
-      save = "__base__/menu-simulations/menu-simulation-spider-ponds.zip"
-    },
-    nauvis_train_junction = {
-      checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 0\n  ",
-      length = 600,
-      save = "__base__/menu-simulations/menu-simulation-train-junction.zip",
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n  ",
+      length = 1200,
+      save = "__pyalternativeenergygraphics__/menu-simulations/menu-simulation-ae-renewable.zip",
       update = "  "
     },
-    nauvis_train_station = {
+    al_early = {
       checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 0\n  ",
-      length = 960,
-      save = "__base__/menu-simulations/menu-simulation-train-station.zip",
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+10.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n  ",
+      length = 1200,
+      save = "__pyalienlifegraphics__/menu-simulations/menu-simulation-al-early.zip",
       update = "  "
     },
-    nauvis_uranium_processing = {
+    al_late = {
       checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 0.5\n  ",
-      length = 480,
-      save = "__base__/menu-simulations/menu-simulation-uranium-processing.zip"
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+10.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n\n    local y = game.simulation.camera_position.y + 17\n    local x = game.simulation.camera_position.x - 40\n    local character = surface.create_entity{ name = \"character\", position = {x, y}, force = \"player\" }\n    character.color = {1, 0, 0, 0.5}\n    local car = surface.create_entity{ name = \"dingrido\", position = {x, y}, force = \"player\" }\n    car.orientation = 0.25\n    car.insert{name = \"meat\", count = 50}\n    character.riding_state = { acceleration = defines.riding.acceleration.nothing, direction = defines.riding.direction.straight }\n\n    local tickCount = 0\n    script.on_nth_tick(1,\n        function()\n            tickCount = tickCount + 1\n            if tickCount == 60 * 5 then\n                car.set_driver(character)\n                character.riding_state = { acceleration = defines.riding.acceleration.accelerating, direction = defines.riding.direction.straight }\n            end\n        end)\n  ",
+      length = 1320,
+      save = "__pyalienlifegraphics__/menu-simulations/menu-simulation-al-late.zip",
+      update = "  "
+    },
+    al_spaghetti = {
+      checkboard = false,
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n  ",
+      length = 1200,
+      save = "__pyalienlifegraphics__/menu-simulations/menu-simulation-al-spaghetti.zip",
+      update = "  "
+    },
+    cp_borax = {
+      checkboard = false,
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+10.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n  ",
+      length = 1200,
+      save = "__pycoalprocessinggraphics__/menu-simulations/menu-simulation-cp-borax.zip",
+      update = "  "
+    },
+    cp_forest = {
+      checkboard = false,
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+10.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n\n    local inventory = game.create_inventory(1)\n    inventory[1].import_stack(\"0eNpdjDEKgDAMAP+SWQeLUu1nitQgRU0liYJI/24dXNyOg7sbJgyJRPkIGhP5fR2JkMHdIKgaaZaXlRHFjzR5TmERn2i9wJUKcwVRcQP3O9XfqYITWYoBZ/qmtYOx1rR915icHxQoLaE=\")\n\n    local tickCount = 0\n    script.on_event(defines.events.on_tick, function()\n      tickCount = tickCount + 1\n      if tickCount == 60 * 3 then\n        inventory[1].deconstruct_area{surface=surface, force=\"player\", area={{174, -42}, {205, -14}}}\n      end\n      if tickCount == 60 * 10 then\n        inventory[1].deconstruct_area{surface=surface, force=\"player\", area={{174, -42}, {305, 114}}}\n      end\n    end)\n  ",
+      length = 1200,
+      save = "__pycoalprocessinggraphics__/menu-simulations/menu-simulation-cp-forest.zip",
+      update = "  "
+    },
+    cp_unload = {
+      checkboard = false,
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+10.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n  ",
+      length = 1200,
+      save = "__pycoalprocessinggraphics__/menu-simulations/menu-simulation-cp-unload.zip",
+      update = "  "
+    },
+    fe_diamonds = {
+      checkboard = false,
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+10.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n  ",
+      length = 1200,
+      save = "__pyfusionenergygraphics__/menu-simulations/menu-simulation-fe-diamonds.zip",
+      update = "  "
+    },
+    fe_reactors = {
+      checkboard = false,
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+10.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n  ",
+      length = 1200,
+      save = "__pyalternativeenergygraphics__/menu-simulations/menu-simulation-fe-reactors2.zip",
+      update = "  "
+    },
+    ht_chips = {
+      checkboard = false,
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+10.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n  ",
+      length = 1200,
+      save = "__pyhightechgraphics__/menu-simulations/menu-simulation-ht-chips2.zip",
+      update = "  "
+    },
+    ht_ores = {
+      checkboard = false,
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+10.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n  ",
+      length = 1200,
+      save = "__pyhightechgraphics__/menu-simulations/menu-simulation-ht-ores.zip",
+      update = "  "
+    },
+    ht_pa = {
+      checkboard = false,
+      init = "      local surface = game.surfaces.nauvis\n      local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n      game.simulation.camera_position = {logo.position.x, logo.position.y+10.25}\n      game.simulation.camera_zoom = 1\n      game.tick_paused = false\n\n      for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n          entity.destroy()\n      end\n\n      local character = surface.create_entity{name = \"character\", position = {29.5, -25.5}, force = \"player\"}\n      character.walking_state = {walking = true, direction = defines.direction.south}\n\n      script.on_nth_tick(1, function()\n        if character.position.y < 11 then return end\n        character.walking_state = {walking = true, direction = defines.direction.west}\n\n        script.on_nth_tick(10, nil)\n      end)\n    ",
+      length = 1200,
+      save = "__pyhightechgraphics__/menu-simulations/menu-simulation-ht-pa2.zip",
+      update = "    "
+    },
+    in_bots = {
+      checkboard = false,
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+10.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n  ",
+      length = 1200,
+      save = "__pyindustrygraphics__/menu-simulations/menu-simulation-in-bots.zip",
+      update = "  "
+    },
+    in_bus = {
+      checkboard = false,
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+10.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n  ",
+      length = 1200,
+      save = "__pyindustrygraphics__/menu-simulations/menu-simulation-in-bus.zip",
+      update = "  "
+    },
+    ph_drills = {
+      checkboard = false,
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+10.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n  ",
+      length = 1200,
+      save = "__pypetroleumhandlinggraphics__/menu-simulations/menu-simulation-ph-drills.zip",
+      update = "  "
+    },
+    ph_seeps = {
+      checkboard = false,
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+10.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n\n    local mixer = surface.find_entities_filtered{name = \"mixer-mk01\", limit = 1}[1]\n    if #(mixer.get_recipe().ingredients) > 3 then -- in PyHT, the recipe gains clay as ingredient\n      local box = surface.find_entities_filtered{name = \"steel-chest\", limit = 1}[1]\n      box.insert{name=\"clay\", count=1000}\n    end\n  ",
+      length = 1200,
+      save = "__pypetroleumhandlinggraphics__/menu-simulations/menu-simulation-ph-seeps.zip",
+      update = "  "
+    },
+    ph_shale = {
+      checkboard = false,
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+10.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n  ",
+      length = 1200,
+      save = "__pypetroleumhandlinggraphics__/menu-simulations/menu-simulation-ph-shale.zip",
+      update = "  "
+    },
+    ro_cast = {
+      checkboard = false,
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+10.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n\n    local box = surface.find_entities_filtered{name = \"steel-chest\", limit = 1}[1]\n    box.insert{name=\"mold\", count=4800}\n  ",
+      length = 1200,
+      save = "__pyraworesgraphics__/menu-simulations/menu-simulation-ro-cast.zip",
+      update = "  "
+    },
+    ro_chain = {
+      checkboard = false,
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+10.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n  ",
+      length = 1200,
+      save = "__pyraworesgraphics__/menu-simulations/menu-simulation-ro-chain.zip",
+      update = "  "
+    },
+    ro_mines = {
+      checkboard = false,
+      init = "    local surface = game.surfaces.nauvis\n    local logo = surface.find_entities_filtered{name = \"py-logo-15tiles\", limit = 1}[1]\n    game.simulation.camera_position = {logo.position.x, logo.position.y+10.25}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    for _, entity in ipairs(surface.find_entities_filtered{ type=\"character\"}) do\n        entity.destroy()\n    end\n\n    local pipe = surface.find_entities_filtered{name = \"infinity-pipe\", limit = 1}[1]\n    pipe.set_infinity_pipe_filter({ name = \"acetylene\", percentage=0.5, temperature=100, mode=\"exactly\" })\n  ",
+      length = 1200,
+      save = "__pyraworesgraphics__/menu-simulations/menu-simulation-ro-mines.zip",
+      update = "  "
     }
   },
   manual_rail_building_reach_modifier = 3,
@@ -2572,7 +2582,7 @@ return {
     }
   },
   max_belt_stack_size = 4,
-  max_fluid_flow = 100,
+  max_fluid_flow = 500,
   max_logistic_filter_count = 1000,
   max_terrain_building_size = 255,
   maximum_quality_jump = 255,
@@ -2591,7 +2601,7 @@ return {
     g = 0.63529411764705879,
     r = 1
   },
-  minimum_recipe_overload_multiplier = 2,
+  minimum_recipe_overload_multiplier = 1,
   missing_preview_sprite_location = "__core__/graphics/missing-preview.png",
   module_inventory_width = 10,
   moving_sound_count_reduction_rate = 0.5,
@@ -2843,7 +2853,7 @@ return {
       0.7
     }
   },
-  recipe_step_limit = 50000,
+  recipe_step_limit = 2000,
   remote_view_LPF_max_cutoff_frequency = 15000,
   remote_view_LPF_min_cutoff_frequency = 4000,
   rocket_lift_weight = 1000000,

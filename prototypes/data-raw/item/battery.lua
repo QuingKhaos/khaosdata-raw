@@ -7,6 +7,7 @@ return {
     filename = "__base__/sound/item/electric-small-inventory-move.ogg",
     volume = 1
   },
+  hidden = true,
   icon = "__base__/graphics/icons/battery.png",
   inventory_move_sound = {
     aggregation = {

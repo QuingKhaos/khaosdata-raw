@@ -5,43 +5,44 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = false,
   icon = "__base__/graphics/technology/atomic-bomb.png",
   icon_size = 256,
   name = "atomic-bomb",
+  order = "autotech-[000597]-[atomic-bomb]",
   prerequisites = {
-    "military-4",
-    "kovarex-enrichment-process",
-    "rocketry"
+    "advanced-circuit",
+    "explosives"
   },
   type = "technology",
   unit = {
-    count = 5000,
+    count = 2000,
     ingredients = {
       {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
+        "py-science-pack-3",
         1
       },
       {
         "chemical-science-pack",
-        1
+        2
       },
       {
-        "military-science-pack",
-        1
+        "py-science-pack-2",
+        3
       },
       {
-        "production-science-pack",
-        1
+        "logistic-science-pack",
+        6
       },
       {
-        "utility-science-pack",
-        1
+        "py-science-pack-1",
+        10
+      },
+      {
+        "automation-science-pack",
+        20
       }
     },
-    time = 45
+    time = 180
   }
 }

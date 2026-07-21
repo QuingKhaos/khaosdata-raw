@@ -1,5 +1,7 @@
 return {
   allow_productivity = true,
+  always_show_made_in = true,
+  always_show_products = true,
   auto_recycle = false,
   category = "chemistry",
   crafting_machine_tint = {
@@ -30,6 +32,7 @@ return {
   },
   enabled = false,
   energy_required = 1,
+  hidden = true,
   ingredients = {
     {
       amount = 20,
@@ -42,6 +45,32 @@ return {
       type = "item"
     }
   },
+  localised_description = {
+    "?",
+    {
+      "",
+      {
+        "recipe-description.plastic-bar"
+      },
+      "\n",
+      {
+        "recipe-description.affected-by-productivity"
+      }
+    },
+    {
+      "recipe-description.affected-by-productivity"
+    }
+  },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.plastic-bar"
+    },
+    {
+      "item-name.plastic-bar"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "plastic-bar",
   results = {
     {

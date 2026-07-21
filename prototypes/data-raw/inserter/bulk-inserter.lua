@@ -669,6 +669,17 @@ return {
       0.15
     }
   },
+  collision_mask = {
+    layers = {
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "bulk-inserter-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -764,7 +775,13 @@ return {
   max_health = 160,
   minable = {
     mining_time = 0.1,
-    result = "bulk-inserter"
+    results = {
+      {
+        amount = 1,
+        name = "bulk-inserter",
+        type = "item"
+      }
+    }
   },
   name = "bulk-inserter",
   open_sound = {

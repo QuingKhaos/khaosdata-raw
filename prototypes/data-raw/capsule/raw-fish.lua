@@ -61,7 +61,9 @@ return {
     filename = "__base__/sound/item/raw-fish-inventory-move.ogg",
     volume = 0.7
   },
-  icon = "__base__/graphics/icons/fish.png",
+  hidden = true,
+  icon = "__pyalienlifegraphics__/graphics/icons/fish.png",
+  icon_size = 32,
   inventory_move_sound = {
     aggregation = {
       max_count = 1,

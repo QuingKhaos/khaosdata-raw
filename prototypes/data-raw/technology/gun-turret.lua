@@ -5,21 +5,23 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = true,
   icon = "__base__/graphics/technology/gun-turret.png",
   icon_size = 256,
   name = "gun-turret",
+  order = "autotech-[000006]-[gun-turret]",
   prerequisites = {
     "automation-science-pack"
   },
   type = "technology",
   unit = {
-    count = 10,
+    count = 60,
     ingredients = {
       {
         "automation-science-pack",
         1
       }
     },
-    time = 10
+    time = 30
   }
 }

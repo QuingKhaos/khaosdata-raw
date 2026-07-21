@@ -1,6 +1,8 @@
 return {
   ["car"] = require("___KHAOSDATA___.prototypes.data-raw.collision-layer.car"),
+  ["caravan_collision_mask"] = require("___KHAOSDATA___.prototypes.data-raw.collision-layer.caravan_collision_mask"),
   ["cliff"] = require("___KHAOSDATA___.prototypes.data-raw.collision-layer.cliff"),
+  ["dingrido_collision_mask"] = require("___KHAOSDATA___.prototypes.data-raw.collision-layer.dingrido_collision_mask"),
   ["doodad"] = require("___KHAOSDATA___.prototypes.data-raw.collision-layer.doodad"),
   ["elevated_rail"] = require("___KHAOSDATA___.prototypes.data-raw.collision-layer.elevated_rail"),
   ["elevated_train"] = require("___KHAOSDATA___.prototypes.data-raw.collision-layer.elevated_train"),
@@ -19,8 +21,11 @@ return {
   ["rail"] = require("___KHAOSDATA___.prototypes.data-raw.collision-layer.rail"),
   ["rail_support"] = require("___KHAOSDATA___.prototypes.data-raw.collision-layer.rail_support"),
   ["resource"] = require("___KHAOSDATA___.prototypes.data-raw.collision-layer.resource"),
+  ["sut"] = require("___KHAOSDATA___.prototypes.data-raw.collision-layer.sut"),
+  ["sut_placement_distance"] = require("___KHAOSDATA___.prototypes.data-raw.collision-layer.sut_placement_distance"),
   ["train"] = require("___KHAOSDATA___.prototypes.data-raw.collision-layer.train"),
   ["transport_belt"] = require("___KHAOSDATA___.prototypes.data-raw.collision-layer.transport_belt"),
   ["trigger_target"] = require("___KHAOSDATA___.prototypes.data-raw.collision-layer.trigger_target"),
   ["water_tile"] = require("___KHAOSDATA___.prototypes.data-raw.collision-layer.water_tile"),
+  ["wind_layer"] = require("___KHAOSDATA___.prototypes.data-raw.collision-layer.wind_layer"),
 }

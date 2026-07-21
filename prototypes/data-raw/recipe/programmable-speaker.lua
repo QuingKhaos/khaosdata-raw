@@ -1,4 +1,6 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 2,
   ingredients = {
@@ -23,6 +25,19 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.programmable-speaker"
+    },
+    {
+      "item-name.programmable-speaker"
+    },
+    {
+      "entity-name.programmable-speaker"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "programmable-speaker",
   results = {
     {

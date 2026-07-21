@@ -9,6 +9,12 @@ return {
       2.4409999999999998
     }
   },
+  collision_mask = {
+    colliding_with_tiles_only = true,
+    layers = {
+      doodad = true
+    }
+  },
   expires = false,
   flags = {
     "placeable-neutral",

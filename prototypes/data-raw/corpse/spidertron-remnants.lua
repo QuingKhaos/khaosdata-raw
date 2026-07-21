@@ -42,6 +42,12 @@ return {
       2
     }
   },
+  collision_mask = {
+    colliding_with_tiles_only = true,
+    layers = {
+      doodad = true
+    }
+  },
   final_render_layer = "remnants",
   flags = {
     "placeable-neutral",

@@ -1,0 +1,34 @@
+return {
+  drop_sound = {
+    aggregation = {
+      max_count = 1,
+      remove = true
+    },
+    filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+    volume = 1
+  },
+  flags = {},
+  icon = "__pyhightechgraphics__/graphics/icons/parametric-oscilator.png",
+  icon_size = 64,
+  inventory_move_sound = {
+    aggregation = {
+      max_count = 1,
+      remove = true
+    },
+    filename = "__base__/sound/item/electric-small-inventory-move.ogg",
+    volume = 1
+  },
+  name = "parametric-oscilator",
+  order = "h",
+  pick_sound = {
+    aggregation = {
+      max_count = 1,
+      remove = true
+    },
+    filename = "__base__/sound/item/electric-small-inventory-pickup.ogg",
+    volume = 0.7
+  },
+  stack_size = 100,
+  subgroup = "py-hightech-tier-4",
+  type = "item"
+}

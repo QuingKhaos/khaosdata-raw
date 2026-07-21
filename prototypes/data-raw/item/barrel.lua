@@ -17,7 +17,7 @@ return {
     volume = 0.6
   },
   name = "barrel",
-  order = "a[basic-intermediates]-d[empty-barrel]",
+  order = "a",
   pick_sound = {
     aggregation = {
       max_count = 1,
@@ -32,8 +32,8 @@ return {
     0.9,
     1
   },
-  stack_size = 10,
-  subgroup = "intermediate-product",
+  stack_size = 50,
+  subgroup = "barrel",
   type = "item",
   weight = 5000
 }

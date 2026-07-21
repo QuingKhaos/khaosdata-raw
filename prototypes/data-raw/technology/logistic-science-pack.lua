@@ -3,6 +3,26 @@ return {
     {
       recipe = "logistic-science-pack",
       type = "unlock-recipe"
+    },
+    {
+      recipe = "rich-clay",
+      type = "unlock-recipe"
+    },
+    {
+      recipe = "bio-sample01",
+      type = "unlock-recipe"
+    },
+    {
+      recipe = "alien-sample01",
+      type = "unlock-recipe"
+    },
+    {
+      recipe = "bone-to-bonemeal-2",
+      type = "unlock-recipe"
+    },
+    {
+      recipe = "animal-sample-01",
+      type = "unlock-recipe"
     }
   },
   essential = true,
@@ -15,18 +35,24 @@ return {
     "technology-name.logistic-science-pack"
   },
   name = "logistic-science-pack",
+  order = "autotech-[000143]-[logistic-science-pack]",
   prerequisites = {
-    "automation-science-pack"
+    "cottongut-science-mk01",
+    "mycology-mk01"
   },
   type = "technology",
   unit = {
-    count = 75,
+    count = 300,
     ingredients = {
       {
-        "automation-science-pack",
+        "py-science-pack-1",
         1
+      },
+      {
+        "automation-science-pack",
+        2
       }
     },
-    time = 5
+    time = 45
   }
 }

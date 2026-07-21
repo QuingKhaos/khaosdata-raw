@@ -11,51 +11,52 @@ return {
     {
       recipe = "cargo-landing-pad",
       type = "unlock-recipe"
-    },
-    {
-      recipe = "satellite",
-      type = "unlock-recipe"
     }
   },
   essential = true,
   icon = "__base__/graphics/technology/rocket-silo.png",
   icon_size = 256,
   name = "rocket-silo",
+  order = "autotech-[000587]-[rocket-silo]",
   prerequisites = {
-    "concrete",
+    "low-density-structure",
     "rocket-fuel",
-    "electric-energy-accumulators",
-    "solar-energy",
-    "utility-science-pack",
-    "speed-module-3",
-    "productivity-module-3",
-    "radar"
+    "py-warehouse-logistics-research",
+    "speed-module"
   },
   type = "technology",
   unit = {
-    count = 1000,
+    count = 1500,
     ingredients = {
       {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
+        "py-science-pack-3",
         1
       },
       {
         "chemical-science-pack",
-        1
+        2
       },
       {
-        "production-science-pack",
-        1
+        "py-science-pack-2",
+        3
       },
       {
-        "utility-science-pack",
-        1
+        "logistic-science-pack",
+        6
+      },
+      {
+        "py-science-pack-1",
+        10
+      },
+      {
+        "automation-science-pack",
+        20
+      },
+      {
+        "military-science-pack",
+        3
       }
     },
-    time = 60
+    time = 180
   }
 }

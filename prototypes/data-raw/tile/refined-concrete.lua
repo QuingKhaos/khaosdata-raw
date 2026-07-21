@@ -102,7 +102,7 @@ return {
       ground_tile = true
     }
   },
-  decorative_removal_probability = 0.25,
+  decorative_removal_probability = 1,
   driving_sound = {
     fade_ticks = 6,
     sound = {
@@ -559,7 +559,7 @@ return {
       }
     }
   },
-  vehicle_friction_modifier = 0.8,
+  vehicle_friction_modifier = -0.1,
   walking_sound = {
     advanced_volume_control = {
       fades = {
@@ -623,5 +623,5 @@ return {
       }
     }
   },
-  walking_speed_modifier = 1.5
+  walking_speed_modifier = 3.5
 }

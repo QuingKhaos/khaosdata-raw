@@ -5,6 +5,7 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = false,
   icons = {
     {
       icon = "__base__/graphics/technology/energy-shield-equipment.png",
@@ -22,27 +23,44 @@ return {
     }
   },
   name = "energy-shield-equipment",
+  order = "autotech-[000580]-[energy-shield-equipment]",
   prerequisites = {
     "solar-panel-equipment",
     "military-science-pack"
   },
   type = "technology",
   unit = {
-    count = 150,
+    count = 1500,
     ingredients = {
       {
-        "automation-science-pack",
+        "py-science-pack-3",
         1
+      },
+      {
+        "chemical-science-pack",
+        2
+      },
+      {
+        "py-science-pack-2",
+        3
       },
       {
         "logistic-science-pack",
-        1
+        6
+      },
+      {
+        "py-science-pack-1",
+        10
+      },
+      {
+        "automation-science-pack",
+        20
       },
       {
         "military-science-pack",
-        1
+        3
       }
     },
-    time = 15
+    time = 180
   }
 }

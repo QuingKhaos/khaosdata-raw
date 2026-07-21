@@ -1,0 +1,47 @@
+return {
+  flags = {},
+  icon = "__pyraworesgraphics__/graphics/icons/mip/mold-1.png",
+  icon_size = 64,
+  name = "mold",
+  order = "aaa",
+  pictures = {
+    {
+      filename = "__pyraworesgraphics__/graphics/icons/mip/mold-1.png",
+      scale = 0.66000000000000005,
+      size = 64
+    },
+    {
+      filename = "__pyraworesgraphics__/graphics/icons/mip/mold-2.png",
+      scale = 0.66000000000000005,
+      size = 64
+    },
+    {
+      filename = "__pyraworesgraphics__/graphics/icons/mip/mold-3.png",
+      scale = 0.66000000000000005,
+      size = 64
+    },
+    {
+      filename = "__pyraworesgraphics__/graphics/icons/mip/mold-4.png",
+      scale = 0.66000000000000005,
+      size = 64
+    },
+    {
+      filename = "__pyraworesgraphics__/graphics/icons/mip/mold-5.png",
+      scale = 0.66000000000000005,
+      size = 64
+    },
+    {
+      filename = "__pyraworesgraphics__/graphics/icons/mip/mold-6.png",
+      scale = 0.66000000000000005,
+      size = 64
+    },
+    {
+      filename = "__pyraworesgraphics__/graphics/icons/mip/mold-7.png",
+      scale = 0.66000000000000005,
+      size = 64
+    }
+  },
+  stack_size = 100,
+  subgroup = "py-rawores-ores",
+  type = "item"
+}

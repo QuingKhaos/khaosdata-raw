@@ -94,6 +94,12 @@ return {
       }
     }
   },
+  collision_mask = {
+    colliding_with_tiles_only = true,
+    layers = {
+      doodad = true
+    }
+  },
   expires = false,
   final_render_layer = "remnants",
   flags = {

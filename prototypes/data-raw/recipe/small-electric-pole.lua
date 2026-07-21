@@ -1,9 +1,12 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
+  energy_required = 0.5,
   ingredients = {
     {
       amount = 1,
-      name = "wood",
+      name = "log",
       type = "item"
     },
     {
@@ -12,10 +15,23 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.small-electric-pole"
+    },
+    {
+      "item-name.small-electric-pole"
+    },
+    {
+      "entity-name.small-electric-pole"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "small-electric-pole",
   results = {
     {
-      amount = 2,
+      amount = 1,
       name = "small-electric-pole",
       type = "item"
     }

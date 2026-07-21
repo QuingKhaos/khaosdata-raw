@@ -1,5 +1,7 @@
 return {
   allow_productivity = true,
+  always_show_made_in = true,
+  always_show_products = true,
   auto_recycle = false,
   category = "chemistry",
   crafting_machine_tint = {
@@ -30,6 +32,7 @@ return {
   },
   enabled = false,
   energy_required = 1,
+  hidden = true,
   ingredients = {
     {
       amount = 30,
@@ -42,6 +45,32 @@ return {
       type = "fluid"
     }
   },
+  localised_description = {
+    "?",
+    {
+      "",
+      {
+        "recipe-description.sulfur"
+      },
+      "\n",
+      {
+        "recipe-description.affected-by-productivity"
+      }
+    },
+    {
+      "recipe-description.affected-by-productivity"
+    }
+  },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.sulfur"
+    },
+    {
+      "item-name.sulfur"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "sulfur",
   results = {
     {

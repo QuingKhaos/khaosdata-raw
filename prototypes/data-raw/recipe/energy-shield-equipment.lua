@@ -1,4 +1,6 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 10,
   ingredients = {
@@ -13,6 +15,19 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.energy-shield-equipment"
+    },
+    {
+      "item-name.energy-shield-equipment"
+    },
+    {
+      "equipment-name.energy-shield-equipment"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "energy-shield-equipment",
   results = {
     {

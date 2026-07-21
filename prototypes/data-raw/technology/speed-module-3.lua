@@ -5,35 +5,53 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = false,
   icon = "__base__/graphics/technology/speed-module-3.png",
   icon_size = 256,
   name = "speed-module-3",
+  order = "autotech-[000809]-[speed-module-3]",
   prerequisites = {
-    "speed-module-2",
-    "production-science-pack"
+    "machine-components-mk04",
+    "speed-module-2"
   },
   type = "technology",
   unit = {
-    count = 300,
+    count = 3300,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
-        1
-      },
-      {
-        "chemical-science-pack",
-        1
-      },
       {
         "production-science-pack",
         1
+      },
+      {
+        "py-science-pack-3",
+        2
+      },
+      {
+        "chemical-science-pack",
+        3
+      },
+      {
+        "py-science-pack-2",
+        6
+      },
+      {
+        "logistic-science-pack",
+        10
+      },
+      {
+        "py-science-pack-1",
+        20
+      },
+      {
+        "automation-science-pack",
+        30
+      },
+      {
+        "military-science-pack",
+        6
       }
     },
-    time = 60
+    time = 300
   },
   upgrade = true
 }

@@ -1,53 +1,50 @@
 return {
   allow_productivity = true,
+  always_show_made_in = true,
+  always_show_products = true,
   category = "chemistry",
-  crafting_machine_tint = {
-    primary = {
-      a = 1,
-      b = 0,
-      g = 0.95800000000000001,
-      r = 1
-    },
-    quaternary = {
-      a = 1,
-      b = 0.019,
-      g = 1,
-      r = 0.96899999999999995
-    },
-    secondary = {
-      a = 1,
-      b = 0.17199999999999998,
-      g = 0.85199999999999996,
-      r = 1
-    },
-    tertiary = {
-      a = 1,
-      b = 0.59699999999999998,
-      g = 0.86899999999999995,
-      r = 0.87599999999999998
-    }
-  },
   enabled = false,
   energy_required = 1,
   ingredients = {
     {
+      amount = 50,
+      name = "hydrogen-peroxide",
+      type = "fluid"
+    },
+    {
       amount = 5,
       name = "sulfur",
       type = "item"
-    },
-    {
-      amount = 1,
-      name = "iron-plate",
-      type = "item"
-    },
-    {
-      amount = 100,
-      name = "water",
-      type = "fluid"
     }
   },
+  localised_description = {
+    "?",
+    {
+      "",
+      {
+        "recipe-description.sulfuric-acid"
+      },
+      "\n",
+      {
+        "recipe-description.affected-by-productivity"
+      }
+    },
+    {
+      "recipe-description.affected-by-productivity"
+    }
+  },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.sulfuric-acid"
+    },
+    {
+      "fluid-name.sulfuric-acid"
+    }
+  },
+  main_product = "sulfuric-acid",
+  maximum_productivity = 1000000,
   name = "sulfuric-acid",
-  order = "c[oil-products]-b[sulfuric-acid]",
   results = {
     {
       amount = 50,
@@ -55,6 +52,5 @@ return {
       type = "fluid"
     }
   },
-  subgroup = "fluid-recipes",
   type = "recipe"
 }

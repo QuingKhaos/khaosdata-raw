@@ -5,34 +5,45 @@ return {
       type = "unlock-recipe"
     }
   },
+  enabled = false,
+  essential = false,
+  hidden = true,
   icon = "__base__/graphics/technology/nuclear-fuel-reprocessing.png",
   icon_size = 256,
   name = "nuclear-fuel-reprocessing",
+  order = "autotech-[000582]-[nuclear-fuel-reprocessing]",
   prerequisites = {
-    "nuclear-power",
-    "production-science-pack"
+    "nuclear-power"
   },
   type = "technology",
   unit = {
-    count = 50,
+    count = 1500,
     ingredients = {
       {
-        "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
+        "py-science-pack-3",
         1
       },
       {
         "chemical-science-pack",
-        1
+        2
       },
       {
-        "production-science-pack",
-        1
+        "py-science-pack-2",
+        3
+      },
+      {
+        "logistic-science-pack",
+        6
+      },
+      {
+        "py-science-pack-1",
+        10
+      },
+      {
+        "automation-science-pack",
+        20
       }
     },
-    time = 30
+    time = 180
   }
 }

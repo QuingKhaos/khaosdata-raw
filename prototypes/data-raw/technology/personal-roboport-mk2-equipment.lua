@@ -5,6 +5,7 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = false,
   icons = {
     {
       icon = "__base__/graphics/technology/personal-roboport-mk2-equipment.png",
@@ -22,31 +23,32 @@ return {
     }
   },
   name = "personal-roboport-mk2-equipment",
+  order = "autotech-[000415]-[personal-roboport-mk2-equipment]",
   prerequisites = {
-    "personal-roboport-equipment",
-    "utility-science-pack"
+    "modular-armor",
+    "personal-roboport-equipment"
   },
   type = "technology",
   unit = {
-    count = 250,
+    count = 800,
     ingredients = {
       {
-        "automation-science-pack",
+        "py-science-pack-2",
         1
       },
       {
         "logistic-science-pack",
-        1
+        2
       },
       {
-        "chemical-science-pack",
-        1
+        "py-science-pack-1",
+        3
       },
       {
-        "utility-science-pack",
-        1
+        "automation-science-pack",
+        6
       }
     },
-    time = 30
+    time = 90
   }
 }

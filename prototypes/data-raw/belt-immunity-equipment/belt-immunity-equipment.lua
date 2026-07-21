@@ -1,6 +1,7 @@
 return {
   categories = {
-    "armor"
+    "armor",
+    "py-mount-generator"
   },
   energy_consumption = "100kW",
   energy_source = {

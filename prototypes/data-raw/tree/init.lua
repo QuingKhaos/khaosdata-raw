@@ -1,9 +1,13 @@
 return {
+  ["arum-fake"] = require("___KHAOSDATA___.prototypes.data-raw.tree.arum-fake"),
   ["dead-dry-hairy-tree"] = require("___KHAOSDATA___.prototypes.data-raw.tree.dead-dry-hairy-tree"),
   ["dead-grey-trunk"] = require("___KHAOSDATA___.prototypes.data-raw.tree.dead-grey-trunk"),
   ["dead-tree-desert"] = require("___KHAOSDATA___.prototypes.data-raw.tree.dead-tree-desert"),
   ["dry-hairy-tree"] = require("___KHAOSDATA___.prototypes.data-raw.tree.dry-hairy-tree"),
   ["dry-tree"] = require("___KHAOSDATA___.prototypes.data-raw.tree.dry-tree"),
+  ["kicalk-tree-fake"] = require("___KHAOSDATA___.prototypes.data-raw.tree.kicalk-tree-fake"),
+  ["mova-fake"] = require("___KHAOSDATA___.prototypes.data-raw.tree.mova-fake"),
+  ["ninja-tree"] = require("___KHAOSDATA___.prototypes.data-raw.tree.ninja-tree"),
   ["tree-01"] = require("___KHAOSDATA___.prototypes.data-raw.tree.tree-01"),
   ["tree-02"] = require("___KHAOSDATA___.prototypes.data-raw.tree.tree-02"),
   ["tree-02-red"] = require("___KHAOSDATA___.prototypes.data-raw.tree.tree-02-red"),

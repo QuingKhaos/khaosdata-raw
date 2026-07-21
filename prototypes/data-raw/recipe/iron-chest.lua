@@ -1,5 +1,8 @@
 return {
-  enabled = true,
+  always_show_made_in = true,
+  always_show_products = true,
+  enabled = false,
+  energy_required = 0.5,
   ingredients = {
     {
       amount = 8,
@@ -7,6 +10,19 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.iron-chest"
+    },
+    {
+      "item-name.iron-chest"
+    },
+    {
+      "entity-name.iron-chest"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "iron-chest",
   results = {
     {

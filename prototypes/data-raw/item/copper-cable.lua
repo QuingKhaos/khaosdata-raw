@@ -7,7 +7,8 @@ return {
     filename = "__base__/sound/item/wire-inventory-move.ogg",
     volume = 0.8
   },
-  icon = "__base__/graphics/icons/copper-cable.png",
+  icon = "__pyraworesgraphics__/graphics/icons/copper-cable.png",
+  icon_size = 32,
   ingredient_to_weight_coefficient = 0.25,
   inventory_move_sound = {
     aggregation = {

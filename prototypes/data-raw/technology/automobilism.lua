@@ -5,23 +5,21 @@ return {
       type = "unlock-recipe"
     }
   },
+  essential = false,
   icon = "__base__/graphics/technology/automobilism.png",
   icon_size = 256,
   name = "automobilism",
+  order = "autotech-[000025]-[automobilism]",
   prerequisites = {
-    "logistics-2",
-    "engine"
+    "engine",
+    "steel-axe"
   },
   type = "technology",
   unit = {
-    count = 100,
+    count = 60,
     ingredients = {
       {
         "automation-science-pack",
-        1
-      },
-      {
-        "logistic-science-pack",
         1
       }
     },

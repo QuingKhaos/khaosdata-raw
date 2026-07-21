@@ -1,4 +1,6 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 8,
   ingredients = {
@@ -9,10 +11,20 @@ return {
     },
     {
       amount = 10,
-      name = "coal",
+      name = "gunpowder",
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.grenade"
+    },
+    {
+      "item-name.grenade"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "grenade",
   results = {
     {

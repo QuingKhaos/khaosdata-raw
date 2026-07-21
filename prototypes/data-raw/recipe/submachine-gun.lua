@@ -1,10 +1,12 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 10,
   ingredients = {
     {
       amount = 10,
-      name = "iron-gear-wheel",
+      name = "small-parts-01",
       type = "item"
     },
     {
@@ -18,6 +20,16 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.submachine-gun"
+    },
+    {
+      "item-name.submachine-gun"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "submachine-gun",
   results = {
     {

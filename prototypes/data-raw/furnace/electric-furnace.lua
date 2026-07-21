@@ -1,9 +1,8 @@
 return {
-  allowed_effects = {
-    "consumption",
-    "speed",
+  allowed_module_categories = {
     "productivity",
-    "pollution",
+    "speed",
+    "efficiency",
     "quality"
   },
   circuit_connector = {
@@ -499,11 +498,23 @@ return {
       1.2
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "electric-furnace-remnants",
   crafting_categories = {
     "smelting"
   },
-  crafting_speed = 2,
+  crafting_speed = 8,
   damaged_trigger_effect = {
     damage_type_filters = "fire",
     entity_name = "spark-explosion",
@@ -527,13 +538,380 @@ return {
   },
   dying_explosion = "electric-furnace-explosion",
   energy_source = {
-    emissions_per_minute = {
-      pollution = 1
+    connections = {
+      {
+        direction = 4,
+        position = {
+          1.2,
+          0
+        }
+      },
+      {
+        direction = 12,
+        position = {
+          -1.2,
+          0
+        }
+      }
     },
-    type = "electric",
-    usage_priority = "secondary-input"
+    heat_picture = {
+      east = {
+        layers = {
+          {
+            filename = "__base__/graphics/entity/heat-exchanger/heatex-E-heated.png",
+            height = 80,
+            priority = "extra-high",
+            scale = 0.5,
+            shift = {
+              -0.65625,
+              -0.40625
+            },
+            tint = {
+              0.5,
+              0.4,
+              0.3,
+              0.5
+            },
+            width = 80
+          },
+          {
+            draw_as_light = true,
+            filename = "__base__/graphics/entity/heat-exchanger/heatex-E-heated.png",
+            height = 80,
+            priority = "extra-high",
+            scale = 0.5,
+            shift = {
+              -0.65625,
+              -0.40625
+            },
+            tint = {
+              1,
+              1,
+              1,
+              1
+            },
+            width = 80
+          }
+        }
+      },
+      north = {
+        layers = {
+          {
+            filename = "__base__/graphics/entity/heat-exchanger/heatex-N-heated.png",
+            height = 96,
+            priority = "extra-high",
+            scale = 0.5,
+            shift = {
+              -0.015625,
+              0.265625
+            },
+            tint = {
+              0.5,
+              0.4,
+              0.3,
+              0.5
+            },
+            width = 44
+          },
+          {
+            draw_as_light = true,
+            filename = "__base__/graphics/entity/heat-exchanger/heatex-N-heated.png",
+            height = 96,
+            priority = "extra-high",
+            scale = 0.5,
+            shift = {
+              -0.015625,
+              0.265625
+            },
+            tint = {
+              1,
+              1,
+              1,
+              1
+            },
+            width = 44
+          }
+        }
+      },
+      south = {
+        layers = {
+          {
+            filename = "__base__/graphics/entity/heat-exchanger/heatex-S-heated.png",
+            height = 40,
+            priority = "extra-high",
+            scale = 0.5,
+            shift = {
+              -0.03125,
+              -0.9375
+            },
+            tint = {
+              0.5,
+              0.4,
+              0.3,
+              0.5
+            },
+            width = 28
+          },
+          {
+            draw_as_light = true,
+            filename = "__base__/graphics/entity/heat-exchanger/heatex-S-heated.png",
+            height = 40,
+            priority = "extra-high",
+            scale = 0.5,
+            shift = {
+              -0.03125,
+              -0.9375
+            },
+            tint = {
+              1,
+              1,
+              1,
+              1
+            },
+            width = 28
+          }
+        }
+      },
+      west = {
+        layers = {
+          {
+            filename = "__base__/graphics/entity/heat-exchanger/heatex-W-heated.png",
+            height = 76,
+            priority = "extra-high",
+            scale = 0.5,
+            shift = {
+              0.71875,
+              -0.40625
+            },
+            tint = {
+              0.5,
+              0.4,
+              0.3,
+              0.5
+            },
+            width = 64
+          },
+          {
+            draw_as_light = true,
+            filename = "__base__/graphics/entity/heat-exchanger/heatex-W-heated.png",
+            height = 76,
+            priority = "extra-high",
+            scale = 0.5,
+            shift = {
+              0.71875,
+              -0.40625
+            },
+            tint = {
+              1,
+              1,
+              1,
+              1
+            },
+            width = 64
+          }
+        }
+      }
+    },
+    heat_pipe_covers = {
+      east = {
+        layers = {
+          {
+            filename = "__base__/graphics/entity/heat-exchanger/heatex-endings-heated.png",
+            height = 64,
+            priority = "high",
+            scale = 0.5,
+            tint = {
+              0.5,
+              0.4,
+              0.3,
+              0.5
+            },
+            tint_as_overlay = false,
+            width = 64,
+            x = 64,
+            y = 0
+          },
+          {
+            draw_as_light = true,
+            filename = "__base__/graphics/entity/heat-exchanger/heatex-endings-heated.png",
+            height = 64,
+            priority = "high",
+            scale = 0.5,
+            tint = {
+              1,
+              1,
+              1,
+              1
+            },
+            tint_as_overlay = false,
+            width = 64,
+            x = 64,
+            y = 0
+          }
+        }
+      },
+      north = {
+        layers = {
+          {
+            filename = "__base__/graphics/entity/heat-exchanger/heatex-endings-heated.png",
+            height = 64,
+            priority = "high",
+            scale = 0.5,
+            tint = {
+              0.5,
+              0.4,
+              0.3,
+              0.5
+            },
+            tint_as_overlay = false,
+            width = 64,
+            x = 0,
+            y = 0
+          },
+          {
+            draw_as_light = true,
+            filename = "__base__/graphics/entity/heat-exchanger/heatex-endings-heated.png",
+            height = 64,
+            priority = "high",
+            scale = 0.5,
+            tint = {
+              1,
+              1,
+              1,
+              1
+            },
+            tint_as_overlay = false,
+            width = 64,
+            x = 0,
+            y = 0
+          }
+        }
+      },
+      south = {
+        layers = {
+          {
+            filename = "__base__/graphics/entity/heat-exchanger/heatex-endings-heated.png",
+            height = 64,
+            priority = "high",
+            scale = 0.5,
+            tint = {
+              0.5,
+              0.4,
+              0.3,
+              0.5
+            },
+            tint_as_overlay = false,
+            width = 64,
+            x = 128,
+            y = 0
+          },
+          {
+            draw_as_light = true,
+            filename = "__base__/graphics/entity/heat-exchanger/heatex-endings-heated.png",
+            height = 64,
+            priority = "high",
+            scale = 0.5,
+            tint = {
+              1,
+              1,
+              1,
+              1
+            },
+            tint_as_overlay = false,
+            width = 64,
+            x = 128,
+            y = 0
+          }
+        }
+      },
+      west = {
+        layers = {
+          {
+            filename = "__base__/graphics/entity/heat-exchanger/heatex-endings-heated.png",
+            height = 64,
+            priority = "high",
+            scale = 0.5,
+            tint = {
+              0.5,
+              0.4,
+              0.3,
+              0.5
+            },
+            tint_as_overlay = false,
+            width = 64,
+            x = 192,
+            y = 0
+          },
+          {
+            draw_as_light = true,
+            filename = "__base__/graphics/entity/heat-exchanger/heatex-endings-heated.png",
+            height = 64,
+            priority = "high",
+            scale = 0.5,
+            tint = {
+              1,
+              1,
+              1,
+              1
+            },
+            tint_as_overlay = false,
+            width = 64,
+            x = 192,
+            y = 0
+          }
+        }
+      }
+    },
+    max_temperature = 1000,
+    max_transfer = "2GW",
+    min_working_temperature = 500,
+    minimum_glow_temperature = 350,
+    pipe_covers = {
+      east = {
+        filename = "__base__/graphics/entity/heat-exchanger/heatex-endings.png",
+        height = 64,
+        priority = "high",
+        scale = 0.5,
+        tint_as_overlay = false,
+        width = 64,
+        x = 64,
+        y = 0
+      },
+      north = {
+        filename = "__base__/graphics/entity/heat-exchanger/heatex-endings.png",
+        height = 64,
+        priority = "high",
+        scale = 0.5,
+        tint_as_overlay = false,
+        width = 64,
+        x = 0,
+        y = 0
+      },
+      south = {
+        filename = "__base__/graphics/entity/heat-exchanger/heatex-endings.png",
+        height = 64,
+        priority = "high",
+        scale = 0.5,
+        tint_as_overlay = false,
+        width = 64,
+        x = 128,
+        y = 0
+      },
+      west = {
+        filename = "__base__/graphics/entity/heat-exchanger/heatex-endings.png",
+        height = 64,
+        priority = "high",
+        scale = 0.5,
+        tint_as_overlay = false,
+        width = 64,
+        x = 192,
+        y = 0
+      }
+    },
+    specific_heat = "1MJ",
+    type = "heat"
   },
-  energy_usage = "180kW",
+  energy_usage = "10MW",
   fast_replaceable_group = "furnace",
   flags = {
     "placeable-neutral",
@@ -683,12 +1061,19 @@ return {
     }
   },
   impact_category = "metal",
+  match_animation_speed_to_activity = false,
   max_health = 350,
   minable = {
     mining_time = 0.2,
-    result = "electric-furnace"
+    results = {
+      {
+        amount = 1,
+        name = "electric-furnace",
+        type = "item"
+      }
+    }
   },
-  module_slots = 2,
+  module_slots = 0,
   name = "electric-furnace",
   open_sound = {
     filename = "__base__/sound/open-close/electric-large-open.ogg",

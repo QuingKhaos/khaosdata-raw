@@ -1,0 +1,103 @@
+return {
+  allow_productivity = true,
+  always_show_made_in = true,
+  always_show_products = true,
+  category = "arum",
+  enabled = false,
+  energy_required = 75,
+  icons = {
+    {
+      icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum.png"
+    },
+    {
+      floating = true,
+      icon = "__pyalienlifegraphics__/graphics/icons/2.png",
+      scale = 0.25,
+      shift = {
+        8,
+        8
+      }
+    }
+  },
+  ingredients = {
+    {
+      amount = 12,
+      name = "cadaveric-arum-seeds",
+      type = "item"
+    },
+    {
+      amount = 100,
+      fluidbox_index = 1,
+      name = "coal-gas",
+      type = "fluid"
+    },
+    {
+      amount = 500,
+      fluidbox_index = 2,
+      name = "water",
+      type = "fluid"
+    },
+    {
+      amount = 5,
+      name = "sand",
+      type = "item"
+    },
+    {
+      amount = 1,
+      name = "stone-wool",
+      type = "item"
+    },
+    {
+      amount = 5,
+      name = "fertilizer",
+      type = "item"
+    },
+    {
+      amount = 7,
+      name = "ash",
+      type = "item"
+    },
+    {
+      amount = 4,
+      name = "blood-meal",
+      type = "item"
+    }
+  },
+  localised_description = {
+    "?",
+    {
+      "",
+      {
+        "recipe-description.cadaveric-arum-2"
+      },
+      "\n",
+      {
+        "recipe-description.affected-by-productivity"
+      }
+    },
+    {
+      "recipe-description.affected-by-productivity"
+    }
+  },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.cadaveric-arum-2"
+    },
+    {
+      "item-name.cadaveric-arum"
+    }
+  },
+  maximum_productivity = 1000000,
+  name = "cadaveric-arum-2",
+  order = "a",
+  results = {
+    {
+      amount = 10,
+      name = "cadaveric-arum",
+      type = "item"
+    }
+  },
+  subgroup = "py-alienlife-cadaveric",
+  type = "recipe"
+}

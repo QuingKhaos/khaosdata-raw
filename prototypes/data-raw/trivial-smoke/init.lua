@@ -20,6 +20,7 @@ return {
   ["smoke-fast"] = require("___KHAOSDATA___.prototypes.data-raw.trivial-smoke.smoke-fast"),
   ["smoke-train-stop"] = require("___KHAOSDATA___.prototypes.data-raw.trivial-smoke.smoke-train-stop"),
   ["soft-fire-smoke"] = require("___KHAOSDATA___.prototypes.data-raw.trivial-smoke.soft-fire-smoke"),
+  ["sut-smoke"] = require("___KHAOSDATA___.prototypes.data-raw.trivial-smoke.sut-smoke"),
   ["tank-smoke"] = require("___KHAOSDATA___.prototypes.data-raw.trivial-smoke.tank-smoke"),
   ["train-smoke"] = require("___KHAOSDATA___.prototypes.data-raw.trivial-smoke.train-smoke"),
   ["turbine-smoke"] = require("___KHAOSDATA___.prototypes.data-raw.trivial-smoke.turbine-smoke"),

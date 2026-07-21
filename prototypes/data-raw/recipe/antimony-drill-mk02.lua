@@ -1,0 +1,75 @@
+return {
+  always_show_made_in = true,
+  always_show_products = true,
+  enabled = false,
+  energy_required = 2,
+  ingredients = {
+    {
+      amount = 1,
+      name = "antimony-drill-mk01",
+      type = "item"
+    },
+    {
+      amount = 10,
+      name = "neuroprocessor",
+      type = "item"
+    },
+    {
+      amount = 15,
+      name = "advanced-circuit",
+      type = "item"
+    },
+    {
+      amount = 50,
+      name = "tin-plate",
+      type = "item"
+    },
+    {
+      amount = 20,
+      name = "stainless-steel",
+      type = "item"
+    },
+    {
+      amount = 10,
+      name = "self-assembly-monolayer",
+      type = "item"
+    },
+    {
+      amount = 15,
+      name = "duralumin",
+      type = "item"
+    },
+    {
+      amount = 20,
+      name = "nexelit-plate",
+      type = "item"
+    },
+    {
+      amount = 1,
+      name = "mechanical-parts-02",
+      type = "item"
+    }
+  },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.antimony-drill-mk02"
+    },
+    {
+      "item-name.antimony-drill-mk02"
+    },
+    {
+      "entity-name.antimony-drill-mk02"
+    }
+  },
+  maximum_productivity = 1000000,
+  name = "antimony-drill-mk02",
+  results = {
+    {
+      amount = 1,
+      name = "antimony-drill-mk02",
+      type = "item"
+    }
+  },
+  type = "recipe"
+}

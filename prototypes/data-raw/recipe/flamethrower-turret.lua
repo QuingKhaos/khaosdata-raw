@@ -1,4 +1,6 @@
 return {
+  always_show_made_in = true,
+  always_show_products = true,
   enabled = false,
   energy_required = 20,
   ingredients = {
@@ -9,7 +11,7 @@ return {
     },
     {
       amount = 15,
-      name = "iron-gear-wheel",
+      name = "small-parts-01",
       type = "item"
     },
     {
@@ -23,6 +25,19 @@ return {
       type = "item"
     }
   },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.flamethrower-turret"
+    },
+    {
+      "item-name.flamethrower-turret"
+    },
+    {
+      "entity-name.flamethrower-turret"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "flamethrower-turret",
   results = {
     {

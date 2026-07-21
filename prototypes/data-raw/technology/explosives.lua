@@ -1,29 +1,35 @@
 return {
   effects = {
     {
-      recipe = "explosives",
+      recipe = "explosive-glycerol",
       type = "unlock-recipe"
     }
   },
+  essential = false,
   icon = "__base__/graphics/technology/explosives.png",
   icon_size = 256,
   name = "explosives",
+  order = "autotech-[000233]-[explosives]",
   prerequisites = {
     "sulfur-processing"
   },
   type = "technology",
   unit = {
-    count = 100,
+    count = 400,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
       {
         "logistic-science-pack",
         1
+      },
+      {
+        "py-science-pack-1",
+        2
+      },
+      {
+        "automation-science-pack",
+        3
       }
     },
-    time = 15
+    time = 60
   }
 }

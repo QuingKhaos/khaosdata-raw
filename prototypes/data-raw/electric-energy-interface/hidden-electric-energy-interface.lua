@@ -9,6 +9,18 @@ return {
       0
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   energy_production = "500GW",
   energy_source = {
     buffer_capacity = "10GJ",

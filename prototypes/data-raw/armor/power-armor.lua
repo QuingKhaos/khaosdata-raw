@@ -25,7 +25,7 @@ return {
     filename = "__base__/sound/item/armor-large-inventory-move.ogg",
     volume = 0.7
   },
-  inventory_size_bonus = 20,
+  inventory_size_bonus = 80,
   name = "power-armor",
   open_sound = {
     filename = "__base__/sound/armor-open.ogg",

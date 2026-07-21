@@ -10,6 +10,7 @@ return {
     0.6,
     0.3
   },
+  fuel_value = "0.8MJ",
   icon = "__base__/graphics/icons/fluid/heavy-oil.png",
   name = "heavy-oil",
   order = "a[fluid]-b[oil]-d[heavy-oil]",

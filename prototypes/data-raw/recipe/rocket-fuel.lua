@@ -1,38 +1,52 @@
 return {
   allow_productivity = true,
-  category = "crafting-with-fluid",
-  crafting_machine_tint = {
-    primary = {
-      a = 1,
-      b = 0,
-      g = 0.7,
-      r = 1
-    },
-    secondary = {
-      a = 1,
-      b = 0,
-      g = 0.7,
-      r = 1
-    }
-  },
+  always_show_made_in = true,
+  always_show_products = true,
+  category = "hor",
   enabled = false,
-  energy_required = 15,
+  energy_required = 20,
   ingredients = {
     {
-      amount = 10,
-      name = "solid-fuel",
-      type = "item"
+      amount = 75,
+      name = "oxygen",
+      type = "fluid"
     },
     {
-      amount = 10,
-      name = "light-oil",
+      amount = 50,
+      name = "kerosene",
       type = "fluid"
     }
   },
+  localised_description = {
+    "?",
+    {
+      "",
+      {
+        "recipe-description.rocket-fuel"
+      },
+      "\n",
+      {
+        "recipe-description.affected-by-productivity"
+      }
+    },
+    {
+      "recipe-description.affected-by-productivity"
+    }
+  },
+  localised_name = {
+    "?",
+    {
+      "recipe-name.rocket-fuel"
+    },
+    {
+      "item-name.rocket-fuel"
+    }
+  },
+  maximum_productivity = 1000000,
   name = "rocket-fuel",
   results = {
     {
-      amount = 1,
+      amount = 5,
       name = "rocket-fuel",
       type = "item"
     }

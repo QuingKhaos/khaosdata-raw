@@ -656,6 +656,7 @@ return {
   ["tutorial-grid-stone-particle-small"] = require("___KHAOSDATA___.prototypes.data-raw.optimized-particle.tutorial-grid-stone-particle-small"),
   ["tutorial-grid-stone-particle-tiny"] = require("___KHAOSDATA___.prototypes.data-raw.optimized-particle.tutorial-grid-stone-particle-tiny"),
   ["tutorial-grid-stone-path-stone-particle-tiny"] = require("___KHAOSDATA___.prototypes.data-raw.optimized-particle.tutorial-grid-stone-path-stone-particle-tiny"),
+  ["ulric-character-footprint-particle"] = require("___KHAOSDATA___.prototypes.data-raw.optimized-particle.ulric-character-footprint-particle"),
   ["underground-belt-metal-particle-medium"] = require("___KHAOSDATA___.prototypes.data-raw.optimized-particle.underground-belt-metal-particle-medium"),
   ["underground-belt-metal-particle-medium-yellow"] = require("___KHAOSDATA___.prototypes.data-raw.optimized-particle.underground-belt-metal-particle-medium-yellow"),
   ["underground-belt-metal-particle-small"] = require("___KHAOSDATA___.prototypes.data-raw.optimized-particle.underground-belt-metal-particle-small"),

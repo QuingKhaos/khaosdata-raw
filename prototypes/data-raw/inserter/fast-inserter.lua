@@ -668,6 +668,17 @@ return {
       0.15
     }
   },
+  collision_mask = {
+    layers = {
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "fast-inserter-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -704,7 +715,7 @@ return {
   },
   extension_speed = 0.1,
   fast_replaceable_group = "inserter",
-  filter_count = 5,
+  filter_count = 4,
   flags = {
     "placeable-neutral",
     "placeable-player",
@@ -764,7 +775,13 @@ return {
   max_health = 150,
   minable = {
     mining_time = 0.1,
-    result = "fast-inserter"
+    results = {
+      {
+        amount = 1,
+        name = "fast-inserter",
+        type = "item"
+      }
+    }
   },
   name = "fast-inserter",
   next_upgrade = "bulk-inserter",

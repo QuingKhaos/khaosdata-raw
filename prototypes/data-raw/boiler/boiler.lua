@@ -14,6 +14,18 @@ return {
       0.79000000000000004
     }
   },
+  collision_mask = {
+    layers = {
+      caravan_collision_mask = true,
+      is_lower_object = true,
+      is_object = true,
+      item = true,
+      meltable = true,
+      object = true,
+      player = true,
+      water_tile = true
+    }
+  },
   corpse = "boiler-remnants",
   damaged_trigger_effect = {
     damage_type_filters = "fire",
@@ -37,14 +49,16 @@ return {
     type = "create-entity"
   },
   dying_explosion = "boiler-explosion",
-  energy_consumption = "1.8MW",
+  energy_consumption = "3.70125MW",
   energy_source = {
+    burnt_inventory_size = 1,
     effectivity = 1,
     emissions_per_minute = {
       pollution = 30
     },
     fuel_categories = {
-      "chemical"
+      "chemical",
+      "biomass"
     },
     fuel_inventory_size = 1,
     light_flicker = {
@@ -93,6 +107,12 @@ return {
     filter = "water",
     pipe_connections = {
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 12,
         flow_direction = "input-output",
         position = {
@@ -101,6 +121,12 @@ return {
         }
       },
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 4,
         flow_direction = "input-output",
         position = {
@@ -195,7 +221,13 @@ return {
   max_health = 200,
   minable = {
     mining_time = 0.2,
-    result = "boiler"
+    results = {
+      {
+        amount = 1,
+        name = "boiler",
+        type = "item"
+      }
+    }
   },
   mode = "output-to-separate-pipe",
   name = "boiler",
@@ -207,6 +239,12 @@ return {
     filter = "steam",
     pipe_connections = {
       {
+        connection_category = {
+          "default",
+          "pipe",
+          "niobium-pipe",
+          "ht-pipes"
+        },
         direction = 0,
         flow_direction = "output",
         position = {
@@ -560,7 +598,7 @@ return {
       1
     }
   },
-  target_temperature = 165,
+  target_temperature = 250,
   type = "boiler",
   water_reflection = {
     orientation_to_variation = true,

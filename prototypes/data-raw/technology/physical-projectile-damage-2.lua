@@ -16,6 +16,7 @@ return {
       type = "ammo-damage"
     }
   },
+  essential = false,
   icons = {
     {
       icon = "__base__/graphics/technology/physical-projectile-damage-1.png",
@@ -33,24 +34,29 @@ return {
     }
   },
   name = "physical-projectile-damage-2",
+  order = "autotech-[000144]-[physical-projectile-damage-2]",
   prerequisites = {
-    "physical-projectile-damage-1",
-    "logistic-science-pack"
+    "logistic-science-pack",
+    "physical-projectile-damage-1"
   },
   type = "technology",
   unit = {
-    count = 200,
+    count = 160,
     ingredients = {
-      {
-        "automation-science-pack",
-        1
-      },
       {
         "logistic-science-pack",
         1
+      },
+      {
+        "py-science-pack-1",
+        2
+      },
+      {
+        "automation-science-pack",
+        3
       }
     },
-    time = 30
+    time = 60
   },
   upgrade = true
 }

@@ -5,6 +5,9 @@ return {
       type = "unlock-recipe"
     }
   },
+  enabled = false,
+  essential = false,
+  hidden = true,
   icons = {
     {
       icon = "__base__/graphics/technology/battery-equipment.png",
@@ -22,23 +25,39 @@ return {
     }
   },
   name = "battery-equipment",
+  order = "autotech-[000581]-[battery-equipment]",
   prerequisites = {
-    "battery",
     "solar-panel-equipment"
   },
   type = "technology",
   unit = {
-    count = 50,
+    count = 1500,
     ingredients = {
       {
-        "automation-science-pack",
+        "py-science-pack-3",
         1
       },
       {
+        "chemical-science-pack",
+        2
+      },
+      {
+        "py-science-pack-2",
+        3
+      },
+      {
         "logistic-science-pack",
-        1
+        6
+      },
+      {
+        "py-science-pack-1",
+        10
+      },
+      {
+        "automation-science-pack",
+        20
       }
     },
-    time = 15
+    time = 180
   }
 }

@@ -9,6 +9,15 @@ return {
       0.3
     }
   },
+  collision_mask = {
+    layers = {
+      floor = true,
+      is_lower_object = true,
+      meltable = true,
+      object = true,
+      water_tile = true
+    }
+  },
   connection_sprites = {
     corner_left_down = {
       {
@@ -424,10 +433,10 @@ return {
         }
       }
     },
-    max_temperature = 1000,
-    max_transfer = "1GW",
+    max_temperature = 2000,
+    max_transfer = "5GW",
     minimum_glow_temperature = 350,
-    specific_heat = "1MJ"
+    specific_heat = "10MJ"
   },
   heat_glow_sprites = {
     corner_left_down = {
@@ -1867,7 +1876,13 @@ return {
   max_health = 200,
   minable = {
     mining_time = 0.1,
-    result = "heat-pipe"
+    results = {
+      {
+        amount = 1,
+        name = "heat-pipe",
+        type = "item"
+      }
+    }
   },
   name = "heat-pipe",
   random_corpse_variation = true,
