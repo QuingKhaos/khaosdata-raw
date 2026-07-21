@@ -12,7 +12,7 @@ permissions:
 jobs:
   release:
     name: Extract raw data
-    uses: QuingKhaos/khaosdata-raw/.github/workflows/extraction.yml@feat/extract-workflow
+    uses: QuingKhaos/khaosdata-raw/.github/workflows/extraction.yml@main
     secrets: inherit
     with:
       version: stable
