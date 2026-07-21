@@ -278,6 +278,55 @@ return {
           width = 444
         }
       }
+    },
+    slope_angle_between_frames = 1.25,
+    slope_back_equals_front = true,
+    sloped = {
+      layers = {
+        {
+          dice = 4,
+          direction_count = 80,
+          filenames = {
+            "__elevated-rails__/graphics/entity/fluid-wagon/fluid-wagon-sloped-1.png",
+            "__elevated-rails__/graphics/entity/fluid-wagon/fluid-wagon-sloped-2.png",
+            "__elevated-rails__/graphics/entity/fluid-wagon/fluid-wagon-sloped-3.png",
+            "__elevated-rails__/graphics/entity/fluid-wagon/fluid-wagon-sloped-4.png"
+          },
+          height = 498,
+          line_length = 4,
+          lines_per_file = 5,
+          priority = "very-low",
+          scale = 0.5,
+          shift = {
+            0,
+            -0.515625
+          },
+          usage = "train",
+          width = 462
+        },
+        {
+          dice = 4,
+          direction_count = 80,
+          draw_as_shadow = true,
+          filenames = {
+            "__elevated-rails__/graphics/entity/fluid-wagon/fluid-wagon-sloped-shadow-1.png",
+            "__elevated-rails__/graphics/entity/fluid-wagon/fluid-wagon-sloped-shadow-2.png",
+            "__elevated-rails__/graphics/entity/fluid-wagon/fluid-wagon-sloped-shadow-3.png",
+            "__elevated-rails__/graphics/entity/fluid-wagon/fluid-wagon-sloped-shadow-4.png"
+          },
+          height = 608,
+          line_length = 4,
+          lines_per_file = 5,
+          priority = "very-low",
+          scale = 0.5,
+          shift = {
+            -0.09375,
+            -0.625
+          },
+          usage = "train",
+          width = 602
+        }
+      }
     }
   },
   resistances = {
@@ -362,6 +411,12 @@ return {
       size = 2
     }
   },
+  surface_conditions = {
+    {
+      min = 1,
+      property = "gravity"
+    }
+  },
   tie_distance = 50,
   type = "fluid-wagon",
   vertical_selection_shift = -0.796875,
@@ -406,6 +461,31 @@ return {
       },
       usage = "train",
       width = 230
+    },
+    slope_angle_between_frames = 1.25,
+    sloped = {
+      direction_count = 160,
+      filenames = {
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-1.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-2.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-3.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-4.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-5.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-6.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-7.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-8.png"
+      },
+      height = 312,
+      line_length = 4,
+      lines_per_file = 5,
+      priority = "very-low",
+      scale = 0.5,
+      shift = {
+        0,
+        0.109375
+      },
+      usage = "train",
+      width = 238
     }
   },
   working_sound = {

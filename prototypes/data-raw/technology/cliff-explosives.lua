@@ -14,11 +14,12 @@ return {
   name = "cliff-explosives",
   prerequisites = {
     "explosives",
-    "military-2"
+    "military-science-pack",
+    "metallurgic-science-pack"
   },
   type = "technology",
   unit = {
-    count = 200,
+    count = 500,
     ingredients = {
       {
         "automation-science-pack",
@@ -27,8 +28,20 @@ return {
       {
         "logistic-science-pack",
         1
+      },
+      {
+        "chemical-science-pack",
+        1
+      },
+      {
+        "space-science-pack",
+        1
+      },
+      {
+        "metallurgic-science-pack",
+        1
       }
     },
-    time = 15
+    time = 30
   }
 }

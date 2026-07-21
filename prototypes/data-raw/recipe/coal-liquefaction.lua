@@ -24,7 +24,7 @@ return {
     }
   },
   name = "coal-liquefaction",
-  order = "a[oil-processing]-c[coal-liquefaction]",
+  order = "a[oil-processing]-d[coal-liquefaction]",
   results = {
     {
       amount = 90,

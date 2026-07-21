@@ -427,6 +427,97 @@ return {
           width = 462
         }
       }
+    },
+    slope_angle_between_frames = 1.25,
+    slope_back_equals_front = true,
+    sloped = {
+      layers = {
+        {
+          back_equals_front = true,
+          dice = 4,
+          direction_count = 80,
+          filenames = {
+            "__elevated-rails__/graphics/entity/cargo-wagon/cargo-wagon-sloped-1.png",
+            "__elevated-rails__/graphics/entity/cargo-wagon/cargo-wagon-sloped-2.png",
+            "__elevated-rails__/graphics/entity/cargo-wagon/cargo-wagon-sloped-3.png",
+            "__elevated-rails__/graphics/entity/cargo-wagon/cargo-wagon-sloped-4.png"
+          },
+          height = 516,
+          line_length = 4,
+          lines_per_file = 5,
+          priority = "very-low",
+          scale = 0.5,
+          shift = {
+            0,
+            -0.40625
+          },
+          tint = {
+            b = 1,
+            g = 0.5,
+            r = 0.5
+          },
+          usage = "train",
+          width = 466
+        },
+        {
+          apply_runtime_tint = true,
+          dice = 4,
+          direction_count = 80,
+          filenames = {
+            "__elevated-rails__/graphics/entity/cargo-wagon/cargo-wagon-sloped-mask-1.png",
+            "__elevated-rails__/graphics/entity/cargo-wagon/cargo-wagon-sloped-mask-2.png",
+            "__elevated-rails__/graphics/entity/cargo-wagon/cargo-wagon-sloped-mask-3.png",
+            "__elevated-rails__/graphics/entity/cargo-wagon/cargo-wagon-sloped-mask-4.png"
+          },
+          flags = {
+            "mask"
+          },
+          height = 456,
+          line_length = 4,
+          lines_per_file = 5,
+          priority = "very-low",
+          scale = 0.5,
+          shift = {
+            0,
+            -0.53125
+          },
+          tint = {
+            b = 1,
+            g = 0.5,
+            r = 0.5
+          },
+          tint_as_overlay = true,
+          usage = "train",
+          width = 438
+        },
+        {
+          dice = 4,
+          direction_count = 80,
+          draw_as_shadow = true,
+          filenames = {
+            "__elevated-rails__/graphics/entity/cargo-wagon/cargo-wagon-sloped-shadow-1.png",
+            "__elevated-rails__/graphics/entity/cargo-wagon/cargo-wagon-sloped-shadow-2.png",
+            "__elevated-rails__/graphics/entity/cargo-wagon/cargo-wagon-sloped-shadow-3.png",
+            "__elevated-rails__/graphics/entity/cargo-wagon/cargo-wagon-sloped-shadow-4.png"
+          },
+          height = 540,
+          line_length = 4,
+          lines_per_file = 5,
+          priority = "very-low",
+          scale = 0.5,
+          shift = {
+            1.1875,
+            -0.0625
+          },
+          tint = {
+            b = 1,
+            g = 0.5,
+            r = 0.5
+          },
+          usage = "train",
+          width = 610
+        }
+      }
     }
   },
   resistances = {
@@ -610,6 +701,36 @@ return {
       },
       usage = "train",
       width = 230
+    },
+    slope_angle_between_frames = 1.25,
+    sloped = {
+      direction_count = 160,
+      filenames = {
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-1.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-2.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-3.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-4.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-5.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-6.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-7.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-8.png"
+      },
+      height = 312,
+      line_length = 4,
+      lines_per_file = 5,
+      priority = "very-low",
+      scale = 0.5,
+      shift = {
+        0,
+        0.109375
+      },
+      tint = {
+        b = 1,
+        g = 0.5,
+        r = 0.5
+      },
+      usage = "train",
+      width = 238
     }
   },
   working_sound = {

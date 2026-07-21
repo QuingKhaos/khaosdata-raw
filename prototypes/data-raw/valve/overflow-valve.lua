@@ -138,6 +138,7 @@ return {
     },
     volume = 100
   },
+  heating_energy = "20kW",
   hidden = true,
   icon = "__base__/graphics/entity/overflow-valve/overflow-valve-east.png",
   icon_draw_specification = {

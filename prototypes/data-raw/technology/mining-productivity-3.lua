@@ -21,15 +21,15 @@ return {
       }
     }
   },
+  max_level = "infinite",
   name = "mining-productivity-3",
   prerequisites = {
     "mining-productivity-2",
-    "production-science-pack",
-    "utility-science-pack"
+    "production-science-pack"
   },
   type = "technology",
   unit = {
-    count = 1000,
+    count_formula = "1000*(L - 2)",
     ingredients = {
       {
         "automation-science-pack",
@@ -45,10 +45,6 @@ return {
       },
       {
         "production-science-pack",
-        1
-      },
-      {
-        "utility-science-pack",
         1
       }
     },

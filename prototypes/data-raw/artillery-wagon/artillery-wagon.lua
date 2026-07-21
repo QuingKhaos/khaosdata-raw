@@ -96,6 +96,60 @@ return {
           width = 578
         }
       }
+    },
+    slope_angle_between_frames = 1.25,
+    sloped = {
+      layers = {
+        {
+          direction_count = 160,
+          filenames = {
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel-1.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel-2.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel-3.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel-4.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel-5.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel-6.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel-7.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel-8.png"
+          },
+          height = 506,
+          line_length = 4,
+          lines_per_file = 5,
+          priority = "very-low",
+          scale = 0.5,
+          shift = {
+            0,
+            -0.875
+          },
+          usage = "train",
+          width = 610
+        },
+        {
+          direction_count = 160,
+          draw_as_shadow = true,
+          filenames = {
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel-shadow-1.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel-shadow-2.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel-shadow-3.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel-shadow-4.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel-shadow-5.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel-shadow-6.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel-shadow-7.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel-shadow-8.png"
+          },
+          height = 548,
+          line_length = 4,
+          lines_per_file = 5,
+          priority = "very-low",
+          scale = 0.5,
+          shift = {
+            3.84375,
+            1.046875
+          },
+          usage = "train",
+          width = 902
+        }
+      }
     }
   },
   cannon_barrel_recoil_shiftings = {
@@ -314,6 +368,60 @@ return {
           },
           usage = "train",
           width = 390
+        }
+      }
+    },
+    slope_angle_between_frames = 1.25,
+    sloped = {
+      layers = {
+        {
+          direction_count = 160,
+          filenames = {
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base-1.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base-2.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base-3.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base-4.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base-5.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base-6.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base-7.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base-8.png"
+          },
+          height = 360,
+          line_length = 4,
+          lines_per_file = 5,
+          priority = "very-low",
+          scale = 0.5,
+          shift = {
+            0,
+            -0.75
+          },
+          usage = "train",
+          width = 446
+        },
+        {
+          direction_count = 160,
+          draw_as_shadow = true,
+          filenames = {
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base-shadow-1.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base-shadow-2.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base-shadow-3.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base-shadow-4.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base-shadow-5.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base-shadow-6.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base-shadow-7.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base-shadow-8.png"
+          },
+          height = 368,
+          line_length = 4,
+          lines_per_file = 5,
+          priority = "very-low",
+          scale = 0.5,
+          shift = {
+            2.875,
+            0.75
+          },
+          usage = "train",
+          width = 636
         }
       }
     }
@@ -580,6 +688,62 @@ return {
           width = 530
         }
       }
+    },
+    slope_angle_between_frames = 1.25,
+    sloped = {
+      layers = {
+        {
+          dice = 4,
+          direction_count = 160,
+          filenames = {
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-base-1.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-base-2.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-base-3.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-base-4.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-base-5.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-base-6.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-base-7.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-base-8.png"
+          },
+          height = 504,
+          line_length = 4,
+          lines_per_file = 5,
+          priority = "very-low",
+          scale = 0.5,
+          shift = {
+            0.015625,
+            -0.390625
+          },
+          usage = "train",
+          width = 486
+        },
+        {
+          dice = 4,
+          direction_count = 160,
+          draw_as_shadow = true,
+          filenames = {
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-base-shadow-1.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-base-shadow-2.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-base-shadow-3.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-base-shadow-4.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-base-shadow-5.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-base-shadow-6.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-base-shadow-7.png",
+            "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-base-shadow-8.png"
+          },
+          height = 528,
+          line_length = 4,
+          lines_per_file = 5,
+          priority = "very-low",
+          scale = 0.5,
+          shift = {
+            2.328125,
+            0.609375
+          },
+          usage = "train",
+          width = 692
+        }
+      }
     }
   },
   resistances = {
@@ -673,6 +837,12 @@ return {
       size = 2
     }
   },
+  surface_conditions = {
+    {
+      min = 1,
+      property = "gravity"
+    }
+  },
   tie_distance = 50,
   turn_after_shooting_cooldown = 60,
   turret_rotation_speed = 0.001,
@@ -719,6 +889,31 @@ return {
       },
       usage = "train",
       width = 230
+    },
+    slope_angle_between_frames = 1.25,
+    sloped = {
+      direction_count = 160,
+      filenames = {
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-1.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-2.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-3.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-4.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-5.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-6.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-7.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-8.png"
+      },
+      height = 312,
+      line_length = 4,
+      lines_per_file = 5,
+      priority = "very-low",
+      scale = 0.5,
+      shift = {
+        0,
+        0.109375
+      },
+      usage = "train",
+      width = 238
     }
   },
   working_sound = {

@@ -196,6 +196,7 @@ return {
     "placeable-neutral",
     "player-creation"
   },
+  heating_energy = "30kW",
   icon = "__base__/graphics/icons/programmable-speaker.png",
   instruments = {
     {

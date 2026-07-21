@@ -1111,6 +1111,12 @@ return {
       0.9
     }
   },
+  surface_conditions = {
+    {
+      min = 1,
+      property = "gravity"
+    }
+  },
   tile_height = 2,
   tile_width = 2,
   top_animations = {

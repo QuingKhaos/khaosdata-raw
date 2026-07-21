@@ -164,6 +164,18 @@ return {
     "placeable-player",
     "player-creation"
   },
+  frozen_patch = {
+    direction_count = 1,
+    filename = "__space-age__/graphics/entity/frozen/radar/radar.png",
+    height = 254,
+    scale = 0.5,
+    shift = {
+      0.03125,
+      -0.5
+    },
+    width = 196
+  },
+  heating_energy = "300kW",
   icon = "__base__/graphics/icons/radar.png",
   impact_category = "metal",
   integration_patch = {
@@ -225,6 +237,7 @@ return {
     0.23499999999999996,
     0.275
   },
+  reset_orientation_when_frozen = true,
   resistances = {
     {
       percent = 70,

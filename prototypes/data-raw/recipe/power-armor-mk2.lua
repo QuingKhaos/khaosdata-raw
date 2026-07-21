@@ -3,13 +3,13 @@ return {
   energy_required = 25,
   ingredients = {
     {
-      amount = 25,
-      name = "efficiency-module-2",
+      amount = 100,
+      name = "efficiency-module",
       type = "item"
     },
     {
-      amount = 25,
-      name = "speed-module-2",
+      amount = 100,
+      name = "speed-module",
       type = "item"
     },
     {

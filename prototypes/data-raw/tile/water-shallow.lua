@@ -112,6 +112,49 @@ return {
     r = 0.031000000000000001
   },
   fluid = "water",
+  landing_steps_sound = {
+    advanced_volume_control = {
+      fades = {
+        fade_in = {
+          curve_type = "cosine",
+          from = {
+            control = 0.3,
+            volume_percentage = 0
+          },
+          to = {
+            control = 0.6,
+            volume_percentage = 100
+          }
+        }
+      }
+    },
+    variations = {
+      {
+        filename = "__space-age__/sound/entity/mech-armor/mech-armor-land-wet-1.ogg",
+        modifiers = {
+          type = "main-menu",
+          volume_multiplier = 2.9
+        },
+        volume = 0.6
+      },
+      {
+        filename = "__space-age__/sound/entity/mech-armor/mech-armor-land-wet-2.ogg",
+        modifiers = {
+          type = "main-menu",
+          volume_multiplier = 2.9
+        },
+        volume = 0.6
+      },
+      {
+        filename = "__space-age__/sound/entity/mech-armor/mech-armor-land-wet-3.ogg",
+        modifiers = {
+          type = "main-menu",
+          volume_multiplier = 2.9
+        },
+        volume = 0.6
+      }
+    }
+  },
   layer = 6,
   layer_group = "water",
   map_color = {
@@ -169,7 +212,8 @@ return {
       overlay_enabled = false,
       spritesheet = "__base__/graphics/terrain/out-of-map-transition/water-shallow-out-of-map-transition.png",
       to_tiles = {
-        "out-of-map"
+        "out-of-map",
+        "empty-space"
       },
       transition_group = 2
     }

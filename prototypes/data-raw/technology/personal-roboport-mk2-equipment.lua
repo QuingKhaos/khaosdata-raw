@@ -24,11 +24,12 @@ return {
   name = "personal-roboport-mk2-equipment",
   prerequisites = {
     "personal-roboport-equipment",
+    "electromagnetic-science-pack",
     "utility-science-pack"
   },
   type = "technology",
   unit = {
-    count = 250,
+    count = 750,
     ingredients = {
       {
         "automation-science-pack",
@@ -44,6 +45,14 @@ return {
       },
       {
         "utility-science-pack",
+        1
+      },
+      {
+        "space-science-pack",
+        1
+      },
+      {
+        "electromagnetic-science-pack",
         1
       }
     },

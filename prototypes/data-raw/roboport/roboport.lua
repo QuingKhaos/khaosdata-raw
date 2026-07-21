@@ -300,6 +300,17 @@ return {
     "placeable-player",
     "player-creation"
   },
+  frozen_patch = {
+    filename = "__space-age__/graphics/entity/frozen/roboport/roboport-base.png",
+    height = 277,
+    scale = 0.5,
+    shift = {
+      0.0625,
+      -0.0703125
+    },
+    width = 228
+  },
+  heating_energy = "300kW",
   icon = "__base__/graphics/icons/roboport.png",
   impact_category = "metal",
   logistics_radius = 25,
@@ -384,6 +395,12 @@ return {
     0
   },
   stationing_render_layer_swap_height = 0.86999999999999993,
+  surface_conditions = {
+    {
+      min = 10,
+      property = "pressure"
+    }
+  },
   type = "roboport",
   water_reflection = {
     orientation_to_variation = false,

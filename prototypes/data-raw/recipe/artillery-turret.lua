@@ -4,12 +4,12 @@ return {
   ingredients = {
     {
       amount = 60,
-      name = "steel-plate",
+      name = "tungsten-plate",
       type = "item"
     },
     {
       amount = 60,
-      name = "concrete",
+      name = "refined-concrete",
       type = "item"
     },
     {
@@ -18,8 +18,8 @@ return {
       type = "item"
     },
     {
-      amount = 20,
-      name = "advanced-circuit",
+      amount = 10,
+      name = "processing-unit",
       type = "item"
     }
   },

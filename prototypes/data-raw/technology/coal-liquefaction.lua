@@ -9,12 +9,11 @@ return {
   icon_size = 256,
   name = "coal-liquefaction",
   prerequisites = {
-    "advanced-oil-processing",
-    "production-science-pack"
+    "metallurgic-science-pack"
   },
   type = "technology",
   unit = {
-    count = 200,
+    count = 500,
     ingredients = {
       {
         "automation-science-pack",
@@ -29,7 +28,11 @@ return {
         1
       },
       {
-        "production-science-pack",
+        "space-science-pack",
+        1
+      },
+      {
+        "metallurgic-science-pack",
         1
       }
     },

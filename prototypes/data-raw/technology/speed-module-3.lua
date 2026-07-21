@@ -10,11 +10,11 @@ return {
   name = "speed-module-3",
   prerequisites = {
     "speed-module-2",
-    "production-science-pack"
+    "metallurgic-science-pack"
   },
   type = "technology",
   unit = {
-    count = 300,
+    count = 2000,
     ingredients = {
       {
         "automation-science-pack",
@@ -29,7 +29,11 @@ return {
         1
       },
       {
-        "production-science-pack",
+        "space-science-pack",
+        1
+      },
+      {
+        "metallurgic-science-pack",
         1
       }
     },

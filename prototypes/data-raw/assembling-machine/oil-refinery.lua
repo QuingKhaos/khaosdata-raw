@@ -753,6 +753,36 @@ return {
           }
         }
       },
+      pipe_covers_frozen = {
+        east = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-east.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        north = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-north.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        south = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-south.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        west = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-west.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        }
+      },
       production_type = "input",
       volume = 1000
     },
@@ -843,6 +873,36 @@ return {
               width = 128
             }
           }
+        }
+      },
+      pipe_covers_frozen = {
+        east = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-east.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        north = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-north.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        south = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-south.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        west = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-west.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
         }
       },
       production_type = "input",
@@ -937,6 +997,36 @@ return {
           }
         }
       },
+      pipe_covers_frozen = {
+        east = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-east.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        north = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-north.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        south = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-south.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        west = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-west.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        }
+      },
       production_type = "output",
       volume = 100
     },
@@ -1029,6 +1119,36 @@ return {
           }
         }
       },
+      pipe_covers_frozen = {
+        east = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-east.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        north = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-north.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        south = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-south.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        west = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-west.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        }
+      },
       production_type = "output",
       volume = 100
     },
@@ -1119,6 +1239,36 @@ return {
               width = 128
             }
           }
+        }
+      },
+      pipe_covers_frozen = {
+        east = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-east.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        north = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-north.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        south = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-south.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        west = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-west.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
         }
       },
       production_type = "output",
@@ -1260,6 +1410,55 @@ return {
         }
       }
     },
+    frozen_patch = {
+      east = {
+        filename = "__space-age__/graphics/entity/frozen/oil-refinery/oil-refinery.png",
+        height = 430,
+        priority = "high",
+        scale = 0.5,
+        shift = {
+          0,
+          -0.234375
+        },
+        width = 386,
+        x = 386
+      },
+      north = {
+        filename = "__space-age__/graphics/entity/frozen/oil-refinery/oil-refinery.png",
+        height = 430,
+        priority = "high",
+        scale = 0.5,
+        shift = {
+          0,
+          -0.234375
+        },
+        width = 386
+      },
+      south = {
+        filename = "__space-age__/graphics/entity/frozen/oil-refinery/oil-refinery.png",
+        height = 430,
+        priority = "high",
+        scale = 0.5,
+        shift = {
+          0,
+          -0.234375
+        },
+        width = 386,
+        x = 772
+      },
+      west = {
+        filename = "__space-age__/graphics/entity/frozen/oil-refinery/oil-refinery.png",
+        height = 430,
+        priority = "high",
+        scale = 0.5,
+        shift = {
+          0,
+          -0.234375
+        },
+        width = 386,
+        x = 1158
+      }
+    },
     working_visualisations = {
       {
         animation = {
@@ -1351,6 +1550,7 @@ return {
       }
     }
   },
+  heating_energy = "200kW",
   icon = "__base__/graphics/icons/oil-refinery.png",
   icon_draw_specification = {
     scale = 2,

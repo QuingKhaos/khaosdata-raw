@@ -22,6 +22,7 @@ return {
     radius = 1.5,
     type = "destroy-cliffs"
   },
+  default_import_location = "vulcanus",
   drop_sound = {
     aggregation = {
       max_count = 1,

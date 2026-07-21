@@ -24,12 +24,11 @@ return {
   max_level = "infinite",
   name = "artillery-shell-range-1",
   prerequisites = {
-    "artillery",
-    "space-science-pack"
+    "artillery"
   },
   type = "technology",
   unit = {
-    count_formula = "2^L*1000",
+    count_formula = "2^(L-1)*1000",
     ingredients = {
       {
         "automation-science-pack",
@@ -53,6 +52,10 @@ return {
       },
       {
         "space-science-pack",
+        1
+      },
+      {
+        "metallurgic-science-pack",
         1
       }
     },

@@ -1,4 +1,5 @@
 return {
+  category = "electronics",
   enabled = false,
   energy_required = 15,
   ingredients = {

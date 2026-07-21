@@ -1,6 +1,6 @@
 return {
   allow_productivity = true,
-  category = "chemistry",
+  category = "chemistry-or-cryogenics",
   crafting_machine_tint = {
     primary = {
       a = 1,

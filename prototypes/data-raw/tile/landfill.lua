@@ -180,7 +180,36 @@ return {
         "deepwater-green",
         "water-shallow",
         "water-mud",
-        "water-wube"
+        "water-wube",
+        "oil-ocean-shallow",
+        "oil-ocean-deep",
+        "wetland-yumako",
+        "wetland-jellynut",
+        "wetland-light-green-slime",
+        "wetland-green-slime",
+        "wetland-light-dead-skin",
+        "wetland-dead-skin",
+        "wetland-pink-tentacle",
+        "wetland-red-tentacle",
+        "oil-ocean-shallow",
+        "oil-ocean-deep",
+        "ammoniacal-ocean",
+        "ammoniacal-ocean-2",
+        "brash-ice",
+        "lava-hot",
+        "lava",
+        "wetland-light-dead-skin",
+        "wetland-dead-skin",
+        "wetland-light-green-slime",
+        "wetland-green-slime",
+        "wetland-pink-tentacle",
+        "wetland-red-tentacle",
+        "wetland-blue-slime",
+        "wetland-yumako",
+        "wetland-jellynut",
+        "gleba-deep-lake",
+        "oil-ocean-shallow",
+        "oil-ocean-deep"
       },
       transition_group = 1
     },
@@ -217,7 +246,8 @@ return {
       overlay_enabled = false,
       spritesheet = "__base__/graphics/terrain/out-of-map-transition/out-of-map-transition.png",
       to_tiles = {
-        "out-of-map"
+        "out-of-map",
+        "empty-space"
       },
       transition_group = 2
     }

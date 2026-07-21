@@ -86,6 +86,98 @@ return {
   default_copy_color_from_train_stop = true,
   deliver_category = "vehicle",
   drawing_box_vertical_extension = 1,
+  drive_over_elevated_tie_trigger = {
+    sound = {
+      category = "environment",
+      variations = {
+        {
+          filename = "__elevated-rails__/sound/elevated-train-tie-1.ogg",
+          modifiers = {
+            {
+              type = "main-menu",
+              volume_multiplier = 1.2
+            },
+            {
+              type = "driving",
+              volume_multiplier = 0.65
+            }
+          },
+          volume = 0.8
+        },
+        {
+          filename = "__elevated-rails__/sound/elevated-train-tie-2.ogg",
+          modifiers = {
+            {
+              type = "main-menu",
+              volume_multiplier = 1.2
+            },
+            {
+              type = "driving",
+              volume_multiplier = 0.65
+            }
+          },
+          volume = 0.8
+        },
+        {
+          filename = "__elevated-rails__/sound/elevated-train-tie-3.ogg",
+          modifiers = {
+            {
+              type = "main-menu",
+              volume_multiplier = 1.2
+            },
+            {
+              type = "driving",
+              volume_multiplier = 0.65
+            }
+          },
+          volume = 0.8
+        },
+        {
+          filename = "__elevated-rails__/sound/elevated-train-tie-4.ogg",
+          modifiers = {
+            {
+              type = "main-menu",
+              volume_multiplier = 1.2
+            },
+            {
+              type = "driving",
+              volume_multiplier = 0.65
+            }
+          },
+          volume = 0.8
+        },
+        {
+          filename = "__elevated-rails__/sound/elevated-train-tie-5.ogg",
+          modifiers = {
+            {
+              type = "main-menu",
+              volume_multiplier = 1.2
+            },
+            {
+              type = "driving",
+              volume_multiplier = 0.65
+            }
+          },
+          volume = 0.8
+        },
+        {
+          filename = "__elevated-rails__/sound/elevated-train-tie-6.ogg",
+          modifiers = {
+            {
+              type = "main-menu",
+              volume_multiplier = 1.2
+            },
+            {
+              type = "driving",
+              volume_multiplier = 0.65
+            }
+          },
+          volume = 0.8
+        }
+      }
+    },
+    type = "play-sound"
+  },
   drive_over_tie_trigger = {
     sound = {
       category = "environment",
@@ -180,6 +272,34 @@ return {
   },
   drive_over_tie_trigger_minimal_speed = 0.5,
   dying_explosion = "locomotive-explosion",
+  elevated_rail_sound = {
+    activity_to_speed_modifiers = {
+      maximum = 1.1499999999999999,
+      minimum = 1,
+      multiplier = 0.6,
+      offset = 0.2
+    },
+    activity_to_volume_modifiers = {
+      multiplier = 1.5,
+      offset = 1
+    },
+    match_speed_to_activity = true,
+    match_volume_to_activity = true,
+    sound = {
+      filename = "__elevated-rails__/sound/elevated-train-driving.ogg",
+      modifiers = {
+        {
+          type = "elevation",
+          volume_multiplier = 1
+        },
+        {
+          type = "main-menu",
+          volume_multiplier = 0.7
+        }
+      },
+      volume = 1
+    }
+  },
   energy_per_hit_point = 5,
   energy_source = {
     effectivity = 1,
@@ -298,6 +418,38 @@ return {
             0,
             -0.5
           },
+          width = 474
+        }
+      }
+    },
+    slope_angle_between_frames = 1.25,
+    sloped = {
+      layers = {
+        {
+          blend_mode = "additive",
+          dice = 4,
+          direction_count = 160,
+          draw_as_light = true,
+          filenames = {
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-lights-1.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-lights-2.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-lights-3.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-lights-4.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-lights-5.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-lights-6.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-lights-7.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-lights-8.png"
+          },
+          height = 562,
+          line_length = 4,
+          lines_per_file = 5,
+          priority = "very-low",
+          scale = 0.5,
+          shift = {
+            0,
+            -0.140625
+          },
+          usage = "train",
           width = 474
         }
       }
@@ -440,6 +592,95 @@ return {
           },
           usage = "train",
           width = 490
+        }
+      }
+    },
+    slope_angle_between_frames = 1.25,
+    sloped = {
+      layers = {
+        {
+          dice = 4,
+          direction_count = 160,
+          filenames = {
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-1.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-2.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-3.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-4.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-5.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-6.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-7.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-8.png"
+          },
+          height = 562,
+          line_length = 4,
+          lines_per_file = 5,
+          priority = "very-low",
+          scale = 0.5,
+          shift = {
+            0,
+            -0.140625
+          },
+          usage = "train",
+          width = 474
+        },
+        {
+          apply_runtime_tint = true,
+          dice = 4,
+          direction_count = 160,
+          filenames = {
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-mask-1.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-mask-2.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-mask-3.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-mask-4.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-mask-5.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-mask-6.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-mask-7.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-mask-8.png"
+          },
+          flags = {
+            "mask"
+          },
+          height = 560,
+          line_length = 4,
+          lines_per_file = 5,
+          priority = "very-low",
+          scale = 0.5,
+          shift = {
+            0,
+            -0.140625
+          },
+          tint_as_overlay = true,
+          usage = "train",
+          width = 474
+        },
+        {
+          dice = 4,
+          direction_count = 160,
+          draw_as_shadow = true,
+          filenames = {
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-shadow-1.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-shadow-2.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-shadow-3.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-shadow-4.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-shadow-5.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-shadow-6.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-shadow-7.png",
+            "__elevated-rails__/graphics/entity/locomotive/locomotive-sloped-shadow-8.png"
+          },
+          flags = {
+            "shadow"
+          },
+          height = 578,
+          line_length = 4,
+          lines_per_file = 5,
+          priority = "very-low",
+          scale = 0.5,
+          shift = {
+            0.46875,
+            0.265625
+          },
+          usage = "train",
+          width = 528
         }
       }
     }
@@ -623,6 +864,12 @@ return {
       type = "play-sound"
     }
   },
+  surface_conditions = {
+    {
+      min = 1,
+      property = "gravity"
+    }
+  },
   tie_distance = 50,
   type = "locomotive",
   vertical_selection_shift = -0.5,
@@ -667,6 +914,31 @@ return {
       },
       usage = "train",
       width = 230
+    },
+    slope_angle_between_frames = 1.25,
+    sloped = {
+      direction_count = 160,
+      filenames = {
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-1.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-2.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-3.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-4.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-5.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-6.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-7.png",
+        "__elevated-rails__/graphics/entity/train-wheel/train-wheel-sloped-8.png"
+      },
+      height = 312,
+      line_length = 4,
+      lines_per_file = 5,
+      priority = "very-low",
+      scale = 0.5,
+      shift = {
+        0,
+        0.109375
+      },
+      usage = "train",
+      width = 238
     }
   },
   working_sound = {

@@ -60,7 +60,7 @@ return {
   icon_draw_specification = {
     render_layer = "air-entity-info-icon"
   },
-  inventory_size = 0,
+  inventory_size = 20,
   name = "rocket-silo-rocket",
   rising_speed = 0.0023809523809523809,
   rocket_above_wires_slice_offset_from_center = -3,

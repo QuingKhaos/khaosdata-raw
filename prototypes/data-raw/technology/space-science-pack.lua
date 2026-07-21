@@ -1,15 +1,23 @@
 return {
-  effects = {},
+  effects = {
+    {
+      recipe = "space-science-pack",
+      type = "unlock-recipe"
+    }
+  },
   essential = true,
   icon = "__base__/graphics/technology/space-science-pack.png",
   icon_size = 256,
+  localised_description = {
+    "technology-description.space-science-pack-space-age"
+  },
   name = "space-science-pack",
   prerequisites = {
-    "rocket-silo"
+    "space-platform"
   },
   research_trigger = {
-    item = "satellite",
-    type = "send-item-to-orbit"
+    entity = "asteroid-collector",
+    type = "build-entity"
   },
   type = "technology"
 }

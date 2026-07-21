@@ -125,6 +125,50 @@ return {
       volume = 0.8
     }
   },
+  frozen_variant = "frozen-refined-concrete",
+  landing_steps_sound = {
+    advanced_volume_control = {
+      fades = {
+        fade_in = {
+          curve_type = "cosine",
+          from = {
+            control = 0.3,
+            volume_percentage = 0
+          },
+          to = {
+            control = 0.6,
+            volume_percentage = 100
+          }
+        }
+      }
+    },
+    variations = {
+      {
+        filename = "__space-age__/sound/entity/mech-armor/mech-armor-land-concrete-1.ogg",
+        modifiers = {
+          type = "main-menu",
+          volume_multiplier = 2.9
+        },
+        volume = 1
+      },
+      {
+        filename = "__space-age__/sound/entity/mech-armor/mech-armor-land-concrete-2.ogg",
+        modifiers = {
+          type = "main-menu",
+          volume_multiplier = 2.9
+        },
+        volume = 1
+      },
+      {
+        filename = "__space-age__/sound/entity/mech-armor/mech-armor-land-concrete-3.ogg",
+        modifiers = {
+          type = "main-menu",
+          volume_multiplier = 2.9
+        },
+        volume = 1
+      }
+    }
+  },
   layer = 17,
   layer_group = "ground-artificial",
   map_color = {
@@ -209,7 +253,36 @@ return {
         "deepwater-green",
         "water-shallow",
         "water-mud",
-        "water-wube"
+        "water-wube",
+        "oil-ocean-shallow",
+        "oil-ocean-deep",
+        "wetland-yumako",
+        "wetland-jellynut",
+        "wetland-light-green-slime",
+        "wetland-green-slime",
+        "wetland-light-dead-skin",
+        "wetland-dead-skin",
+        "wetland-pink-tentacle",
+        "wetland-red-tentacle",
+        "oil-ocean-shallow",
+        "oil-ocean-deep",
+        "ammoniacal-ocean",
+        "ammoniacal-ocean-2",
+        "brash-ice",
+        "lava-hot",
+        "lava",
+        "wetland-light-dead-skin",
+        "wetland-dead-skin",
+        "wetland-light-green-slime",
+        "wetland-green-slime",
+        "wetland-pink-tentacle",
+        "wetland-red-tentacle",
+        "wetland-blue-slime",
+        "wetland-yumako",
+        "wetland-jellynut",
+        "gleba-deep-lake",
+        "oil-ocean-shallow",
+        "oil-ocean-deep"
       },
       transition_group = 1
     },
@@ -245,7 +318,8 @@ return {
       offset_background_layer_by_tile_layer = true,
       spritesheet = "__base__/graphics/terrain/out-of-map-transition/concrete-out-of-map-transition.png",
       to_tiles = {
-        "out-of-map"
+        "out-of-map",
+        "empty-space"
       },
       transition_group = 2
     }

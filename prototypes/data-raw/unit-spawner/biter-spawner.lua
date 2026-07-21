@@ -13,6 +13,7 @@ return {
     richness_expression = 1
   },
   call_for_help_radius = 50,
+  captured_spawner_entity = "captive-biter-spawner",
   collision_box = {
     {
       -2.2000000000000002,

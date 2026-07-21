@@ -24,8 +24,8 @@ return {
   name = "battery-mk2-equipment",
   prerequisites = {
     "battery-equipment",
-    "low-density-structure",
-    "power-armor"
+    "power-armor",
+    "utility-science-pack"
   },
   type = "technology",
   unit = {
@@ -41,6 +41,10 @@ return {
       },
       {
         "chemical-science-pack",
+        1
+      },
+      {
+        "utility-science-pack",
         1
       }
     },

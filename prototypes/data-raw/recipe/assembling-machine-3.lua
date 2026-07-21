@@ -2,13 +2,13 @@ return {
   enabled = false,
   ingredients = {
     {
-      amount = 4,
-      name = "speed-module",
+      amount = 2,
+      name = "assembling-machine-2",
       type = "item"
     },
     {
-      amount = 2,
-      name = "assembling-machine-2",
+      amount = 4,
+      name = "speed-module",
       type = "item"
     }
   },

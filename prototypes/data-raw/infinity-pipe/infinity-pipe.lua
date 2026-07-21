@@ -45,6 +45,10 @@ return {
     hide_connection_info = true,
     pipe_connections = {
       {
+        connection_category = {
+          "default",
+          "fusion-plasma"
+        },
         direction = 0,
         position = {
           0,
@@ -52,6 +56,10 @@ return {
         }
       },
       {
+        connection_category = {
+          "default",
+          "fusion-plasma"
+        },
         direction = 4,
         position = {
           0,
@@ -59,6 +67,10 @@ return {
         }
       },
       {
+        connection_category = {
+          "default",
+          "fusion-plasma"
+        },
         direction = 8,
         position = {
           0,
@@ -66,6 +78,10 @@ return {
         }
       },
       {
+        connection_category = {
+          "default",
+          "fusion-plasma"
+        },
         direction = 12,
         position = {
           0,

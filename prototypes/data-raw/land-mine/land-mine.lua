@@ -37,6 +37,14 @@ return {
             type = "explosion"
           },
           type = "damage"
+        },
+        {
+          damage = {
+            amount = 100,
+            type = "explosion"
+          },
+          radius = 3,
+          type = "damage-tile"
         }
       },
       type = "instant"

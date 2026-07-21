@@ -112,6 +112,14 @@ return {
           width = 64
         }
       }
+    },
+    frozen_patch = {
+      direction_count = 20,
+      filename = "__space-age__/graphics/entity/frozen/express-transport-belt/express-transport-belt.png",
+      line_length = 1,
+      priority = "extra-high",
+      scale = 0.5,
+      size = 128
     }
   },
   close_sound = {
@@ -159,6 +167,7 @@ return {
     "placeable-neutral",
     "player-creation"
   },
+  heating_energy = "150kW",
   icon = "__base__/graphics/icons/express-underground-belt.png",
   max_distance = 9,
   max_health = 170,
@@ -167,6 +176,7 @@ return {
     result = "express-underground-belt"
   },
   name = "express-underground-belt",
+  next_upgrade = "turbo-underground-belt",
   open_sound = {
     filename = "__base__/sound/machine-open.ogg",
     volume = 0.5
@@ -249,9 +259,34 @@ return {
         scale = 0.5,
         width = 192
       }
+    },
+    frozen_patch_in = {
+      sheet = {
+        filename = "__space-age__/graphics/entity/frozen/underground-belt/underground-belt-structure.png",
+        height = 192,
+        priority = "extra-high",
+        scale = 0.5,
+        width = 192,
+        y = 192
+      }
+    },
+    frozen_patch_out = {
+      sheet = {
+        filename = "__space-age__/graphics/entity/frozen/underground-belt/underground-belt-structure.png",
+        height = 192,
+        priority = "extra-high",
+        scale = 0.5,
+        width = 192
+      }
     }
   },
   type = "underground-belt",
+  underground_collision_mask = {
+    layers = {
+      empty_space = true,
+      lava_tile = true
+    }
+  },
   underground_remove_belts_sprite = {
     filename = "__core__/graphics/arrows/underground-lines-remove.png",
     height = 64,

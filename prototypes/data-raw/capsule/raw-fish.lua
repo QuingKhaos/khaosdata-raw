@@ -81,6 +81,8 @@ return {
     volume = 0.7
   },
   send_to_orbit_mode = "manual",
+  spoil_result = "spoilage",
+  spoil_ticks = 453000,
   stack_size = 100,
   subgroup = "raw-resource",
   type = "capsule",

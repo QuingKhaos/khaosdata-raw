@@ -8,12 +8,13 @@ return {
   icon = "__base__/graphics/technology/spidertron.png",
   icon_size = 256,
   name = "spidertron",
+  order = "d-e-h",
   prerequisites = {
-    "military-4",
+    "rocket-turret",
     "exoskeleton-equipment",
     "fission-reactor-equipment",
-    "rocketry",
-    "efficiency-module-3",
+    "military-4",
+    "production-science-pack",
     "radar"
   },
   type = "technology",
@@ -42,6 +43,14 @@ return {
       },
       {
         "utility-science-pack",
+        1
+      },
+      {
+        "space-science-pack",
+        1
+      },
+      {
+        "agricultural-science-pack",
         1
       }
     },

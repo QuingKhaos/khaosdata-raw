@@ -34,7 +34,8 @@ return {
   },
   name = "stronger-explosives-5",
   prerequisites = {
-    "stronger-explosives-4"
+    "stronger-explosives-4",
+    "space-science-pack"
   },
   type = "technology",
   unit = {
@@ -58,6 +59,10 @@ return {
       },
       {
         "utility-science-pack",
+        1
+      },
+      {
+        "space-science-pack",
         1
       }
     },

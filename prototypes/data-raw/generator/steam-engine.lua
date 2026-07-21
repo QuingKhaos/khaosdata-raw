@@ -149,10 +149,41 @@ return {
         }
       }
     },
+    pipe_covers_frozen = {
+      east = {
+        filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-east.png",
+        height = 128,
+        priority = "extra-high",
+        scale = 0.5,
+        width = 128
+      },
+      north = {
+        filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-north.png",
+        height = 128,
+        priority = "extra-high",
+        scale = 0.5,
+        width = 128
+      },
+      south = {
+        filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-south.png",
+        height = 128,
+        priority = "extra-high",
+        scale = 0.5,
+        width = 128
+      },
+      west = {
+        filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-west.png",
+        height = 128,
+        priority = "extra-high",
+        scale = 0.5,
+        width = 128
+      }
+    },
     production_type = "input",
     volume = 200
   },
   fluid_usage_per_tick = 0.5,
+  heating_energy = "50kW",
   horizontal_animation = {
     layers = {
       {

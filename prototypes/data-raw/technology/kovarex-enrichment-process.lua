@@ -13,13 +13,12 @@ return {
   icon_size = 256,
   name = "kovarex-enrichment-process",
   prerequisites = {
-    "production-science-pack",
     "uranium-processing",
-    "rocket-fuel"
+    "space-science-pack"
   },
   type = "technology",
   unit = {
-    count = 1500,
+    count = 1000,
     ingredients = {
       {
         "automation-science-pack",
@@ -34,7 +33,7 @@ return {
         1
       },
       {
-        "production-science-pack",
+        "space-science-pack",
         1
       }
     },

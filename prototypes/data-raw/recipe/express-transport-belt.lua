@@ -1,5 +1,5 @@
 return {
-  category = "crafting-with-fluid",
+  category = "crafting-with-fluid-or-metallurgy",
   enabled = false,
   ingredients = {
     {

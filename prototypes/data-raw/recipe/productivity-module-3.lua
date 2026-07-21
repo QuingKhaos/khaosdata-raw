@@ -1,4 +1,5 @@
 return {
+  category = "electronics",
   enabled = false,
   energy_required = 60,
   ingredients = {
@@ -15,6 +16,11 @@ return {
     {
       amount = 5,
       name = "processing-unit",
+      type = "item"
+    },
+    {
+      amount = 1,
+      name = "biter-egg",
       type = "item"
     }
   },

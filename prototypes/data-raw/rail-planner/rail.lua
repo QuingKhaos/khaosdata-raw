@@ -35,9 +35,15 @@ return {
     "straight-rail",
     "curved-rail-a",
     "curved-rail-b",
-    "half-diagonal-rail"
+    "half-diagonal-rail",
+    "rail-ramp",
+    "elevated-straight-rail",
+    "elevated-curved-rail-a",
+    "elevated-curved-rail-b",
+    "elevated-half-diagonal-rail"
   },
   stack_size = 100,
   subgroup = "train-transport",
+  support = "rail-support",
   type = "rail-planner"
 }

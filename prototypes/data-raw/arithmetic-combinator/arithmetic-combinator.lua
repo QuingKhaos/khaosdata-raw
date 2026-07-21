@@ -220,6 +220,19 @@ return {
     "placeable-neutral",
     "player-creation"
   },
+  frozen_patch = {
+    sheet = {
+      filename = "__space-age__/graphics/entity/frozen/combinator/arithmetic-combinator-frozen.png",
+      height = 124,
+      scale = 0.5,
+      shift = {
+        0.015625,
+        0.234375
+      },
+      width = 144
+    }
+  },
+  heating_energy = "50kW",
   icon = "__base__/graphics/icons/arithmetic-combinator.png",
   icon_draw_specification = {
     scale = 0.5

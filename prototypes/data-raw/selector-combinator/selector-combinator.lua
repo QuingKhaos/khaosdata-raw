@@ -174,6 +174,19 @@ return {
     "placeable-neutral",
     "player-creation"
   },
+  frozen_patch = {
+    sheet = {
+      filename = "__space-age__/graphics/entity/frozen/combinator/selector-combinator-frozen.png",
+      height = 160,
+      scale = 0.5,
+      shift = {
+        0.03125,
+        -0.03125
+      },
+      width = 154
+    }
+  },
+  heating_energy = "100kW",
   icon = "__base__/graphics/icons/selector-combinator.png",
   icon_draw_specification = {
     scale = 0.5

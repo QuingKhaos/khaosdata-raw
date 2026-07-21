@@ -421,6 +421,7 @@ return {
       }
     }
   },
+  heating_energy = "50kW",
   icon = "__base__/graphics/icons/laser-turret.png",
   max_health = 1000,
   minable = {

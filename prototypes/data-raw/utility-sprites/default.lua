@@ -5520,6 +5520,208 @@ return {
     width = 64,
     x = 128
   },
+  platform_entity_build_animations = {
+    back_left = {
+      body = {
+        layers = {
+          {
+            animation_speed = 0.5,
+            filename = "__space-age__/graphics/entity/space-platform-build-anim/back-L.png",
+            frame_count = 32,
+            height = 146,
+            line_length = 8,
+            scale = 0.5,
+            shift = {
+              -0.09375,
+              -0.546875
+            },
+            width = 78
+          },
+          {
+            animation_speed = 0.5,
+            draw_as_shadow = true,
+            filename = "__space-age__/graphics/entity/space-platform-build-anim/back-L-shadow.png",
+            frame_count = 32,
+            height = 84,
+            line_length = 8,
+            scale = 0.5,
+            shift = {
+              0.890625,
+              0.015625
+            },
+            width = 188
+          }
+        }
+      },
+      top = {
+        layers = {
+          {
+            animation_speed = 0.5,
+            filename = "__space-age__/graphics/entity/space-platform-build-anim/back-L-top.png",
+            frame_count = 32,
+            height = 96,
+            line_length = 8,
+            scale = 0.5,
+            shift = {
+              -0.09375,
+              -0.9375
+            },
+            width = 76
+          }
+        }
+      }
+    },
+    back_right = {
+      body = {
+        layers = {
+          {
+            animation_speed = 0.5,
+            filename = "__space-age__/graphics/entity/space-platform-build-anim/back-R.png",
+            frame_count = 32,
+            height = 146,
+            line_length = 8,
+            scale = 0.5,
+            shift = {
+              0.09375,
+              -0.546875
+            },
+            width = 78
+          },
+          {
+            animation_speed = 0.5,
+            draw_as_shadow = true,
+            filename = "__space-age__/graphics/entity/space-platform-build-anim/back-R-shadow.png",
+            frame_count = 32,
+            height = 84,
+            line_length = 8,
+            scale = 0.5,
+            shift = {
+              0.8125,
+              0.015625
+            },
+            width = 174
+          }
+        }
+      },
+      top = {
+        layers = {
+          {
+            animation_speed = 0.5,
+            filename = "__space-age__/graphics/entity/space-platform-build-anim/back-R-top.png",
+            frame_count = 32,
+            height = 96,
+            line_length = 8,
+            scale = 0.5,
+            shift = {
+              0.09375,
+              -0.9375
+            },
+            width = 78
+          }
+        }
+      }
+    },
+    front_left = {
+      body = {
+        layers = {
+          {
+            animation_speed = 0.5,
+            filename = "__space-age__/graphics/entity/space-platform-build-anim/front-L.png",
+            frame_count = 32,
+            height = 164,
+            line_length = 8,
+            scale = 0.5,
+            shift = {
+              -0.09375,
+              -0.5625
+            },
+            width = 78
+          },
+          {
+            animation_speed = 0.5,
+            draw_as_shadow = true,
+            filename = "__space-age__/graphics/entity/space-platform-build-anim/front-L-shadow.png",
+            frame_count = 32,
+            height = 88,
+            line_length = 8,
+            scale = 0.5,
+            shift = {
+              0.796875,
+              0.03125
+            },
+            width = 176
+          }
+        }
+      },
+      top = {
+        layers = {
+          {
+            animation_speed = 0.5,
+            filename = "__space-age__/graphics/entity/space-platform-build-anim/front-L-top.png",
+            frame_count = 32,
+            height = 108,
+            line_length = 8,
+            scale = 0.5,
+            shift = {
+              -0.09375,
+              -0.984375
+            },
+            width = 76
+          }
+        }
+      }
+    },
+    front_right = {
+      body = {
+        layers = {
+          {
+            animation_speed = 0.5,
+            filename = "__space-age__/graphics/entity/space-platform-build-anim/front-R.png",
+            frame_count = 32,
+            height = 164,
+            line_length = 8,
+            scale = 0.5,
+            shift = {
+              0.09375,
+              -0.546875
+            },
+            width = 78
+          },
+          {
+            animation_speed = 0.5,
+            draw_as_shadow = true,
+            filename = "__space-age__/graphics/entity/space-platform-build-anim/front-R-shadow.png",
+            frame_count = 32,
+            height = 88,
+            line_length = 8,
+            scale = 0.5,
+            shift = {
+              0.796875,
+              0.03125
+            },
+            width = 172
+          }
+        }
+      },
+      top = {
+        layers = {
+          {
+            animation_speed = 0.5,
+            filename = "__space-age__/graphics/entity/space-platform-build-anim/front-R-top.png",
+            frame_count = 32,
+            height = 108,
+            line_length = 8,
+            scale = 0.5,
+            shift = {
+              0.09375,
+              -0.984375
+            },
+            width = 78
+          }
+        }
+      }
+    }
+  },
   play = {
     filename = "__core__/graphics/icons/mip/play.png",
     flags = {

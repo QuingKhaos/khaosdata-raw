@@ -1,6 +1,11 @@
 return {
   crafting_categories = {
-    "crafting"
+    "crafting",
+    "electronics",
+    "pressing",
+    "recycling-or-hand-crafting",
+    "organic-or-hand-crafting",
+    "organic-or-assembling"
   },
   inventory_size = 80,
   item_pickup_distance = 1,

@@ -1,4 +1,5 @@
 return {
+  category = "electronics",
   enabled = false,
   ingredients = {
     {

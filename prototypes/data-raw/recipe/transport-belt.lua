@@ -1,4 +1,5 @@
 return {
+  category = "pressing",
   ingredients = {
     {
       amount = 1,

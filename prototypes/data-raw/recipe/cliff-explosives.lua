@@ -8,6 +8,11 @@ return {
       type = "item"
     },
     {
+      amount = 10,
+      name = "calcite",
+      type = "item"
+    },
+    {
       amount = 1,
       name = "grenade",
       type = "item"

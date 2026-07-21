@@ -8,8 +8,13 @@ return {
       type = "item"
     },
     {
+      amount = 4,
+      name = "steel-plate",
+      type = "item"
+    },
+    {
       amount = 1,
-      name = "speed-module",
+      name = "processing-unit",
       type = "item"
     }
   },

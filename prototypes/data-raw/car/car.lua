@@ -385,6 +385,12 @@ return {
     }
   },
   stop_trigger_speed = 0.15,
+  surface_conditions = {
+    {
+      min = 1,
+      property = "gravity"
+    }
+  },
   track_particle_triggers = {
     {
       initial_height = 0.2,

@@ -1,5 +1,6 @@
 return {
   allow_productivity = true,
+  allow_quality = false,
   category = "oil-processing",
   enabled = false,
   energy_required = 5,

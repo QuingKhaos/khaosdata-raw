@@ -784,6 +784,36 @@ return {
         }
       }
     },
+    pipe_covers_frozen = {
+      east = {
+        filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-east.png",
+        height = 128,
+        priority = "extra-high",
+        scale = 0.5,
+        width = 128
+      },
+      north = {
+        filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-north.png",
+        height = 128,
+        priority = "extra-high",
+        scale = 0.5,
+        width = 128
+      },
+      south = {
+        filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-south.png",
+        height = 128,
+        priority = "extra-high",
+        scale = 0.5,
+        width = 128
+      },
+      west = {
+        filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-west.png",
+        height = 128,
+        priority = "extra-high",
+        scale = 0.5,
+        width = 128
+      }
+    },
     volume = 400
   },
   fluid_wagon_connector_alignment_tolerance = 0.0625,
@@ -2860,6 +2890,39 @@ return {
       }
     }
   },
+  frozen_patch = {
+    east = {
+      filename = "__space-age__/graphics/entity/frozen/pump/pump.png",
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+      width = 128,
+      x = 128
+    },
+    north = {
+      filename = "__space-age__/graphics/entity/frozen/pump/pump.png",
+      height = 192,
+      priority = "extra-high",
+      scale = 0.5,
+      width = 128
+    },
+    south = {
+      filename = "__space-age__/graphics/entity/frozen/pump/pump.png",
+      height = 192,
+      priority = "extra-high",
+      scale = 0.5,
+      width = 128,
+      x = 256
+    },
+    west = {
+      filename = "__space-age__/graphics/entity/frozen/pump/pump.png",
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+      width = 128,
+      x = 384
+    }
+  },
   glass_pictures = {
     east = {
       filename = "__base__/graphics/entity/pump/pump-east-glass.png",
@@ -2890,6 +2953,7 @@ return {
       width = 192
     }
   },
+  heating_energy = "30kW",
   icon = "__base__/graphics/icons/pump.png",
   icon_draw_specification = {
     scale = 0.5

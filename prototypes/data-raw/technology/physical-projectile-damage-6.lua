@@ -2,11 +2,11 @@ return {
   effects = {
     {
       ammo_category = "bullet",
-      modifier = 0.4,
+      modifier = 0.2,
       type = "ammo-damage"
     },
     {
-      modifier = 0.4,
+      modifier = 0.2,
       turret_id = "gun-turret",
       type = "turret-attack"
     },

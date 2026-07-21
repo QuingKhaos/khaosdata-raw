@@ -560,6 +560,12 @@ return {
       1
     }
   },
+  surface_conditions = {
+    {
+      min = 10,
+      property = "pressure"
+    }
+  },
   target_temperature = 165,
   type = "boiler",
   water_reflection = {

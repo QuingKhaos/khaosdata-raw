@@ -1,6 +1,6 @@
 return {
   allow_productivity = true,
-  category = "crafting-with-fluid",
+  category = "electronics-with-fluid",
   enabled = false,
   energy_required = 10,
   ingredients = {

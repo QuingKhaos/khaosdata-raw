@@ -1,4 +1,10 @@
 return {
+  allowed_effects = {
+    "consumption",
+    "speed",
+    "productivity",
+    "pollution"
+  },
   base_picture = {
     sheets = {
       {
@@ -703,8 +709,19 @@ return {
           }
         }
       }
-    }
+    },
+    frozen_patch = {
+      sheet = {
+        filename = "__space-age__/graphics/entity/frozen/pumpjack/pumpjack.png",
+        height = 256,
+        priority = "extra-high",
+        scale = 0.5,
+        width = 256
+      }
+    },
+    reset_animation_when_frozen = true
   },
+  heating_energy = "50kW",
   icon = "__base__/graphics/icons/pumpjack.png",
   max_health = 200,
   minable = {

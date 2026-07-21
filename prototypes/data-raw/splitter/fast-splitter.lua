@@ -112,6 +112,14 @@ return {
           width = 64
         }
       }
+    },
+    frozen_patch = {
+      direction_count = 20,
+      filename = "__space-age__/graphics/entity/frozen/fast-transport-belt/fast-transport-belt.png",
+      line_length = 1,
+      priority = "extra-high",
+      scale = 0.5,
+      size = 128
     }
   },
   circuit_connector = {
@@ -751,6 +759,40 @@ return {
     "placeable-neutral",
     "player-creation"
   },
+  frozen_patch = {
+    east = {
+      filename = "__space-age__/graphics/entity/frozen/splitter/splitter.png",
+      height = 192,
+      priority = "extra-high",
+      scale = 0.5,
+      width = 128,
+      x = 192
+    },
+    north = {
+      filename = "__space-age__/graphics/entity/frozen/splitter/splitter.png",
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+      width = 192
+    },
+    south = {
+      filename = "__space-age__/graphics/entity/frozen/splitter/splitter.png",
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+      width = 192,
+      x = 320
+    },
+    west = {
+      filename = "__space-age__/graphics/entity/frozen/splitter/splitter.png",
+      height = 192,
+      priority = "extra-high",
+      scale = 0.5,
+      width = 128,
+      x = 512
+    }
+  },
+  heating_energy = "40kW",
   icon = "__base__/graphics/icons/fast-splitter.png",
   icon_draw_specification = {
     scale = 0.5

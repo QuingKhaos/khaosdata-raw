@@ -34,11 +34,11 @@ return {
         1
       },
       {
-        "production-science-pack",
+        "utility-science-pack",
         1
       },
       {
-        "utility-science-pack",
+        "space-science-pack",
         1
       }
     },

@@ -9,5 +9,6 @@ return {
   ["other"] = require("___KHAOSDATA___.prototypes.data-raw.item-group.other"),
   ["production"] = require("___KHAOSDATA___.prototypes.data-raw.item-group.production"),
   ["signals"] = require("___KHAOSDATA___.prototypes.data-raw.item-group.signals"),
+  ["space"] = require("___KHAOSDATA___.prototypes.data-raw.item-group.space"),
   ["tiles"] = require("___KHAOSDATA___.prototypes.data-raw.item-group.tiles"),
 }

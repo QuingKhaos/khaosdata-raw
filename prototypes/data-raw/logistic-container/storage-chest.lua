@@ -285,5 +285,11 @@ return {
       0.5
     }
   },
+  surface_conditions = {
+    {
+      min = 0.1,
+      property = "gravity"
+    }
+  },
   type = "logistic-container"
 }

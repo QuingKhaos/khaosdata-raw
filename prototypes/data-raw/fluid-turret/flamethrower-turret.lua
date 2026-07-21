@@ -4899,6 +4899,12 @@ return {
     }
   },
   shoot_in_prepare_state = false,
+  surface_conditions = {
+    {
+      min = 10,
+      property = "pressure"
+    }
+  },
   turret_base_has_direction = true,
   type = "fluid-turret"
 }

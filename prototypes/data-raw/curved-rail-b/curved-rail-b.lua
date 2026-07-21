@@ -1045,6 +1045,12 @@ return {
       0.8
     }
   },
+  surface_conditions = {
+    {
+      min = 1,
+      property = "gravity"
+    }
+  },
   type = "curved-rail-b",
   walking_sound = {
     advanced_volume_control = {

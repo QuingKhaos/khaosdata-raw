@@ -81,7 +81,8 @@ return {
       overlay_enabled = false,
       spritesheet = "__base__/graphics/terrain/out-of-map-transition/water-shallow-out-of-map-transition.png",
       to_tiles = {
-        "out-of-map"
+        "out-of-map",
+        "empty-space"
       },
       transition_group = 2
     }

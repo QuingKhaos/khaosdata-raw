@@ -112,6 +112,14 @@ return {
           width = 64
         }
       }
+    },
+    frozen_patch = {
+      direction_count = 20,
+      filename = "__space-age__/graphics/entity/frozen/express-transport-belt/express-transport-belt.png",
+      line_length = 1,
+      priority = "extra-high",
+      scale = 0.5,
+      size = 128
     }
   },
   circuit_connector = {
@@ -852,6 +860,7 @@ return {
     "placeable-neutral",
     "player-creation"
   },
+  heating_energy = "10kW",
   icon = "__base__/graphics/icons/express-transport-belt.png",
   max_health = 170,
   minable = {
@@ -859,6 +868,7 @@ return {
     result = "express-transport-belt"
   },
   name = "express-transport-belt",
+  next_upgrade = "turbo-transport-belt",
   open_sound = {
     filename = "__base__/sound/open-close/transport-belt-open.ogg",
     volume = 0.7

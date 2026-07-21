@@ -926,6 +926,12 @@ return {
       0.8
     }
   },
+  surface_conditions = {
+    {
+      min = 1,
+      property = "gravity"
+    }
+  },
   type = "legacy-straight-rail",
   walking_sound = {
     advanced_volume_control = {

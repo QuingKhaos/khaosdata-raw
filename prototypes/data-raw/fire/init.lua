@@ -7,7 +7,10 @@ return {
   ["acid-splash-fire-worm-big"] = require("___KHAOSDATA___.prototypes.data-raw.fire.acid-splash-fire-worm-big"),
   ["acid-splash-fire-worm-medium"] = require("___KHAOSDATA___.prototypes.data-raw.fire.acid-splash-fire-worm-medium"),
   ["acid-splash-fire-worm-small"] = require("___KHAOSDATA___.prototypes.data-raw.fire.acid-splash-fire-worm-small"),
+  ["big-acid-splash-fire-stomper"] = require("___KHAOSDATA___.prototypes.data-raw.fire.big-acid-splash-fire-stomper"),
   ["crash-site-fire-flame"] = require("___KHAOSDATA___.prototypes.data-raw.fire.crash-site-fire-flame"),
   ["fire-flame"] = require("___KHAOSDATA___.prototypes.data-raw.fire.fire-flame"),
   ["fire-flame-on-tree"] = require("___KHAOSDATA___.prototypes.data-raw.fire.fire-flame-on-tree"),
+  ["medium-acid-splash-fire-stomper"] = require("___KHAOSDATA___.prototypes.data-raw.fire.medium-acid-splash-fire-stomper"),
+  ["small-acid-splash-fire-stomper"] = require("___KHAOSDATA___.prototypes.data-raw.fire.small-acid-splash-fire-stomper"),
 }

@@ -1,5 +1,6 @@
 return {
   allow_productivity = true,
+  allow_quality = false,
   category = "chemistry",
   crafting_machine_tint = {
     primary = {

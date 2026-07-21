@@ -1,7 +1,7 @@
 return {
   allow_productivity = true,
   auto_recycle = false,
-  category = "chemistry",
+  category = "chemistry-or-cryogenics",
   crafting_machine_tint = {
     primary = {
       a = 1,

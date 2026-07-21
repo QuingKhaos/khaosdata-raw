@@ -580,6 +580,12 @@ return {
       0.8
     }
   },
+  surface_conditions = {
+    {
+      min = 1,
+      property = "gravity"
+    }
+  },
   tile_height = 2,
   type = "half-diagonal-rail",
   walking_sound = {

@@ -67,6 +67,22 @@ return {
     {
       recipe = "empty-lubricant-barrel",
       type = "unlock-recipe"
+    },
+    {
+      recipe = "fluoroketone-cold-barrel",
+      type = "unlock-recipe"
+    },
+    {
+      recipe = "empty-fluoroketone-cold-barrel",
+      type = "unlock-recipe"
+    },
+    {
+      recipe = "fluoroketone-hot-barrel",
+      type = "unlock-recipe"
+    },
+    {
+      recipe = "empty-fluoroketone-hot-barrel",
+      type = "unlock-recipe"
     }
   },
   icon = "__base__/graphics/technology/fluid-handling.png",

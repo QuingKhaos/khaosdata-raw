@@ -379,6 +379,12 @@ return {
     }
   },
   stop_trigger_speed = 0.1,
+  surface_conditions = {
+    {
+      min = 1,
+      property = "gravity"
+    }
+  },
   tank_driving = true,
   terrain_friction_modifier = 0.2,
   track_particle_triggers = {

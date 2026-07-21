@@ -568,6 +568,16 @@ return {
         }
       }
     },
+    frozen_patch = {
+      filename = "__space-age__/graphics/entity/frozen/electric-furnace/electric-furnace.png",
+      height = 219,
+      scale = 0.5,
+      shift = {
+        0.0234375,
+        0.1796875
+      },
+      width = 239
+    },
     water_reflection = {
       orientation_to_variation = false,
       pictures = {
@@ -666,6 +676,7 @@ return {
       }
     }
   },
+  heating_energy = "100kW",
   icon = "__base__/graphics/icons/electric-furnace.png",
   icon_draw_specification = {
     shift = {

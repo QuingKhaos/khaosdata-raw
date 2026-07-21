@@ -3533,6 +3533,12 @@ return {
       1.5
     }
   },
+  surface_conditions = {
+    {
+      min = 1,
+      property = "gravity"
+    }
+  },
   torso_rotation_speed = 0.005,
   trash_inventory_size = 20,
   type = "spider-vehicle",

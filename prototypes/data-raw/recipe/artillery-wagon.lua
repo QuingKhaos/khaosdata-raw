@@ -3,28 +3,28 @@ return {
   energy_required = 4,
   ingredients = {
     {
-      amount = 64,
+      amount = 60,
       name = "engine-unit",
       type = "item"
     },
     {
-      amount = 10,
-      name = "iron-gear-wheel",
+      amount = 60,
+      name = "tungsten-plate",
+      type = "item"
+    },
+    {
+      amount = 60,
+      name = "refined-concrete",
       type = "item"
     },
     {
       amount = 40,
-      name = "steel-plate",
+      name = "iron-gear-wheel",
       type = "item"
     },
     {
-      amount = 16,
-      name = "pipe",
-      type = "item"
-    },
-    {
-      amount = 20,
-      name = "advanced-circuit",
+      amount = 10,
+      name = "processing-unit",
       type = "item"
     }
   },

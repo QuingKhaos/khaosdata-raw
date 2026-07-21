@@ -1431,6 +1431,573 @@ return {
           }
         }
       }
+    },
+    {
+      armors = {
+        "mech-armor"
+      },
+      extra_smoke_cycles_per_tile = 1.5,
+      idle_with_gun = {
+        layers = {
+          {
+            animation_speed = 0.16000000000000001,
+            direction_count = 8,
+            filename = "__space-age__/graphics/entity/mech-armor/mech-idle.png",
+            frame_count = 22,
+            frame_sequence = {
+              1,
+              2,
+              3,
+              4,
+              4,
+              3,
+              2,
+              1,
+              1,
+              2,
+              3,
+              4,
+              4,
+              3,
+              2,
+              1,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22
+            },
+            height = 176,
+            line_length = 11,
+            scale = 0.5,
+            shift = {
+              0.03125,
+              -0.796875
+            },
+            usage = "player",
+            width = 142
+          },
+          {
+            animation_speed = 0.16000000000000001,
+            apply_runtime_tint = true,
+            direction_count = 8,
+            filename = "__space-age__/graphics/entity/mech-armor/mech-idle-mask.png",
+            frame_count = 22,
+            frame_sequence = {
+              1,
+              2,
+              3,
+              4,
+              4,
+              3,
+              2,
+              1,
+              1,
+              2,
+              3,
+              4,
+              4,
+              3,
+              2,
+              1,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22
+            },
+            height = 150,
+            line_length = 11,
+            scale = 0.5,
+            shift = {
+              0.015625,
+              -1
+            },
+            usage = "player",
+            width = 134
+          },
+          {
+            animation_speed = 0.16000000000000001,
+            direction_count = 8,
+            draw_as_shadow = true,
+            filename = "__space-age__/graphics/entity/mech-armor/mech-idle-shadow.png",
+            frame_count = 22,
+            frame_sequence = {
+              1,
+              2,
+              3,
+              4,
+              4,
+              3,
+              2,
+              1,
+              1,
+              2,
+              3,
+              4,
+              4,
+              3,
+              2,
+              1,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22
+            },
+            height = 94,
+            line_length = 11,
+            scale = 0.5,
+            shift = {
+              1.234375,
+              0.03125
+            },
+            usage = "player",
+            width = 226
+          }
+        }
+      },
+      idle_with_gun_in_air = {
+        layers = {
+          {
+            animation_speed = 0.2,
+            direction_count = 8,
+            filename = "__space-age__/graphics/entity/mech-armor/mech-idle-air.png",
+            frame_count = 5,
+            height = 168,
+            line_length = 5,
+            scale = 0.5,
+            shift = {
+              0,
+              -0.96875
+            },
+            usage = "player",
+            width = 160
+          },
+          {
+            animation_speed = 0.2,
+            apply_runtime_tint = true,
+            direction_count = 8,
+            filename = "__space-age__/graphics/entity/mech-armor/mech-idle-air-mask.png",
+            frame_count = 5,
+            height = 130,
+            line_length = 5,
+            scale = 0.5,
+            shift = {
+              0,
+              -1.265625
+            },
+            usage = "player",
+            width = 156
+          },
+          {
+            animation_speed = 0.2,
+            direction_count = 8,
+            draw_as_shadow = true,
+            filename = "__space-age__/graphics/entity/mech-armor/mech-idle-air-shadow.png",
+            frame_count = 5,
+            height = 112,
+            line_length = 5,
+            scale = 0.5,
+            shift = {
+              1.640625,
+              0
+            },
+            usage = "player",
+            width = 190
+          },
+          {
+            animation_speed = 0.2,
+            blend_mode = "additive",
+            direction_count = 8,
+            draw_as_light = true,
+            filename = "__space-age__/graphics/entity/mech-armor/mech-idle-air-light.png",
+            frame_count = 5,
+            height = 166,
+            line_length = 5,
+            scale = 0.5,
+            shift = {
+              -0.015625,
+              -0.96875
+            },
+            usage = "player",
+            width = 144
+          }
+        }
+      },
+      landing = {
+        layers = {
+          {
+            animation_speed = 0.6,
+            direction_count = 8,
+            filename = "__space-age__/graphics/entity/mech-armor/mech-descend.png",
+            frame_count = 16,
+            height = 212,
+            line_length = 10,
+            scale = 0.5,
+            shift = {
+              0,
+              -0.78125
+            },
+            usage = "player",
+            width = 192
+          },
+          {
+            animation_speed = 0.6,
+            apply_runtime_tint = true,
+            direction_count = 8,
+            filename = "__space-age__/graphics/entity/mech-armor/mech-descend-mask.png",
+            frame_count = 16,
+            height = 186,
+            line_length = 10,
+            scale = 0.5,
+            shift = {
+              0,
+              -0.984375
+            },
+            usage = "player",
+            width = 188
+          },
+          {
+            animation_speed = 0.6,
+            direction_count = 8,
+            draw_as_shadow = true,
+            filename = "__space-age__/graphics/entity/mech-armor/mech-descend-shadow.png",
+            frame_count = 16,
+            height = 134,
+            line_length = 10,
+            scale = 0.5,
+            shift = {
+              1.1875,
+              0
+            },
+            usage = "player",
+            width = 276
+          },
+          {
+            animation_speed = 0.6,
+            blend_mode = "additive",
+            direction_count = 8,
+            draw_as_light = true,
+            filename = "__space-age__/graphics/entity/mech-armor/mech-descend-light.png",
+            frame_count = 16,
+            height = 194,
+            line_length = 10,
+            scale = 0.5,
+            shift = {
+              0,
+              -0.734375
+            },
+            usage = "player",
+            width = 154
+          }
+        }
+      },
+      mining_with_tool = {
+        layers = {
+          {
+            animation_speed = 0.45,
+            direction_count = 8,
+            filenames = {
+              "__space-age__/graphics/entity/mech-armor/mech-mining-1.png",
+              "__space-age__/graphics/entity/mech-armor/mech-mining-2.png"
+            },
+            frame_count = 27,
+            height = 236,
+            line_length = 9,
+            lines_per_file = 12,
+            scale = 0.5,
+            shift = {
+              0,
+              -1.28125
+            },
+            usage = "player",
+            width = 208
+          },
+          {
+            animation_speed = 0.45,
+            apply_runtime_tint = true,
+            direction_count = 8,
+            filenames = {
+              "__space-age__/graphics/entity/mech-armor/mech-mining-mask-1.png",
+              "__space-age__/graphics/entity/mech-armor/mech-mining-mask-2.png"
+            },
+            frame_count = 27,
+            height = 226,
+            line_length = 9,
+            lines_per_file = 12,
+            scale = 0.5,
+            shift = {
+              0.015625,
+              -1.328125
+            },
+            usage = "player",
+            width = 200
+          },
+          {
+            animation_speed = 0.45,
+            direction_count = 8,
+            draw_as_shadow = true,
+            filename = "__space-age__/graphics/entity/mech-armor/mech-mining-shadow.png",
+            frame_count = 27,
+            height = 146,
+            line_length = 9,
+            scale = 0.5,
+            shift = {
+              1.796875,
+              0
+            },
+            usage = "player",
+            width = 316
+          }
+        }
+      },
+      mining_with_tool_particles_animation_positions = {
+        10,
+        25
+      },
+      running_with_gun = {
+        layers = {
+          {
+            animation_speed = 0.37000000000000002,
+            direction_count = 40,
+            filenames = {
+              "__space-age__/graphics/entity/mech-armor/mech-run-1.png",
+              "__space-age__/graphics/entity/mech-armor/mech-run-2.png",
+              "__space-age__/graphics/entity/mech-armor/mech-run-3.png",
+              "__space-age__/graphics/entity/mech-armor/mech-run-4.png",
+              "__space-age__/graphics/entity/mech-armor/mech-run-5.png"
+            },
+            frame_count = 22,
+            height = 224,
+            line_length = 11,
+            lines_per_file = 16,
+            scale = 0.5,
+            shift = {
+              0,
+              -0.625
+            },
+            usage = "player",
+            width = 220
+          },
+          {
+            animation_speed = 0.37000000000000002,
+            apply_runtime_tint = true,
+            direction_count = 40,
+            filenames = {
+              "__space-age__/graphics/entity/mech-armor/mech-run-mask-1.png",
+              "__space-age__/graphics/entity/mech-armor/mech-run-mask-2.png",
+              "__space-age__/graphics/entity/mech-armor/mech-run-mask-3.png",
+              "__space-age__/graphics/entity/mech-armor/mech-run-mask-4.png"
+            },
+            frame_count = 22,
+            height = 174,
+            line_length = 11,
+            lines_per_file = 20,
+            scale = 0.5,
+            shift = {
+              0,
+              -0.984375
+            },
+            usage = "player",
+            width = 212
+          },
+          {
+            animation_speed = 0.37000000000000002,
+            direction_count = 40,
+            draw_as_shadow = true,
+            filenames = {
+              "__space-age__/graphics/entity/mech-armor/mech-run-shadow-1.png",
+              "__space-age__/graphics/entity/mech-armor/mech-run-shadow-2.png",
+              "__space-age__/graphics/entity/mech-armor/mech-run-shadow-3.png",
+              "__space-age__/graphics/entity/mech-armor/mech-run-shadow-4.png"
+            },
+            frame_count = 22,
+            height = 154,
+            line_length = 11,
+            lines_per_file = 20,
+            scale = 0.5,
+            shift = {
+              1.03125,
+              0
+            },
+            usage = "player",
+            width = 290
+          }
+        }
+      },
+      smoke_cycles_per_tick = 0.25,
+      smoke_in_air = {
+        {
+          deviation = {
+            0.2,
+            0.2
+          },
+          east_position = {
+            -0.9,
+            0.75
+          },
+          frequency = 5,
+          has_8_directions = true,
+          height = 1,
+          name = "mech-armor-smoke",
+          north_east_position = {
+            -0.53029999999999999,
+            0.8838000000000001
+          },
+          north_position = {
+            0,
+            1.1499999999999999
+          },
+          north_west_position = {
+            0.38380000000000001,
+            1.0303
+          },
+          position = {
+            0.25,
+            1
+          },
+          south_east_position = {
+            -0.38380000000000001,
+            -0.030299999999999994
+          },
+          south_position = {
+            0,
+            0.5
+          },
+          south_west_position = {
+            0.53029999999999999,
+            -0.38380000000000001
+          },
+          starting_frame = 0,
+          starting_frame_deviation = 60,
+          starting_vertical_speed = -0.1,
+          starting_vertical_speed_deviation = 0.04,
+          west_position = {
+            1,
+            0.75
+          }
+        }
+      },
+      take_off = {
+        layers = {
+          {
+            animation_speed = 0.6,
+            direction_count = 8,
+            filename = "__space-age__/graphics/entity/mech-armor/mech-uplift.png",
+            frame_count = 16,
+            height = 206,
+            line_length = 10,
+            scale = 0.5,
+            shift = {
+              0,
+              -0.921875
+            },
+            usage = "player",
+            width = 182
+          },
+          {
+            animation_speed = 0.6,
+            apply_runtime_tint = true,
+            direction_count = 8,
+            filename = "__space-age__/graphics/entity/mech-armor/mech-uplift-mask.png",
+            frame_count = 16,
+            height = 176,
+            line_length = 10,
+            scale = 0.5,
+            shift = {
+              0,
+              -1.15625
+            },
+            usage = "player",
+            width = 176
+          },
+          {
+            animation_speed = 0.6,
+            direction_count = 8,
+            draw_as_shadow = true,
+            filename = "__space-age__/graphics/entity/mech-armor/mech-uplift-shadow.png",
+            frame_count = 16,
+            height = 128,
+            line_length = 10,
+            scale = 0.5,
+            shift = {
+              1.390625,
+              0
+            },
+            usage = "player",
+            width = 266
+          },
+          {
+            animation_speed = 0.6,
+            blend_mode = "additive",
+            direction_count = 8,
+            draw_as_light = true,
+            filename = "__space-age__/graphics/entity/mech-armor/mech-uplift-light.png",
+            frame_count = 16,
+            height = 176,
+            line_length = 10,
+            scale = 0.5,
+            shift = {
+              0,
+              -0.953125
+            },
+            usage = "player",
+            width = 172
+          }
+        }
+      }
     }
   },
   build_distance = 10,
@@ -1446,7 +2013,12 @@ return {
     }
   },
   crafting_categories = {
-    "crafting"
+    "crafting",
+    "electronics",
+    "pressing",
+    "recycling-or-hand-crafting",
+    "organic-or-hand-crafting",
+    "organic-or-assembling"
   },
   damage_hit_tint = {
     0.12,
@@ -1629,7 +2201,15 @@ return {
       tail_length = 3,
       tiles = {
         "water-shallow",
-        "water-shallow"
+        "wetland-blue-slime",
+        "wetland-light-green-slime",
+        "wetland-green-slime",
+        "wetland-light-dead-skin",
+        "wetland-dead-skin",
+        "wetland-pink-tentacle",
+        "wetland-red-tentacle",
+        "wetland-yumako",
+        "wetland-jellynut"
       },
       type = "create-particle"
     },

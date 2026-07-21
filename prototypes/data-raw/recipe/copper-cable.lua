@@ -1,5 +1,6 @@
 return {
   allow_productivity = true,
+  category = "electronics",
   enabled = false,
   ingredients = {
     {

@@ -63,6 +63,7 @@ return {
   ["signal-alert"] = require("___KHAOSDATA___.prototypes.data-raw.virtual-signal.signal-alert"),
   ["signal-ampersand"] = require("___KHAOSDATA___.prototypes.data-raw.virtual-signal.signal-ampersand"),
   ["signal-anticlockwise-circle-arrow"] = require("___KHAOSDATA___.prototypes.data-raw.virtual-signal.signal-anticlockwise-circle-arrow"),
+  ["signal-any-quality"] = require("___KHAOSDATA___.prototypes.data-raw.virtual-signal.signal-any-quality"),
   ["signal-anything"] = require("___KHAOSDATA___.prototypes.data-raw.virtual-signal.signal-anything"),
   ["signal-apostrophe"] = require("___KHAOSDATA___.prototypes.data-raw.virtual-signal.signal-apostrophe"),
   ["signal-battery-full"] = require("___KHAOSDATA___.prototypes.data-raw.virtual-signal.signal-battery-full"),

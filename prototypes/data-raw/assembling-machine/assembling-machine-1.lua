@@ -617,7 +617,9 @@ return {
   crafting_categories = {
     "crafting",
     "basic-crafting",
-    "advanced-crafting"
+    "advanced-crafting",
+    "electronics",
+    "pressing"
   },
   crafting_speed = 0.5,
   damaged_trigger_effect = {
@@ -692,8 +694,21 @@ return {
           width = 190
         }
       }
-    }
+    },
+    frozen_patch = {
+      filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-1-frozen.png",
+      height = 226,
+      priority = "high",
+      scale = 0.5,
+      shift = {
+        0,
+        0.0625
+      },
+      width = 214
+    },
+    reset_animation_when_frozen = true
   },
+  heating_energy = "100kW",
   icon = "__base__/graphics/icons/assembling-machine-1.png",
   icon_draw_specification = {
     shift = {

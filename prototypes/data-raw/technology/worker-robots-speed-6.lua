@@ -21,15 +21,15 @@ return {
       }
     }
   },
-  max_level = "infinite",
   name = "worker-robots-speed-6",
+  order = "c-k-f-f",
   prerequisites = {
     "worker-robots-speed-5",
     "space-science-pack"
   },
   type = "technology",
   unit = {
-    count_formula = "2^(L-6)*1000",
+    count = 1000,
     ingredients = {
       {
         "automation-science-pack",

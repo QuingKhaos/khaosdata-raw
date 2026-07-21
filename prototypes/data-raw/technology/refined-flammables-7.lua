@@ -31,7 +31,7 @@ return {
   name = "refined-flammables-7",
   prerequisites = {
     "refined-flammables-6",
-    "space-science-pack"
+    "agricultural-science-pack"
   },
   type = "technology",
   unit = {
@@ -59,6 +59,10 @@ return {
       },
       {
         "space-science-pack",
+        1
+      },
+      {
+        "agricultural-science-pack",
         1
       }
     },

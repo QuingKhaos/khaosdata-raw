@@ -416,6 +416,301 @@ return {
         width = 270
       },
       index = 202
+    },
+    {
+      index = 1,
+      sprite = {
+        filename = "__space-age__/graphics/entity/cargo-pod/pod-static-attached.png",
+        height = 172,
+        line_length = 1,
+        priority = "medium",
+        scale = 0.5,
+        shift = {
+          0.03125,
+          0.09375
+        },
+        width = 78
+      }
+    },
+    {
+      index = 100,
+      sprite = {
+        filename = "__space-age__/graphics/entity/cargo-pod/rocket-opening-base.png",
+        flags = {
+          "group=effect-texture",
+          "linear-minification",
+          "linear-magnification"
+        },
+        height = 572,
+        line_length = 1,
+        priority = "no-atlas",
+        scale = 0.5,
+        shift = {
+          -0.125,
+          1.546875
+        },
+        width = 308
+      }
+    },
+    {
+      animation = {
+        filename = "__space-age__/graphics/entity/cargo-pod/rocket-opening-back.png",
+        flags = {
+          "group=effect-texture",
+          "linear-minification",
+          "linear-magnification"
+        },
+        frame_count = 20,
+        height = 326,
+        line_length = 4,
+        priority = "no-atlas",
+        scale = 0.5,
+        shift = {
+          -0.375,
+          -3.953125
+        },
+        width = 316
+      },
+      index = 102
+    },
+    {
+      animation = {
+        filename = "__space-age__/graphics/entity/cargo-pod/rocket-opening-front.png",
+        flags = {
+          "group=effect-texture",
+          "linear-minification",
+          "linear-magnification"
+        },
+        frame_count = 20,
+        height = 266,
+        line_length = 4,
+        priority = "no-atlas",
+        scale = 0.5,
+        shift = {
+          -0.609375,
+          -3.015625
+        },
+        width = 288
+      },
+      index = 101
+    },
+    {
+      animation = {
+        blend_mode = "additive",
+        draw_as_glow = true,
+        filename = "__space-age__/graphics/entity/cargo-pod/rocket-backblast-back.png",
+        flags = {
+          "group=effect-texture",
+          "linear-minification",
+          "linear-magnification"
+        },
+        height = 528,
+        line_length = 1,
+        priority = "no-atlas",
+        scale = 0.5,
+        shift = {
+          -0.0625,
+          -2.34375
+        },
+        width = 268
+      },
+      index = 123
+    },
+    {
+      animation = {
+        blend_mode = "additive",
+        draw_as_glow = true,
+        filename = "__space-age__/graphics/entity/cargo-pod/rocket-backblast-front.png",
+        flags = {
+          "group=effect-texture",
+          "linear-minification",
+          "linear-magnification"
+        },
+        height = 244,
+        line_length = 1,
+        priority = "no-atlas",
+        scale = 0.5,
+        shift = {
+          -0.59375,
+          -2.984375
+        },
+        width = 278
+      },
+      index = 124
+    },
+    {
+      index = 121,
+      sprite = {
+        blend_mode = "additive",
+        draw_as_glow = true,
+        filename = "__base__/graphics/entity/rocket-silo/rocket-static-emission.png",
+        flags = {
+          "group=effect-texture",
+          "linear-minification",
+          "linear-magnification"
+        },
+        height = 668,
+        line_length = 1,
+        priority = "no-atlas",
+        scale = 0.5,
+        shift = {
+          -0.125,
+          0.765625
+        },
+        width = 306
+      }
+    },
+    {
+      index = 120,
+      sprite = {
+        blend_mode = "additive",
+        draw_as_glow = true,
+        filename = "__base__/graphics/entity/rocket-silo/03-rocket-over-glare.png",
+        flags = {
+          "linear-magnification",
+          "linear-minification"
+        },
+        height = 481,
+        shift = {
+          -0.0625,
+          6.71875
+        },
+        width = 481
+      }
+    },
+    {
+      animation = {
+        animation_speed = 0.5,
+        blend_mode = "additive",
+        draw_as_glow = true,
+        filename = "__base__/graphics/entity/rocket-silo/rocket-jet.png",
+        frame_count = 8,
+        height = 288,
+        line_length = 4,
+        priority = "medium",
+        scale = 0.5,
+        shift = {
+          -0.234375,
+          6.734375
+        },
+        width = 290
+      },
+      index = 122
+    },
+    {
+      animation = {
+        animation_speed = 0.5,
+        filename = "__base__/graphics/entity/rocket-silo/12-rocket-smoke.png",
+        frame_count = 24,
+        height = 286,
+        line_length = 8,
+        priority = "medium",
+        scale = 0.975,
+        shift = {
+          -2.09375,
+          4.3125
+        },
+        tint = {
+          0.8,
+          0.8,
+          1,
+          0.8
+        },
+        width = 80
+      },
+      index = 140
+    },
+    {
+      animation = {
+        animation_speed = 0.5,
+        filename = "__base__/graphics/entity/rocket-silo/12-rocket-smoke.png",
+        frame_count = 24,
+        height = 286,
+        line_length = 8,
+        priority = "medium",
+        scale = 0.975,
+        shift = {
+          0.5,
+          5.34375
+        },
+        tint = {
+          0.8,
+          0.8,
+          1,
+          0.8
+        },
+        width = 80
+      },
+      index = 141
+    },
+    {
+      animation = {
+        animation_speed = 0.5,
+        filename = "__base__/graphics/entity/rocket-silo/12-rocket-smoke.png",
+        frame_count = 24,
+        height = 286,
+        line_length = 8,
+        priority = "medium",
+        scale = 0.975,
+        shift = {
+          1.46875,
+          4.9375
+        },
+        tint = {
+          0.8,
+          0.8,
+          1,
+          0.8
+        },
+        width = 80
+      },
+      index = 142
+    },
+    {
+      animation = {
+        animation_speed = 0.5,
+        filename = "__base__/graphics/entity/rocket-silo/12-rocket-smoke.png",
+        frame_count = 24,
+        height = 286,
+        line_length = 8,
+        priority = "medium",
+        scale = 0.975,
+        shift = {
+          -2.1875,
+          3.46875
+        },
+        tint = {
+          0.8,
+          0.8,
+          1,
+          0.8
+        },
+        width = 80
+      },
+      index = 143
+    },
+    {
+      animation = {
+        animation_speed = 0.5,
+        filename = "__base__/graphics/entity/rocket-silo/12-rocket-smoke.png",
+        frame_count = 24,
+        height = 286,
+        line_length = 8,
+        priority = "medium",
+        scale = 0.975,
+        shift = {
+          1.90625,
+          3.53125
+        },
+        tint = {
+          0.8,
+          0.8,
+          1,
+          0.8
+        },
+        width = 80
+      },
+      index = 144
     }
   },
   selection_box = {
@@ -430,5 +725,6 @@ return {
   },
   shadow_slave_entity = "cargo-pod-shadow",
   spawned_container = "cargo-pod-container",
+  subgroup = "space-interactors",
   type = "cargo-pod"
 }

@@ -1,4 +1,5 @@
 return {
+  category = "pressing",
   enabled = false,
   ingredients = {
     {

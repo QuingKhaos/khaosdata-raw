@@ -477,6 +477,7 @@ return {
     "player-creation"
   },
   gun = "artillery-wagon-cannon",
+  heating_energy = "200kW",
   icon = "__base__/graphics/icons/artillery-turret.png",
   inventory_size = 1,
   manual_range_modifier = 2.5,
