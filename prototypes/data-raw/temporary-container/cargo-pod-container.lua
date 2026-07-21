@@ -111,5 +111,6 @@ return {
       1.5
     }
   },
+  subgroup = "space-interactors",
   type = "temporary-container"
 }

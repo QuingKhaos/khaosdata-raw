@@ -965,6 +965,32 @@ return {
     },
     filename = "__core__/sound/scenario-message.ogg"
   },
+  segment_dying_sound = {
+    aggregation = {
+      count_already_playing = true,
+      max_count = 1,
+      remove = true
+    },
+    category = "enemy",
+    variations = {
+      {
+        filename = "__space-age__/sound/enemies/demolisher/demolisher-death-1.ogg",
+        modifiers = {
+          type = "main-menu",
+          volume_multiplier = 0.5
+        },
+        volume = 1
+      },
+      {
+        filename = "__space-age__/sound/enemies/demolisher/demolisher-death-2.ogg",
+        modifiers = {
+          type = "main-menu",
+          volume_multiplier = 0.5
+        },
+        volume = 1
+      }
+    }
+  },
   smart_pipette = {
     aggregation = {
       max_count = 3,

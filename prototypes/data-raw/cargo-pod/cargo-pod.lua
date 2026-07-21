@@ -21,7 +21,8 @@ return {
     type = "pod-catalogue"
   },
   factoriopedia_simulation = {
-    init = "    game.simulation.camera_position = {0, 0}\n    rendering.draw_sprite{sprite = \"cargo-pod-factoriopedia\", target = {0, 0}, surface = game.surfaces[1]}\n  "
+    hide_factoriopedia_gradient = true,
+    init = "    game.simulation.camera_position = {0, 0}\n    for x = -8, 8, 1 do\n      for y = -3, 3 do\n        game.surfaces[1].set_tiles{{position = {x, y}, name = \"empty-space\"}}\n      end\n    end\n    rendering.draw_sprite{sprite = \"cargo-pod-factoriopedia\", target = {0, 0}, surface = game.surfaces[1]}\n  "
   },
   flags = {
     "not-on-map"
@@ -444,6 +445,429 @@ return {
       },
       index = 201,
       type = "sprite"
+    },
+    {
+      index = 1,
+      sprite = {
+        filename = "__space-age__/graphics/entity/cargo-pod/pod-static-attached.png",
+        height = 172,
+        line_length = 1,
+        priority = "medium",
+        scale = 0.5,
+        shift = {
+          0.03125,
+          0.09375
+        },
+        width = 78
+      }
+    },
+    {
+      animation = {
+        filename = "__space-age__/graphics/entity/cargo-pod/pod-closed-rotation.png",
+        frame_count = 59,
+        height = 172,
+        line_length = 12,
+        priority = "medium",
+        scale = 0.5,
+        shift = {
+          0,
+          0.09375
+        },
+        width = 82
+      },
+      index = 7
+    },
+    {
+      animation = {
+        blend_mode = "additive",
+        filename = "__space-age__/graphics/entity/cargo-pod/pod-closed-rotation-emission.png",
+        frame_count = 59,
+        height = 146,
+        line_length = 12,
+        priority = "medium",
+        scale = 0.5,
+        shift = {
+          0,
+          0.265625
+        },
+        width = 80
+      },
+      index = 8
+    },
+    {
+      animation = {
+        filename = "__space-age__/graphics/entity/cargo-pod/pod-open-rotation.png",
+        frame_count = 60,
+        height = 248,
+        line_length = 12,
+        priority = "medium",
+        scale = 0.5,
+        shift = {
+          0,
+          0.078125
+        },
+        width = 236
+      },
+      index = 11
+    },
+    {
+      animation = {
+        blend_mode = "additive",
+        filename = "__space-age__/graphics/entity/cargo-pod/pod-open-rotation-emission.png",
+        frame_count = 60,
+        height = 240,
+        line_length = 12,
+        priority = "medium",
+        scale = 0.5,
+        shift = {
+          0,
+          0.125
+        },
+        width = 234
+      },
+      index = 12
+    },
+    {
+      animation = {
+        animation_speed = 0.5,
+        blend_mode = "additive",
+        draw_as_glow = true,
+        filename = "__space-age__/graphics/entity/cargo-pod/pod-open-reentry-flame.png",
+        frame_count = 30,
+        height = 360,
+        line_length = 10,
+        priority = "medium",
+        scale = 0.5,
+        shift = {
+          -0.109375,
+          -0.640625
+        },
+        width = 278
+      },
+      index = 202
+    },
+    {
+      animation = {
+        filename = "__space-age__/graphics/entity/cargo-pod/vct_single.png",
+        flags = {
+          "group=procession",
+          "linear-minification",
+          "linear-magnification"
+        },
+        frame_count = 20,
+        height = 25,
+        line_length = 4,
+        scale = 1,
+        shift = {
+          -1.203125,
+          -0.046875
+        },
+        width = 59
+      },
+      index = 210,
+      type = "sprite"
+    },
+    {
+      animation = {
+        filename = "__space-age__/graphics/entity/cargo-pod/vct_single_strong.png",
+        flags = {
+          "group=procession",
+          "linear-minification",
+          "linear-magnification"
+        },
+        frame_count = 20,
+        height = 25,
+        line_length = 4,
+        scale = 0.7,
+        shift = {
+          -0.734375,
+          -0.046875
+        },
+        width = 59
+      },
+      index = 211,
+      type = "sprite"
+    },
+    {
+      index = 100,
+      sprite = {
+        filename = "__space-age__/graphics/entity/cargo-pod/rocket-opening-base.png",
+        flags = {
+          "group=procession",
+          "linear-minification",
+          "linear-magnification"
+        },
+        height = 572,
+        line_length = 1,
+        priority = "medium",
+        scale = 0.5,
+        shift = {
+          -0.125,
+          1.546875
+        },
+        width = 308
+      }
+    },
+    {
+      animation = {
+        filename = "__space-age__/graphics/entity/cargo-pod/rocket-opening-back.png",
+        flags = {
+          "group=procession",
+          "linear-minification",
+          "linear-magnification"
+        },
+        frame_count = 20,
+        height = 326,
+        line_length = 4,
+        priority = "medium",
+        scale = 0.5,
+        shift = {
+          -0.375,
+          -3.953125
+        },
+        width = 316
+      },
+      index = 102
+    },
+    {
+      animation = {
+        filename = "__space-age__/graphics/entity/cargo-pod/rocket-opening-front.png",
+        flags = {
+          "group=procession",
+          "linear-minification",
+          "linear-magnification"
+        },
+        frame_count = 20,
+        height = 266,
+        line_length = 4,
+        priority = "medium",
+        scale = 0.5,
+        shift = {
+          -0.609375,
+          -3.015625
+        },
+        width = 288
+      },
+      index = 101
+    },
+    {
+      animation = {
+        blend_mode = "additive",
+        draw_as_glow = true,
+        filename = "__space-age__/graphics/entity/cargo-pod/rocket-backblast-back.png",
+        flags = {
+          "group=procession",
+          "linear-minification",
+          "linear-magnification"
+        },
+        height = 528,
+        line_length = 1,
+        priority = "medium",
+        scale = 0.5,
+        shift = {
+          -0.0625,
+          -2.34375
+        },
+        width = 268
+      },
+      index = 123
+    },
+    {
+      animation = {
+        blend_mode = "additive",
+        draw_as_glow = true,
+        filename = "__space-age__/graphics/entity/cargo-pod/rocket-backblast-front.png",
+        flags = {
+          "group=procession",
+          "linear-minification",
+          "linear-magnification"
+        },
+        height = 244,
+        line_length = 1,
+        priority = "medium",
+        scale = 0.5,
+        shift = {
+          -0.59375,
+          -2.984375
+        },
+        width = 278
+      },
+      index = 124
+    },
+    {
+      index = 121,
+      sprite = {
+        blend_mode = "additive",
+        draw_as_glow = true,
+        filename = "__base__/graphics/entity/rocket-silo/rocket-static-emission.png",
+        flags = {
+          "group=procession",
+          "linear-minification",
+          "linear-magnification"
+        },
+        height = 668,
+        line_length = 1,
+        priority = "medium",
+        scale = 0.5,
+        shift = {
+          -0.125,
+          0.765625
+        },
+        width = 306
+      }
+    },
+    {
+      index = 120,
+      sprite = {
+        blend_mode = "additive",
+        draw_as_glow = true,
+        filename = "__base__/graphics/entity/rocket-silo/03-rocket-over-glare.png",
+        flags = {
+          "group=procession",
+          "linear-minification",
+          "linear-magnification"
+        },
+        height = 481,
+        shift = {
+          -0.0625,
+          6.71875
+        },
+        width = 481
+      }
+    },
+    {
+      animation = {
+        animation_speed = 0.5,
+        blend_mode = "additive",
+        draw_as_glow = true,
+        filename = "__base__/graphics/entity/rocket-silo/rocket-jet.png",
+        frame_count = 8,
+        height = 288,
+        line_length = 4,
+        priority = "medium",
+        scale = 0.5,
+        shift = {
+          -0.234375,
+          6.734375
+        },
+        width = 290
+      },
+      index = 122
+    },
+    {
+      animation = {
+        animation_speed = 0.5,
+        filename = "__base__/graphics/entity/rocket-silo/12-rocket-smoke.png",
+        frame_count = 24,
+        height = 286,
+        line_length = 8,
+        priority = "medium",
+        scale = 0.975,
+        shift = {
+          -2.09375,
+          4.3125
+        },
+        tint = {
+          0.8,
+          0.8,
+          1,
+          0.8
+        },
+        width = 80
+      },
+      index = 140
+    },
+    {
+      animation = {
+        animation_speed = 0.5,
+        filename = "__base__/graphics/entity/rocket-silo/12-rocket-smoke.png",
+        frame_count = 24,
+        height = 286,
+        line_length = 8,
+        priority = "medium",
+        scale = 0.975,
+        shift = {
+          0.5,
+          5.34375
+        },
+        tint = {
+          0.8,
+          0.8,
+          1,
+          0.8
+        },
+        width = 80
+      },
+      index = 141
+    },
+    {
+      animation = {
+        animation_speed = 0.5,
+        filename = "__base__/graphics/entity/rocket-silo/12-rocket-smoke.png",
+        frame_count = 24,
+        height = 286,
+        line_length = 8,
+        priority = "medium",
+        scale = 0.975,
+        shift = {
+          1.46875,
+          4.9375
+        },
+        tint = {
+          0.8,
+          0.8,
+          1,
+          0.8
+        },
+        width = 80
+      },
+      index = 142
+    },
+    {
+      animation = {
+        animation_speed = 0.5,
+        filename = "__base__/graphics/entity/rocket-silo/12-rocket-smoke.png",
+        frame_count = 24,
+        height = 286,
+        line_length = 8,
+        priority = "medium",
+        scale = 0.975,
+        shift = {
+          -2.1875,
+          3.46875
+        },
+        tint = {
+          0.8,
+          0.8,
+          1,
+          0.8
+        },
+        width = 80
+      },
+      index = 143
+    },
+    {
+      animation = {
+        animation_speed = 0.5,
+        filename = "__base__/graphics/entity/rocket-silo/12-rocket-smoke.png",
+        frame_count = 24,
+        height = 286,
+        line_length = 8,
+        priority = "medium",
+        scale = 0.975,
+        shift = {
+          1.90625,
+          3.53125
+        },
+        tint = {
+          0.8,
+          0.8,
+          1,
+          0.8
+        },
+        width = 80
+      },
+      index = 144
     }
   },
   selection_box = {
@@ -458,5 +882,6 @@ return {
   },
   shadow_slave_entity = "cargo-pod-shadow",
   spawned_container = "cargo-pod-container",
+  subgroup = "space-interactors",
   type = "cargo-pod"
 }

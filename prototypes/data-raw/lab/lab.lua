@@ -198,6 +198,17 @@ return {
     "placeable-player",
     "player-creation"
   },
+  frozen_patch = {
+    filename = "__space-age__/graphics/entity/frozen/lab/lab.png",
+    height = 174,
+    scale = 0.5,
+    shift = {
+      0,
+      0.046875
+    },
+    width = 194
+  },
+  heating_energy = "100kW",
   icon = "__base__/graphics/icons/lab.png",
   icons_positioning = {
     {
@@ -209,7 +220,7 @@ return {
     },
     {
       inventory_index = 2,
-      max_icons_per_row = 4,
+      max_icons_per_row = 6,
       separation_multiplier = 0.90909090909090899,
       shift = {
         0,
@@ -225,7 +236,12 @@ return {
     "chemical-science-pack",
     "production-science-pack",
     "utility-science-pack",
-    "space-science-pack"
+    "space-science-pack",
+    "metallurgic-science-pack",
+    "agricultural-science-pack",
+    "electromagnetic-science-pack",
+    "cryogenic-science-pack",
+    "promethium-science-pack"
   },
   max_health = 150,
   minable = {

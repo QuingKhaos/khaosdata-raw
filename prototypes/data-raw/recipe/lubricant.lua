@@ -1,5 +1,6 @@
 return {
   allow_productivity = true,
+  allow_quality = false,
   auto_recycle = false,
   categories = {
     "chemistry"

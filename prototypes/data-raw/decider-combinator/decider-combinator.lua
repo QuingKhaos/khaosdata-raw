@@ -174,6 +174,18 @@ return {
     "placeable-neutral",
     "player-creation"
   },
+  frozen_patch = {
+    sheet = {
+      filename = "__space-age__/graphics/entity/frozen/combinator/decider-combinator-frozen.png",
+      height = 132,
+      scale = 0.5,
+      shift = {
+        0.015625,
+        0.234375
+      },
+      width = 156
+    }
+  },
   greater_or_equal_symbol_sprites = {
     east = {
       draw_as_glow = true,
@@ -282,6 +294,7 @@ return {
       y = 22
     }
   },
+  heating_energy = "50kW",
   icon = "__base__/graphics/icons/decider-combinator.png",
   icon_draw_specification = {
     scale = 0.5

@@ -40,7 +40,17 @@ return {
       "water-green",
       "deepwater-green",
       "water-shallow",
-      "water-mud"
+      "water-mud",
+      "wetland-light-green-slime",
+      "wetland-green-slime",
+      "wetland-light-dead-skin",
+      "wetland-dead-skin",
+      "wetland-pink-tentacle",
+      "wetland-red-tentacle",
+      "wetland-yumako",
+      "wetland-jellynut",
+      "wetland-blue-slime",
+      "gleba-deep-lake"
     }
   },
   random_tint_color = {

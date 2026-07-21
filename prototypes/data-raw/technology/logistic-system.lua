@@ -21,8 +21,7 @@ return {
   icon_size = 256,
   name = "logistic-system",
   prerequisites = {
-    "utility-science-pack",
-    "logistic-robotics"
+    "space-science-pack"
   },
   type = "technology",
   unit = {
@@ -41,7 +40,7 @@ return {
         1
       },
       {
-        "utility-science-pack",
+        "space-science-pack",
         1
       }
     },

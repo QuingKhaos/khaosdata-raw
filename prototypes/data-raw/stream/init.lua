@@ -7,7 +7,10 @@ return {
   ["acid-stream-worm-big"] = require("___KHAOSDATA___.prototypes.data-raw.stream.acid-stream-worm-big"),
   ["acid-stream-worm-medium"] = require("___KHAOSDATA___.prototypes.data-raw.stream.acid-stream-worm-medium"),
   ["acid-stream-worm-small"] = require("___KHAOSDATA___.prototypes.data-raw.stream.acid-stream-worm-small"),
+  ["big-acid-stream-stomper"] = require("___KHAOSDATA___.prototypes.data-raw.stream.big-acid-stream-stomper"),
   ["flamethrower-fire-stream"] = require("___KHAOSDATA___.prototypes.data-raw.stream.flamethrower-fire-stream"),
   ["handheld-flamethrower-fire-stream"] = require("___KHAOSDATA___.prototypes.data-raw.stream.handheld-flamethrower-fire-stream"),
+  ["medium-acid-stream-stomper"] = require("___KHAOSDATA___.prototypes.data-raw.stream.medium-acid-stream-stomper"),
+  ["small-acid-stream-stomper"] = require("___KHAOSDATA___.prototypes.data-raw.stream.small-acid-stream-stomper"),
   ["tank-flamethrower-fire-stream"] = require("___KHAOSDATA___.prototypes.data-raw.stream.tank-flamethrower-fire-stream"),
 }

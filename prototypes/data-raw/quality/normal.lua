@@ -6,10 +6,11 @@ return {
     r = 178.5
   },
   draw_sprite_by_default = false,
-  hidden = true,
+  hidden = false,
   icon = "__base__/graphics/icons/quality-normal.png",
   level = 0,
   name = "normal",
+  next = "uncommon",
   next_probability = 1,
   order = "a",
   subgroup = "qualities",

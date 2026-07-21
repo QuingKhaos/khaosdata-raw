@@ -1,5 +1,5 @@
 return {
-  icon = "__base__/graphics/technology/module.png",
+  icon = "__quality__/graphics/technology/module.png",
   icon_size = 256,
   name = "modules",
   prerequisites = {

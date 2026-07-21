@@ -8,13 +8,13 @@ return {
       type = "item"
     },
     {
-      amount = 100,
+      amount = 50,
       name = "processing-unit",
       type = "item"
     },
     {
-      amount = 20,
-      name = "low-density-structure",
+      amount = 50,
+      name = "superconductor",
       type = "item"
     }
   },

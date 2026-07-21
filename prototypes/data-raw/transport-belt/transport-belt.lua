@@ -112,6 +112,14 @@ return {
           width = 64
         }
       }
+    },
+    frozen_patch = {
+      direction_count = 20,
+      filename = "__space-age__/graphics/entity/frozen/transport-belt/transport-belt.png",
+      line_length = 1,
+      priority = "extra-high",
+      scale = 0.5,
+      size = 128
     }
   },
   circuit_connector = {
@@ -852,6 +860,7 @@ return {
     "placeable-neutral",
     "player-creation"
   },
+  heating_energy = "10kW",
   icon = "__base__/graphics/icons/transport-belt.png",
   max_health = 150,
   minable = {

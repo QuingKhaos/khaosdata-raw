@@ -1,6 +1,7 @@
 return {
   categories = {
-    "crafting-with-fluid"
+    "crafting-with-fluid",
+    "metallurgy"
   },
   enabled = false,
   ingredients = {

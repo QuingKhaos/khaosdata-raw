@@ -3406,6 +3406,7 @@ return {
       }
     }
   },
+  heating_energy = "100kW",
   icon = "__base__/graphics/icons/electric-mining-drill.png",
   input_fluid_box = {
     pipe_connections = {

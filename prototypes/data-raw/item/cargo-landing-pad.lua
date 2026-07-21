@@ -28,7 +28,7 @@ return {
   },
   place_result = "cargo-landing-pad",
   stack_size = 1,
-  subgroup = "space-related",
+  subgroup = "space-interactors",
   type = "item",
   weight = 1000000
 }

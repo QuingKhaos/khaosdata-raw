@@ -1,7 +1,8 @@
 return {
   allow_productivity = true,
   categories = {
-    "crafting-with-fluid"
+    "crafting-with-fluid",
+    "organic"
   },
   crafting_machine_tint = {
     primary = {

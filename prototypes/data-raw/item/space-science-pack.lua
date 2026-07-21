@@ -35,7 +35,7 @@ return {
     0.96999999999999993,
     1
   },
-  stack_size = 2000,
+  stack_size = 200,
   subgroup = "science-pack",
   type = "item",
   weight = 1000

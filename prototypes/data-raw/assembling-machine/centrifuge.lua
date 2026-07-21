@@ -543,6 +543,17 @@ return {
   },
   graphics_set = {
     always_draw_idle_animation = true,
+    frozen_patch = {
+      filename = "__space-age__/graphics/entity/frozen/centrifuge/centrifuge-frozen.png",
+      height = 320,
+      priority = "high",
+      scale = 0.5,
+      shift = {
+        0,
+        -0.5
+      },
+      width = 256
+    },
     idle_animation = {
       layers = {
         {
@@ -588,6 +599,7 @@ return {
         }
       }
     },
+    reset_animation_when_frozen = true,
     working_visualisations = {
       {
         effect = "uranium-glow",
@@ -631,6 +643,7 @@ return {
       }
     }
   },
+  heating_energy = "100kW",
   icon = "__base__/graphics/icons/centrifuge.png",
   icon_draw_specification = {
     shift = {

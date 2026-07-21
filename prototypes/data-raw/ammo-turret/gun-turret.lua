@@ -578,6 +578,7 @@ return {
       }
     }
   },
+  heating_energy = "50kW",
   icon = "__base__/graphics/icons/gun-turret.png",
   icon_draw_specification = {
     scale = 0.7

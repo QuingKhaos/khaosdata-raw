@@ -743,6 +743,36 @@ return {
           }
         }
       },
+      pipe_covers_frozen = {
+        east = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-east.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        north = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-north.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        south = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-south.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        west = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-west.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        }
+      },
       production_type = "input",
       volume = 1000
     },
@@ -833,6 +863,36 @@ return {
               width = 128
             }
           }
+        }
+      },
+      pipe_covers_frozen = {
+        east = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-east.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        north = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-north.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        south = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-south.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        west = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-west.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
         }
       },
       production_type = "input",
@@ -927,6 +987,36 @@ return {
           }
         }
       },
+      pipe_covers_frozen = {
+        east = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-east.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        north = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-north.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        south = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-south.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        west = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-west.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        }
+      },
       production_type = "output",
       volume = 100
     },
@@ -1017,6 +1107,36 @@ return {
               width = 128
             }
           }
+        }
+      },
+      pipe_covers_frozen = {
+        east = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-east.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        north = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-north.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        south = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-south.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        west = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-west.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
         }
       },
       production_type = "output",
@@ -1245,6 +1365,55 @@ return {
         }
       }
     },
+    frozen_patch = {
+      east = {
+        filename = "__space-age__/graphics/entity/frozen/chemical-plant/chemical-plant-frozen.png",
+        height = 292,
+        priority = "high",
+        scale = 0.5,
+        shift = {
+          0.015625,
+          -0.28125
+        },
+        width = 220,
+        x = 220
+      },
+      north = {
+        filename = "__space-age__/graphics/entity/frozen/chemical-plant/chemical-plant-frozen.png",
+        height = 292,
+        priority = "high",
+        scale = 0.5,
+        shift = {
+          0.015625,
+          -0.28125
+        },
+        width = 220
+      },
+      south = {
+        filename = "__space-age__/graphics/entity/frozen/chemical-plant/chemical-plant-frozen.png",
+        height = 292,
+        priority = "high",
+        scale = 0.5,
+        shift = {
+          0.015625,
+          -0.28125
+        },
+        width = 220,
+        x = 440
+      },
+      west = {
+        filename = "__space-age__/graphics/entity/frozen/chemical-plant/chemical-plant-frozen.png",
+        height = 292,
+        priority = "high",
+        scale = 0.5,
+        shift = {
+          0.015625,
+          -0.28125
+        },
+        width = 220,
+        x = 660
+      }
+    },
     working_visualisations = {
       {
         apply_recipe_tint = "primary",
@@ -1420,6 +1589,7 @@ return {
       }
     }
   },
+  heating_energy = "100kW",
   icon = "__base__/graphics/icons/chemical-plant.png",
   icon_draw_specification = {
     shift = {

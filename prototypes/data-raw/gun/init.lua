@@ -3,6 +3,7 @@ return {
   ["combat-shotgun"] = require("___KHAOSDATA___.prototypes.data-raw.gun.combat-shotgun"),
   ["flamethrower"] = require("___KHAOSDATA___.prototypes.data-raw.gun.flamethrower"),
   ["pistol"] = require("___KHAOSDATA___.prototypes.data-raw.gun.pistol"),
+  ["railgun"] = require("___KHAOSDATA___.prototypes.data-raw.gun.railgun"),
   ["rocket-launcher"] = require("___KHAOSDATA___.prototypes.data-raw.gun.rocket-launcher"),
   ["shotgun"] = require("___KHAOSDATA___.prototypes.data-raw.gun.shotgun"),
   ["spidertron-rocket-launcher-1"] = require("___KHAOSDATA___.prototypes.data-raw.gun.spidertron-rocket-launcher-1"),
@@ -13,5 +14,6 @@ return {
   ["tank-cannon"] = require("___KHAOSDATA___.prototypes.data-raw.gun.tank-cannon"),
   ["tank-flamethrower"] = require("___KHAOSDATA___.prototypes.data-raw.gun.tank-flamethrower"),
   ["tank-machine-gun"] = require("___KHAOSDATA___.prototypes.data-raw.gun.tank-machine-gun"),
+  ["teslagun"] = require("___KHAOSDATA___.prototypes.data-raw.gun.teslagun"),
   ["vehicle-machine-gun"] = require("___KHAOSDATA___.prototypes.data-raw.gun.vehicle-machine-gun"),
 }

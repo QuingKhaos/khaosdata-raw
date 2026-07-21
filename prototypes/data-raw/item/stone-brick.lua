@@ -29,6 +29,7 @@ return {
   place_as_tile = {
     condition = {
       layers = {
+        meltable = true,
         water_tile = true
       }
     },

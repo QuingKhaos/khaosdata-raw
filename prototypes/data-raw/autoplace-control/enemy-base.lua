@@ -1,4 +1,5 @@
 return {
+  can_be_disabled = false,
   category = "enemy",
   name = "enemy-base",
   order = "c-z",

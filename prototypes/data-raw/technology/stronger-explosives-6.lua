@@ -59,6 +59,10 @@ return {
       {
         "utility-science-pack",
         1
+      },
+      {
+        "space-science-pack",
+        1
       }
     },
     time = 60

@@ -1,4 +1,10 @@
 return {
+  allowed_effects = {
+    "consumption",
+    "speed",
+    "productivity",
+    "pollution"
+  },
   circuit_connector = {
     {
       points = {
@@ -677,6 +683,20 @@ return {
         }
       }
     },
+    frozen_patch = {
+      sheet = {
+        filename = "__space-age__/graphics/entity/frozen/pumpjack/pumpjack.png",
+        height = 273,
+        priority = "extra-high",
+        scale = 0.5,
+        shift = {
+          -0.0703125,
+          -0.1484375
+        },
+        width = 261
+      }
+    },
+    reset_animation_when_frozen = true,
     working_visualisations = {
       {
         always_draw = true,
@@ -832,6 +852,20 @@ return {
         }
       }
     },
+    frozen_patch = {
+      sheet = {
+        filename = "__space-age__/graphics/entity/frozen/pumpjack/pumpjack-flipped.png",
+        height = 273,
+        priority = "extra-high",
+        scale = 0.5,
+        shift = {
+          -0.0703125,
+          -0.1484375
+        },
+        width = 261
+      }
+    },
+    reset_animation_when_frozen = true,
     working_visualisations = {
       {
         always_draw = true,
@@ -951,6 +985,7 @@ return {
       }
     }
   },
+  heating_energy = "50kW",
   icon = "__base__/graphics/icons/pumpjack.png",
   max_health = 200,
   migrate_horizontal_mirroring = true,

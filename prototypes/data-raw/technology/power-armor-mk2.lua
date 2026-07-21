@@ -11,8 +11,8 @@ return {
   prerequisites = {
     "power-armor",
     "military-4",
-    "speed-module-2",
-    "efficiency-module-2"
+    "speed-module",
+    "efficiency-module"
   },
   type = "technology",
   unit = {

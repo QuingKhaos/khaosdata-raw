@@ -1,5 +1,6 @@
 return {
   allow_productivity = true,
+  allow_quality = false,
   categories = {
     "oil-processing"
   },

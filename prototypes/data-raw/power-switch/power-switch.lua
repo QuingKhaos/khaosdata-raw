@@ -63,6 +63,17 @@ return {
     "placeable-neutral",
     "player-creation"
   },
+  frozen_patch = {
+    filename = "__space-age__/graphics/entity/frozen/power-switch/power-switch.png",
+    height = 138,
+    scale = 0.5,
+    shift = {
+      -0.09375,
+      0.0625
+    },
+    width = 168
+  },
+  heating_energy = "20kW",
   icon = "__base__/graphics/icons/power-switch.png",
   led_off = {
     blend_mode = "additive",

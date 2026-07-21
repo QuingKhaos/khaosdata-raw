@@ -982,6 +982,7 @@ return {
       }
     }
   },
+  heating_energy = "50kW",
   icon = "__base__/graphics/icons/burner-mining-drill.png",
   max_health = 150,
   minable = {
@@ -1011,6 +1012,12 @@ return {
     {
       1,
       1
+    }
+  },
+  surface_conditions = {
+    {
+      min = 10,
+      property = "pressure"
     }
   },
   type = "mining-drill",

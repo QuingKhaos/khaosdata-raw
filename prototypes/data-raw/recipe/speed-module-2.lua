@@ -1,4 +1,8 @@
 return {
+  categories = {
+    "crafting",
+    "electromagnetics"
+  },
   enabled = false,
   energy_required = 30,
   ingredients = {

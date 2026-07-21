@@ -19,7 +19,7 @@ return {
     volume = 0.7
   },
   name = "rocket-part",
-  order = "d[rocket-parts]-d[rocket-part]",
+  order = "b[rocket-part]",
   pick_sound = {
     aggregation = {
       max_count = 1,
@@ -29,7 +29,7 @@ return {
     volume = 0.8
   },
   stack_size = 5,
-  subgroup = "intermediate-product",
+  subgroup = "space-interactors",
   type = "item",
   weight = 20000
 }

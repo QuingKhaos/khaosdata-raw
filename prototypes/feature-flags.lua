@@ -1,11 +1,11 @@
 --- @type data.FeatureFlags
 return {
-  expansion = false,
-  expansion_shaders = false,
-  freezing = false,
-  quality = false,
-  rail_bridges = false,
-  segmented_units = false,
-  space_travel = false,
-  spoiling = false
+  expansion = true,
+  expansion_shaders = true,
+  freezing = true,
+  quality = true,
+  rail_bridges = true,
+  segmented_units = true,
+  space_travel = true,
+  spoiling = true
 }

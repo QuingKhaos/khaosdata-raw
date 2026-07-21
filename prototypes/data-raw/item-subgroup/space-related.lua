@@ -1,6 +1,6 @@
 return {
-  group = "production",
+  group = "space",
   name = "space-related",
-  order = "g",
+  order = "e",
   type = "item-subgroup"
 }

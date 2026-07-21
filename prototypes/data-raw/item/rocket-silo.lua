@@ -7,6 +7,9 @@ return {
     filename = "__base__/sound/item/mechanical-large-inventory-move.ogg",
     volume = 0.7
   },
+  flags = {
+    "draw-logistic-overlay"
+  },
   icon = "__base__/graphics/icons/rocket-silo.png",
   inventory_move_sound = {
     aggregation = {
@@ -28,7 +31,7 @@ return {
   },
   place_result = "rocket-silo",
   stack_size = 1,
-  subgroup = "space-related",
+  subgroup = "space-interactors",
   type = "item",
   weight = 10000000
 }

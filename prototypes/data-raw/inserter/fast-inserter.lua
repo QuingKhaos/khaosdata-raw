@@ -710,6 +710,14 @@ return {
     "placeable-player",
     "player-creation"
   },
+  hand_base_frozen = {
+    filename = "__space-age__/graphics/entity/frozen/inserter/inserter-hand.png",
+    height = 136,
+    priority = "extra-high",
+    scale = 0.25,
+    width = 130,
+    x = 520
+  },
   hand_base_picture = {
     filename = "__base__/graphics/entity/fast-inserter/fast-inserter-hand-base.png",
     height = 136,
@@ -723,6 +731,14 @@ return {
     priority = "extra-high",
     scale = 0.25,
     width = 32
+  },
+  hand_closed_frozen = {
+    filename = "__space-age__/graphics/entity/frozen/inserter/inserter-hand.png",
+    height = 164,
+    priority = "extra-high",
+    scale = 0.25,
+    width = 130,
+    x = 390
   },
   hand_closed_picture = {
     filename = "__base__/graphics/entity/fast-inserter/fast-inserter-hand-closed.png",
@@ -738,6 +754,14 @@ return {
     scale = 0.25,
     width = 72
   },
+  hand_open_frozen = {
+    filename = "__space-age__/graphics/entity/frozen/inserter/inserter-hand.png",
+    height = 164,
+    priority = "extra-high",
+    scale = 0.25,
+    width = 130,
+    x = 260
+  },
   hand_open_picture = {
     filename = "__base__/graphics/entity/fast-inserter/fast-inserter-hand-open.png",
     height = 164,
@@ -752,6 +776,7 @@ return {
     scale = 0.25,
     width = 72
   },
+  heating_energy = "30kW",
   icon = "__base__/graphics/icons/fast-inserter.png",
   icon_draw_specification = {
     scale = 0.5
@@ -775,6 +800,19 @@ return {
   pickup_position = {
     0,
     -1
+  },
+  platform_frozen = {
+    sheet = {
+      filename = "__space-age__/graphics/entity/frozen/inserter/inserter-platform.png",
+      height = 79,
+      priority = "extra-high",
+      scale = 0.5,
+      shift = {
+        0.046875,
+        0.203125
+      },
+      width = 105
+    }
   },
   platform_picture = {
     sheet = {

@@ -834,6 +834,12 @@ return {
     }
   },
   source_inventory_size = 1,
+  surface_conditions = {
+    {
+      min = 10,
+      property = "pressure"
+    }
+  },
   type = "furnace",
   working_sound = {
     fade_in_ticks = 4,

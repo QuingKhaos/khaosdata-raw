@@ -1955,6 +1955,11 @@ return {
   fluid_box = {
     pipe_connections = {
       {
+        connection_category = {
+          "default",
+          "fusion-reactor",
+          "fusion-generator"
+        },
         direction = 0,
         hide_connection_info = true,
         position = {
@@ -1963,6 +1968,11 @@ return {
         }
       },
       {
+        connection_category = {
+          "default",
+          "fusion-reactor",
+          "fusion-generator"
+        },
         direction = 4,
         hide_connection_info = true,
         position = {
@@ -1971,6 +1981,11 @@ return {
         }
       },
       {
+        connection_category = {
+          "default",
+          "fusion-reactor",
+          "fusion-generator"
+        },
         direction = 8,
         hide_connection_info = true,
         position = {
@@ -1979,6 +1994,11 @@ return {
         }
       },
       {
+        connection_category = {
+          "default",
+          "fusion-reactor",
+          "fusion-generator"
+        },
         direction = 12,
         hide_connection_info = true,
         position = {

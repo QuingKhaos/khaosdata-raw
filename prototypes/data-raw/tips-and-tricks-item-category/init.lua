@@ -7,5 +7,9 @@ return {
   ["ghost-building"] = require("___KHAOSDATA___.prototypes.data-raw.tips-and-tricks-item-category.ghost-building"),
   ["inserters"] = require("___KHAOSDATA___.prototypes.data-raw.tips-and-tricks-item-category.inserters"),
   ["logistic-network"] = require("___KHAOSDATA___.prototypes.data-raw.tips-and-tricks-item-category.logistic-network"),
+  ["quality"] = require("___KHAOSDATA___.prototypes.data-raw.tips-and-tricks-item-category.quality"),
+  ["space-age"] = require("___KHAOSDATA___.prototypes.data-raw.tips-and-tricks-item-category.space-age"),
+  ["space-platform"] = require("___KHAOSDATA___.prototypes.data-raw.tips-and-tricks-item-category.space-platform"),
+  ["spoilables"] = require("___KHAOSDATA___.prototypes.data-raw.tips-and-tricks-item-category.spoilables"),
   ["trains"] = require("___KHAOSDATA___.prototypes.data-raw.tips-and-tricks-item-category.trains"),
 }

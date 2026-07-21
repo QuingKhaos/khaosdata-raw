@@ -10,7 +10,7 @@ return {
   name = "productivity-module-3",
   prerequisites = {
     "productivity-module-2",
-    "production-science-pack"
+    "biter-egg-handling"
   },
   type = "technology",
   unit = {
@@ -29,7 +29,11 @@ return {
         1
       },
       {
-        "production-science-pack",
+        "space-science-pack",
+        1
+      },
+      {
+        "agricultural-science-pack",
         1
       }
     },

@@ -13,7 +13,7 @@ return {
       type = "item"
     },
     {
-      amount = 30,
+      amount = 100,
       name = "uranium-235",
       type = "item"
     }

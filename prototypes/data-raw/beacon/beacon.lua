@@ -144,6 +144,16 @@ return {
     },
     animation_progress = 1,
     apply_module_tint = "secondary",
+    frozen_patch = {
+      filename = "__space-age__/graphics/entity/frozen/beacon/beacon-frozen.png",
+      height = 192,
+      scale = 0.5,
+      shift = {
+        0.015625,
+        0.03125
+      },
+      width = 212
+    },
     module_icons_suppressed = true,
     module_tint_mode = "mix",
     module_visualisations = {
@@ -296,6 +306,7 @@ return {
     },
     random_animation_offset = true
   },
+  heating_energy = "400kW",
   icon = "__base__/graphics/icons/beacon.png",
   icons_positioning = {
     {

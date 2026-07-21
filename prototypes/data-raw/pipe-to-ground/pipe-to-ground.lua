@@ -587,6 +587,12 @@ return {
         position = {
           0,
           0
+        },
+        underground_collision_mask = {
+          layers = {
+            empty_space = true,
+            lava_tile = true
+          }
         }
       }
     },
@@ -668,8 +674,69 @@ return {
         }
       }
     },
+    pipe_covers_frozen = {
+      east = {
+        filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-east.png",
+        height = 128,
+        priority = "extra-high",
+        scale = 0.5,
+        width = 128
+      },
+      north = {
+        filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-north.png",
+        height = 128,
+        priority = "extra-high",
+        scale = 0.5,
+        width = 128
+      },
+      south = {
+        filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-south.png",
+        height = 128,
+        priority = "extra-high",
+        scale = 0.5,
+        width = 128
+      },
+      west = {
+        filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-west.png",
+        height = 128,
+        priority = "extra-high",
+        scale = 0.5,
+        width = 128
+      }
+    },
     volume = 100
   },
+  frozen_patch = {
+    east = {
+      filename = "__space-age__/graphics/entity/frozen/pipe-to-ground/pipe-to-ground-right.png",
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+      width = 128
+    },
+    north = {
+      filename = "__space-age__/graphics/entity/frozen/pipe-to-ground/pipe-to-ground-up.png",
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+      width = 128
+    },
+    south = {
+      filename = "__space-age__/graphics/entity/frozen/pipe-to-ground/pipe-to-ground-down.png",
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+      width = 128
+    },
+    west = {
+      filename = "__space-age__/graphics/entity/frozen/pipe-to-ground/pipe-to-ground-left.png",
+      height = 128,
+      priority = "extra-high",
+      scale = 0.5,
+      width = 128
+    }
+  },
+  heating_energy = "150kW",
   icon = "__base__/graphics/icons/pipe-to-ground.png",
   icon_draw_specification = {
     scale = 0.5

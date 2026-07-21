@@ -324,7 +324,7 @@ return {
     }
   },
   render_layer = "decals",
-  tile_layer = 255,
+  tile_layer = 210,
   type = "optimized-decorative",
   walking_sound = {
     advanced_volume_control = {

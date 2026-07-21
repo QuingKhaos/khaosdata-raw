@@ -167,7 +167,8 @@ return {
       overlay_layer_group = "zero",
       spritesheet = "__base__/graphics/terrain/out-of-map-transition/water-out-of-map-transition-tintable.png",
       to_tiles = {
-        "out-of-map"
+        "out-of-map",
+        "empty-space"
       },
       transition_group = 2,
       waving_effect_time_scale = 0.013500000000000001

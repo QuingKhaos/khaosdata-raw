@@ -14,7 +14,7 @@ return {
     "player-creation"
   },
   hidden = true,
-  icon = "__base__/graphics/icons/factorio-logo-11tiles.png",
+  icon = "__space-age__/graphics/icons/factorio-space-age-logo-11tiles.png",
   inventory_size = 1,
   max_health = 666,
   minable = {
@@ -22,7 +22,7 @@ return {
   },
   name = "factorio-logo-11tiles",
   picture = {
-    filename = "__base__/graphics/entity/factorio-logo/factorio-logo-11tiles.png",
+    filename = "__space-age__/graphics/entity/factorio-space-age-logo/factorio-space-age-logo-11tiles.png",
     height = 256,
     priority = "very-low",
     scale = 0.5,

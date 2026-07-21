@@ -2,6 +2,7 @@ return {
   armor_picture_mapping = {
     ["heavy-armor"] = 2,
     ["light-armor"] = 1,
+    ["mech-armor"] = 4,
     ["modular-armor"] = 2,
     ["power-armor"] = 3,
     ["power-armor-mk2"] = 3
@@ -199,6 +200,54 @@ return {
           },
           usage = "player",
           width = 108
+        }
+      }
+    },
+    {
+      layers = {
+        {
+          animation_speed = 1,
+          filename = "__space-age__/graphics/entity/mech-armor/mech-corpse.png",
+          frame_count = 2,
+          height = 154,
+          line_length = 2,
+          scale = 0.5,
+          shift = {
+            0.265625,
+            -0.046875
+          },
+          usage = "player",
+          width = 220
+        },
+        {
+          animation_speed = 1,
+          apply_runtime_tint = true,
+          filename = "__space-age__/graphics/entity/mech-armor/mech-corpse-mask.png",
+          frame_count = 2,
+          height = 134,
+          line_length = 2,
+          scale = 0.5,
+          shift = {
+            0.109375,
+            -0.203125
+          },
+          usage = "player",
+          width = 126
+        },
+        {
+          animation_speed = 1,
+          draw_as_shadow = true,
+          filename = "__space-age__/graphics/entity/mech-armor/mech-corpse-shadow.png",
+          frame_count = 2,
+          height = 118,
+          line_length = 2,
+          scale = 0.5,
+          shift = {
+            0.359375,
+            0.078125
+          },
+          usage = "player",
+          width = 198
         }
       }
     }

@@ -4,11 +4,6 @@ return {
       ammo_category = "laser",
       modifier = 0.5,
       type = "ammo-damage"
-    },
-    {
-      ammo_category = "beam",
-      modifier = 0.4,
-      type = "ammo-damage"
     }
   },
   icons = {

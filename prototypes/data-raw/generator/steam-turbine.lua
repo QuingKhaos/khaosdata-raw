@@ -154,6 +154,7 @@ return {
     volume = 200
   },
   fluid_usage_per_tick = 1,
+  heating_energy = "50kW",
   icon = "__base__/graphics/icons/steam-turbine.png",
   impact_category = "metal-large",
   max_health = 300,
@@ -203,6 +204,16 @@ return {
             width = 435
           }
         }
+      },
+      frozen_patch = {
+        filename = "__space-age__/graphics/entity/frozen/steam-turbine/steam-turbine-H.png",
+        height = 245,
+        scale = 0.5,
+        shift = {
+          0,
+          -0.0859375
+        },
+        width = 320
       }
     },
     north = {
@@ -236,6 +247,16 @@ return {
             width = 302
           }
         }
+      },
+      frozen_patch = {
+        filename = "__space-age__/graphics/entity/frozen/steam-turbine/steam-turbine-V.png",
+        height = 347,
+        scale = 0.5,
+        shift = {
+          0.1484375,
+          0.2109375
+        },
+        width = 217
       }
     }
   },

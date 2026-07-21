@@ -139,6 +139,7 @@ return {
     },
     volume = 100
   },
+  heating_energy = "20kW",
   hidden = true,
   icon = "__base__/graphics/entity/one-way-valve/one-way-valve-east.png",
   icon_draw_specification = {

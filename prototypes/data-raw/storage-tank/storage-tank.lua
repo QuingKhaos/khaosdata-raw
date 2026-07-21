@@ -638,8 +638,39 @@ return {
         }
       }
     },
+    pipe_covers_frozen = {
+      east = {
+        filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-east.png",
+        height = 128,
+        priority = "extra-high",
+        scale = 0.5,
+        width = 128
+      },
+      north = {
+        filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-north.png",
+        height = 128,
+        priority = "extra-high",
+        scale = 0.5,
+        width = 128
+      },
+      south = {
+        filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-south.png",
+        height = 128,
+        priority = "extra-high",
+        scale = 0.5,
+        width = 128
+      },
+      west = {
+        filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-west.png",
+        height = 128,
+        priority = "extra-high",
+        scale = 0.5,
+        width = 128
+      }
+    },
     volume = 25000
   },
+  heating_energy = "100kW",
   icon = "__base__/graphics/icons/storage-tank.png",
   icon_draw_specification = {
     scale = 1.5,
@@ -671,6 +702,22 @@ return {
       height = 15,
       priority = "extra-high",
       width = 32
+    },
+    frozen_patch = {
+      sheets = {
+        {
+          filename = "__space-age__/graphics/entity/frozen/storage-tank/storage-tank.png",
+          frames = 2,
+          height = 215,
+          priority = "extra-high",
+          scale = 0.5,
+          shift = {
+            -0.0078125,
+            0.1171875
+          },
+          width = 219
+        }
+      }
     },
     gas_flow = {
       animation_speed = 0.25,

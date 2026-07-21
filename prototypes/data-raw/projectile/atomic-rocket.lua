@@ -10,6 +10,21 @@ return {
         },
         {
           check_buildability = true,
+          entity_name = "nuke-effects-space",
+          type = "create-entity"
+        },
+        {
+          check_buildability = true,
+          entity_name = "nuke-effects-vulcanus",
+          type = "create-entity"
+        },
+        {
+          check_buildability = true,
+          entity_name = "nuke-effects-aquilo",
+          type = "create-entity"
+        },
+        {
+          check_buildability = true,
           entity_name = "nuke-effects-nauvis",
           type = "create-entity"
         },

@@ -3,13 +3,18 @@ return {
   energy_required = 15,
   ingredients = {
     {
-      amount = 4,
-      name = "explosive-cannon-shell",
+      amount = 1,
+      name = "radar",
       type = "item"
     },
     {
       amount = 1,
-      name = "radar",
+      name = "calcite",
+      type = "item"
+    },
+    {
+      amount = 4,
+      name = "tungsten-plate",
       type = "item"
     },
     {

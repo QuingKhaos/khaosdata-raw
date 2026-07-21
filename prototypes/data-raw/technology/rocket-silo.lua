@@ -13,7 +13,16 @@ return {
       type = "unlock-recipe"
     },
     {
-      recipe = "satellite",
+      hidden = true,
+      modifier = true,
+      type = "unlock-space-platforms"
+    },
+    {
+      recipe = "space-platform-starter-pack",
+      type = "unlock-recipe"
+    },
+    {
+      recipe = "space-platform-foundation",
       type = "unlock-recipe"
     }
   },
@@ -24,12 +33,10 @@ return {
   prerequisites = {
     "concrete",
     "rocket-fuel",
-    "electric-energy-accumulators",
-    "solar-energy",
-    "utility-science-pack",
-    "speed-module-3",
-    "productivity-module-3",
-    "radar"
+    "processing-unit",
+    "logistic-robotics",
+    "low-density-structure",
+    "advanced-material-processing-2"
   },
   type = "technology",
   unit = {
@@ -45,14 +52,6 @@ return {
       },
       {
         "chemical-science-pack",
-        1
-      },
-      {
-        "production-science-pack",
-        1
-      },
-      {
-        "utility-science-pack",
         1
       }
     },

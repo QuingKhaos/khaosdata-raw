@@ -1,4 +1,7 @@
 return {
+  autoplace = {
+    probability_expression = 0
+  },
   collision_box = {
     {
       -2.1000000000000001,

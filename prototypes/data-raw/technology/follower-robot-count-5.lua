@@ -25,7 +25,8 @@ return {
   name = "follower-robot-count-5",
   prerequisites = {
     "follower-robot-count-4",
-    "space-science-pack"
+    "space-science-pack",
+    "production-science-pack"
   },
   type = "technology",
   unit = {

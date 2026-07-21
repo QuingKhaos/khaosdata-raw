@@ -24,13 +24,13 @@ return {
   name = "energy-shield-mk2-equipment",
   prerequisites = {
     "energy-shield-equipment",
-    "military-3",
-    "low-density-structure",
+    "military-4",
+    "electromagnetic-science-pack",
     "power-armor"
   },
   type = "technology",
   unit = {
-    count = 200,
+    count = 750,
     ingredients = {
       {
         "automation-science-pack",
@@ -46,6 +46,18 @@ return {
       },
       {
         "military-science-pack",
+        1
+      },
+      {
+        "space-science-pack",
+        1
+      },
+      {
+        "utility-science-pack",
+        1
+      },
+      {
+        "electromagnetic-science-pack",
         1
       }
     },

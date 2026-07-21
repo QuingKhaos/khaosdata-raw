@@ -288,6 +288,12 @@ return {
       0.5
     }
   },
+  surface_conditions = {
+    {
+      min = 0.1,
+      property = "gravity"
+    }
+  },
   trash_inventory_size = 20,
   type = "logistic-container",
   water_reflection = {

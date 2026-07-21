@@ -125,6 +125,50 @@ return {
       volume = 0.8
     }
   },
+  frozen_variant = "frozen-refined-hazard-concrete-left",
+  landing_steps_sound = {
+    advanced_volume_control = {
+      fades = {
+        fade_in = {
+          curve_type = "cosine",
+          from = {
+            control = 0.3,
+            volume_percentage = 0
+          },
+          to = {
+            control = 1,
+            volume_percentage = 100
+          }
+        }
+      }
+    },
+    variations = {
+      {
+        filename = "__space-age__/sound/entity/mech-armor/mech-armor-land-concrete-1.ogg",
+        modifiers = {
+          type = "main-menu",
+          volume_multiplier = 2.9
+        },
+        volume = 1
+      },
+      {
+        filename = "__space-age__/sound/entity/mech-armor/mech-armor-land-concrete-2.ogg",
+        modifiers = {
+          type = "main-menu",
+          volume_multiplier = 2.9
+        },
+        volume = 1
+      },
+      {
+        filename = "__space-age__/sound/entity/mech-armor/mech-armor-land-concrete-3.ogg",
+        modifiers = {
+          type = "main-menu",
+          volume_multiplier = 2.9
+        },
+        volume = 1
+      }
+    }
+  },
   layer = 19,
   layer_group = "ground-artificial",
   map_color = {

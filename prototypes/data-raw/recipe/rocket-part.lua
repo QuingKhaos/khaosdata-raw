@@ -9,17 +9,17 @@ return {
   hide_from_player_crafting = true,
   ingredients = {
     {
-      amount = 10,
+      amount = 1,
       name = "processing-unit",
       type = "item"
     },
     {
-      amount = 10,
+      amount = 1,
       name = "low-density-structure",
       type = "item"
     },
     {
-      amount = 10,
+      amount = 1,
       name = "rocket-fuel",
       type = "item"
     }

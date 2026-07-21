@@ -15,6 +15,34 @@ return {
       1.3999999999999999
     }
   },
+  created_effect = {
+    action_delivery = {
+      source_effects = {
+        {
+          entity_name = "aquilo-tiles-inner-explosion",
+          offsets = {
+            {
+              0.5,
+              0.5
+            }
+          },
+          type = "create-entity"
+        },
+        {
+          entity_name = "aquilo-tiles-outer-explosion",
+          offsets = {
+            {
+              0.5,
+              0.5
+            }
+          },
+          type = "create-entity"
+        }
+      },
+      type = "instant"
+    },
+    type = "direct"
+  },
   draw_stateless_visualisation_under_building = false,
   driving_sound = {
     fade_ticks = 6,

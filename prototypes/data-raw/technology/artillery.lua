@@ -18,13 +18,12 @@ return {
   name = "artillery",
   prerequisites = {
     "military-4",
-    "tank",
-    "concrete",
+    "metallurgic-science-pack",
     "radar"
   },
   type = "technology",
   unit = {
-    count = 2000,
+    count = 1500,
     ingredients = {
       {
         "automation-science-pack",
@@ -44,6 +43,14 @@ return {
       },
       {
         "utility-science-pack",
+        1
+      },
+      {
+        "space-science-pack",
+        1
+      },
+      {
+        "metallurgic-science-pack",
         1
       }
     },

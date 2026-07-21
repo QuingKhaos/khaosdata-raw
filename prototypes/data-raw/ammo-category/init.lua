@@ -11,6 +11,9 @@ return {
   ["landmine"] = require("___KHAOSDATA___.prototypes.data-raw.ammo-category.landmine"),
   ["laser"] = require("___KHAOSDATA___.prototypes.data-raw.ammo-category.laser"),
   ["melee"] = require("___KHAOSDATA___.prototypes.data-raw.ammo-category.melee"),
+  ["railgun"] = require("___KHAOSDATA___.prototypes.data-raw.ammo-category.railgun"),
   ["rocket"] = require("___KHAOSDATA___.prototypes.data-raw.ammo-category.rocket"),
+  ["seismic"] = require("___KHAOSDATA___.prototypes.data-raw.ammo-category.seismic"),
   ["shotgun-shell"] = require("___KHAOSDATA___.prototypes.data-raw.ammo-category.shotgun-shell"),
+  ["tesla"] = require("___KHAOSDATA___.prototypes.data-raw.ammo-category.tesla"),
 }

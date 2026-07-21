@@ -10,7 +10,9 @@ return {
   objective_condition = "late-research",
   order = "h[limitation]-d[logistic-network-embargo]",
   research_with = {
-    "space-science-pack"
+    "metallurgic-science-pack",
+    "electromagnetic-science-pack",
+    "agricultural-science-pack"
   },
   type = "dont-build-entity-achievement"
 }

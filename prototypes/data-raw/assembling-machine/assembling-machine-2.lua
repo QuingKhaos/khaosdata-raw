@@ -588,6 +588,36 @@ return {
           }
         }
       },
+      pipe_covers_frozen = {
+        east = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-east.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        north = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-north.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        south = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-south.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        west = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-west.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        }
+      },
       pipe_picture = {
         east = {
           filename = "__base__/graphics/entity/assembling-machine-2/assembling-machine-2-pipe-E.png",
@@ -636,6 +666,56 @@ return {
             0.015625
           },
           width = 30
+        }
+      },
+      pipe_picture_frozen = {
+        east = {
+          filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-pipe-E-frozen.png",
+          height = 62,
+          line_length = 1,
+          priority = "extra-high",
+          scale = 0.5,
+          shift = {
+            -0.71875,
+            -0.03125
+          },
+          width = 32
+        },
+        north = {
+          filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-pipe-N-frozen.png",
+          height = 22,
+          line_length = 1,
+          priority = "extra-high",
+          scale = 0.5,
+          shift = {
+            0,
+            0.34375
+          },
+          width = 50
+        },
+        south = {
+          filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-pipe-S-frozen.png",
+          height = 48,
+          line_length = 1,
+          priority = "extra-high",
+          scale = 0.5,
+          shift = {
+            -0.03125,
+            -0.921875
+          },
+          width = 60
+        },
+        west = {
+          filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-pipe-W-frozen.png",
+          height = 70,
+          line_length = 1,
+          priority = "extra-high",
+          scale = 0.5,
+          shift = {
+            0.71875,
+            0
+          },
+          width = 32
         }
       },
       production_type = "input",
@@ -733,6 +813,36 @@ return {
           }
         }
       },
+      pipe_covers_frozen = {
+        east = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-east.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        north = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-north.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        south = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-south.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        },
+        west = {
+          filename = "__space-age__/graphics/entity/frozen/pipe-covers/pipe-cover-west.png",
+          height = 128,
+          priority = "extra-high",
+          scale = 0.5,
+          width = 128
+        }
+      },
       pipe_picture = {
         east = {
           filename = "__base__/graphics/entity/assembling-machine-2/assembling-machine-2-pipe-E.png",
@@ -781,6 +891,56 @@ return {
             0.015625
           },
           width = 30
+        }
+      },
+      pipe_picture_frozen = {
+        east = {
+          filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-pipe-E-frozen.png",
+          height = 62,
+          line_length = 1,
+          priority = "extra-high",
+          scale = 0.5,
+          shift = {
+            -0.71875,
+            -0.03125
+          },
+          width = 32
+        },
+        north = {
+          filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-pipe-N-frozen.png",
+          height = 22,
+          line_length = 1,
+          priority = "extra-high",
+          scale = 0.5,
+          shift = {
+            0,
+            0.34375
+          },
+          width = 50
+        },
+        south = {
+          filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-pipe-S-frozen.png",
+          height = 48,
+          line_length = 1,
+          priority = "extra-high",
+          scale = 0.5,
+          shift = {
+            -0.03125,
+            -0.921875
+          },
+          width = 60
+        },
+        west = {
+          filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-pipe-W-frozen.png",
+          height = 70,
+          line_length = 1,
+          priority = "extra-high",
+          scale = 0.5,
+          shift = {
+            0.71875,
+            0
+          },
+          width = 32
         }
       },
       production_type = "output",
@@ -836,6 +996,19 @@ return {
         }
       }
     },
+    frozen_patch = {
+      filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-2-frozen.png",
+      height = 182,
+      line_length = 1,
+      priority = "high",
+      scale = 0.5,
+      shift = {
+        -0.015625,
+        0.03125
+      },
+      width = 178
+    },
+    reset_animation_when_frozen = true,
     working_visualisations = {
       {
         animation = {
@@ -856,6 +1029,7 @@ return {
       }
     }
   },
+  heating_energy = "100kW",
   icon = "__base__/graphics/icons/assembling-machine-2.png",
   icon_draw_specification = {
     shift = {

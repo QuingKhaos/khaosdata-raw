@@ -1,6 +1,6 @@
 return {
   group = "production",
   name = "module",
-  order = "f",
+  order = "g",
   type = "item-subgroup"
 }

@@ -1,4 +1,8 @@
 return {
+  categories = {
+    "crafting",
+    "electromagnetics"
+  },
   enabled = false,
   ingredients = {
     {

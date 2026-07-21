@@ -10,7 +10,7 @@ return {
   name = "efficiency-module-3",
   prerequisites = {
     "efficiency-module-2",
-    "production-science-pack"
+    "agricultural-science-pack"
   },
   type = "technology",
   unit = {
@@ -29,7 +29,11 @@ return {
         1
       },
       {
-        "production-science-pack",
+        "space-science-pack",
+        1
+      },
+      {
+        "agricultural-science-pack",
         1
       }
     },

@@ -547,6 +547,19 @@ return {
         }
       }
     },
+    frozen_patch = {
+      filename = "__space-age__/graphics/entity/frozen/assembling-machine/assembling-machine-1-frozen.png",
+      height = 178,
+      line_length = 1,
+      priority = "high",
+      scale = 0.5,
+      shift = {
+        0,
+        0.078125
+      },
+      width = 178
+    },
+    reset_animation_when_frozen = true,
     working_visualisations = {
       {
         animation = {
@@ -567,6 +580,7 @@ return {
       }
     }
   },
+  heating_energy = "100kW",
   icon = "__base__/graphics/icons/assembling-machine-1.png",
   icon_draw_specification = {
     shift = {

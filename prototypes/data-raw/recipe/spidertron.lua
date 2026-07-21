@@ -13,28 +13,13 @@ return {
       type = "item"
     },
     {
-      amount = 4,
-      name = "rocket-launcher",
-      type = "item"
-    },
-    {
-      amount = 16,
-      name = "processing-unit",
-      type = "item"
-    },
-    {
-      amount = 150,
-      name = "low-density-structure",
+      amount = 1,
+      name = "rocket-turret",
       type = "item"
     },
     {
       amount = 2,
       name = "radar",
-      type = "item"
-    },
-    {
-      amount = 2,
-      name = "efficiency-module-3",
       type = "item"
     },
     {
