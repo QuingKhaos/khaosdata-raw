@@ -8,10 +8,10 @@
   "factorio_version": "2.1",
   "dependencies": [
     "base >= 2.1.12",
-    "! elevated-rails",
-    "! quality",
-    "! recycler",
-    "! space-age",
+    "elevated-rails >= 2.1.12",
+    "quality >= 2.1.12",
+    "recycler >= 2.1.12",
+    "space-age >= 2.1.12",
 
     "khaosdata-extractor"
   ]
