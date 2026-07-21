@@ -153,35 +153,6 @@ return {
     volume = 200
   },
   fluid_usage_per_tick = 0.5,
-  horizontal_animation = {
-    layers = {
-      {
-        filename = "__base__/graphics/entity/steam-engine/steam-engine-H.png",
-        frame_count = 32,
-        height = 257,
-        line_length = 8,
-        scale = 0.5,
-        shift = {
-          0.03125,
-          -0.1484375
-        },
-        width = 352
-      },
-      {
-        draw_as_shadow = true,
-        filename = "__base__/graphics/entity/steam-engine/steam-engine-H-shadow.png",
-        frame_count = 32,
-        height = 160,
-        line_length = 8,
-        scale = 0.5,
-        shift = {
-          1.5,
-          0.75
-        },
-        width = 508
-      }
-    }
-  },
   icon = "__base__/graphics/icons/steam-engine.png",
   impact_category = "metal-large",
   max_health = 400,
@@ -198,6 +169,70 @@ return {
   perceived_performance = {
     minimum = 0.25,
     performance_to_activity_rate = 2
+  },
+  pictures = {
+    east = {
+      animation = {
+        layers = {
+          {
+            filename = "__base__/graphics/entity/steam-engine/steam-engine-H.png",
+            frame_count = 32,
+            height = 257,
+            line_length = 8,
+            scale = 0.5,
+            shift = {
+              0.03125,
+              -0.1484375
+            },
+            width = 352
+          },
+          {
+            draw_as_shadow = true,
+            filename = "__base__/graphics/entity/steam-engine/steam-engine-H-shadow.png",
+            frame_count = 32,
+            height = 160,
+            line_length = 8,
+            scale = 0.5,
+            shift = {
+              1.5,
+              0.75
+            },
+            width = 508
+          }
+        }
+      }
+    },
+    north = {
+      animation = {
+        layers = {
+          {
+            filename = "__base__/graphics/entity/steam-engine/steam-engine-V.png",
+            frame_count = 32,
+            height = 391,
+            line_length = 8,
+            scale = 0.5,
+            shift = {
+              0.1484375,
+              -0.1953125
+            },
+            width = 225
+          },
+          {
+            draw_as_shadow = true,
+            filename = "__base__/graphics/entity/steam-engine/steam-engine-V-shadow.png",
+            frame_count = 32,
+            height = 307,
+            line_length = 8,
+            scale = 0.5,
+            shift = {
+              1.265625,
+              0.2890625
+            },
+            width = 330
+          }
+        }
+      }
+    }
   },
   resistances = {
     {
@@ -235,36 +270,8 @@ return {
       starting_vertical_speed = 0.08
     }
   },
+  two_direction_only = true,
   type = "generator",
-  vertical_animation = {
-    layers = {
-      {
-        filename = "__base__/graphics/entity/steam-engine/steam-engine-V.png",
-        frame_count = 32,
-        height = 391,
-        line_length = 8,
-        scale = 0.5,
-        shift = {
-          0.1484375,
-          -0.1953125
-        },
-        width = 225
-      },
-      {
-        draw_as_shadow = true,
-        filename = "__base__/graphics/entity/steam-engine/steam-engine-V-shadow.png",
-        frame_count = 32,
-        height = 307,
-        line_length = 8,
-        scale = 0.5,
-        shift = {
-          1.265625,
-          0.2890625
-        },
-        width = 330
-      }
-    }
-  },
   water_reflection = {
     orientation_to_variation = true,
     pictures = {

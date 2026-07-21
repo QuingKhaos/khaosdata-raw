@@ -1,4 +1,4 @@
 return {
-  name = "basic-crafting",
+  name = "hand-crafting",
   type = "recipe-category"
 }

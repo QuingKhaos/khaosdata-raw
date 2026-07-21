@@ -1,6 +1,6 @@
 return {
   color_hint = {
-    text = "S"
+    text = "U"
   },
   drop_sound = {
     aggregation = {
@@ -10,11 +10,7 @@ return {
     filename = "__base__/sound/item/science-inventory-move.ogg",
     volume = 0.6
   },
-  durability = 1,
-  durability_description_key = "description.science-pack-remaining-amount-key",
-  durability_description_value = "description.science-pack-remaining-amount-value",
-  factoriopedia_durability_description_key = "description.factoriopedia-science-pack-remaining-amount-key",
-  icon = "__base__/graphics/icons/space-science-pack.png",
+  icon = "__base__/graphics/icons/utility-science-pack.png",
   inventory_move_sound = {
     aggregation = {
       max_count = 1,
@@ -23,8 +19,11 @@ return {
     filename = "__base__/sound/item/science-inventory-move.ogg",
     volume = 0.6
   },
-  name = "space-science-pack",
-  order = "g[space-science-pack]",
+  localised_description = {
+    "item-description.science-pack"
+  },
+  name = "utility-science-pack",
+  order = "f[utility-science-pack]",
   pick_sound = {
     aggregation = {
       max_count = 1,
@@ -39,8 +38,8 @@ return {
     0.96999999999999993,
     1
   },
-  stack_size = 2000,
+  stack_size = 200,
   subgroup = "science-pack",
-  type = "tool",
+  type = "item",
   weight = 1000
 }

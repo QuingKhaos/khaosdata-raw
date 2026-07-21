@@ -1446,7 +1446,8 @@ return {
     }
   },
   crafting_categories = {
-    "crafting"
+    "crafting",
+    "hand-crafting"
   },
   damage_hit_tint = {
     0.12,

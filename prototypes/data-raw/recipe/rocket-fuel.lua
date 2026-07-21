@@ -1,6 +1,8 @@
 return {
   allow_productivity = true,
-  category = "crafting-with-fluid",
+  categories = {
+    "crafting-with-fluid"
+  },
   crafting_machine_tint = {
     primary = {
       a = 1,

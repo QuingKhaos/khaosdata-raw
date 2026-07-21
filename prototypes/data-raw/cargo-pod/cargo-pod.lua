@@ -20,6 +20,9 @@ return {
     catalogue_id = 6,
     type = "pod-catalogue"
   },
+  factoriopedia_simulation = {
+    init = "    game.simulation.camera_position = {0, 0}\n    rendering.draw_sprite{sprite = \"cargo-pod-factoriopedia\", target = {0, 0}, surface = game.surfaces[1]}\n  "
+  },
   flags = {
     "not-on-map"
   },
@@ -55,7 +58,8 @@ return {
           max_count = 3,
           remove = true
         },
-        filename = "__base__/sound/procession/cargo-pod-reentry-flame.ogg"
+        filename = "__base__/sound/procession/cargo-pod-reentry-flame.ogg",
+        volume = 0.7
       }
     },
     {
@@ -63,43 +67,71 @@ return {
       sound = {
         aggregation = {
           count_already_playing = true,
-          max_count = 3,
+          max_count = 2,
           remove = true
         },
-        filename = "__base__/sound/procession/cargo-pod-thruster-burst-1.ogg"
+        variations = {
+          {
+            filename = "__base__/sound/procession/cargo-pod-thruster-burst-1.ogg",
+            modifiers = {
+              type = "main-menu",
+              volume_multiplier = 3
+            },
+            volume = 0.6
+          },
+          {
+            filename = "__base__/sound/procession/cargo-pod-thruster-burst-2.ogg",
+            modifiers = {
+              type = "main-menu",
+              volume_multiplier = 3
+            },
+            volume = 0.6
+          },
+          {
+            filename = "__base__/sound/procession/cargo-pod-thruster-burst-3.ogg",
+            modifiers = {
+              type = "main-menu",
+              volume_multiplier = 3
+            },
+            volume = 0.6
+          },
+          {
+            filename = "__base__/sound/procession/cargo-pod-thruster-burst-4.ogg",
+            modifiers = {
+              type = "main-menu",
+              volume_multiplier = 3
+            },
+            volume = 0.6
+          },
+          {
+            filename = "__base__/sound/procession/cargo-pod-thruster-burst-5.ogg",
+            modifiers = {
+              type = "main-menu",
+              volume_multiplier = 3
+            },
+            volume = 0.6
+          }
+        }
       }
     },
     {
-      index = 202,
+      index = 205,
       sound = {
         aggregation = {
           count_already_playing = true,
-          max_count = 3,
+          max_count = 2,
           remove = true
         },
-        filename = "__base__/sound/procession/cargo-pod-thruster-burst-2.ogg"
-      }
-    },
-    {
-      index = 203,
-      sound = {
-        aggregation = {
-          count_already_playing = true,
-          max_count = 3,
-          remove = true
-        },
-        filename = "__base__/sound/procession/cargo-pod-thruster-burst-3.ogg"
-      }
-    },
-    {
-      index = 204,
-      sound = {
-        aggregation = {
-          count_already_playing = true,
-          max_count = 3,
-          remove = true
-        },
-        filename = "__base__/sound/procession/cargo-pod-thruster-burst-4.ogg"
+        variations = {
+          {
+            filename = "__base__/sound/procession/cargo-pod-thruster-burst-short-1.ogg",
+            volume = 0.6
+          },
+          {
+            filename = "__base__/sound/procession/cargo-pod-thruster-burst-short-2.ogg",
+            volume = 0.6
+          }
+        }
       }
     },
     {
@@ -107,10 +139,55 @@ return {
       sound = {
         aggregation = {
           count_already_playing = true,
-          max_count = 3,
+          max_count = 1,
           remove = true
         },
-        filename = "__base__/sound/procession/cargo-pod-wings.ogg"
+        variations = {
+          {
+            filename = "__base__/sound/procession/cargo-pod-wings-1.ogg",
+            volume = 0.35
+          },
+          {
+            filename = "__base__/sound/procession/cargo-pod-wings-2.ogg",
+            volume = 0.35
+          },
+          {
+            filename = "__base__/sound/procession/cargo-pod-wings-3.ogg",
+            volume = 0.35
+          }
+        }
+      }
+    },
+    {
+      index = 251,
+      sound = {
+        aggregation = {
+          count_already_playing = true,
+          max_count = 2,
+          remove = true
+        },
+        variations = {
+          {
+            filename = "__base__/sound/procession/cargo-pod-jet-burst-1.ogg",
+            volume = 0.15
+          },
+          {
+            filename = "__base__/sound/procession/cargo-pod-jet-burst-2.ogg",
+            volume = 0.15
+          },
+          {
+            filename = "__base__/sound/procession/cargo-pod-jet-burst-3.ogg",
+            volume = 0.15
+          },
+          {
+            filename = "__base__/sound/procession/cargo-pod-jet-burst-4.ogg",
+            volume = 0.15
+          },
+          {
+            filename = "__base__/sound/procession/cargo-pod-jet-burst-5.ogg",
+            volume = 0.15
+          }
+        }
       }
     },
     {
@@ -118,7 +195,7 @@ return {
       sound = {
         aggregation = {
           count_already_playing = true,
-          max_count = 3,
+          max_count = 1,
           remove = true
         },
         filename = "__base__/sound/procession/cargo-pod-rocket-claws-open.ogg"
@@ -132,8 +209,44 @@ return {
           max_count = 3,
           remove = true
         },
-        filename = "__base__/sound/car-stone-impact-2.ogg",
-        volume = 0.8
+        variations = {
+          {
+            filename = "__base__/sound/procession/cargo-pod-ground-land-1.ogg",
+            volume = 0.6
+          },
+          {
+            filename = "__base__/sound/procession/cargo-pod-ground-land-2.ogg",
+            volume = 0.6
+          },
+          {
+            filename = "__base__/sound/procession/cargo-pod-ground-land-3.ogg",
+            volume = 0.6
+          }
+        }
+      }
+    },
+    {
+      index = 301,
+      sound = {
+        aggregation = {
+          count_already_playing = true,
+          max_count = 1,
+          remove = true
+        },
+        variations = {
+          {
+            filename = "__base__/sound/procession/cargo-pod-wings-close-1.ogg",
+            volume = 0.3
+          },
+          {
+            filename = "__base__/sound/procession/cargo-pod-wings-close-2.ogg",
+            volume = 0.3
+          },
+          {
+            filename = "__base__/sound/procession/cargo-pod-wings-close-3.ogg",
+            volume = 0.3
+          }
+        }
       }
     }
   },
@@ -284,85 +397,19 @@ return {
     },
     {
       animation = {
-        filename = "__base__/graphics/entity/cargo-pod/pod-closed-rotation.png",
-        frame_count = 59,
-        height = 172,
-        line_length = 12,
-        priority = "medium",
-        scale = 0.5,
-        shift = {
-          0,
-          0.09375
-        },
-        width = 82
-      },
-      index = 7
-    },
-    {
-      animation = {
-        blend_mode = "additive",
-        filename = "__base__/graphics/entity/cargo-pod/pod-closed-rotation-emission.png",
-        frame_count = 59,
-        height = 146,
-        line_length = 12,
-        priority = "medium",
-        scale = 0.5,
-        shift = {
-          0,
-          0.265625
-        },
-        width = 80
-      },
-      index = 8
-    },
-    {
-      animation = {
-        filename = "__base__/graphics/entity/cargo-pod/pod-open-rotation.png",
-        frame_count = 60,
-        height = 248,
-        line_length = 12,
-        priority = "medium",
-        scale = 0.5,
-        shift = {
-          0,
-          0.078125
-        },
-        width = 236
-      },
-      index = 11
-    },
-    {
-      animation = {
-        blend_mode = "additive",
-        filename = "__base__/graphics/entity/cargo-pod/pod-open-rotation-emission.png",
-        frame_count = 60,
-        height = 240,
-        line_length = 12,
-        priority = "medium",
-        scale = 0.5,
-        shift = {
-          0,
-          0.125
-        },
-        width = 234
-      },
-      index = 12
-    },
-    {
-      animation = {
         animation_speed = 0.5,
         blend_mode = "additive",
         draw_as_glow = true,
         filename = "__base__/graphics/entity/cargo-pod/pod-thruster-loop.png",
         flags = {
-          "group=effect-texture",
+          "group=procession",
           "linear-minification",
           "linear-magnification"
         },
         frame_count = 10,
         height = 256,
         line_length = 5,
-        priority = "no-atlas",
+        priority = "medium",
         scale = 0.25,
         shift = {
           0,
@@ -380,14 +427,14 @@ return {
         draw_as_glow = true,
         filename = "__base__/graphics/entity/cargo-pod/pod-thruster-ignition.png",
         flags = {
-          "group=effect-texture",
+          "group=procession",
           "linear-minification",
           "linear-magnification"
         },
         frame_count = 10,
         height = 256,
         line_length = 5,
-        priority = "no-atlas",
+        priority = "medium",
         scale = 0.25,
         shift = {
           0,
@@ -397,25 +444,6 @@ return {
       },
       index = 201,
       type = "sprite"
-    },
-    {
-      animation = {
-        animation_speed = 0.5,
-        blend_mode = "additive",
-        draw_as_glow = true,
-        filename = "__base__/graphics/entity/cargo-pod/pod-open-reentry-flame.png",
-        frame_count = 30,
-        height = 302,
-        line_length = 10,
-        priority = "medium",
-        scale = 0.5,
-        shift = {
-          -0.15625,
-          -0.1875
-        },
-        width = 270
-      },
-      index = 202
     }
   },
   selection_box = {

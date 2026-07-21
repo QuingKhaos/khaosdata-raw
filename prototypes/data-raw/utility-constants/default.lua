@@ -783,7 +783,6 @@ return {
     },
     ["cargo-bay"] = {
       layers = {
-        elevated_rail = true,
         is_lower_object = true,
         is_object = true,
         item = true,
@@ -1909,12 +1908,14 @@ return {
       "default-a"
     }
   },
+  default_platform_surface_render_parameters = {},
   default_player_force_color = {
     0.86899999999999995,
     0.5,
     0.13,
     0.5
   },
+  default_rocket_lift_weight = 1000000,
   default_scorch_mark_color = {
     0.373,
     0.30699999999999998,
@@ -2005,11 +2006,21 @@ return {
     g = 0.3,
     r = 0.3
   },
-  explosions_in_simulation_volume_modifier = 0.5,
-  factoriopedia_recycling_recipe_categories = {
-    "recycling",
-    "recycling-or-hand-crafting"
+  equipment_disabled_background_tint = {
+    0.5,
+    0.5,
+    0.5,
+    1
   },
+  equipment_disabled_tint = {
+    0.5,
+    0.5,
+    0.5,
+    0.5
+  },
+  explosions_in_simulation_volume_modifier = 0.5,
+  factoriopedia_recycling_recipe_categories = {},
+  far_away_chunk_generation_radius = 20,
   feedback_screenshot_file_name = "feedback_screenshot",
   feedback_screenshot_subfolder_name = "feedback",
   filter_outline_color = {
@@ -2028,29 +2039,35 @@ return {
   freezing_temperature = 30,
   frozen_color_lookup = "__core__/graphics/color_luts/frozen.png",
   ghost_layer = "ghost",
+  ghost_product_count_tint = {
+    170,
+    222,
+    255,
+    200
+  },
   ghost_shader_tint = {
     ghost_delivery_tint = {
-      168,
-      214,
-      196,
+      210,
+      250,
+      245,
       77
     },
     ghost_tint = {
-      118,
-      135,
-      209,
+      147,
+      168,
+      255,
       77
     },
     tile_ghost_delivery_tint = {
-      174,
-      221,
-      242,
+      217,
+      255,
+      255,
       255
     },
     tile_ghost_tint = {
-      37,
-      123,
-      194,
+      46,
+      153,
+      242,
       255
     },
     wire_tint = {
@@ -2241,6 +2258,7 @@ return {
     230,
     192
   },
+  huge_area_size = 26,
   huge_platform_animation_sound_area = 81,
   icon_shadow_color = {
     a = 1
@@ -2348,7 +2366,7 @@ return {
     },
     nauvis_big_defense = {
       checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    logo.destructible = false\n    local center = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_position = center\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 1\n    game.map_settings.steering.moving.force_unit_fuzzy_goto_behavior = true\n    game.map_settings.steering.moving.radius = 3\n\n    local bop = function()\n      local surface = game.surfaces[1]\n      local target = surface.find_entities_filtered{name = \"flamethrower-turret\", position = {33.5, -12}}[1]\n      local names = {\"medium-biter\", \"medium-biter\", \"big-biter\", \"big-biter\", \"big-spitter\", \"medium-spitter\"}\n      for k = 1, 100 do\n        local spawn_position = {center[1] - 60 + math.random(-35, 5), center[2] + math.random(-10, 10)}\n        local name = names[math.random(#names)]\n        local biter = surface.create_entity{name = name, position = spawn_position}\n        biter.commandable.set_command({type = defines.command.attack, target = target})\n        biter.speed = 0.24 + (math.random() / 20)\n      end\n    end\n\n    bop()\n  ",
+      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    logo.destructible = false\n    local center = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_position = center\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 1\n\n    local bop = function()\n      local surface = game.surfaces[1]\n      local target = surface.find_entities_filtered{name = \"flamethrower-turret\", position = {33.5, -12}}[1]\n      local names = {\"medium-biter\", \"medium-biter\", \"big-biter\", \"big-biter\", \"big-spitter\", \"medium-spitter\"}\n      for k = 1, 100 do\n        local spawn_position = {center[1] - 60 + math.random(-35, 5), center[2] + math.random(-10, 10)}\n        local name = names[math.random(#names)]\n        local biter = surface.create_entity{name = name, position = spawn_position}\n        biter.commandable.set_command({type = defines.command.attack, target = target})\n        biter.speed = 0.24 + (math.random() / 20)\n      end\n    end\n\n    bop()\n  ",
       length = 720,
       save = "__base__/menu-simulations/menu-simulation-big-defense.zip"
     },
@@ -2360,7 +2378,7 @@ return {
     },
     nauvis_biter_base_laser_defense = {
       checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    logo.destructible = false\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    center = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.forces.enemy.set_evolution_factor(0.7)\n    game.surfaces[1].peaceful_mode = true\n    game.forces.player.research_all_technologies()\n    game.surfaces.nauvis.daytime = 0\n\n    local character = game.surfaces[1].create_entity{name = \"character\", position = {center[1] - 40, center[2] + 20}, force = \"player\"}\n    character.insert{name = \"power-armor-mk2\"}\n    local grid = character.get_inventory(defines.inventory.character_armor)[1].grid\n    grid.put{name = \"exoskeleton-equipment\"}\n    grid.put{name = \"exoskeleton-equipment\"}\n    for k = 1, 10 do\n      grid.put{name = \"personal-laser-defense-equipment\"}\n      grid.put{name = \"energy-shield-mk2-equipment\"}\n      grid.put{name = \"battery-mk2-equipment\"}\n      grid.put{name = \"battery-mk2-equipment\"}\n    end\n\n    for k, equipment in pairs(grid.equipment) do\n      if equipment.max_shield > 0 then equipment.shield = equipment.max_shield end\n      equipment.energy = equipment.max_energy\n    end\n\n    character.insert{name = \"submachine-gun\"}\n    character.insert{name = \"uranium-rounds-magazine\", count = 50}\n\n    points =\n    {\n      {-16, -8},\n      {0, -12},\n      {16, -8},\n      {16, 0},\n      {8, 8},\n      {60, 8},\n    }\n\n    local distance = function(p_1, p_2)\n      local dx = (p_1[1] or p_1.x) - (p_2[1] or p_2.x)\n      local dy = (p_1[2] or p_1.y) - (p_2[2] or p_2.y)\n      return ((dx * dx) + (dy * dy)) ^ 0.5\n    end\n\n    local direction = function(p_1, p_2)\n\n      local d_x = (p_2[1] or p_2.x) - (p_1[1] or p_1.x)\n      local d_y = (p_2[2] or p_2.y) - (p_1[2] or p_1.y)\n      local angle = math.atan2(d_y, d_x)\n\n      local orientation =  (angle / (2 * math.pi)) - 0.25\n      if orientation < 0 then orientation = orientation + 1 end\n\n      local direction = math.floor((orientation * 16) + 0.5)\n      if direction == 16 then direction = defines.direction.north end\n      return direction\n    end\n\n    local get_shoot_target = function(entity)\n      local enemies = entity.surface.find_enemy_units(entity.position, 10)\n      local closest = entity.surface.get_closest(entity.position, enemies)\n      return closest\n    end\n\n    script.on_event(defines.events.on_tick, function()\n      local k, destination = next(points)\n      if not k then return end\n      local target = {center[1] + destination[1], center[2] + destination[2]}\n      if distance(character.position, target) < 1 then\n        points[k] = nil\n        return\n      end\n\n      if game.tick % 17 == 0 then\n        local walking_direction = direction(target, character.position)\n        character.walking_state = {walking = true, direction = walking_direction}\n      end\n\n      if not (shoot_target and shoot_target.valid) then\n        shoot_target = get_shoot_target(character)\n      end\n\n      if shoot_target then\n        character.shooting_state = {state = defines.shooting.shooting_enemies, position = shoot_target.position}\n      else\n        character.shooting_state = {state = defines.shooting.not_shooting}\n      end\n\n    end)\n\n  ",
+      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    logo.destructible = false\n    game.simulation.camera_position = {logo.position.x, logo.position.y+9.75}\n    center = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.forces.enemy.set_evolution_factor(0.7)\n    game.surfaces[1].peaceful_mode = true\n    game.forces.player.research_all_technologies()\n    game.surfaces.nauvis.daytime = 0\n\n    local character = game.surfaces[1].create_entity{name = \"character\", position = {center[1] - 40, center[2] + 20}, force = \"player\"}\n    character.insert{name = \"power-armor-mk2\"}\n    local grid = character.get_inventory(defines.inventory.character_armor)[1].grid\n    grid.put{name = \"exoskeleton-equipment\"}\n    grid.put{name = \"exoskeleton-equipment\"}\n    for k = 1, 10 do\n      grid.put{name = \"personal-laser-defense-equipment\"}\n      grid.put{name = \"energy-shield-mk2-equipment\"}\n      grid.put{name = \"battery-mk2-equipment\"}\n      grid.put{name = \"battery-mk2-equipment\"}\n    end\n\n    for k, equipment in pairs(grid.equipment) do\n      if equipment.max_shield > 0 then equipment.shield = equipment.max_shield end\n      equipment.energy = equipment.max_energy\n    end\n\n    character.insert{name = \"submachine-gun\"}\n    character.insert{name = \"uranium-rounds-magazine\", count = 50}\n\n    points =\n    {\n      {-16, -8},\n      {0, -12},\n      {16, -8},\n      {16, 0},\n      {8, 8},\n      {60, 8},\n    }\n\n    local distance = function(p_1, p_2)\n      local dx = (p_1[1] or p_1.x) - (p_2[1] or p_2.x)\n      local dy = (p_1[2] or p_1.y) - (p_2[2] or p_2.y)\n      return ((dx * dx) + (dy * dy)) ^ 0.5\n    end\n\n    local direction = function(p_1, p_2)\n\n      local d_x = (p_2[1] or p_2.x) - (p_1[1] or p_1.x)\n      local d_y = (p_2[2] or p_2.y) - (p_1[2] or p_1.y)\n      local angle = math.atan2(d_y, d_x)\n\n      local orientation =  (angle / (2 * math.pi)) - 0.25\n      if orientation < 0 then orientation = orientation + 1 end\n\n      local direction = math.floor((orientation * 16) + 0.5)\n      if direction == 16 then direction = defines.direction.north end\n      return direction\n    end\n\n    local get_shoot_target = function(entity)\n      local enemies = entity.surface.find_enemy_units(entity.position, 10)\n      local closest = entity.surface.get_closest(entity.position, enemies)\n      return closest\n    end\n\n    script.on_event(defines.events.on_tick, function()\n      if not character.valid then return end\n      local k, destination = next(points)\n      if not k then return end\n      local target = {center[1] + destination[1], center[2] + destination[2]}\n      if distance(character.position, target) < 1 then\n        points[k] = nil\n        return\n      end\n\n      if game.tick % 17 == 0 then\n        local walking_direction = direction(target, character.position)\n        character.walking_state = {walking = true, direction = walking_direction}\n      end\n\n      if not (shoot_target and shoot_target.valid) then\n        shoot_target = get_shoot_target(character)\n      end\n\n      if shoot_target then\n        character.shooting_state = {state = defines.shooting.shooting_enemies, position = shoot_target.position}\n      else\n        character.shooting_state = {state = defines.shooting.not_shooting}\n      end\n\n    end)\n\n  ",
       length = 720,
       save = "__base__/menu-simulations/menu-simulation-biter-base.zip"
     },
@@ -2384,7 +2402,7 @@ return {
     },
     nauvis_brutal_defeat = {
       checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    logo.destructible = false\n    local center = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_position = center\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.map_settings.steering.moving.force_unit_fuzzy_goto_behavior = true\n    game.map_settings.steering.moving.radius = 2\n\n    game.forces.enemy.set_ammo_damage_modifier(\"melee\", 10)\n    game.forces.enemy.set_ammo_damage_modifier(\"biological\", 10)\n    game.forces.enemy.set_gun_speed_modifier(\"melee\", 0.5)\n    game.forces.enemy.set_gun_speed_modifier(\"biological\", 0.5)\n\n    local bop = function()\n      local surface = game.surfaces[1]\n      local targets = surface.find_entities_filtered{force = \"player\", position = {center[1] + 25, center[2]}, radius = 10}\n      local count = #targets\n      local names = {\"medium-biter\", \"small-biter\", \"small-biter\", \"small-biter\", \"small-biter\", \"small-biter\", \"small-spitter\"}\n      for k = 1, 350 do\n        local spawn_position = {center[1] - 40 + math.random(-55, 5), center[2] + 10 + math.random(-5, 5)}\n        local name = names[math.random(#names)]\n        local biter = surface.create_entity{name = name, position = spawn_position}\n        biter.commandable.set_command\n        {\n          type = defines.command.compound,\n          structure_type = defines.compound_command.return_last,\n          commands =\n          {\n            {type = defines.command.attack, target = targets[math.random(count)]},\n            {type = defines.command.attack_area, destination = {center[1] + 20, center[2]}, radius = math.random(5, 10)},\n            {type = defines.command.attack_area, destination = {center[1] + 35, center[2]}, radius = math.random(2, 5)},\n            {type = defines.command.go_to_location, destination = {center[1] + 120, center[2]}}\n          }\n        }\n        biter.speed = 0.24 + (math.random() / 20)\n      end\n    end\n\n    bop()\n  ",
+      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    logo.destructible = false\n    local center = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_position = center\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n\n    game.forces.enemy.set_ammo_damage_modifier(\"melee\", 10)\n    game.forces.enemy.set_ammo_damage_modifier(\"biological\", 10)\n    game.forces.enemy.set_gun_speed_modifier(\"melee\", 0.5)\n    game.forces.enemy.set_gun_speed_modifier(\"biological\", 0.5)\n\n    local bop = function()\n      local surface = game.surfaces[1]\n      local targets = surface.find_entities_filtered{force = \"player\", position = {center[1] + 25, center[2]}, radius = 10}\n      local count = #targets\n      local names = {\"medium-biter\", \"small-biter\", \"small-biter\", \"small-biter\", \"small-biter\", \"small-biter\", \"small-spitter\"}\n      for k = 1, 350 do\n        local spawn_position = {center[1] - 40 + math.random(-55, 5), center[2] + 10 + math.random(-5, 5)}\n        local name = names[math.random(#names)]\n        local biter = surface.create_entity{name = name, position = spawn_position}\n        biter.commandable.set_command\n        {\n          type = defines.command.compound,\n          structure_type = defines.compound_command.return_last,\n          commands =\n          {\n            {type = defines.command.attack, target = targets[math.random(count)]},\n            {type = defines.command.attack_area, destination = {center[1] + 20, center[2]}, radius = math.random(5, 10)},\n            {type = defines.command.attack_area, destination = {center[1] + 35, center[2]}, radius = math.random(2, 5)},\n            {type = defines.command.go_to_location, destination = {center[1] + 120, center[2]}}\n          }\n        }\n        biter.speed = 0.24 + (math.random() / 20)\n      end\n    end\n\n    bop()\n  ",
       length = 1080,
       save = "__base__/menu-simulations/menu-simulation-brutal-defeat.zip"
     },
@@ -2397,7 +2415,7 @@ return {
     },
     nauvis_chase_player = {
       checkboard = false,
-      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    local center = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_position = center\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 0\n    game.map_settings.steering.moving.force_unit_fuzzy_goto_behavior = true\n    game.map_settings.steering.moving.radius = 1\n\n    local character = game.surfaces[1].create_entity{name = \"character\", position = {center[1] - 55, center[2] + 4.5}, force = \"player\"}\n    character.walking_state = {walking = true, direction = defines.direction.east}\n    character.character_running_speed_modifier = 0.2\n    character.tick_of_last_attack = game.tick\n\n    local biter = game.surfaces[1].create_entity{name = \"small-biter\", position = {center[1] - 40, center[2] + 4.5}}\n    biter.speed = character.character_running_speed\n    biter.commandable.set_command{type = defines.command.go_to_location, destination = {center[1] + 60, center[2] + 4.5}, distraction = defines.distraction.none}\n\n    script.on_nth_tick(10, function()\n      if biter.position.x < (center[1] + 50) then return end\n      character.walking_state = {walking = true, direction = defines.direction.west}\n      character.tick_of_last_attack = 0\n      character.character_running_speed_modifier = 0.6\n      local command = {type = defines.command.go_to_location, destination_entity = character, distraction = defines.distraction.none}\n      biter.commandable.set_command(command)\n      biter.speed = character.character_running_speed\n      local position = biter.position\n      local surface = game.surfaces[1]\n      local names = {\"medium-biter\", \"small-biter\", \"small-biter\", \"small-biter\"}\n      for k = 1, 25 do\n        local spawn_position = {position.x + math.random(-5, 5), position.y + math.random(-10, 10)}\n        local name = names[math.random(#names)]\n        local biter = surface.create_entity{name = name, position = position}\n        biter.commandable.set_command(command)\n        biter.speed = character.character_running_speed\n      end\n      script.on_nth_tick(10, nil)\n    end)\n  ",
+      init = "    local logo = game.surfaces.nauvis.find_entities_filtered{name = \"factorio-logo-11tiles\", limit = 1}[1]\n    local center = {logo.position.x, logo.position.y+9.75}\n    game.simulation.camera_position = center\n    game.simulation.camera_zoom = 1\n    game.tick_paused = false\n    game.surfaces.nauvis.daytime = 0\n\n    local character = game.surfaces[1].create_entity{name = \"character\", position = {center[1] - 55, center[2] + 4.5}, force = \"player\"}\n    character.walking_state = {walking = true, direction = defines.direction.east}\n    character.character_running_speed_modifier = 0.2\n    character.tick_of_last_attack = game.tick\n\n    local biter = game.surfaces[1].create_entity{name = \"small-biter\", position = {center[1] - 40, center[2] + 4.5}}\n    biter.speed = character.character_running_speed\n    biter.commandable.set_command{type = defines.command.go_to_location, destination = {center[1] + 60, center[2] + 4.5}, distraction = defines.distraction.none}\n\n    script.on_nth_tick(10, function()\n      if biter.position.x < (center[1] + 50) then return end\n      character.walking_state = {walking = true, direction = defines.direction.west}\n      character.tick_of_last_attack = 0\n      character.character_running_speed_modifier = 0.6\n      local command = {type = defines.command.go_to_location, destination_entity = character, distraction = defines.distraction.none}\n      biter.commandable.set_command(command)\n      biter.speed = character.character_running_speed\n      local position = biter.position\n      local surface = game.surfaces[1]\n      local names = {\"medium-biter\", \"small-biter\", \"small-biter\", \"small-biter\"}\n      for k = 1, 25 do\n        local spawn_position = {position.x + math.random(-5, 5), position.y + math.random(-10, 10)}\n        local name = names[math.random(#names)]\n        local biter = surface.create_entity{name = name, position = position}\n        biter.commandable.set_command(command)\n        biter.speed = character.character_running_speed\n      end\n      script.on_nth_tick(10, nil)\n    end)\n  ",
       length = 960,
       save = "__base__/menu-simulations/menu-simulation-chase-player.zip"
     },
@@ -2572,25 +2590,12 @@ return {
     }
   },
   max_belt_stack_size = 4,
-  max_fluid_flow = 100,
   max_logistic_filter_count = 1000,
   max_terrain_building_size = 255,
   maximum_quality_jump = 255,
   maximum_recipe_overload_multiplier = 100,
   medium_area_size = 6.5,
   medium_blueprint_area_size = 200,
-  minimap_slot_clicked_tint = {
-    a = 0.7,
-    b = 0,
-    g = 0.4784313725490196,
-    r = 0.85882352941176467
-  },
-  minimap_slot_hovered_tint = {
-    a = 0.7,
-    b = 0,
-    g = 0.63529411764705879,
-    r = 1
-  },
   minimum_recipe_overload_multiplier = 2,
   missing_preview_sprite_location = "__core__/graphics/missing-preview.png",
   module_inventory_width = 10,
@@ -2846,7 +2851,6 @@ return {
   recipe_step_limit = 50000,
   remote_view_LPF_max_cutoff_frequency = 15000,
   remote_view_LPF_min_cutoff_frequency = 4000,
-  rocket_lift_weight = 1000000,
   script_command_console_chat_color = {
     0.75,
     0.75,
@@ -2875,6 +2879,7 @@ return {
   },
   small_area_size = 1.5,
   small_blueprint_area_size = 50,
+  sound_fade_ticks = 120,
   space_LPF_max_cutoff_frequency = 500,
   space_LPF_min_cutoff_frequency = 200,
   space_platform_acceleration_expression = "(thrust / (1 + weight / 10000000) - ((1500 * speed * speed + 1500 * abs(speed)) * (width * 0.5) + 10000) * sign(speed)) / weight / 60",
@@ -2917,6 +2922,18 @@ return {
     0.98000000000000007,
     0.66000000000000005,
     0.22000000000000002
+  },
+  tall_entity_smoke_tint = {
+    0.3,
+    0.3,
+    0.3,
+    0.3
+  },
+  tall_entity_tint = {
+    0.2,
+    0.2,
+    0.1,
+    0.2
   },
   time_to_show_full_health_bar = 5,
   tooltip_monitor_edge_border = 10,

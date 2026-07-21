@@ -111,6 +111,7 @@ return {
   ["slowdown-capsule-explosion"] = require("___KHAOSDATA___.prototypes.data-raw.explosion.slowdown-capsule-explosion"),
   ["small-biter-die"] = require("___KHAOSDATA___.prototypes.data-raw.explosion.small-biter-die"),
   ["small-electric-pole-explosion"] = require("___KHAOSDATA___.prototypes.data-raw.explosion.small-electric-pole-explosion"),
+  ["small-explosion-hit"] = require("___KHAOSDATA___.prototypes.data-raw.explosion.small-explosion-hit"),
   ["small-spitter-die"] = require("___KHAOSDATA___.prototypes.data-raw.explosion.small-spitter-die"),
   ["small-worm-die"] = require("___KHAOSDATA___.prototypes.data-raw.explosion.small-worm-die"),
   ["solar-panel-explosion"] = require("___KHAOSDATA___.prototypes.data-raw.explosion.solar-panel-explosion"),

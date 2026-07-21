@@ -10,6 +10,7 @@ return {
       ground_tile = true
     }
   },
+  factoriopedia_alternative = "dirt-1",
   layer = 18,
   map_color = {
     94,
@@ -475,7 +476,7 @@ return {
             volume_percentage = 0
           },
           to = {
-            control = 0.6,
+            control = 1,
             volume_percentage = 100
           }
         }

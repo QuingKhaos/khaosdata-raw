@@ -1,6 +1,7 @@
 return {
   crafting_categories = {
-    "crafting"
+    "crafting",
+    "hand-crafting"
   },
   inventory_size = 80,
   item_pickup_distance = 1,

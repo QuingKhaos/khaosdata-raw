@@ -28,7 +28,7 @@ return {
               volume_percentage = 0
             },
             to = {
-              control = 0.6,
+              control = 1,
               volume_percentage = 100
             }
           }
@@ -55,10 +55,8 @@ return {
     mining_time = 1,
     results = {
       {
-        amount_max = 10,
-        amount_min = 10,
+        amount = 10,
         name = "crude-oil",
-        probability = 1,
         type = "fluid"
       }
     }
@@ -177,7 +175,7 @@ return {
             volume_percentage = 0
           },
           to = {
-            control = 0.6,
+            control = 1,
             volume_percentage = 100
           }
         }
@@ -212,6 +210,30 @@ return {
         filename = "__base__/sound/walking/resources/oil-7.ogg",
         volume = 0.7
       }
+    }
+  },
+  working_sound = {
+    max_sounds_per_prototype = 3,
+    sound = {
+      advanced_volume_control = {
+        fades = {
+          fade_in = {
+            curve_type = "S-curve",
+            from = {
+              control = 0.3,
+              volume_percentage = 0
+            },
+            to = {
+              2,
+              100
+            }
+          }
+        }
+      },
+      audible_distance_modifier = 0.25,
+      category = "world-ambient",
+      filename = "__base__/sound/world/resources/crude-oil-1.ogg",
+      volume = 0.3
     }
   }
 }

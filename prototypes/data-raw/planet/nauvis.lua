@@ -210,6 +210,7 @@ return {
         wind_speed_factor = 1.77
       },
       detail_noise_texture = {
+        color_channels = 1,
         filename = "__core__/graphics/clouds-detail-noise.png",
         size = 2048
       },
@@ -226,6 +227,7 @@ return {
       opacity = 0.25,
       scale = 1,
       shape_noise_texture = {
+        color_channels = 3,
         filename = "__core__/graphics/clouds-noise.png",
         size = 2048
       },

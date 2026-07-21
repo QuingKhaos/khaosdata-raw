@@ -1,6 +1,16 @@
 return {
   allow_productivity = true,
-  category = "oil-processing",
+  categories = {
+    "oil-processing"
+  },
+  crafting_machine_tint = {
+    primary = {
+      a = 1,
+      b = 0.060999999999999996,
+      g = 0.454,
+      r = 0.99600000000000009
+    }
+  },
   enabled = false,
   energy_required = 5,
   icon = "__base__/graphics/icons/fluid/advanced-oil-processing.png",

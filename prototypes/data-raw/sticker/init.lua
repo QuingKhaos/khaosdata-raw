@@ -5,6 +5,7 @@ return {
   ["acid-sticker-small"] = require("___KHAOSDATA___.prototypes.data-raw.sticker.acid-sticker-small"),
   ["electric-mini-stun"] = require("___KHAOSDATA___.prototypes.data-raw.sticker.electric-mini-stun"),
   ["fire-sticker"] = require("___KHAOSDATA___.prototypes.data-raw.sticker.fire-sticker"),
+  ["shotgun-impact-sticker"] = require("___KHAOSDATA___.prototypes.data-raw.sticker.shotgun-impact-sticker"),
   ["slowdown-sticker"] = require("___KHAOSDATA___.prototypes.data-raw.sticker.slowdown-sticker"),
   ["stun-sticker"] = require("___KHAOSDATA___.prototypes.data-raw.sticker.stun-sticker"),
 }

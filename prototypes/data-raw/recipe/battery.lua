@@ -1,6 +1,9 @@
 return {
   allow_productivity = true,
-  category = "chemistry",
+  auto_recycle = true,
+  categories = {
+    "chemistry"
+  },
   crafting_machine_tint = {
     primary = {
       a = 1,

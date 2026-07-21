@@ -1,6 +1,6 @@
 return {
   color_hint = {
-    text = "P"
+    text = "L"
   },
   drop_sound = {
     aggregation = {
@@ -10,11 +10,7 @@ return {
     filename = "__base__/sound/item/science-inventory-move.ogg",
     volume = 0.6
   },
-  durability = 1,
-  durability_description_key = "description.science-pack-remaining-amount-key",
-  durability_description_value = "description.science-pack-remaining-amount-value",
-  factoriopedia_durability_description_key = "description.factoriopedia-science-pack-remaining-amount-key",
-  icon = "__base__/graphics/icons/production-science-pack.png",
+  icon = "__base__/graphics/icons/logistic-science-pack.png",
   inventory_move_sound = {
     aggregation = {
       max_count = 1,
@@ -26,8 +22,8 @@ return {
   localised_description = {
     "item-description.science-pack"
   },
-  name = "production-science-pack",
-  order = "e[production-science-pack]",
+  name = "logistic-science-pack",
+  order = "b[logistic-science-pack]",
   pick_sound = {
     aggregation = {
       max_count = 1,
@@ -44,6 +40,6 @@ return {
   },
   stack_size = 200,
   subgroup = "science-pack",
-  type = "tool",
+  type = "item",
   weight = 1000
 }
