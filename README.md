@@ -1,5 +1,5 @@
 [![The Foundry](https://img.shields.io/badge/foundrygg-4a1402?style=for-the-badge&logo=vercel&logoColor=white)](https://foundrygg.com/) [![Discord community](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/SYmkaDjFCt) [![GitHub issues: bugs](https://img.shields.io/github/issues/QuingKhaos/khaosdata-raw/bug?label=Bug%20Reports&style=for-the-badge&logo=github)](https://github.com/QuingKhaos/khaosdata-raw/issues?q=is%3Aissue%20state%3Aopen%20label%3Abug) [![GitHub pull requests](https://img.shields.io/github/issues-pr/QuingKhaos/khaosdata-raw?label=Pull%20Requests&style=for-the-badge&logo=github)](https://github.com/QuingKhaos/khaosdata-raw/pulls)
 
-# Factorio Vanilla (stable)
+# Full Pyanodons (stable)
 
-[![GitHub extraction status](https://img.shields.io/github/actions/workflow/status/QuingKhaos/khaosdata-raw/extract.yml?branch=stable/vanilla&label=Extraction&style=for-the-badge&logo=github)](https://github.com/QuingKhaos/khaosdata-raw/actions/workflows/extract.yml?query=branch%3Astable/vanilla)
+[![GitHub extraction status](https://img.shields.io/github/actions/workflow/status/QuingKhaos/khaosdata-raw/extract.yml?branch=stable/pyanodons/full&label=Extraction&style=for-the-badge&logo=github)](https://github.com/QuingKhaos/khaosdata-raw/actions/workflows/extract.yml?query=branch%3Astable/pyanodons/full)

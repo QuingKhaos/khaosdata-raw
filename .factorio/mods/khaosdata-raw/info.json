@@ -12,6 +12,8 @@
     "! quality",
     "! space-age",
 
-    "khaosdata-extractor"
+    "khaosdata-extractor",
+
+    "pymodpack >= 3.0.0"
   ]
 }
