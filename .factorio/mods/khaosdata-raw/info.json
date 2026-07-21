@@ -5,11 +5,12 @@
   "author": "QuingKhaos",
   "homepage": "https://discord.gg/SYmkaDjFCt",
   "version": "0.0.0",
-  "factorio_version": "2.0",
+  "factorio_version": "2.1",
   "dependencies": [
-    "base >= 2.0.77",
+    "base >= 2.1.12",
     "! elevated-rails",
     "! quality",
+    "! recycler",
     "! space-age",
 
     "khaosdata-extractor"

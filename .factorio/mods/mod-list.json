@@ -18,6 +18,10 @@
     },
     {
       "enabled": false,
+      "name": "recycler"
+    },
+    {
+      "enabled": false,
       "name": "space-age"
     }
   ]
