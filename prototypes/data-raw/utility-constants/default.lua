@@ -17,7 +17,7 @@ return {
   asteroid_collector_static_head_swing_segment_count = 12,
   asteroid_collector_static_head_swing_strength_scale = 1,
   asteroid_fading_range = 16,
-  asteroid_min_damage_modifier = 0.1,
+  asteroid_min_damage_modifier = 0.05,
   asteroid_position_offset_to_speed_coefficient = 0.0083333333333333321,
   asteroid_spawning_offset = {
     {
@@ -2883,7 +2883,7 @@ return {
   sound_fade_ticks = 120,
   space_LPF_max_cutoff_frequency = 500,
   space_LPF_min_cutoff_frequency = 200,
-  space_platform_acceleration_expression = "(thrust / (1 + weight / 10000000) - ((1500 * speed * speed + 1500 * abs(speed)) * (width * 0.5) + 10000) * sign(speed)) / weight / 60",
+  space_platform_acceleration_expression = "(thrust / (1 + weight / 10000000) - ((90 * speed * speed) * ((weight / 200) ^ 0.80) + 10000) * sign(speed)) / weight / 60",
   space_platform_asteroid_chunk_trajectory_updates_per_tick = 1,
   space_platform_dump_cooldown = 1800,
   space_platform_manual_dump_cooldown = 120,

@@ -2522,6 +2522,7 @@ return {
         }
       }
     },
+    max_sounds_per_prototype = 3,
     sound_accents = {
       {
         frame = 1,
